@@ -1,0 +1,5 @@
+tags:
+  store:
+    description: "Marketing images; opt in with --dart-define=GENERATE_STORE=true"
+  golden:
+    description: "Screenshot goldens (checked in; regenerate with --update-goldens test/goldens)"

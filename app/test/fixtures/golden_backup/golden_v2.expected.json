@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "appVersion": "0.3.0",
+  "exportedAt": "2026-12-01T10:30:00Z",
+  "checksum": "sha256:d29bdb53611b42fac11f256044224d813f521430a3a1f1b3f4cdb0ccab23c8a6",
+  "fingerprint": {
+    "from": "2026-01-01",
+    "to": "2027-12-31",
+    "days": 730,
+    "calendars": [
+      "cal-old",
+      "cal-pareja",
+      "main"
+    ],
+    "digest": "25de8a745e58be5241766546efd6541a94f9c8b8c078996e7a725750b5575291"
+  },
+  "counts": {
+    "calendars": 3,
+    "shiftTypes": 10,
+    "patterns": 3,
+    "patternRuns": 6,
+    "dayEntries": 52,
+    "holidays": 1,
+    "absenceBalances": 3,
+    "settings": 6
+  }
+}

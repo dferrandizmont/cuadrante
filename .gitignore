@@ -1,0 +1,19 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets
+*.env
+.env*
+!*.example
+
+# Claude Code worktrees
+.claude/worktrees/
+
+# Capturas locales del emulador
+.shots/
+
+# Salidas de compilación y de la batería del emulador
+build/

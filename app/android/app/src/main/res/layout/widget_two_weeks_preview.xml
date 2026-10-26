@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:padding="@dimen/widget_space_l"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/widget_two_weeks_label"
+        android:textStyle="bold"
+        android:textSize="@dimen/widget_preview_title_size"
+        android:textColor="@color/widget_text_primary"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/widget_preview_two_weeks"
+        android:scaleType="fitCenter"
+        android:importantForAccessibility="no"/>
+</LinearLayout>

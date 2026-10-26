@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agenda_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/widget_agenda_min_row"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/widget_space_s"
+    android:paddingBottom="@dimen/widget_space_s">
+    <LinearLayout
+        android:layout_width="@dimen/widget_agenda_date_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/agenda_date"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/widget_caption_size"
+            android:textStyle="bold"
+            android:textColor="@color/widget_text_secondary"/>
+        <ImageView
+            android:id="@+id/agenda_note"
+            android:layout_width="@dimen/widget_note_size"
+            android:layout_height="@dimen/widget_note_size"
+            android:src="@drawable/widget_note"
+            android:contentDescription="@string/widget_has_note"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/agenda_shifts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"/>
+</LinearLayout>

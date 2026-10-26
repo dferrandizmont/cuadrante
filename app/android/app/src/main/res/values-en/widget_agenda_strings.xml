@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_agenda_label">Cuadrante: upcoming days</string>
+    <string name="widget_two_weeks_label">Cuadrante: two weeks</string>
+    <string name="widget_agenda_description">Today and the coming days, with shifts and notes. Updates each day.</string>
+    <string name="widget_two_weeks_description">This week and next, starting on Monday. Updates each day.</string>
+    <string name="widget_no_shift">No shift</string>
+    <string name="widget_has_note">Has a note</string>
+    <string name="widget_today">today</string>
+    <string name="widget_empty_title">Cuadrante</string>
+    <string name="widget_empty_body">Open Cuadrante to see your shifts</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Data extraction rules for Android 12+ (android:dataExtractionRules): what goes
+  into the cloud backup (Google) and into a device-to-device transfer.
+  Android 11 and below use backup_rules.xml; keep the two in step.
+  See docs/copia-de-seguridad.md, "Copia del sistema de Android".
+
+  Both get the same: the "file" domain, which is files/ (cuadrante.sqlite and
+  backups/). Nothing else: not the shared preferences (the scheduled alarms are
+  derived from the data and planned again at start-up), not the cache, not
+  no_backup/. An <include> limits the backup to what it names.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="file" path="."/>
+    </cloud-backup>
+    <device-transfer>
+        <include domain="file" path="."/>
+    </device-transfer>
+</data-extraction-rules>

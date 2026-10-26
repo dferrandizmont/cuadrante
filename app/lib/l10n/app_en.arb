@@ -1,0 +1,2761 @@
+{
+  "@@locale": "en",
+  "appName": "Cuadrante",
+  "@appName": {
+    "description": "Nombre de la app (título de ventana y cabeceras)."
+  },
+  "cancel": "Cancel",
+  "close": "Close",
+  "delete": "Delete",
+  "save": "Save",
+  "undo": "Undo",
+  "redo": "Redo",
+  "retry": "Try again",
+  "back": "Back",
+  "loadingLabel": "Loading",
+  "errorGeneric": "Something went wrong. Try again.",
+  "calendarToday": "Today",
+  "calendarPickMonth": "{month}, choose month",
+  "calendarPreviousMonth": "Previous month",
+  "calendarNextMonth": "Next month",
+  "calendarHeaderTomorrow": "Tomorrow ({date}): {shifts} shift",
+  "@calendarHeaderTomorrow": {
+    "description": "Última línea de la tarjeta de hoy, con la fecha del día siguiente para no confundir «mañana» con un turno llamado Mañana, p. ej. «Mañana (mié 21 oct): turno de Noche».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarHeaderTomorrowNone": "Tomorrow ({date}): no shift",
+  "@calendarHeaderTomorrowNone": {
+    "description": "Última línea de la tarjeta de hoy cuando el día siguiente no tiene turno.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLabelNow": "Now",
+  "@todayLabelNow": {
+    "description": "Etiqueta de la tarjeta de hoy con un turno en curso (se muestra en mayúsculas)."
+  },
+  "todayLabelTonight": "Tonight",
+  "@todayLabelTonight": {
+    "description": "Etiqueta cuando el próximo turno de hoy empieza a partir de las 20:00."
+  },
+  "todayLabelToday": "Today",
+  "@todayLabelToday": {
+    "description": "Etiqueta cuando el próximo turno de hoy empieza antes de las 20:00."
+  },
+  "todayLabelFree": "Off today",
+  "@todayLabelFree": {
+    "description": "Etiqueta cuando hoy no queda turno."
+  },
+  "todayLabelDone": "Done for today",
+  "@todayLabelDone": {
+    "description": "Etiqueta de la tarjeta de hoy cuando el turno de hoy ya ha terminado y no queda otro hoy (se muestra en mayúsculas)."
+  },
+  "todayFinishedAt": "Finished at {time}",
+  "@todayFinishedAt": {
+    "description": "Hora a la que terminó el último turno de hoy, p. ej. «Terminó a las 22:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLabelGap": "Break",
+  "@todayLabelGap": {
+    "description": "Etiqueta de la tarjeta de hoy entre los dos tramos de un turno partido (se muestra en mayúsculas)."
+  },
+  "todayBackAt": "Back at {time}",
+  "@todayBackAt": {
+    "description": "Entre los dos tramos de un turno partido: hora a la que empieza el segundo, p. ej. «Vuelves a las 17:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayBackIn": "Back in {duration}",
+  "@todayBackIn": {
+    "description": "Cuenta atrás hasta el segundo tramo de un turno partido, p. ej. «Vuelves en 2 h 10 min».",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayFreeTitle": "Off",
+  "todayUntil": "Until {time}",
+  "@todayUntil": {
+    "description": "Fin del turno en curso, p. ej. «Hasta las 06:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayStartsIn": "Starts in {duration}",
+  "@todayStartsIn": {
+    "description": "Cuenta atrás hasta el inicio del turno, p. ej. «Empieza en 3 h 40 min».",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayEndsIn": "Ends in {duration}",
+  "@todayEndsIn": {
+    "description": "Cuenta atrás hasta el final del turno en curso.",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNext": "Next: {name}, {weekday} {time}",
+  "@todayNext": {
+    "description": "Próximo turno cuando hoy es libre, p. ej. «Próximo: Mañana, mié 06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "weekday": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNoNext": "No shifts coming up",
+  "todayAlso": "+ {shift}",
+  "@todayAlso": {
+    "description": "Otro turno de hoy, p. ej. «+ Tarde 14:00–22:00».",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "durationDaysHours": "{days} d {hours} h",
+  "@durationDaysHours": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "durationDays": "{days} d",
+  "@durationDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "durationHoursMinutes": "{hours} h {minutes} min",
+  "@durationHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "durationHours": "{hours} h",
+  "@durationHours": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMinutes": "{minutes} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarNoShift": "No shift",
+  "calendarShiftWithTimes": "{name} {times}",
+  "@calendarShiftWithTimes": {
+    "description": "Turno con su horario, p. ej. «Noche 22:00–06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarWeekdayMon": "M",
+  "calendarWeekdayTue": "T",
+  "calendarWeekdayWed": "W",
+  "calendarWeekdayThu": "T",
+  "calendarWeekdayFri": "F",
+  "calendarWeekdaySat": "S",
+  "calendarWeekdaySun": "S",
+  "daySemanticsToday": "today",
+  "daySemanticsNoShift": "no shift",
+  "daySemanticsShift": "{name} from {start} to {end}",
+  "@daySemanticsShift": {
+    "description": "Lectura en voz alta de un turno con horario.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsShiftSplit": "{name} from {start} to {end} and from {start2} to {end2}",
+  "@daySemanticsShiftSplit": {
+    "description": "Lectura en voz alta de un turno partido (dos tramos).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      },
+      "start2": {
+        "type": "String"
+      },
+      "end2": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsAnd": "{first} and {second}",
+  "@daySemanticsAnd": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsHoliday": "public holiday: {name}",
+  "@daySemanticsHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsNote": "with a note",
+  "daySemanticsOvertime": "overtime: {duration}",
+  "@daySemanticsOvertime": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsEarlyLeave": "left early: {duration}",
+  "@daySemanticsEarlyLeave": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "daySheetHoliday": "Public holiday: {name}",
+  "@daySheetHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "daySheetNote": "Note",
+  "daySheetEmpty": "No shift on this day.",
+  "dayPaneClose": "Close day",
+  "upcomingTitle": "Upcoming days",
+  "dayDetailSourcePattern": "From your pattern",
+  "dayDetailSourceOverride": "Changed by hand",
+  "dayDetailAdd": "Add shift",
+  "@dayDetailAdd": {
+    "description": "Etiqueta (se muestra en mayúsculas) de las fichas para añadir un turno a un día sin turno."
+  },
+  "dayDetailDouble": "Add a second shift",
+  "@dayDetailDouble": {
+    "description": "Etiqueta (se muestra en mayúsculas) de las fichas para añadir un segundo turno a un día que ya tiene uno."
+  },
+  "dayDetailReset": "Back to the pattern",
+  "dayDetailPatternGives": "The pattern gives: {shifts}",
+  "@dayDetailPatternGives": {
+    "description": "Lo que daría la rotación ese día, bajo «Volver al patrón», p. ej. «El patrón da: Noche 22:00–06:00».",
+    "placeholders": {
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "dayDetailNoteHint": "Write a note for this day",
+  "dayDetailUserHoliday": "Custom holiday",
+  "dayDetailUserHolidayDefault": "Custom holiday",
+  "dayDetailUserHolidayNameHint": "Holiday name",
+  "dayDetailDuplicate": "Copy to another day",
+  "dayDetailDuplicateHelp": "Copy to this day",
+  "dayDetailDuplicated": "Copied to {date}",
+  "@dayDetailDuplicated": {
+    "description": "Aviso tras duplicar un día, p. ej. «Copiado en jueves, 22 de octubre».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "dayDetailClear": "Clear day",
+  "dayDetailCleared": "Day cleared",
+  "@dayDetailCleared": {
+    "description": "Aviso tras «Borrar día», con la acción de deshacer."
+  },
+  "dayDetailMoveUp": "Move up",
+  "dayDetailMoveDown": "Move down",
+  "dayDetailRemove": "Remove {name}",
+  "@dayDetailRemove": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasTitle": "Overtime / Left early",
+  "dayExtrasOvertime": "Overtime",
+  "dayExtrasEarlyLeave": "Left early",
+  "dayExtrasNone": "None",
+  "dayExtrasHelper": "Added to or taken from the month’s hours and the estimate. Set it to 0 to remove it.",
+  "dayExtrasMore": "More {label}",
+  "@dayExtrasMore": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasLess": "Less {label}",
+  "@dayExtrasLess": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasValue": "{label}: {value}",
+  "@dayExtrasValue": {
+    "description": "Lectura en voz alta de un contador de la sección de horas extra, p. ej. «Horas extra: 1 h 30 min».",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesTitle": "My shifts",
+  "shiftTypesEditEntry": "Edit shifts",
+  "shiftTypesEmptyTitle": "You have no shifts",
+  "shiftTypesEmptyMessage": "Create the first one so you can paint it on the calendar.",
+  "shiftTypesNew": "New shift",
+  "shiftTypesNewTitle": "New shift",
+  "shiftTypesEditTitle": "Edit shift",
+  "shiftTypesNotFound": "We can’t find this shift",
+  "shiftTypesNotFoundMessage": "You may have archived it. Go back to the list of shifts.",
+  "shiftTypesArchive": "Archive",
+  "shiftTypesArchiveTitle": "Archive “{name}”?",
+  "@shiftTypesArchiveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesArchiveBody": "It won’t show up when you paint anymore. Days that already use it will keep showing it.",
+  "shiftTypesArchiveConfirm": "Archive",
+  "shiftTypesDragHandle": "Drag to reorder",
+  "shiftTypesArchivedSection": "Archived ({count})",
+  "@shiftTypesArchivedSection": {
+    "description": "Cabecera plegable, al final de Mis turnos, con los turnos archivados.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesArchivedHelp": "They no longer show up when you paint. Restore them to put them back in the palette.",
+  "shiftTypesRestore": "Restore",
+  "shiftTypesRestoreSemantic": "Restore “{name}”",
+  "@shiftTypesRestoreSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesRestored": "“{name}” restored",
+  "@shiftTypesRestored": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesDiscardTitle": "Discard your changes?",
+  "shiftTypesDiscardBody": "What you changed in this shift won’t be saved.",
+  "shiftTypesDiscardKeep": "Keep editing",
+  "shiftTypesDiscardConfirm": "Discard",
+  "shiftTypesNoTimes": "No times",
+  "shiftTypesRatePerHour": "{rate}/h",
+  "shiftTypesFixedPlusPerShift": "+{amount} per shift",
+  "@shiftTypesRatePerHour": {
+    "description": "Precio por hora de un turno en la lista, p. ej. «12,50 €/h».",
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesCategoryWork": "Work",
+  "shiftTypesCategoryRest": "Rest",
+  "shiftTypesCategoryAbsence": "Absence",
+  "shiftTypesNameLabel": "Name",
+  "shiftTypesCodeLabel": "Code",
+  "shiftTypesCodeHelper": "1 to 3 characters. It’s what you see in each box of the month.",
+  "shiftTypesColorLabel": "Color",
+  "shiftTypesColorOption": "Color {number} of {total}",
+  "@shiftTypesColorOption": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorOptionNamed": "{name}, {number} of {total}",
+  "shiftColorNameOrange": "Orange",
+  "shiftColorNameCoral": "Coral",
+  "shiftColorNameIndigo": "Indigo",
+  "shiftColorNameLightGrey": "Light gray",
+  "shiftColorNameRed": "Red",
+  "shiftColorNameLilac": "Lilac",
+  "shiftColorNameGreen": "Green",
+  "shiftColorNameTeal": "Teal",
+  "shiftColorNameRaspberry": "Raspberry",
+  "shiftColorNamePink": "Pink",
+  "shiftColorNameTangerine": "Tangerine",
+  "shiftColorNameYellow": "Yellow",
+  "shiftColorNameLime": "Lime",
+  "shiftColorNameForest": "Forest green",
+  "shiftColorNameMint": "Mint",
+  "shiftColorNameCyan": "Cyan",
+  "shiftColorNameSkyBlue": "Sky blue",
+  "shiftColorNameBlue": "Blue",
+  "shiftColorNameCobalt": "Cobalt",
+  "shiftColorNameViolet": "Violet",
+  "shiftColorNamePurple": "Purple",
+  "shiftColorNameBrown": "Brown",
+  "shiftColorNameGrey": "Gray",
+  "shiftColorNameGraphite": "Graphite",
+  "shiftTypesColorCurrent": "Current color",
+  "shiftTypesIconLabel": "Icon",
+  "shiftTypesIconHelper": "Optional. It shows next to the code when there’s room; the code and the color are always there.",
+  "shiftTypesIconNone": "No icon",
+  "shiftTypesIconChoose": "Choose icon",
+  "shiftTypesIconCurrent": "Icon: {name}",
+  "@shiftTypesIconCurrent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftIconNameSun": "Sun",
+  "shiftIconNameMoon": "Moon",
+  "shiftIconNameSunrise": "Sunrise",
+  "shiftIconNameHospital": "Hospital",
+  "shiftIconNameAmbulance": "Ambulance",
+  "shiftIconNamePolice": "Police",
+  "shiftIconNameFire": "Firefighters",
+  "shiftIconNameFactory": "Factory",
+  "shiftIconNameTruck": "Truck",
+  "shiftIconNamePlane": "Plane",
+  "shiftIconNameSchool": "School",
+  "shiftIconNameHome": "Home",
+  "shiftIconNameBeach": "Beach",
+  "shiftIconNameBed": "Bed",
+  "shiftIconNameStar": "Star",
+  "shiftIconNameHeart": "Heart",
+  "shiftIconNameCoffee": "Coffee",
+  "shiftIconNameBook": "Book",
+  "shiftIconNameMoney": "Money",
+  "shiftIconNameAlert": "Alert",
+  "shiftIconNamePhone": "Phone",
+  "shiftIconNameCar": "Car",
+  "shiftIconNameTrain": "Train",
+  "shiftIconNameBus": "Bus",
+  "shiftIconNameShop": "Shop",
+  "shiftIconNameTool": "Tools",
+  "shiftIconNameBaby": "Baby",
+  "shiftIconNameSport": "Sport",
+  "shiftIconNameParty": "Party",
+  "shiftIconNameMedical": "Medical",
+  "shiftTypesColorMore": "More colors…",
+  "shiftTypesColorPickerTitle": "Pick your color",
+  "shiftTypesColorPickerHelp": "See how the box looks in light and dark mode. The text adjusts itself so it’s easy to read.",
+  "shiftTypesColorHue": "Hue",
+  "shiftTypesColorSaturation": "Saturation",
+  "shiftTypesColorLightness": "Lightness",
+  "shiftTypesColorHueSpoken": "{degrees} degrees",
+  "@shiftTypesColorHueSpoken": {
+    "placeholders": {
+      "degrees": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorPercentSpoken": "{percent} percent",
+  "@shiftTypesColorPercentSpoken": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorHexLabel": "Hex code",
+  "shiftTypesColorHexError": "Type 6 digits or letters from A to F, for example #1C7ED6.",
+  "shiftTypesColorUse": "Use this color",
+  "shiftTypesCategoryLabel": "Category",
+  "shiftTypesTimesLabel": "Times",
+  "shiftTypesStarts": "Starts {time}",
+  "@shiftTypesStarts": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesEnds": "Ends {time}",
+  "@shiftTypesEnds": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesPickStart": "Start time",
+  "shiftTypesPickEnd": "End time",
+  "shiftTypesDuration": "Lasts {duration}",
+  "@shiftTypesDuration": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesEndsNextDay": "Ends the next day · lasts {duration}",
+  "@shiftTypesEndsNextDay": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesTwentyFourHours": "Lasts 24 h: ends the next day at the same time",
+  "shiftTypesSplitLabel": "Split shift",
+  "shiftTypesSplitHelper": "Two parts on the same day, with an unpaid break in between that doesn’t count as worked.",
+  "shiftTypesSplitTemplate": "Use “Split 09–13 / 17–21”",
+  "shiftTypesSplitSecondTitle": "Second part",
+  "shiftTypesPickSecondStart": "Part 2 start",
+  "shiftTypesPickSecondEnd": "Part 2 end",
+  "shiftTypesSplitSummary": "You work {first} and {second}: {total} in total",
+  "@shiftTypesSplitSummary": {
+    "description": "Resumen de un turno partido bajo las horas, p. ej. «Trabajas 4 h y 4 h: 8 h en total».",
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorSplitIncomplete": "Set when the second part starts and ends, or turn off the split shift.",
+  "shiftTypesErrorSplitStart": "The start time of the second part isn’t valid.",
+  "shiftTypesErrorSplitDuration": "The second part has to last between 1 minute and 24 h.",
+  "shiftTypesErrorSplitNotAfter": "The second part can’t start right when the first one ends: that would be a single part. Leave a break between them.",
+  "shiftTypesErrorSplitTooLong": "The two parts and the break between them don’t fit in 24 h. Check that the second one starts after the first one ends.",
+  "shiftTypesBreakLabel": "Unpaid break",
+  "shiftTypesBreakUnit": "min",
+  "shiftTypesBreakHint": "0 min",
+  "shiftTypesRateHint": "No rate",
+  "shiftTypesBreakHelper": "Minutes of the shift that aren’t paid. Leave it empty if all of it is paid.",
+  "shiftTypesPaidHelper": "{duration} paid",
+  "@shiftTypesPaidHelper": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesNightLabel": "Night shift",
+  "shiftTypesNightHelper": "Automatic counts the hours between 22:00 and 06:00 as night hours.",
+  "shiftTypesNightAuto": "Automatic",
+  "shiftTypesNightAlways": "Always night",
+  "shiftTypesNightNever": "Never night",
+  "shiftTypesFixedPlusLabel": "Shift allowance (optional)",
+  "shiftTypesFixedPlusHelper": "Added once for each shift worked.",
+  "shiftTypesFixedPlusHint": "No allowance",
+  "shiftTypesFixedPlusUnit": "€",
+  "shiftTypesRateLabel": "Hourly rate (optional)",
+  "shiftTypesRateHelper": "To work out how much you earn in the monthly summary.",
+  "shiftTypesRateUnit": "€/h",
+  "shiftTypesPreviewLabel": "How it will look in the month",
+  "shiftTypesPreviewLight": "Light",
+  "shiftTypesPreviewDark": "Dark",
+  "shiftTypesPreviewContrast": "Contrast {ratio}:1",
+  "@shiftTypesPreviewContrast": {
+    "description": "Contraste del código del turno sobre su casilla, bajo la vista previa, p. ej. «Contraste 7,2:1».",
+    "placeholders": {
+      "ratio": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorCodeEmpty": "Type a code of 1 to 3 characters",
+  "shiftTypesErrorCodeTooLong": "The code takes up to 3 characters, with no emojis or spaces",
+  "shiftTypesErrorCodeTaken": "“{name}” already uses this code",
+  "@shiftTypesErrorCodeTaken": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorNameEmpty": "Give the shift a name",
+  "shiftTypesErrorBreak": "The break has to be shorter than the shift",
+  "shiftTypesErrorRate": "Type a valid amount, for example 12.50",
+  "paintFab": "Paint",
+  "paintHeader": "Painting",
+  "@paintHeader": {
+    "description": "Etiqueta de la cabecera del modo pintar (se muestra en mayúsculas)."
+  },
+  "paintHeaderShift": "{name} · {times}",
+  "@paintHeaderShift": {
+    "description": "Turno elegido y su horario en la cabecera del modo pintar, p. ej. «Tarde · 14:00–22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      }
+    }
+  },
+  "paintDone": "Done",
+  "paintDouble": "Double",
+  "paintEraser": "Erase",
+  "paintToolsLabel": "Painting tools",
+  "selectionHeader": "Selection",
+  "@selectionHeader": {
+    "description": "Etiqueta de la cabecera del modo selección de días (se muestra en mayúsculas)."
+  },
+  "selectionHint": "Tap days, or touch and hold and drag to pick several",
+  "selectionCount": "{count, plural, =0{No days} =1{1 day} other{{count} days}}",
+  "@selectionCount": {
+    "description": "Cuántos días hay elegidos en la barra de selección.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionBarLabel": "Actions for the selected days",
+  "selectionSetShift": "Set shift…",
+  "selectionDouble": "Double with…",
+  "selectionClear": "Clear",
+  "selectionReset": "Back to the pattern",
+  "selectionCopy": "Copy",
+  "selectionCut": "Cut",
+  "selectionPaste": "Paste",
+  "selectionRepeat": "Repeat…",
+  "selectionNote": "Note…",
+  "selectionCancel": "Cancel",
+  "selectionCellSelected": "selected",
+  "selectionSetShiftTitle": "Set shift",
+  "selectionSetShiftHelp": "Replaces the shifts of the selected days.",
+  "selectionDoubleTitle": "Add a second shift",
+  "selectionDoubleHelp": "Adds the shift to whatever the selected days already have.",
+  "selectionNoteTitle": "Note for the selected days",
+  "selectionNoteHint": "The same note on every day",
+  "selectionNoteSave": "Save note",
+  "selectionNoteRemove": "Remove notes",
+  "selectionPasteTitle": "Paste days",
+  "selectionPasteSummary": "{count, plural, =1{1 day is pasted} other{{count} days are pasted}} starting {date}.",
+  "@selectionPasteSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionPasteReach": "It will be pasted from {from} to {to}.",
+  "@selectionPasteReach": {
+    "description": "Hasta qué día llega el bloque pegado (con sus huecos); {from} y {to} son «lun 3» y «dom 9 de noviembre», o con el mes en los dos extremos si cruza de mes.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionPasteReplaces": "The shifts on those days are replaced. You can undo it.",
+  "selectionIncludeNotes": "Include notes",
+  "selectionIncludeNotesHelp": "The notes of the copied days replace the ones on the target days.",
+  "selectionCutNotesMove": "When you cut, notes move with the days.",
+  "@selectionCutNotesMove": {
+    "description": "Línea del cuadro de Pegar tras Cortar, en lugar del interruptor «Incluir notas»: las notas, avisos y horas extra viajan siempre con los días cortados."
+  },
+  "selectionPasteConfirm": "Paste",
+  "selectionRepeatTitle": "Repeat the selected days",
+  "selectionRepeatTimes": "{count, plural, =1{1 time} other{{count} times}}",
+  "@selectionRepeatTimes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRepeatLess": "One time less",
+  "selectionRepeatMore": "One time more",
+  "selectionRepeatPreview": "{count, plural, =1{Changes 1 more day, until {date}.} other{Changes {count} more days, until {date}.}}",
+  "@selectionRepeatPreview": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRepeatConfirm": "Repeat",
+  "selectionChanged": "{count, plural, =1{1 day changed} other{{count} days changed}}",
+  "@selectionChanged": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionNothingChanged": "Those days were already like that",
+  "selectionCopied": "{count, plural, =1{1 day copied} other{{count} days copied}}. Pick the start day and tap Paste.",
+  "@selectionCopied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionCutDone": "{count, plural, =1{1 day cut} other{{count} days cut}}. Pick the start day and tap Paste.",
+  "@selectionCutDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionPasted": "{count, plural, =1{1 day pasted} other{{count} days pasted}}",
+  "@selectionPasted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRepeated": "Repeated {times, plural, =1{once} other{{times} times}}",
+  "@selectionRepeated": {
+    "placeholders": {
+      "times": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRunsTitle": "My rotations",
+  "selectionRunsSubtitle": "End or remove a pattern in one go",
+  "selectionRunsEmptyTitle": "No rotations",
+  "selectionRunsEmptyMessage": "When you apply a pattern from Paint, it will show up here.",
+  "selectionRunsRange": "From {from} to {to}",
+  "@selectionRunsRange": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsOpenEnded": "From {from}, no end date",
+  "@selectionRunsOpenEnded": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsStep": "Starts on day {day} of the cycle",
+  "@selectionRunsStep": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRunsActive": "Running",
+  "selectionRunsFuture": "Hasn’t started yet",
+  "selectionRunsEnded": "Ended",
+  "selectionRunsEnd": "End here",
+  "selectionRunsEndHelp": "First day without the rotation",
+  "selectionRunsEndDone": "The rotation ends on {date}",
+  "@selectionRunsEndDone": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsDelete": "Delete",
+  "selectionRunsDeleteTitle": "Delete {name}?",
+  "@selectionRunsDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsDeleteBody": "It’s removed from the whole calendar. Days you changed by hand and notes stay as they are. You can undo it.",
+  "selectionRunsDeleted": "Rotation deleted",
+  "agendaTitle": "Agenda",
+  "agendaOpenTooltip": "Notes agenda",
+  "agendaSearchHint": "Search notes and shifts",
+  "agendaSearchHintShort": "Search",
+  "agendaModeNotes": "Notes",
+  "agendaModeShifts": "Shifts",
+  "agendaSearchScope": "Searches all your notes and custom holidays, and your shifts from a year ago to a year from now. Dates work too: 15/10 or 15 Oct.",
+  "agendaSearchClear": "Clear search",
+  "agendaEmptyTitle": "No upcoming notes",
+  "agendaEmptyMessage": "Notes and custom holidays for the coming days will show up here.",
+  "agendaNoResultsTitle": "Nothing found",
+  "agendaNoResultsMessage": "No notes or shifts match “{query}”.",
+  "@agendaNoResultsMessage": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaHoliday": "Public holiday: {name}",
+  "@agendaHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaTruncated": "Showing the first {count} results. Type a bit more to narrow it down.",
+  "@agendaTruncated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "agendaResults": "{count, plural, =1{1 result} other{{count} results}}",
+  "@agendaResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "agendaSemanticsNote": "note: {note}",
+  "@agendaSemanticsNote": {
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "patternButton": "Pattern",
+  "@patternButton": {
+    "description": "Botón de la cabecera del modo pintar que abre el asistente de patrón."
+  },
+  "patternTitle": "Apply pattern",
+  "patternStepOf": "Step {current} of {total}",
+  "@patternStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "patternStepChoose": "Choose a pattern",
+  "patternStepStart": "When do you start?",
+  "patternStepEnd": "Until when?",
+  "patternNext": "Next",
+  "patternBack": "Back",
+  "patternApply": "Apply",
+  "patternApplied": "Pattern applied",
+  "patternApplyFailed": "Couldn’t apply the pattern",
+  "patternFromDay": "From {date}",
+  "@patternFromDay": {
+    "description": "Día en el que empieza el patrón tras la pulsación larga, p. ej. «Desde el sábado 24 de octubre».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patternGroupHealth": "Healthcare",
+  "patternGroupPolice": "Police and Guardia Civil",
+  "patternGroupFirefighters": "Firefighters",
+  "patternGroupIndustry": "Industry",
+  "patternGroupSecurity": "Security",
+  "patternGroupOther": "Other",
+  "patternGroupMine": "My patterns",
+  "patternGroupTypical": "Starting with {shift}",
+  "@patternGroupTypical": {
+    "description": "Sección con los patrones cuyo primer día es el turno de la ficha pulsada, p. ej. «Empiezan por Noche».",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "patternGroupIncluding": "Including {shift}",
+  "@patternGroupIncluding": {
+    "description": "Sección con los patrones que contienen el turno de la ficha pulsada, cuando ninguno empieza por él.",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "patternCycleDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@patternCycleDays": {
+    "description": "Longitud del ciclo de un patrón.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "patternCreateOwn": "Create my own",
+  "patternCreateOwnHint": "Build your sequence day by day",
+  "patternBuilderBack": "Choose a pattern from the list",
+  "patternBuilderName": "Pattern name",
+  "patternBuilderDefaultName": "My pattern",
+  "patternBuilderSequence": "Your sequence",
+  "patternBuilderEmpty": "Tap the shifts below to add days.",
+  "patternBuilderSameDay": "Several shifts in one day",
+  "patternBuilderSameDayHint": "On: each shift you tap is added to the last day of the sequence instead of making a new day.",
+  "patternBuilderRemoveLast": "Remove the last one",
+  "patternBuilderClear": "Clear the sequence",
+  "patternBuilderAdd": "Add {name}",
+  "@patternBuilderAdd": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "patternStartLabel": "Start day",
+  "patternSuggestedStart": "This pattern usually starts on a {weekday}.",
+  "@patternSuggestedStart": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      }
+    }
+  },
+  "patternWeekdayMonday": "Monday",
+  "patternWeekdayTuesday": "Tuesday",
+  "patternWeekdayWednesday": "Wednesday",
+  "patternWeekdayThursday": "Thursday",
+  "patternWeekdayFriday": "Friday",
+  "patternWeekdaySaturday": "Saturday",
+  "patternWeekdaySunday": "Sunday",
+  "patternOffsetTitle": "Which day of the cycle are you on that day?",
+  "patternOffsetHelp": "Tap the day of the pattern you’re on on {date}.",
+  "@patternOffsetHelp": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patternOffsetThatDay": "That day you’re on: {shifts}",
+  "@patternOffsetThatDay": {
+    "placeholders": {
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "patternChipDay": "Day {day}: {shifts}",
+  "@patternChipDay": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "patternEndNever": "No end",
+  "patternEndNeverHint": "It repeats until you change it.",
+  "patternEndUntil": "Until a date",
+  "patternEndUntilHint": "After that date, what you had before comes back.",
+  "patternUntilLabel": "Last day",
+  "patternOverridesTitle": "Days you’ve already changed by hand",
+  "patternOverridesKeep": "Keep the days I’ve changed by hand",
+  "patternOverridesKeepHint": "Your changes stay; the pattern fills in the rest.",
+  "patternOverridesReplace": "Replace them with the pattern",
+  "patternOverridesReplaceHint": "Your manual changes on those dates are deleted. Notes stay.",
+  "patternPreviewTitle": "How it will look",
+  "patternPreviewNone": "Choose a pattern to see how it looks.",
+  "patternPreviewPostNight": "{count, plural, =1{Automatic post-night: 1 day after a night.} other{Automatic post-night: {count} days after a night.}}",
+  "@patternPreviewPostNight": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "patternPickBanner": "Tap the day the pattern starts",
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingContinue": "Continue",
+  "onboardingProgress": "Step {current} of {total}",
+  "@onboardingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingProfessionTitle": "What do you do?",
+  "onboardingProfessionHelp": "We’ll set up the shifts and rotations of your job. You can change it whenever you like.",
+  "onboardingProfessionNursing": "Nursing, nursing assistants and porters",
+  "onboardingProfessionNursingHint": "M 08–15, A 15–22, N 22–08 and post-night",
+  "onboardingProfessionMedicine": "Medicine (24-hour shifts)",
+  "onboardingProfessionMedicineHint": "Morning, 24-hour shift and post-call",
+  "onboardingProfessionPolice": "Police and Guardia Civil",
+  "onboardingProfessionPoliceHint": "M 07–15, A 15–23 and N 23–07",
+  "onboardingProfessionFirefighters": "Firefighters",
+  "onboardingProfessionFirefightersHint": "24-hour shifts and long rest periods",
+  "onboardingProfessionIndustry": "Industry",
+  "onboardingProfessionIndustryHint": "Rotating shifts: M 06–14, A 14–22 and N 22–06",
+  "onboardingProfessionSecurity": "Private security",
+  "onboardingProfessionSecurityHint": "12-hour day and night shifts",
+  "onboardingProfessionHospitality": "Hospitality and retail",
+  "onboardingProfessionHospitalityHint": "M 08–16 and A 16–00",
+  "onboardingProfessionOther": "Other",
+  "onboardingProfessionOtherHint": "You start with the usual shifts",
+  "onboardingPlaceTitle": "Where do you work?",
+  "onboardingPlaceHelp": "So we can mark the public holidays of your region and your town on the calendar.",
+  "onboardingRegionLabel": "Region",
+  "onboardingRegionPick": "Choose region",
+  "onboardingRegionSheetTitle": "Your region",
+  "onboardingMunicipalityLabel": "Town (optional)",
+  "onboardingMunicipalityPick": "Search town",
+  "onboardingMunicipalityNeedsRegion": "Choose the region first",
+  "onboardingMunicipalitySheetTitle": "Your town",
+  "onboardingMunicipalitySearch": "Type the name",
+  "onboardingMunicipalityNone": "No town has that name",
+  "onboardingMunicipalityClear": "Remove town",
+  "onboardingLocalHolidaysMissing": "You can add your town’s local holidays yourself in two taps.",
+  "onboardingRotationTitle": "What’s your rotation like?",
+  "onboardingRotationHelp": "Choose the closest one. Then you say when you start.",
+  "onboardingRotationTypical": "Usual in your job",
+  "onboardingRotationOthers": "Other rotations",
+  "onboardingRotationAll": "Rotations",
+  "onboardingByHand": "I’ll paint it by hand",
+  "onboardingByHandHint": "No rotation: you paint the days on the calendar yourself.",
+  "onboardingStartTitle": "When do you start?",
+  "onboardingStartHelp": "Say which day it counts from and where in the cycle you are on that day.",
+  "onboardingImportTitle": "Coming from another app?",
+  "onboardingImportBody": "If you kept your shifts in LRHSoft (Shifter), Supershift or another app, bring them over from its backup, your phone’s calendar or a file. You can also do it later, in Settings.",
+  "onboardingReadyTitle": "All set",
+  "onboardingReadyBody": "Your calendar is ready. You can change all of this whenever you like in Settings.",
+  "onboardingReadyProfession": "Job: {name}",
+  "@onboardingReadyProfession": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyPlace": "Public holidays: {place}",
+  "@onboardingReadyPlace": {
+    "placeholders": {
+      "place": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyRotation": "Rotation: {name}, from {date}",
+  "@onboardingReadyRotation": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyOffset": "You start on day {day} of the cycle ({shifts})",
+  "@onboardingReadyOffset": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyByHand": "Rotation: you paint it by hand",
+  "onboardingReadyNothing": "You didn’t choose anything, so you start with a blank calendar.",
+  "onboardingReadySaveFailed": "Not everything could be saved. Check your shifts and public holidays in Settings.",
+  "onboardingOpenCalendar": "See my calendar",
+  "onboardingTipTitle": "Paint your month in no time",
+  "onboardingTipBody": "Tap Paint, choose a shift and drag across the days. With the Pattern button you repeat a whole rotation in one go.",
+  "onboardingTipDismiss": "Got it",
+  "onboardingTipClose": "Close the tip",
+  "paintScrollUp": "Scroll month up",
+  "paintScrollDown": "Scroll month down",
+  "monthTipPaint": "Pick a shift and drag.",
+  "@monthTipPaint": { "description": "Text of the compact tip on the month screen: one line that explains how to paint the month by dragging over the days." },
+  "postNightAutoTitle": "Automatic post-night",
+  "postNightAutoHelp": "After a night, the next day becomes Post-night if it was empty or off.",
+  "yearTitle": "Year view",
+  "yearOpenTooltip": "See the year",
+  "yearPrevious": "Previous year",
+  "yearNext": "Next year",
+  "yearShare": "Share as image",
+  "yearShareSubject": "My shifts in {year}",
+  "@yearShareSubject": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "yearShareFailed": "Couldn’t share the image",
+  "yearImageTitle": "My shifts {year}",
+  "@yearImageTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "yearMonthEmpty": "no shifts",
+  "yearLegendTitle": "Shifts of the year",
+  "yearLegendEmpty": "This year has no shifts.",
+  "yearLegendDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@yearLegendDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "yearLegendHoliday": "Public holiday",
+  "summaryTitle": "Summary",
+  "summaryOpenTooltip": "Monthly summary",
+  "summaryModeMonth": "Month",
+  "summaryModeYear": "Year",
+  "summaryModeRange": "Dates…",
+  "summaryRangeFrom": "From",
+  "summaryRangeTo": "To",
+  "summaryRangePrevious": "Previous period",
+  "summaryRangeNext": "Next period",
+  "summaryRangeDays": "{count, plural, =1{1 day in total} other{{count} days in total}}. You can choose up to {max}.",
+  "@summaryRangeDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangeClamped": "The maximum is {max} days: we’ve moved the end date earlier.",
+  "@summaryRangeClamped": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangePreviousName": "{days, plural, =1{the previous day} other{the previous {days} days}}",
+  "@summaryRangePreviousName": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangeEmptyTitle": "No shifts on these dates",
+  "summaryRangeEmptyBody": "Choose other dates or paint shifts on the calendar.",
+  "summaryRangeNoteMidnight": "The hours of a shift that crosses midnight count on the day it starts, even if it’s the last day of the dates.",
+  "summaryEmptyTitle": "No shifts this month",
+  "summaryEmptyBody": "Paint shifts on the calendar and you’ll see the hours and the estimate here.",
+  "summaryHoursWorked": "Hours worked",
+  "summaryShiftsWorked": "Shifts worked",
+  "summaryNightHours": "Night hours",
+  "summaryRestDays": "Days off",
+  "summaryAbsences": "Absences",
+  "summaryHolidayHours": "Hours on public holidays",
+  "summaryHolidayDetail": "{count, plural, =1{1 shift on a public holiday} other{{count} shifts on public holidays}}",
+  "@summaryHolidayDetail": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryOvertime": "Overtime",
+  "summaryEarlyLeave": "Early leaves",
+  "summaryExtrasPay": "{amount} in the estimate",
+  "@summaryExtrasPay": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryExtrasNoRate": "There’s overtime or early leave on days without a shift with an hourly rate: it isn’t in the estimate.",
+  "summaryNoteExtras": "Overtime and early leave: what you log on each day. Overtime adds to and early leave takes from the hours worked (a day never goes below 0 h). They’re valued at the hourly rate of the first shift with a rate that day.",
+  "summaryDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@summaryDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryShifts": "{count, plural, =1{1 shift} other{{count} shifts}}",
+  "@summaryShifts": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryNightOf": "{hours} at night",
+  "@summaryNightOf": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNoTimes": "no times",
+  "summaryNoRate": "no rate",
+  "summaryGroupWork": "Work shifts",
+  "summaryGroupRest": "Rest days",
+  "summaryEstimateTitle": "Estimated earnings",
+  "summaryFixedPluses": "Allowances",
+  "summaryFixedPlusCount": "{count, plural, one{1 shift} other{{count} shifts}}",
+  "@summaryFixedPlusCount": {"placeholders": {"count": {"type": "int"}}},
+  "summaryEstimateNote": "Estimate, before tax",
+  "summaryEstimateNone": "Set an hourly rate or a fixed allowance in My shifts to see the estimate.",
+  "summaryEstimateMissing": "Excludes hourly pay for {types}: no rate.",
+  "@summaryEstimateMissing": {
+    "placeholders": {
+      "types": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryRateAction": "Set rates in My shifts",
+  "summaryDelta": "{delta} compared with {month}",
+  "@summaryDelta": {
+    "placeholders": {
+      "delta": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDeltaSame": "Same hours as in {month}",
+  "@summaryDeltaSame": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDeltaNone": "No shifts in {month} to compare",
+  "@summaryDeltaNone": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNotesTitle": "How it’s counted",
+  "summaryNoteMidnight": "The hours of a shift that crosses midnight count on the day and in the month it starts.",
+  "summaryNoteNight": "Night hours: from 22:00 to 06:00, unless you set something else in the shift.",
+  "summaryNoteDst": "These are clock hours: on the night the clocks change, it isn’t adjusted to 7 or 9 hours.",
+  "summaryNoteNoTimes": "Shifts without times count as a shift, but add no hours.",
+  "summaryNoteHoliday": "Hours on public holidays: those that fall on a public holiday of your region and town, even if the shift crosses midnight.",
+  "summaryYearEmpty": "This year has no shifts.",
+  "summaryYearHint": "Tap a month to see its details.",
+  "summaryYearHeaderMonth": "Month",
+  "summaryYearHeaderShifts": "Shifts",
+  "summaryYearHeaderHours": "Hours",
+  "summaryYearHeaderNight": "Night",
+  "summaryYearHeaderEstimate": "Estimate",
+  "summaryYearTotal": "Total",
+  "summaryYearEstimated": "{amount} estimated",
+  "@summaryYearEstimated": {
+    "description": "Importe de un mes en la lista del año con texto grande.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryYearMonthEmpty": "No shifts",
+  "summaryYearRowTitle": "Hours and estimate",
+  "summaryYearRowBody": "Shifts, hours and euros for each month",
+  "summaryYearMonthSemantics": "{month}: {shifts}, {hours}",
+  "@summaryYearMonthSemantics": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "shareMonthTooltip": "Share the month as an image",
+  "shareMonthSubject": "My shifts in {month}",
+  "@shareMonthSubject": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "shareMonthFailed": "Couldn’t share the image",
+  "shareMonthLegendTitle": "Shifts of the month",
+  "shareMonthLegendEmpty": "This month has no shifts.",
+  "saveFailed": "Couldn’t save the change",
+  "@saveFailed": {
+    "description": "Aviso (SnackBar) cuando falla escribir un cambio en la base de datos; el calendario ya muestra lo que hay guardado."
+  },
+  "settingsTitle": "Settings",
+  "settingsOpenTooltip": "Open settings",
+  "settingsSectionSchedule": "Your schedule",
+  "settingsShiftsTitle": "My shifts",
+  "settingsShiftsSubtitle": "Colors, codes and times",
+  "settingsCalendarsTitle": "Calendars",
+  "settingsSectionAppearance": "Appearance",
+  "settingsThemeTitle": "Theme",
+  "settingsThemeSystemLight": "System (light)",
+  "settingsThemeSystemDark": "System (dark)",
+  "settingsThemeLight": "Light",
+  "settingsThemeDark": "Dark",
+  "settingsWeekStartTitle": "First day of the week",
+  "settingsWeekStartMonday": "Monday",
+  "settingsWeekStartSunday": "Sunday",
+  "settingsWeekNumbersTitle": "Show week numbers",
+  "settingsWeekNumbersSubtitle": "A column on the left of the month",
+  "settingsLanguageTitle": "Language",
+  "settingsLanguageSystem": "System ({language})",
+  "@settingsLanguageSystem": {
+    "description": "Opción «seguir el idioma del móvil», con el idioma que da ahora, p. ej. «Sistema (Español)».",
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageNameEs": "Español",
+  "@languageNameEs": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameCa": "Català",
+  "@languageNameCa": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameGl": "Galego",
+  "@languageNameGl": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameEu": "Euskara",
+  "@languageNameEu": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameEn": "English",
+  "@languageNameEn": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "settingsSaveFailed": "Couldn’t save the setting. Try again.",
+  "settingsSectionMore": "Alerts and data",
+  "settingsHolidaysTitle": "Public holidays",
+  "settingsAlarmsTitle": "Alarms",
+  "settingsBackupTitle": "Backup",
+  "settingsPrivacyTitle": "Privacy policy",
+  "settingsPrivacySubtitle": "Opens in your browser",
+  "settingsPrivacyOpenFailed": "Couldn’t open the privacy policy. Try again.",
+  "faqAlarmsQIos": "How do I set up alarms, and what’s the notification permission?",
+  "faqAlarmsAIos": "In Settings › Alarms, turn on “Alert before each shift”, choose how long before and, if you like, an alert the day before at a set time. In a day’s details you can remove its alarm with “No alarm this day”.\n\nWithout notification permission, Cuadrante can’t alert you. If the window to allow them doesn’t appear, turn them on in the system settings.",
+  "faqWidgetAIos": "In Settings › Add widget you’ll see the sizes (small: today and tomorrow; medium: the next 7 days; large: the whole month) and how to place it. Touch and hold the home screen, tap the + at the top and look for Cuadrante.\n\nThe widget stores your upcoming days. The system decides when to update it and may delay the change of day. If it runs out of data, open Cuadrante to bring it up to date.",
+  "settingsSectionHelp": "Help",
+  "settingsHelpTitle": "Help and contact",
+  "settingsHelpSubtitle": "Write to us if something isn’t working",
+  "settingsHelpBody": "Questions, or something isn’t working? Tell us what’s happening and which version you use.",
+  "settingsHelpSubtitleSoon": "We’re setting up the support email",
+  "settingsHelpBodySoon": "We don’t have a support email yet. In the meantime, check the FAQ and, if something isn’t working, keep the version you use at hand.",
+  "settingsHelpNoEmail": "The support email will arrive with the store version.",
+  "settingsHelpCopyEmail": "Copy email",
+  "settingsHelpCopyVersion": "Copy version",
+  "settingsFaqTitle": "FAQ",
+  "settingsFaqSubtitle": "Painting, rotations, alarms, widget and more",
+  "faqIntro": "Quick answers about how Cuadrante works. Everything is on this device: no account or connection needed.",
+  "faqNotFound": "Can’t find what you’re looking for?",
+  "faqContact": "Help and contact",
+  "faqPaintQ": "How do I paint the month?",
+  "faqPaintA": "Tap “Paint” on the calendar, choose a shift at the bottom and tap the days or swipe across them. To empty a day, use “Erase”. Every stroke can be undone and redone with the arrows on the bar. Tap “Done” when you finish.\n\nIf you tap a day while you’re not painting, its details open: there you change the shift, add a note or go back to the pattern. If you touch and hold a day you start selecting several at once: you can set their shift, copy, cut and paste them, or repeat a week.",
+  "faqPatternQ": "How do I apply a rotation, and what’s the offset?",
+  "faqPatternA": "In paint mode, tap the “Pattern” button and follow the steps: choose your rotation (or create your own), the day you start and until when it repeats.\n\nThe offset is where in the cycle you are on the start day. If you’re on nights that day, in the step “Which day of the cycle are you on that day?” you tap the night and the rest adjusts itself. Days you’ve already changed by hand are kept or replaced, as you prefer. To end or remove a rotation, go to Settings › My rotations.",
+  "faqDoubleQ": "How do I work a double shift?",
+  "faqDoubleA": "A double is working two shifts on the same day. Tap the day and, in its details, use “Add a second shift”. If you’re painting, turn on “Double” and tap the days. With several days selected, “Double with…” adds the shift to all of them.\n\nA day can have as many shifts as you need, and each one adds its own hours.",
+  "faqPostNightQ": "What’s the automatic post-night?",
+  "faqPostNightA": "It’s the rest on the day after a night. If you turn it on in Settings › Automatic post-night, when you paint or apply a night, the next day becomes Post-night if it was empty or off. Days that already had another shift aren’t touched. It’s off by default.",
+  "faqNotesQ": "How do I use notes and the agenda?",
+  "faqNotesA": "Tap a day and write in the note field; days with notes are marked on the calendar. Open the agenda at the top of the calendar: “Notes” lists your notes and custom holidays; “Shifts” shows upcoming shifts.\n\nSearch by text, regardless of case or accents, or by date: for example, 15/10 or Oct 15. Search covers all your notes and custom holidays, and shifts from one year ago to one year ahead.",
+  "faqAlarmsQ": "How do I set up alarms, and what’s the exact alarms permission?",
+  "faqAlarmsA": "In Settings › Alarms, turn on “Alert before each shift”, choose how long before and, if you like, an alert the day before at a set time. In a day’s details you can remove its alarm with “No alarm this day”.\n\nOn Android you need notifications and the “Alarms & reminders” permission in the system settings: without it, Android may delay the alert by a few minutes. The alarms screen tells you what’s missing and takes you to the settings. If your phone saves battery aggressively, set Cuadrante to unrestricted so it doesn’t stop the alerts.",
+  "faqHolidaysQ": "How do I add a local holiday?",
+  "faqHolidaysA": "In Settings › Holidays, choose your region and town to see the holidays that apply to you. If a local holiday is missing, tap that day on the calendar and turn on “Custom holiday”: give it a name and it counts as a holiday from then on.\n\nYou can also bring in holidays from your phone calendar in Settings › Holidays. Choose calendars and dates and review the preview: only all-day events are read, holidays you already have are skipped, and you can undo. Calendar events are never changed.",
+  "faqWidgetQ": "How do I add the widget, and why does it change by itself?",
+  "faqWidgetA": "In Settings › Add widget you’ll see the sizes (small: today and tomorrow; medium: the next 7 days; large: the whole month) and how to place it. On Android, touch and hold an empty area of the home screen, choose Widgets and look for Cuadrante.\n\nThe widget always shows today: it moves to the next day at midnight even if you don’t open the app, because it keeps your upcoming days stored. If you go a long time without opening Cuadrante, it runs out of data and asks you to open the app to catch up.",
+  "faqBackupQ": "How do I back up and change devices?",
+  "faqBackupA": "Settings › Backup saves automatic backups on this device after each change, but they are lost if you lose it or uninstall the app. Export a file with “Export file” and save it to Drive or send it to yourself by WhatsApp or email.\n\nTo change devices: export the file, install Cuadrante on the new device, open the file with the app (or use “Import file” in Backup), and review the preview before restoring. “Test restore” checks that your latest backup can be fully recovered.",
+  "faqImportQ": "Can I import my shifts or export them to the calendar?",
+  "faqImportA": "Yes. In Settings › Import shifts, you can bring in an LRHSoft «.Shifter» backup, shifts from your phone calendar, an .ics file or a CSV. In LRHSoft, create a backup in Menu › Backup › Local backup, then choose the file from Documents › ShifterBackups. Check the dates, shift types and preview before importing.\n\n“Export to phone calendar” copies your shifts once to a phone calendar. Exporting again does not duplicate them: only events created by Cuadrante are changed.",
+  "faqCalendarsQ": "Can I keep several calendars and compare them?",
+  "faqCalendarsA": "Yes. In Settings › Calendars you create one for your partner, a second job or a child: each one has its own rotations and days, and the shift types are shared. With two or more, the calendar name above the month lets you switch between them. The widget and the alarms follow the calendar marked “Widget and alarms”.\n\nTo see when you’re both off, tap “Compare calendars” on that same sheet: you choose two and see their shifts together and the days off you share in the month.",
+  "faqSummaryQ": "How are hours and earnings calculated?",
+  "faqSummaryA": "The summary icon on the calendar shows the shifts, hours, night hours and public holiday hours of the month, a whole year or the dates you choose in “Dates…” (up to 366 days). A shift counts on the day it starts, even if it crosses midnight.\n\nTo see euros, set each shift type’s hourly rate and, if you have one, fixed allowance in Settings › My shifts. The estimate includes those fixed allowances, before tax. It excludes allowances per night or public holiday hour and deductions.\n\n“Shift allowance” is added once for each worked shift of that type, including split shifts; it does not depend on the hours. Rest days and absences do not add it.",
+  "settingsVersionCopied": "Version copied",
+  "settingsEmailCopied": "Email copied",
+  "settingsAboutTitle": "About",
+  "settingsAboutVersion": "Version {version}",
+  "@settingsAboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsAboutVersionDev": "Development version",
+  "settingsAboutTagline": "Cuadrante works offline and without an account: your shifts stay on your phone.",
+  "settingsAboutLicenses": "Open source licenses",
+  "calendarWeekNumberSemantics": "Week {number}",
+  "@calendarWeekNumberSemantics": {
+    "description": "Lectura en voz alta del número de semana ISO de una fila del mes.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "importSectionTitle": "Import and export",
+  "importRowTitle": "Import shifts",
+  "importRowSubtitle": "LRHSoft backup, phone calendar, .ics or CSV",
+  "calExportRowTitle": "Export shifts",
+  "calExportRowSubtitle": "To the phone calendar, no duplicates",
+  "importTitle": "Import shifts",
+  "importStepOf": "Step {current} of {total}",
+  "@importStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importNext": "Next",
+  "importReading": "Reading…",
+  "importSourceTitle": "Where are your shifts coming from?",
+  "importSourceHelp": "Cuadrante reads the events right here, on your phone, and doesn’t send them anywhere. You decide what gets imported.",
+  "importSourceDevice": "Phone calendar",
+  "importSourceDeviceHelp": "Google, iCloud, Outlook… whatever you have in your calendar app.",
+  "importSourceIcs": ".ics file",
+  "importSourceIcsHelp": "An exported calendar, with one shift per event.",
+  "importSourceCsv": "CSV file",
+  "importSourceCsvHelp": "A sheet with a date and a shift on each row.",
+  "importSourceLrhsoft": "LRHSoft backup (Work Shift Calendar)",
+  "importSourceLrhsoftHelp": "The .Shifter file from your local backup",
+  "importFileLrhsoft": "LRHSoft backup",
+  "importHowToTitle": "Coming from LRHSoft or Supershift?",
+  "importHowToBody": "LRHSoft or Shifter: in the app, Menu › Calendar backup › Local backup. Then choose that .Shifter file here: it is in your phone’s storage, under Documents › ShifterBackups.\nSupershift: export your shifts to your phone’s calendar and choose “Phone calendar”.",
+  "calExportPermissionTitle": "Calendar permission needed",
+  "calExportPermissionReadBody": "To import, Cuadrante needs to read the events in your calendars. It only does so now, while you import, and doesn’t keep anything outside your phone.",
+  "calExportPermissionWriteBody": "To add your shifts, Cuadrante needs access to your calendars. It only adds or changes its own events, and only when you export. If the calendar you choose syncs with an account (Google, iCloud...), that account will also get the shifts.",
+  "calExportPermissionAgainBody": "You haven’t granted permission. Without it we can’t use your calendars, but you can allow it now. If you decline again, you’ll have to turn it on in the system settings.",
+  "calExportPermissionAllow": "Allow access",
+  "calExportPermissionDeniedTitle": "Calendar access is turned off",
+  "calExportPermissionDeniedBody": "Turn it on in the system settings (Permissions › Calendar) and come back here.",
+  "calExportPermissionSettings": "Open settings",
+  "calExportPermissionRecheck": "Check again",
+  "calExportPermissionRestrictedTitle": "This phone doesn’t allow using the calendar",
+  "calExportPermissionRestrictedBody": "It may be parental controls or a work profile. If you’re importing, try an .ics file.",
+  "calExportPermissionWriteOnlyBody": "The system only gave permission to add events. Cuadrante needs full access to read calendars or to replace the events of an earlier export.",
+  "importCalendarsTitle": "Choose the calendars",
+  "importCalendarsHelp": "Mark where your shifts come from. The others aren’t touched.",
+  "importCalendarsEmpty": "There are no calendars on this phone.",
+  "importCalendarsNoAccount": "No account",
+  "importCalendarsReadOnly": "Read-only",
+  "importCalendarSemantics": "{name}, {account}",
+  "@importCalendarSemantics": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "importRangeTitle": "Which dates?",
+  "importRangeHelp": "Only events on these days are looked at.",
+  "importRangeFrom": "From",
+  "importRangeTo": "To",
+  "importRangeDefault": "Last 12 months and next 6",
+  "importRangeInvalid": "The end date can’t be before the start date.",
+  "importRangeClamped": "The maximum is 5 years: the start has been cut.",
+  "importRangeFile": "File: {name}",
+  "@importRangeFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importRangeFileEvents": "{count, plural, =1{The file has 1 event.} other{The file has {count} events.}}",
+  "@importRangeFileEvents": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRangeFileSkipped": "{count, plural, =1{1 event doesn’t have a valid date and won’t be read.} other{{count} events don’t have a valid date and won’t be read.}}",
+  "@importRangeFileSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRangeFileRules": "{count, plural, =1{1 event has a repeat we don’t understand and counts only once.} other{{count} events have a repeat we don’t understand and count only once.}}",
+  "@importRangeFileRules": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importColumnsTitle": "What’s in each column?",
+  "importColumnsHelp": "Look at the first rows and confirm which one is the date and which one the shift.",
+  "importColumnsHeader": "The first row has the headings",
+  "importColumnDate": "Date",
+  "importColumnTitle": "Shift or code",
+  "importColumnStart": "Start time (optional)",
+  "importColumnEnd": "End time (optional)",
+  "importColumnNone": "None",
+  "importColumnNumber": "Column {number}",
+  "@importColumnNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "importColumnNamed": "{number}: {name}",
+  "@importColumnNamed": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importColumnsScrollHint": "Swipe sideways to see all the columns.",
+  "importColumnsPreview": "First rows",
+  "importMappingTitle": "Which shift does each title match?",
+  "importMappingHelp": "We group the events by title. Choose one of your shifts, create a new one or ignore them.",
+  "importMappingSummary": "{days, plural, =1{1 day} other{{days} days}} in {groups, plural, =1{1 title} other{{groups} titles}}",
+  "@importMappingSummary": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "groups": {
+        "type": "int"
+      }
+    }
+  },
+  "importMappingTruncated": "There are more than {limit} events: only the first ones have been read. Shorten the dates to see the rest.",
+  "@importMappingTruncated": {
+    "placeholders": {
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "importMappingSkippedRows": "{count, plural, =1{1 row was skipped because it has no valid date or shift (for example, line {line}).} other{{count} rows were skipped because they have no valid date or shift (for example, line {line}).}}",
+  "@importMappingSkippedRows": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "importMappingNothing": "Choose at least one title to import.",
+  "importGroupDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@importGroupDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importGroupAllDay": "All day",
+  "importGroupExamples": "e.g. {dates}",
+  "@importGroupExamples": {
+    "placeholders": {
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "importGroupUntitled": "Untitled",
+  "importMapIgnore": "Ignore",
+  "importMapCreate": "Create new type",
+  "importMapChoose": "Choose shift",
+  "importMapSuggested": "Suggested",
+  "importMapNew": "New: {name}",
+  "@importMapNew": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importMapPickTitle": "Which shift is “{title}”?",
+  "@importMapPickTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "importMapSemantics": "{title}: {choice}",
+  "@importMapSemantics": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "choice": {
+        "type": "String"
+      }
+    }
+  },
+  "importNewTypeTitle": "New shift type",
+  "importNewTypeUse": "Use this type",
+  "importPreviewTitle": "How it will look",
+  "importPreviewHelp": "Check the months. Nothing is saved until you tap Import.",
+  "importPreviewTarget": "Importing into “{name}”.",
+  "@importPreviewTarget": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importPreviewDays": "{count, plural, =1{1 day will be written.} other{{count} days will be written.}}",
+  "@importPreviewDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewUnchanged": "{count, plural, =1{1 day was already the same.} other{{count} days were already the same.}}",
+  "@importPreviewUnchanged": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewNewTypes": "{count, plural, =1{1 new shift type will be created.} other{{count} new shift types will be created.}}",
+  "@importPreviewNewTypes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewEmpty": "With these choices, no day changes.",
+  "importPreviewMoreMonths": "{count, plural, =1{And 1 more month not shown.} other{And {count} more months not shown.}}",
+  "@importPreviewMoreMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictsTitle": "{count, plural, =1{1 day already has a shift} other{{count} days already have a shift}}",
+  "@importConflictsTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictsHelp": "What should we do with them?",
+  "importConflictReplace": "Replace",
+  "importConflictKeep": "Keep mine",
+  "importConflictsExamples": "For example: {dates}",
+  "@importConflictsExamples": {
+    "placeholders": {
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "importApply": "{count, plural, =1{Import 1 day} other{Import {count} days}}",
+  "@importApply": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importApplied": "{count, plural, =1{1 day imported.} other{{count} days imported.}}",
+  "@importApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAppliedWithTypes": "{days, plural, =1{1 day imported} other{{days} days imported}} and {types, plural, =1{1 new shift type} other{{types} new shift types}}.",
+  "@importAppliedWithTypes": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "types": {
+        "type": "int"
+      }
+    }
+  },
+  "importUndoDone": "The import has been undone.",
+  "importUndoKeptTypes": "{count, plural, =1{The type “{names}” stays: something uses it.} other{The types “{names}” stay: something uses them.}}",
+  "@importUndoKeptTypes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "importApplyFailed": "Couldn’t import. Try again.",
+  "importProblemPermissionDenied": "Without the permission we can’t read your calendars.",
+  "importProblemPermissionRestricted": "This phone doesn’t let Cuadrante use the calendar. Try a file.",
+  "importProblemCalendarUnavailable": "This phone has no calendars available.",
+  "importProblemReadFailed": "Couldn’t read the events. Try again.",
+  "importProblemFileTooLarge": "The file is larger than 5 MB. When you export it, choose fewer dates.",
+  "importProblemFileUnreadable": "We couldn’t open that file. We accept .csv, .ics and the .Shifter backup from LRHSoft.",
+  "importProblemNotCalendar": "That file doesn’t look like an .ics calendar.",
+  "importProblemNotCsv": "We couldn’t find a date column in that CSV.",
+  "importProblemNoEvents": "There are no events on those dates.",
+  "importProblemTooComplex": "That file is too large or complex and takes too long. When you export it, choose fewer dates.",
+  "importProblemUnknown": "Something went wrong reading the file. Try another one.",
+  "importProblemNotLrhsoft": "That file doesn’t look like an LRHSoft backup (.Shifter). Try making another local backup.",
+  "importRangeLrhsoftDays": "{count, plural, =1{The backup has 1 day.} other{The backup has {count} days.}}",
+  "importMappingInvalidRows": "{count, plural, =1{1 invalid row ignored.} other{{count} invalid rows ignored.}}",
+  "importLrhsoftNotImported": "Alarms, drawings, photos and overtime aren’t brought over.",
+  "importNoteCount": "{count, plural, =1{1 note} other{{count} notes}}",
+  "importApplyNotes": "{count, plural, =1{Import 1 note} other{Import {count} notes}}",
+  "importAppliedNotes": "{count, plural, =1{1 note imported.} other{{count} notes imported.}}",
+  "importPreviewNotes": "{count, plural, =1{1 note will be added.} other{{count} notes will be added.}}",
+  "calExportTitle": "Export shifts",
+  "calExportHelp": "Adds your shifts as events to a calendar on your phone, once. If you do it again, Cuadrante replaces its earlier events on those dates instead of duplicating them.",
+  "calExportSource": "Exporting the shifts of “{name}”.",
+  "@calExportSource": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calExportCalendarLabel": "Calendar",
+  "calExportNewCalendar": "Create the “Cuadrante” calendar",
+  "calExportNewCalendarHelp": "That way you can hide it or delete it entirely whenever you like.",
+  "calExportRangeLabel": "Dates",
+  "calExportFrom": "From",
+  "calExportTo": "To",
+  "calExportIncludeRest": "Include days off",
+  "calExportIncludeRestHelp": "Off and Post-night are added too, as all-day events.",
+  "calExportIncludeAbsences": "Include absences",
+  "calExportIncludeAbsencesHelp": "Vacation, sick leave and other absences. They’d be added to that calendar and to the account it syncs with.",
+  "calExportSynced": "This calendar syncs with {account}: your shifts will show up there.",
+  "@calExportSynced": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "calExportSyncedUnnamed": "This calendar syncs with an account: your shifts will show up there.",
+  "calExportPlanAdd": "{count, plural, =1{1 event will be added.} other{{count} events will be added.}}",
+  "@calExportPlanAdd": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanReplace": "{count, plural, =1{1 event from an earlier export will be replaced.} other{{count} events from an earlier export will be replaced.}}",
+  "@calExportPlanReplace": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanRemove": "{count, plural, =1{1 event from an earlier export will be removed.} other{{count} events from an earlier export will be removed.}}",
+  "calExportPlanSame": "{count, plural, =1{1 event is already up to date.} other{{count} events are already up to date.}}",
+  "@calExportPlanSame": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanNothing": "Everything is up to date: nothing to change.",
+  "calExportPlanNone": "There are no shifts on those dates.",
+  "calExportButton": "Export",
+  "calExportRunning": "Exporting… {done} of {total}",
+  "@calExportRunning": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneTitle": "Export done",
+  "calExportDoneCalendar": "The “Cuadrante” calendar has been created.",
+  "calExportDoneCreated": "{count, plural, =1{1 event added} other{{count} events added}}",
+  "@calExportDoneCreated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneReplaced": "{count, plural, =1{1 earlier event replaced} other{{count} earlier events replaced}}",
+  "calExportDoneRemoved": "{count, plural, =1{1 event removed} other{{count} events removed}}",
+  "@calExportDoneRemoved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneSame": "{count, plural, =1{1 event was already up to date} other{{count} events were already up to date}}",
+  "@calExportDoneSame": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneFailed": "{count, plural, =1{1 event couldn’t be written. Export again to complete it.} other{{count} events couldn’t be written. Export again to complete them.}}",
+  "@calExportDoneFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportProblemPermission": "Without the permission we can’t write to your calendar.",
+  "calExportProblemUnavailable": "This phone has no calendars available.",
+  "calExportProblemFailed": "Couldn’t export. Try again.",
+  "calExportRangeClamped": "The maximum is one year: the end has been cut.",
+  "onboardingImportButton": "Import now",
+  "onboardingImportLrhsoftButton": "Import LRHSoft backup",
+  "backupUiRowSubtitle": "Automatic, export and import",
+  "backupUiStatusNoneTitle": "There’s no backup yet",
+  "backupUiStatusNoneBody": "Make one now: it takes a second. Until you have one, if you lose this device or uninstall the app, your schedule is lost.",
+  "backupUiStatusLast": "Last backup",
+  "backupUiStatusWhere": "On this device",
+  "backupUiStatusRunning": "Saving the backup…",
+  "backupUiStatusPending": "There are new changes: the backup will run in a few seconds.",
+  "backupUiStatusPendingAt": "There are new changes: the next backup will be made around {time}. If you don’t want to wait, tap “Back up now”.",
+  "backupUiStatusPendingLater": "There are new changes: the next backup will be made in a few minutes. If you don’t want to wait, tap “Back up now”.",
+  "backupUiStatusFailedTitle": "The last automatic backup failed",
+  "backupUiStatusFailedWithGood": "We tried {when} and it couldn’t be saved. Your last good backup is from {good}.",
+  "@backupUiStatusFailedWithGood": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "good": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiStatusFailedNoGood": "We tried {when} and it couldn’t be saved. You don’t have a good backup yet.",
+  "@backupUiStatusFailedNoGood": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiFailDiskFull": "The device has no free space.",
+  "backupUiFailGeneric": "The backup file couldn’t be written.",
+  "backupUiRetry": "Try again",
+  "backupUiSystemOn": "Android system backup: on",
+  "backupUiSystemOff": "Android system backup: off. Turn it on in the Android settings to have another copy.",
+  "backupUiSystemUnknown": "Android system backup: we can’t check it from the app. Make sure it’s on in the Android settings.",
+  "backupUiWarning": "These backups are kept on this device. If you uninstall the app without another copy, it’s lost. Export a file and save it to Drive or send it by WhatsApp or email.",
+  "backupUiBackupNow": "Back up now",
+  "backupUiBackupDone": "Backup done",
+  "backupUiBackupFailed": "Couldn’t make the backup. Your data is as it was.",
+  "backupUiAutoTitle": "Automatic backups",
+  "backupUiAutoOn": "After you change something, without you noticing. We keep the last 7 and one per day for 30 days.",
+  "backupUiAutoOff": "Off: a backup is only made when you ask for it.",
+  "backupUiSectionFile": "File",
+  "backupUiSectionCheck": "Check",
+  "backupUiSectionCopies": "Backups on this device",
+  "backupUiExport": "Export file",
+  "backupUiExportSubtitle": "To save it to Drive or send it by WhatsApp or email",
+  "backupUiExportFailed": "Couldn’t export the file.",
+  "backupUiSave": "Save to device",
+  "backupUiSaveSubtitle": "Choose a folder, for example Downloads",
+  "backupUiSaveDone": "File saved",
+  "backupUiSaveFailed": "The file couldn’t be saved. Try another folder or use “Export file”.",
+  "backupUiImport": "Import file",
+  "backupUiImportSubtitle": "Recover a Cuadrante file",
+  "backupUiVerify": "Test restore",
+  "backupUiVerifySubtitle": "Checks that your latest backup can be fully recovered",
+  "backupUiVerifyRunning": "Checking the backup…",
+  "backupUiVerifyNone": "There’s no backup to test yet. Make one first.",
+  "backupUiVerifyOk": "{days, plural, =1{The backup is complete: 1 day checked} other{The backup is complete: {days} days checked}}",
+  "@backupUiVerifyOk": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "backupUiVerifySame": "It’s identical to what you have now.",
+  "backupUiVerifyOlder": "It’s older than what you have now (the first day that differs is {day}). That’s normal if you’ve made changes since.",
+  "@backupUiVerifyOlder": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiVerifyOlderNoDay": "It’s older than what you have now. That’s normal if you’ve made changes since.",
+  "backupUiVerifyMismatch": "The backup doesn’t rebuild the same. First day that differs: {day}. Make a new backup and let us know.",
+  "@backupUiVerifyMismatch": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiVerifyMismatchNoDay": "The backup doesn’t rebuild the same: the saved data doesn’t match. Make a new backup and let us know.",
+  "backupUiVerifyError": "Couldn’t test the backup. {reason}",
+  "@backupUiVerifyError": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiCopiesEmpty": "Your backups will show up here.",
+  "backupUiCopyLocal": "Device backup",
+  "backupUiCopySafety": "Before restoring",
+  "backupUiCopyMeta": "{kind} · {size}",
+  "@backupUiCopyMeta": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiCopyMetaVersion": "{kind} · {version} · {size}",
+  "backupUiCopyRestore": "Restore this one",
+  "backupUiCopyRestoreLabel": "Restore the backup from {when}",
+  "@backupUiCopyRestoreLabel": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenToday": "today at {time}",
+  "@backupUiWhenToday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenYesterday": "yesterday at {time}",
+  "@backupUiWhenYesterday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenDate": "{date} at {time}",
+  "@backupUiWhenDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewTitle": "Restore backup",
+  "backupUiPreviewReading": "Reading the file…",
+  "backupUiOriginFile": "File you chose",
+  "backupUiOriginShared": "File received from another app",
+  "backupUiOriginLocal": "Backup on this device",
+  "backupUiOriginSafety": "Backup from just before restoring",
+  "backupUiOriginCloud": "iCloud backup",
+  "backupUiPreviewSaved": "Saved {when}",
+  "@backupUiPreviewSaved": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewSender": "Sent from {sender}",
+  "@backupUiPreviewSender": {
+    "placeholders": {
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewSenderHint": "Your device says so. If you weren’t expecting this file, cancel.",
+  "backupUiPreviewTurnsOffTitle": "This backup turns off settings you have on",
+  "backupUiPreviewTurnsOffAuto": "Turns off automatic backups.",
+  "backupUiPreviewTurnsOffAlarms": "Turns off shift alarms.",
+  "backupUiPreviewContains": "What’s inside",
+  "backupUiPreviewNow": "Now: {value}",
+  "@backupUiPreviewNow": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewCalendars": "Calendars",
+  "backupUiPreviewArchived": "{name} (archived)",
+  "@backupUiPreviewArchived": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewDays": "Days with a shift or note set by hand",
+  "backupUiPreviewRuns": "Rotations",
+  "backupUiPreviewTypes": "Shift types",
+  "backupUiPreviewRange": "Dates",
+  "backupUiPreviewRangeValue": "From {from} to {to}",
+  "@backupUiPreviewRangeValue": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewRangeOpen": "From {from} to {to}, and a rotation goes on after that",
+  "@backupUiPreviewRangeOpen": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewRangeNone": "No dates",
+  "backupUiPreviewReplace": "This replaces what you have now; we save a backup first.",
+  "backupUiPreviewConfirm": "Replace what I have",
+  "backupUiPreviewCancel": "Cancel",
+  "backupUiRestoring": "Restoring your schedule…",
+  "backupUiRestoringHint": "Don’t close the app.",
+  "backupUiDoneTitle": "Done, your schedule is restored",
+  "backupUiDoneBody": "Before changing anything, we saved what you had. If it wasn’t what you expected, you can go back.",
+  "backupUiDoneView": "See my calendar",
+  "backupUiDoneUndo": "Put it back as it was",
+  "backupUiErrorNotOurs": "This file isn’t a Cuadrante backup.",
+  "backupUiErrorNewer": "This file is from a newer version of Cuadrante: update the app.",
+  "backupUiErrorCorrupt": "The file is damaged or incomplete and can’t be used.",
+  "backupUiErrorTooLarge": "This file is too large to be a Cuadrante backup.",
+  "backupUiErrorUnreadable": "Couldn’t read the file.",
+  "backupUiErrorUntouched": "We haven’t changed anything: your data is as it was.",
+  "backupUiErrorRestoreFailed": "Couldn’t restore. Your data is as it was.",
+  "backupUiErrorRestoreReload": "We restored your data, but the screen couldn’t be updated. Close Cuadrante and open it again.",
+  "backupUiBack": "Back",
+  "widgetWeekdaysShort": "Mon,Tue,Wed,Thu,Fri,Sat,Sun",
+  "@widgetWeekdaysShort": {
+    "description": "Widget: los siete días de la semana abreviados, de lunes a domingo, separados por comas (sin espacios)."
+  },
+  "widgetWeekdayHeaders": "M,T,W,T,F,S,S",
+  "@widgetWeekdayHeaders": {
+    "description": "Widget: inicial de cada día de la semana, de lunes a domingo, separadas por comas."
+  },
+  "widgetMonthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+  "@widgetMonthNames": {
+    "description": "Widget: los doce meses en minúsculas, separados por comas (sin espacios)."
+  },
+  "widgetTomorrow": "Tomorrow",
+  "@widgetTomorrow": {
+    "description": "Widget: prefijo de la línea del día siguiente («Mañana: T 14–22»)."
+  },
+  "widgetEmptyCircular": "–",
+  "widgetStaleTitle": "Cuadrante",
+  "widgetStaleBody": "Open Cuadrante to stay up to date",
+  "@widgetStaleBody": {
+    "description": "Widget: aviso cuando los datos publicados ya no cubren el día de hoy."
+  },
+  "widgetAddTitle": "Add widget",
+  "widgetAddSubtitle": "Today’s shift on your home screen",
+  "widgetAddBody": "The widget always shows today, even if you don’t open the app.",
+  "widgetAddSmall": "Small: today and tomorrow",
+  "widgetAddMedium": "Medium: the next 7 days",
+  "widgetAddLarge": "Large: the whole month",
+  "widgetAddAgenda": "Agenda: upcoming shifts",
+  "widgetAddTwoWeeks": "Two weeks: current and next",
+  "widgetAddManualAndroid": "Touch and hold an empty area of the home screen, choose Widgets and look for Cuadrante.",
+  "widgetAddManualIos": "Touch and hold the home screen, tap the + at the top and look for Cuadrante.",
+  "compareTitle": "Compare calendars",
+  "compareOpen": "Compare calendars",
+  "compareOpenSubtitle": "See when you’re both off",
+  "compareSwap": "Swap",
+  "compareIntro": "Choose two calendars and see their shifts together. Days when both are off are marked.",
+  "compareFirstLabel": "First calendar",
+  "compareSecondLabel": "Second calendar",
+  "comparePickTitle": "Choose a calendar",
+  "compareNeedTwoTitle": "You need two calendars",
+  "compareNeedTwoBody": "Create another calendar (your partner, a second job) to see when you’re both off.",
+  "compareCount": "{count, plural, =0{No shared days off this month} =1{1 shared day off this month} other{{count} shared days off this month}}",
+  "@compareCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "compareFreeListTitle": "Shared days off",
+  "compareLegendFree": "Both off",
+  "compareNote": "A day counts as off when it has no work shift: empty, off, or an absence (vacation, sick leave…). Each shift counts on the day it starts.",
+  "compareNoShiftMark": "–",
+  "compareBothFree": "both off",
+  "compareCellCalendar": "{calendar}: {shifts}",
+  "@compareCellCalendar": {
+    "placeholders": {
+      "calendar": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "compareLoadFailed": "Couldn’t read the calendars.",
+  "calendarsTitle": "Calendars",
+  "calendarsIntro": "Each calendar has its own schedule: yours, your partner’s, a second job. Shift types are the same in all of them.",
+  "calendarsActiveBadge": "Active",
+  "calendarsPrimaryBadge": "Widget and alarms",
+  "calendarsAdd": "New calendar",
+  "calendarsNewTitle": "New calendar",
+  "calendarsEditTitle": "Edit calendar",
+  "calendarsNameLabel": "Name",
+  "calendarsNameHint": "Partner, second job…",
+  "calendarsColorLabel": "Color",
+  "calendarsColorOption": "Color {index}",
+  "@calendarsColorOption": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarsCreate": "Create",
+  "calendarsMakePrimary": "Use for widget and alarms",
+  "calendarsPrimaryHelp": "The widget and the alarms follow this calendar even when you’re looking at another one.",
+  "calendarsArchive": "Archive",
+  "calendarsArchiveTitle": "Archive “{name}”?",
+  "@calendarsArchiveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsArchiveBody": "It won’t show up in the list anymore, but you can restore it from “Archived”. Its shifts stay saved on your phone.",
+  "calendarsArchivePrimaryNote": "The widget and the alarms will switch to “{name}”.",
+  "@calendarsArchivePrimaryNote": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsArchivedSection": "Archived ({count})",
+  "@calendarsArchivedSection": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarsRestore": "Restore",
+  "calendarsRestoreSemantic": "Restore “{name}”",
+  "@calendarsRestoreSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsRestored": "“{name}” restored",
+  "@calendarsRestored": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsLastError": "You can’t archive the last calendar: there always has to be one.",
+  "calendarsNameRequired": "Give the calendar a name.",
+  "calendarsNotFoundError": "That calendar no longer exists.",
+  "calendarsSaveFailed": "Couldn’t save the calendar. Try again.",
+  "calendarsSwitcherLabel": "Calendar {name}. Switch calendar",
+  "@calendarsSwitcherLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsSwitcherTitle": "Switch calendar",
+  "calendarsSwitchFailed": "Couldn’t switch calendar.",
+  "calendarsManage": "Manage calendars",
+  "holidayImportAction": "Bring public holidays from your phone’s calendar",
+  "holidayImportTitle": "Public holidays",
+  "holidayImportHelp": "All-day events only. Everything stays on your phone; your calendar stays as it is.",
+  "holidayImportRangeHelp": "Starts with this year and next year.",
+  "holidayImportSkipped": "Already exists · skipped",
+  "holidayImportReady": "Will be added",
+  "holidayImportIgnored": "{count, plural, =1{1 timed event is skipped.} other{{count} timed events are skipped.}}",
+  "@holidayImportIgnored": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportCapped": "{count, plural, =1{1 event exceeds 31 days: it is shortened.} other{{count} events exceed 31 days: they are shortened.}}",
+  "@holidayImportCapped": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportAdd": "{count, plural, =1{Add 1 public holiday} other{Add {count} public holidays}}",
+  "@holidayImportAdd": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportAdded": "{count, plural, =1{1 public holiday added} other{{count} public holidays added}}",
+  "@holidayImportAdded": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportEmpty": "No new public holidays.",
+  "holidayImportPreviewHelp": "Dates that already have a public holiday are skipped.",
+
+  "holidaysSettingsRegionTitle": "Region",
+  "holidaysSettingsRegionUnset": "Not chosen",
+  "holidaysSettingsRegionClear": "No region",
+  "holidaysSettingsMunicipalityTitle": "Town",
+  "holidaysSettingsMunicipalityNone": "None",
+  "holidaysSettingsMunicipalitySearch": "Search town",
+  "holidaysSettingsMunicipalityNoMatch": "No town matches “{query}”",
+  "@holidaysSettingsMunicipalityNoMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsMunicipalityLoadFailed": "Couldn’t load the list of towns.",
+  "holidaysSettingsStatusNoRegion": "Without a region, only national public holidays show. Choose yours to see the regional ones.",
+  "holidaysSettingsStatusNoMunicipality": "Choose your town to see its local holidays, or add them yourself below.",
+  "holidaysSettingsStatusLocalIncluded": "Local holidays of {municipality}: included",
+  "@holidaysSettingsStatusLocalIncluded": {
+    "placeholders": {
+      "municipality": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusYearPending": "The official public holidays for {year} will come with an update",
+  "@holidaysSettingsStatusYearPending": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusLocalMissing": "We don’t have your town’s yet: add them yourself below",
+  "holidaysSettingsStatusLocalMissingYear": "We don’t have {municipality}’s for {year} yet: add them yourself below",
+  "@holidaysSettingsStatusLocalMissingYear": {
+    "placeholders": {
+      "municipality": {
+        "type": "String"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusLocalPartial": "Some may be missing: check them.",
+  "holidaysSettingsAdd": "Add local holiday",
+  "holidaysSettingsAddName": "Name",
+  "holidaysSettingsAddDefaultName": "Local holiday",
+  "holidaysSettingsEmptyYear": "We don’t have the public holidays for {year} yet.",
+  "@holidaysSettingsEmptyYear": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsScopeNational": "National",
+  "holidaysSettingsScopeLocal": "Local",
+  "holidaysSettingsScopeUser": "Yours",
+  "holidaysSettingsNoteReplaces": "Replaces {name}",
+  "@holidaysSettingsNoteReplaces": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsNoteCovered": "In your calendar, “{name}” covers it",
+  "@holidaysSettingsNoteCovered": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsSubstitutedTitle": "Not public holidays in {region}",
+  "@holidaysSettingsSubstitutedTitle": {
+    "placeholders": {
+      "region": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsSubstitutedBody": "A region can swap these national public holidays for its own.",
+  "holidaysSettingsRemove": "Remove public holiday",
+  "holidaysSettingsRemoved": "Public holiday removed: {name}",
+  "@holidaysSettingsRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsRowSemantics": "{date}. {name}. {scope}",
+  "@holidaysSettingsRowSemantics": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      },
+      "scope": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmTitle": "{name} shift at {start}",
+  "@alarmTitle": {
+    "description": "Título del aviso de turno, p. ej. «Turno de Noche a las 22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmBody": "{name}: from {start} to {end}",
+  "@alarmBody": {
+    "description": "Cuerpo del aviso de turno, p. ej. «Noche: de 22:00 a 06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmChannelName": "Shift alarms",
+  "@alarmChannelName": {
+    "description": "Nombre del canal de notificaciones de Android para las alarmas de turno."
+  },
+  "alarmChannelDescription": "Alerts you before each shift starts.",
+  "@alarmChannelDescription": {
+    "description": "Descripción del canal de Android de las alarmas de turno."
+  },
+  "alarmsNotifDayBeforeTitle": "Tomorrow: {name} shift at {start}",
+  "@alarmsNotifDayBeforeTitle": {
+    "description": "Título del aviso del día anterior, p. ej. «Mañana: turno de Noche a las 22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNotifSnooze": "Snooze 10 min",
+  "@alarmsNotifSnooze": {
+    "description": "Botón del aviso de turno: vuelve a sonar dentro de 10 minutos."
+  },
+  "alarmsNotifAwake": "I’m awake",
+  "@alarmsNotifAwake": {
+    "description": "Botón del aviso de turno: lo descarta."
+  },
+  "alarmsNotifTestTitle": "Test alert",
+  "alarmsNotifTestBody": "This is how Cuadrante will alert you before your shift.",
+  "alarmsRowOn": "On",
+  "alarmsRowOff": "Off",
+  "alarmsMasterTitle": "Alert before each shift",
+  "alarmsMasterHelp": "An alert on your phone, offline and without an account.",
+  "alarmsPermOkTitle": "All set",
+  "alarmsPermOkBody": "Notifications and exact-time alarms are allowed.",
+  "alarmsPermNotifTitle": "Notifications are off",
+  "alarmsPermNotifBody": "Without notification permission, Cuadrante can’t alert you. If the window to allow them doesn’t appear, turn them on in the system settings.",
+  "alarmsPermNotifAllow": "Allow",
+  "alarmsPermNotifBlockedBody": "Android no longer asks you about notifications. Turn them on in the system settings and Cuadrante will be able to alert you.",
+  "alarmsPermNotifOpenSettings": "Open settings",
+  "alarmsPermExactTitle": "Alarms & reminders",
+  "alarmsPermExactBody": "Alarms may arrive a few minutes late. For them to ring at the exact time, allow “Alarms & reminders” in the system settings.",
+  "alarmsPermExactOpen": "Open settings",
+  "alarmsSectionTypes": "Shift types",
+  "alarmsTypesEmpty": "None of your shifts has times. Set a time in My shifts so Cuadrante can alert you.",
+  "alarmsBeforeTitle": "Before the shift",
+  "alarmsBeforeAtStart": "When it starts",
+  "alarmsBeforeSheetTitle": "How long before the shift",
+  "alarmsBeforeCustom": "Custom",
+  "alarmsBeforeCustomTitle": "Custom lead time",
+  "alarmsBeforeCustomHelp": "Hours and minutes before the shift starts.",
+  "alarmsBeforeCustomApply": "Save",
+  "alarmsSecondSegmentTitle": "Also alert before the second part",
+  "alarmsSecondSegmentHelper": "A second alert, with the same lead time, before going back to work.",
+  "alarmsDayBeforeTitle": "Alert the day before",
+  "alarmsDayBeforeAt": "At {time}",
+  "@alarmsDayBeforeAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsDayBeforeTimeTitle": "Alert time",
+  "alarmsLabelTitle": "Alert text",
+  "alarmsLabelDefault": "The usual one",
+  "alarmsLabelHint": "For example: Time for work",
+  "alarmsLabelApply": "Save",
+  "alarmsLabelReset": "Use the usual one",
+  "alarmsTestButton": "Test alert",
+  "alarmsTestScheduled": "We’ll alert you in 10 seconds.",
+  "alarmsTestDenied": "Without notification permission we can’t test the alert.",
+  "alarmsNextLine": "Next alert: {when} · {shift}",
+  "@alarmsNextLine": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextLineDayBefore": "Next alert: {when} · {shift}, the day before",
+  "@alarmsNextLineDayBefore": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextWhen": "{weekday}, {month} {day}, {time}",
+  "@alarmsNextWhen": {
+    "description": "Cuándo suena el próximo aviso, p. ej. «mié 21 de octubre, 20:30».",
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "day": {
+        "type": "int"
+      },
+      "month": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextNone": "No alerts coming up in the next few days.",
+  "alarmsNextOff": "Alarms are off.",
+  "alarmsSkipDay": "No alarm this day",
+  "alarmsReminderTitle": "Reminder",
+  "@alarmsReminderTitle": {
+    "description": "Título de la notificación del recordatorio de una nota."
+  },
+  "alarmsReminderEmptyBody": "You have a reminder for today",
+  "@alarmsReminderEmptyBody": {
+    "description": "Texto de la notificación del recordatorio cuando la nota no tiene texto."
+  },
+  "alarmsReminderChannelName": "Note reminders",
+  "@alarmsReminderChannelName": {
+    "description": "Nombre del canal de notificaciones de Android para los recordatorios de las notas."
+  },
+  "alarmsReminderChannelDescription": "Alerts you at the time you choose in a day’s note.",
+  "@alarmsReminderChannelDescription": {
+    "description": "Descripción del canal de Android de los recordatorios de notas."
+  },
+  "dayReminderAdd": "Remind me",
+  "@dayReminderAdd": {
+    "description": "Botón del detalle del día, bajo la nota: pide una hora y programa un aviso."
+  },
+  "dayReminderAt": "Alert at {time}",
+  "@dayReminderAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dayReminderChange": "Change the alert time",
+  "@dayReminderChange": {
+    "description": "Descripción accesible de la fila del aviso: tocarla cambia la hora."
+  },
+  "dayReminderRemove": "Remove alert",
+  "dayReminderRemoved": "Alert removed",
+  "dayReminderPickHelp": "Alert time",
+  "dayReminderPast": "That time has passed: it won’t ring.",
+  "dayReminderNoPermission": "Notifications are off, so the alert won’t ring. Turn them on in your phone’s settings.",
+  "dayReminderOnlyPrimary": "Only alerts from the main calendar ring.",
+  "agendaSemanticsReminder": "alert at {time}",
+  "@agendaSemanticsReminder": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesAlarmSection": "Alarm",
+  "@shiftTypesAlarmSection": {
+    "description": "Cabecera de la sección de alarma del editor de un tipo de turno."
+  },
+  "shiftTypesSoundLabel": "Sound",
+  "shiftTypesSoundHelper": "Rings at alarm volume, once you turn on this shift’s alarm in Settings.",
+  "shiftTypesSoundDefault": "Default",
+  "shiftTypesSoundCustom": "Phone sound",
+  "@shiftTypesSoundCustom": {
+    "description": "Valor de la fila Sonido cuando hay un sonido elegido pero el móvil no ha dado su nombre."
+  },
+  "shiftTypesSoundMissing": "Not available: the default rings",
+  "shiftTypesSoundReset": "Use the default",
+  "catalogShiftMorningName": "Morning",
+  "@catalogShiftMorningName": {
+    "description": "Plantillas de tipo de turno: nombre y código (1 a 3 caracteres, sin espacios, distinto en cada plantilla). Solo se usan al crear el tipo (instalación nueva, saliente automático…); los tipos ya guardados no se renombran."
+  },
+  "catalogShiftMorningCode": "M",
+  "catalogShiftAfternoonName": "Afternoon",
+  "catalogShiftAfternoonCode": "A",
+  "catalogShiftNightName": "Night",
+  "catalogShiftNightCode": "N",
+  "catalogShiftRestName": "Off",
+  "catalogShiftRestCode": "O",
+  "catalogShiftGuard24Name": "24-hour shift",
+  "catalogShiftGuard24Code": "24",
+  "catalogShiftPostNightName": "Post-night",
+  "catalogShiftPostNightCode": "PN",
+  "catalogShiftVacationName": "Vacation",
+  "catalogShiftVacationCode": "V",
+  "catalogShiftPersonalDayName": "Personal day",
+  "catalogShiftPersonalDayCode": "PD",
+  "catalogShiftDay12Name": "Day 12 h",
+  "catalogShiftDay12Code": "D",
+  "catalogShiftNight12Name": "Night 12 h",
+  "catalogShiftNight12Code": "N12",
+  "catalogShiftSplitName": "Split",
+  "@catalogShiftSplitName": {
+    "description": "Nombre que propone «Usar «Partido 09–13 / 17–21»» en el editor de turnos."
+  },
+  "catalogShiftSplitCode": "S",
+  "catalogPatternCorreturnosName": "Rotating shifts",
+  "@catalogPatternCorreturnosName": {
+    "description": "Catálogo de rotaciones: nombre y descripción de cada patrón (asistente de patrón y primer uso)."
+  },
+  "catalogPatternCorreturnosDescription": "5 mornings, 2 off, 5 afternoons, 2 off, 5 nights, 2 off",
+  "catalogPattern24x72Name": "24 x 72",
+  "catalogPattern24x72Description": "24-hour shift and 72 hours off",
+  "catalogPattern12hName": "12 hours",
+  "catalogPattern12hDescription": "Day 12 h, night 12 h, post-night and off",
+  "catalogPattern6x4Name": "6 x 4",
+  "catalogPattern6x4Description": "6 mornings and 4 off",
+  "catalogPattern4x4Name": "4 x 4",
+  "catalogPattern4x4Description": "4 12-hour days and 4 off",
+  "catalogPattern5x2Name": "5 x 2",
+  "catalogPattern5x2Description": "5 mornings and 2 off (Monday to Friday)",
+  "catalogPattern223Name": "2-2-3",
+  "catalogPattern223Description": "Two 12-hour days, two off, three 12-hour days, two off, two 12-hour days and three off (also 2-2-3-2-2-3)",
+  "catalogPatternContinentalName": "Continental",
+  "catalogPatternContinentalDescription": "28-day continuous rotation with 4 crews: blocks of 2 and 3 mornings, afternoons and nights, and 7 off",
+  "catalogPatternDupontName": "DuPont",
+  "catalogPatternDupontDescription": "28-day cycle of 12-hour shifts: 4 nights, 3 off, 3 days, 1 off, 3 nights, 3 off, 4 days and 7 off",
+  "holidayNameNewYear": "New Year’s Day",
+  "holidayNameEpiphany": "Epiphany",
+  "holidayNameMaundyThursday": "Maundy Thursday",
+  "holidayNameGoodFriday": "Good Friday",
+  "holidayNameEasterMonday": "Easter Monday",
+  "holidayNameLabourDay": "Labour Day",
+  "holidayNameAssumption": "Assumption Day",
+  "holidayNameNationalDay": "National Day of Spain",
+  "holidayNameAllSaints": "All Saints’ Day",
+  "holidayNameConstitution": "Constitution Day",
+  "holidayNameImmaculate": "Immaculate Conception",
+  "holidayNameChristmas": "Christmas Day",
+  "holidayNameStStephen": "St Stephen’s Day",
+  "holidayNameStJoseph": "St Joseph’s Day",
+  "holidayNameStJames": "St James’ Day",
+  "holidayNameGaliciaDay": "Galicia Day",
+  "holidayNameStJamesGalicia": "St James’ Day / Galicia Day",
+  "holidayNameCataloniaDay": "Catalonia National Day",
+  "holidayNameBasqueDay": "Basque Country Day",
+  "catalogCalendarMainName": "My roster",
+  "historyUndone": "Change undone",
+  "historyRedone": "Change redone",
+  "historyNothingToUndo": "Nothing to undo",
+  "historyNothingToRedo": "Nothing to redo",
+  "monthPresentationGrid": "Grid",
+  "monthPresentationList": "List",
+  "monthSelectDays": "Select days",
+  "monthSelectDay": "Tap to select this day",
+  "monthListRecommended": "List recommended for full times and large text.",
+  "monthListSelected": "List view",
+  "monthGridSelected": "Grid view"
+}

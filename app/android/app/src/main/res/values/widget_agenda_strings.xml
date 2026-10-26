@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_agenda_label">Cuadrante: próximos días</string>
+    <string name="widget_two_weeks_label">Cuadrante: dos semanas</string>
+    <string name="widget_agenda_description">Hoy y los próximos días, con turnos y notas. Cambia de día solo.</string>
+    <string name="widget_two_weeks_description">Esta semana y la siguiente, desde el lunes. Cambia de día solo.</string>
+    <string name="widget_no_shift">Sin turno</string>
+    <string name="widget_has_note">Tiene nota</string>
+</resources>

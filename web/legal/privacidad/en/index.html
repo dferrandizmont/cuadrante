@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Cuadrante privacy policy</title>
+<meta name="description" content="Cuadrante privacy policy">
+<link rel="canonical" href="https://dferrandizmont.github.io/cuadrante/privacidad/en/">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<main id="contenido">
+<nav aria-label="Language"><a href="../" lang="es" hreflang="es">Español</a></nav>
+<h1>Cuadrante privacy policy</h1>
+<p>Last updated: 26 October 2026</p>
+<p>Courtesy translation. The Spanish version (<a href="../">politica-privacidad.md</a>) is the one that applies.</p>
+<p>Cuadrante is a shift-work calendar app for shift workers in Spain. It is an independent app: not created, reviewed or endorsed by any company, public body or union.</p>
+<p>Summary: <strong>you have no account, there is no server of ours and your shifts stay on your phone.</strong> The app is entirely free and open source, and sends no data or crash reports to anyone. The only things that can take your data off the phone are the backups of your Google or Apple account and the files or calendars you choose to export, and you control those.</p>
+<h2>1. Data controller</h2>
+<ul>
+<li>Holder: Daniel Mont Ferrandiz</li>
+<li>Contact email: <a href="mailto:dev@mainshai.com">dev@mainshai.com</a></li>
+</ul>
+<h2>2. What data is processed</h2>
+<h3>Data that stays on your phone (we never receive it)</h3>
+<p>Your calendars, shift types, rotations, day changes, notes, reminders, overtime, absences (holidays, personal days, leave and sick leave), public holidays, region and municipality, hourly rate and settings are stored only in a local database on the device. Official holidays ship inside the app and everything works offline. There is no sync and no copy on any server of ours.</p>
+<p><strong>Your sick leave is health data.</strong> We never receive it: there is no server, no analytics and no shared calendar. Alarms do not ring on absence days, and a note reminder on an absence day does not show the note&#x27;s text, so none of that reaches the lock screen. Bear in mind, though, that:</p>
+<ul>
+<li>the today, week and month widgets show the day&#x27;s shifts on your home screen, including an absence with the code and colour you gave it, and their screen-reader description names them. The agenda and two-week widgets only say &quot;Absence&quot;. The text of your notes never goes to the widget;</li>
+<li>absences, sick leave included, are part of your backups (see below), like the rest of your shifts.</li>
+</ul>
+<h3>Backups</h3>
+<p>The app makes <strong>automatic backups on your own phone</strong> and lets you <strong>export a backup to a <code>.cuadrante</code> file</strong> (Settings › Backup) to keep wherever you like or move to another phone, and restore it later. That file contains your shifts, notes and absences, carries no identifier and is not encrypted; you keep and control it: the app only hands it to the app you pick in the system share sheet. What you do with it afterwards (upload it to your cloud, send it by WhatsApp or email...) is outside the app. When you open a <code>.cuadrante</code>, nothing is restored until you confirm.</p>
+<p><strong>System backup.</strong> On Android, if Google backup is on, the system periodically uploads the app&#x27;s database and backups to your Google account and moves them to your new phone; on Android 9 or later it is end-to-end encrypted with your screen lock, if you have one. On iPhone, the database is part of the device backup (iCloud or computer). You manage those backups with your Google or Apple account and can turn them off in the system settings; the app sends nothing on its own and keeps no backup of its own in iCloud.</p>
+<h3>Phone calendar</h3>
+<p>Only if you ask, and only at that moment:</p>
+<ul>
+<li><strong>Import</strong> reads the events of the calendar you choose (or of an <code>.ics</code> or CSV file, or a backup from another shift app) to suggest shifts. They are read and grouped on your phone, and only what you accept is saved.</li>
+<li><strong>Export</strong> writes your shifts (name, code and hours; never notes or amounts) to the phone calendar you choose. <strong>If that calendar syncs with an account</strong> (Google, iCloud, Exchange...), your shifts will also appear in that account: the system uploads them, outside the app&#x27;s control. The screen warns you. Absences and days off are not exported unless you turn on their switches.</li>
+</ul>
+<p>The calendar permission is requested when you start importing or exporting, never at launch, and the app does not read or write the calendar in the background.</p>
+<h3>Permissions</h3>
+<p>Besides the calendar, the app asks for <strong>notifications</strong> and <strong>alarms and reminders</strong> permission when you enable shift alarms or a note reminder, so they ring on time and the widget changes day at midnight. If you decline, alarms may ring late. It does not ask for location, contacts, photos, camera, microphone or general storage access, and the published Android version has no network permission.</p>
+<h3>Communications</h3>
+<p>The app transmits no shifts, identifiers or crash reports. It uses no purchases, ads, analytics or third-party services. Errors are handled on the device only.</p>
+<p>If you tap &quot;Privacy policy&quot; in Settings › Help, this page opens in your external browser. The browser connects to the website; Cuadrante sends it none of your shifts, notes or absences.</p>
+<h3>Data NOT processed</h3>
+<ul>
+<li>We do not ask for or store your name, email, phone, ID number, date of birth or employer details.</li>
+<li>No analytics, no ads, no personalised advertising, no cross-app tracking.</li>
+<li>We do not access your location, contacts, photos, camera or microphone.</li>
+<li>We do not receive your shifts, notes, absences or hours.</li>
+</ul>
+<h3>If you write to us</h3>
+<p>&quot;Help and contact&quot; (Settings) shows you the support address to copy so you can write from your own mail app, with the app version if you want to attach it. The app opens no mail client and sends nothing by itself. If you write to us, we process your email address and what you tell us only to reply. Do not send us <code>.cuadrante</code> backups or screenshots with real shifts, notes or absences: made-up data is enough to fix a bug.</p>
+<h2>3. Purposes and legal basis</h2>
+<div class="tabla" role="region" aria-label="Purposes and legal basis" tabindex="0"><table><thead><tr>
+<th scope="col">Processing</th><th scope="col">Purpose</th><th scope="col">Legal basis (GDPR)</th>
+</tr></thead><tbody>
+<tr><td>Shifts, notes, absences and settings on your phone</td><td>Keeping your roster, hours and alarms</td><td>We do not receive them: they stay on your device, under your control</td></tr>
+<tr><td>Backups and exports</td><td>Not losing your data and changing phones</td><td>You make them; the services you use (Google, Apple, your cloud) have their own terms</td></tr>
+<tr><td>Support emails</td><td>Answering your query</td><td>Your request and our legitimate interest in handling it (art. 6(1)(f))</td></tr>
+</tbody></table></div>
+<p>We make no automated decisions and build no profiles about you.</p>
+<h2>4. Who receives the data</h2>
+<p>The app transmits no data to third parties. If you send a support email, the holder receives it at <a href="mailto:dev@mainshai.com">dev@mainshai.com</a> through the mail service you choose. If you export to a synced calendar or have system backup on, the recipient of that data is your account provider (Google, Apple or another), on your behalf and under its terms.</p>
+<h2>5. International transfers</h2>
+<p>The app makes no data transfers. External services you decide to use (mail, cloud, synced calendar or the destination of an export) are governed by their own terms.</p>
+<h2>6. Retention</h2>
+<ul>
+<li><strong>Data on your phone:</strong> until you uninstall the app or clear its data from the system settings (and, where relevant, from your account&#x27;s backups and the files you exported).</li>
+<li><strong>Support emails:</strong> as long as needed to handle your query and at most one year after the last reply.</li>
+</ul>
+<h2>7. Your rights</h2>
+<p>You can exercise your rights of <strong>access, rectification, erasure, objection, restriction of processing and portability</strong> by writing to <a href="mailto:dev@mainshai.com">dev@mainshai.com</a>. We will reply within one month.</p>
+<p>We do not receive the data stored on your phone, so we cannot see or delete it for you. You can delete it by uninstalling the app or clearing its data from the system settings, and take it with you using &quot;Export backup&quot;.</p>
+<p>If you believe we have not handled your data properly, you can complain to the Spanish Data Protection Agency: <a href="https://www.aepd.es">https://www.aepd.es</a></p>
+<h2>8. Minors</h2>
+<p>The app is meant for working people. It does not ask for age or collect personal data from anyone, minors included: shifts and settings stay on the device.</p>
+<h2>9. Security</h2>
+<p>There is no server and no data transmission from the app. Automatic backups are kept in the app&#x27;s private folder. You control exported files and the backups of your Google or Apple account; if your phone has a screen lock, the Google backup is encrypted with it. The code is public and anyone can check what it does.</p>
+<h2>10. Changes to this policy</h2>
+<p>If what the app does with data changes, we will update this page and the date above. If the change is significant (for example, if an iCloud backup or any feature that sends data were ever added, which would only be enabled with your consent), we will also tell you inside the app.</p>
+<h2>11. Contact</h2>
+<p><a href="mailto:dev@mainshai.com">dev@mainshai.com</a></p>
+<footer><a href="../../">Cuadrante</a></footer>
+</main>
+</body>
+</html>

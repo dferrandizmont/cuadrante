@@ -1,0 +1,2761 @@
+{
+  "@@locale": "eu",
+  "appName": "Cuadrante",
+  "@appName": {
+    "description": "Nombre de la app (título de ventana y cabeceras)."
+  },
+  "cancel": "Utzi",
+  "close": "Itxi",
+  "delete": "Ezabatu",
+  "save": "Gorde",
+  "undo": "Desegin",
+  "redo": "Berregin",
+  "retry": "Saiatu berriro",
+  "back": "Atzera",
+  "loadingLabel": "Kargatzen",
+  "errorGeneric": "Zerbaitek huts egin du. Saiatu berriro.",
+  "calendarToday": "Gaur",
+  "calendarPickMonth": "{month}, aukeratu hilabetea",
+  "calendarPreviousMonth": "Aurreko hila",
+  "calendarNextMonth": "Hurrengo hila",
+  "calendarHeaderTomorrow": "Bihar ({date}): {shifts}",
+  "@calendarHeaderTomorrow": {
+    "description": "Última línea de la tarjeta de hoy, con la fecha del día siguiente para no confundir «mañana» con un turno llamado Mañana, p. ej. «Mañana (mié 21 oct): turno de Noche».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarHeaderTomorrowNone": "Bihar ({date}): txandarik ez",
+  "@calendarHeaderTomorrowNone": {
+    "description": "Última línea de la tarjeta de hoy cuando el día siguiente no tiene turno.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLabelNow": "Orain",
+  "@todayLabelNow": {
+    "description": "Etiqueta de la tarjeta de hoy con un turno en curso (se muestra en mayúsculas)."
+  },
+  "todayLabelTonight": "Gaur gauean",
+  "@todayLabelTonight": {
+    "description": "Etiqueta cuando el próximo turno de hoy empieza a partir de las 20:00."
+  },
+  "todayLabelToday": "Gaur",
+  "@todayLabelToday": {
+    "description": "Etiqueta cuando el próximo turno de hoy empieza antes de las 20:00."
+  },
+  "todayLabelFree": "Gaur libre",
+  "@todayLabelFree": {
+    "description": "Etiqueta cuando hoy no queda turno."
+  },
+  "todayLabelDone": "Gaurkoa amaituta",
+  "@todayLabelDone": {
+    "description": "Etiqueta de la tarjeta de hoy cuando el turno de hoy ya ha terminado y no queda otro hoy (se muestra en mayúsculas)."
+  },
+  "todayFinishedAt": "Amaitu da: {time}",
+  "@todayFinishedAt": {
+    "description": "Hora a la que terminó el último turno de hoy, p. ej. «Terminó a las 22:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLabelGap": "Etenaldia",
+  "@todayLabelGap": {
+    "description": "Etiqueta de la tarjeta de hoy entre los dos tramos de un turno partido (se muestra en mayúsculas)."
+  },
+  "todayBackAt": "Itzulera: {time}",
+  "@todayBackAt": {
+    "description": "Entre los dos tramos de un turno partido: hora a la que empieza el segundo, p. ej. «Vuelves a las 17:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayBackIn": "{duration} barru itzuliko zara",
+  "@todayBackIn": {
+    "description": "Cuenta atrás hasta el segundo tramo de un turno partido, p. ej. «Vuelves en 2 h 10 min».",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayFreeTitle": "Libre",
+  "todayUntil": "Amaiera: {time}",
+  "@todayUntil": {
+    "description": "Fin del turno en curso, p. ej. «Hasta las 06:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayStartsIn": "{duration} barru hasiko da",
+  "@todayStartsIn": {
+    "description": "Cuenta atrás hasta el inicio del turno, p. ej. «Empieza en 3 h 40 min».",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayEndsIn": "{duration} barru amaituko da",
+  "@todayEndsIn": {
+    "description": "Cuenta atrás hasta el final del turno en curso.",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNext": "Hurrengoa: {name}, {weekday} {time}",
+  "@todayNext": {
+    "description": "Próximo turno cuando hoy es libre, p. ej. «Próximo: Mañana, mié 06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "weekday": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNoNext": "Ez dago txandarik bistan",
+  "todayAlso": "+ {shift}",
+  "@todayAlso": {
+    "description": "Otro turno de hoy, p. ej. «+ Tarde 14:00–22:00».",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "durationDaysHours": "{days} egun {hours} h",
+  "@durationDaysHours": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "durationDays": "{days} egun",
+  "@durationDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "durationHoursMinutes": "{hours} h {minutes} min",
+  "@durationHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "durationHours": "{hours} h",
+  "@durationHours": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMinutes": "{minutes} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarNoShift": "Txandarik ez",
+  "calendarShiftWithTimes": "{name} {times}",
+  "@calendarShiftWithTimes": {
+    "description": "Turno con su horario, p. ej. «Noche 22:00–06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarWeekdayMon": "Al",
+  "calendarWeekdayTue": "Ar",
+  "calendarWeekdayWed": "Az",
+  "calendarWeekdayThu": "Og",
+  "calendarWeekdayFri": "Or",
+  "calendarWeekdaySat": "Lr",
+  "calendarWeekdaySun": "Ig",
+  "daySemanticsToday": "gaur",
+  "daySemanticsNoShift": "txandarik ez",
+  "daySemanticsShift": "{name}, hasiera {start}, amaiera {end}",
+  "@daySemanticsShift": {
+    "description": "Lectura en voz alta de un turno con horario.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsShiftSplit": "{name}, hasiera {start}, amaiera {end}; eta hasiera {start2}, amaiera {end2}",
+  "@daySemanticsShiftSplit": {
+    "description": "Lectura en voz alta de un turno partido (dos tramos).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      },
+      "start2": {
+        "type": "String"
+      },
+      "end2": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsAnd": "{first} eta {second}",
+  "@daySemanticsAnd": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsHoliday": "jaieguna: {name}",
+  "@daySemanticsHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsNote": "oharrarekin",
+  "daySemanticsOvertime": "aparteko orduak: {duration}",
+  "@daySemanticsOvertime": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsEarlyLeave": "irteera aurreratua: {duration}",
+  "@daySemanticsEarlyLeave": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "daySheetHoliday": "Jaieguna: {name}",
+  "@daySheetHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "daySheetNote": "Oharra",
+  "daySheetEmpty": "Egun honek ez du txandarik.",
+  "dayPaneClose": "Itxi eguna",
+  "upcomingTitle": "Hurrengo egunak",
+  "dayDetailSourcePattern": "Zure ereduaren arabera",
+  "dayDetailSourceOverride": "Eskuz aldatua",
+  "dayDetailAdd": "Gehitu txanda",
+  "@dayDetailAdd": {
+    "description": "Etiqueta (se muestra en mayúsculas) de las fichas para añadir un turno a un día sin turno."
+  },
+  "dayDetailDouble": "Gehitu bigarren txanda",
+  "@dayDetailDouble": {
+    "description": "Etiqueta (se muestra en mayúsculas) de las fichas para añadir un segundo turno a un día que ya tiene uno."
+  },
+  "dayDetailReset": "Itzuli eredura",
+  "dayDetailPatternGives": "Ereduaren arabera: {shifts}",
+  "@dayDetailPatternGives": {
+    "description": "Lo que daría la rotación ese día, bajo «Volver al patrón», p. ej. «El patrón da: Noche 22:00–06:00».",
+    "placeholders": {
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "dayDetailNoteHint": "Idatzi ohar bat egun honetarako",
+  "dayDetailUserHoliday": "Jaiegun pertsonala",
+  "dayDetailUserHolidayDefault": "Jaiegun pertsonala",
+  "dayDetailUserHolidayNameHint": "Jaiegunaren izena",
+  "dayDetailDuplicate": "Bikoiztu beste egun batean",
+  "dayDetailDuplicateHelp": "Kopiatu egun honetara",
+  "dayDetailDuplicated": "Kopiatuta: {date}",
+  "@dayDetailDuplicated": {
+    "description": "Aviso tras duplicar un día, p. ej. «Copiado en jueves, 22 de octubre».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "dayDetailClear": "Ezabatu eguna",
+  "dayDetailCleared": "Eguna ezabatuta",
+  "@dayDetailCleared": {
+    "description": "Aviso tras «Borrar día», con la acción de deshacer."
+  },
+  "dayDetailMoveUp": "Igo",
+  "dayDetailMoveDown": "Jaitsi",
+  "dayDetailRemove": "Kendu: {name}",
+  "@dayDetailRemove": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasTitle": "Aparteko orduak / Lehenago irten naiz",
+  "dayExtrasOvertime": "Aparteko orduak",
+  "dayExtrasEarlyLeave": "Lehenago irten naiz",
+  "dayExtrasNone": "Bat ere ez",
+  "dayExtrasHelper": "Hileko orduei eta estimazioari gehitzen edo kentzen zaizkie. 0 jarrita kentzen da.",
+  "dayExtrasMore": "Gehiago: {label}",
+  "@dayExtrasMore": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasLess": "Gutxiago: {label}",
+  "@dayExtrasLess": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasValue": "{label}: {value}",
+  "@dayExtrasValue": {
+    "description": "Lectura en voz alta de un contador de la sección de horas extra, p. ej. «Horas extra: 1 h 30 min».",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesTitle": "Nire txandak",
+  "shiftTypesEditEntry": "Editatu txandak",
+  "shiftTypesEmptyTitle": "Ez duzu txandarik",
+  "shiftTypesEmptyMessage": "Sortu lehenengoa egutegian margotu ahal izateko.",
+  "shiftTypesNew": "Txanda berria",
+  "shiftTypesNewTitle": "Txanda berria",
+  "shiftTypesEditTitle": "Editatu txanda",
+  "shiftTypesNotFound": "Ez dugu txanda hau aurkitu",
+  "shiftTypesNotFoundMessage": "Baliteke artxibatu izana. Itzuli txanden zerrendara.",
+  "shiftTypesArchive": "Artxibatu",
+  "shiftTypesArchiveTitle": "«{name}» artxibatu nahi duzu?",
+  "@shiftTypesArchiveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesArchiveBody": "Margotzean ez da gehiago agertuko. Dagoeneko erabiltzen duten egunek erakusten jarraituko dute.",
+  "shiftTypesArchiveConfirm": "Artxibatu",
+  "shiftTypesDragHandle": "Arrastatu ordena aldatzeko",
+  "shiftTypesArchivedSection": "Artxibatuak ({count})",
+  "@shiftTypesArchivedSection": {
+    "description": "Cabecera plegable, al final de Mis turnos, con los turnos archivados.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesArchivedHelp": "Margotzean ez dira agertzen. Berreskuratu, eta paletara itzuliko dira.",
+  "shiftTypesRestore": "Berreskuratu",
+  "shiftTypesRestoreSemantic": "Berreskuratu «{name}»",
+  "@shiftTypesRestoreSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesRestored": "«{name}» berreskuratu da",
+  "@shiftTypesRestored": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesDiscardTitle": "Aldaketak baztertu nahi dituzu?",
+  "shiftTypesDiscardBody": "Txanda honetan aldatu duzuna ez da gordeko.",
+  "shiftTypesDiscardKeep": "Jarraitu editatzen",
+  "shiftTypesDiscardConfirm": "Baztertu",
+  "shiftTypesNoTimes": "Ordutegirik gabe",
+  "shiftTypesRatePerHour": "{rate}/h",
+  "shiftTypesFixedPlusPerShift": "Txanda bakoitzeko: +{amount}",
+  "@shiftTypesRatePerHour": {
+    "description": "Precio por hora de un turno en la lista, p. ej. «12,50 €/h».",
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesCategoryWork": "Lana",
+  "shiftTypesCategoryRest": "Atsedena",
+  "shiftTypesCategoryAbsence": "Absentzia",
+  "shiftTypesNameLabel": "Izena",
+  "shiftTypesCodeLabel": "Kodea",
+  "shiftTypesCodeHelper": "1-3 karaktere. Hileko lauki bakoitzean ikusten dena da.",
+  "shiftTypesColorLabel": "Kolorea",
+  "shiftTypesColorOption": "Kolorea: {number}/{total}",
+  "@shiftTypesColorOption": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorOptionNamed": "{name}, {number}/{total}",
+  "shiftColorNameOrange": "Laranja",
+  "shiftColorNameCoral": "Korala",
+  "shiftColorNameIndigo": "Indigoa",
+  "shiftColorNameLightGrey": "Gris argia",
+  "shiftColorNameRed": "Gorria",
+  "shiftColorNameLilac": "Lila",
+  "shiftColorNameGreen": "Berdea",
+  "shiftColorNameTeal": "Turkesa",
+  "shiftColorNameRaspberry": "Mugurdia",
+  "shiftColorNamePink": "Arrosa",
+  "shiftColorNameTangerine": "Mandarina",
+  "shiftColorNameYellow": "Horia",
+  "shiftColorNameLime": "Lima",
+  "shiftColorNameForest": "Baso-berdea",
+  "shiftColorNameMint": "Menda",
+  "shiftColorNameCyan": "Ziana",
+  "shiftColorNameSkyBlue": "Zeru-urdina",
+  "shiftColorNameBlue": "Urdina",
+  "shiftColorNameCobalt": "Kobaltoa",
+  "shiftColorNameViolet": "Bioleta",
+  "shiftColorNamePurple": "Morea",
+  "shiftColorNameBrown": "Marroia",
+  "shiftColorNameGrey": "Grisa",
+  "shiftColorNameGraphite": "Grafitoa",
+  "shiftTypesColorCurrent": "Uneko kolorea",
+  "shiftTypesIconLabel": "Ikonoa",
+  "shiftTypesIconHelper": "Aukerakoa. Kodearen ondoan ikusten da lekua dagoenean; kodea eta kolorea beti daude.",
+  "shiftTypesIconNone": "Ikonorik ez",
+  "shiftTypesIconChoose": "Aukeratu ikonoa",
+  "shiftTypesIconCurrent": "Ikonoa: {name}",
+  "@shiftTypesIconCurrent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftIconNameSun": "Eguzkia",
+  "shiftIconNameMoon": "Ilargia",
+  "shiftIconNameSunrise": "Egunsentia",
+  "shiftIconNameHospital": "Ospitalea",
+  "shiftIconNameAmbulance": "Anbulantzia",
+  "shiftIconNamePolice": "Polizia",
+  "shiftIconNameFire": "Suhiltzaileak",
+  "shiftIconNameFactory": "Lantegia",
+  "shiftIconNameTruck": "Kamioia",
+  "shiftIconNamePlane": "Hegazkina",
+  "shiftIconNameSchool": "Ikastetxea",
+  "shiftIconNameHome": "Etxea",
+  "shiftIconNameBeach": "Hondartza",
+  "shiftIconNameBed": "Ohea",
+  "shiftIconNameStar": "Izarra",
+  "shiftIconNameHeart": "Bihotza",
+  "shiftIconNameCoffee": "Kafea",
+  "shiftIconNameBook": "Liburua",
+  "shiftIconNameMoney": "Dirua",
+  "shiftIconNameAlert": "Abisua",
+  "shiftIconNamePhone": "Telefonoa",
+  "shiftIconNameCar": "Autoa",
+  "shiftIconNameTrain": "Trena",
+  "shiftIconNameBus": "Autobusa",
+  "shiftIconNameShop": "Denda",
+  "shiftIconNameTool": "Tresnak",
+  "shiftIconNameBaby": "Haurra",
+  "shiftIconNameSport": "Kirola",
+  "shiftIconNameParty": "Jaia",
+  "shiftIconNameMedical": "Medikua",
+  "shiftTypesColorMore": "Kolore gehiago…",
+  "shiftTypesColorPickerTitle": "Aukeratu zure kolorea",
+  "shiftTypesColorPickerHelp": "Ikusi nola geratzen den laukia modu argian eta ilunean. Testua bere kasa egokitzen da ondo irakurtzeko.",
+  "shiftTypesColorHue": "Ñabardura",
+  "shiftTypesColorSaturation": "Intentsitatea",
+  "shiftTypesColorLightness": "Argitasuna",
+  "shiftTypesColorHueSpoken": "{degrees} gradu",
+  "@shiftTypesColorHueSpoken": {
+    "placeholders": {
+      "degrees": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorPercentSpoken": "ehuneko {percent}",
+  "@shiftTypesColorPercentSpoken": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorHexLabel": "Kode hamaseitarra",
+  "shiftTypesColorHexError": "Idatzi 6 zifra edo letra, A-tik F-ra; adibidez, #1C7ED6.",
+  "shiftTypesColorUse": "Erabili kolore hau",
+  "shiftTypesCategoryLabel": "Kategoria",
+  "shiftTypesTimesLabel": "Ordutegia",
+  "shiftTypesStarts": "Hasiera: {time}",
+  "@shiftTypesStarts": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesEnds": "Amaiera: {time}",
+  "@shiftTypesEnds": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesPickStart": "Hasiera-ordua",
+  "shiftTypesPickEnd": "Amaiera-ordua",
+  "shiftTypesDuration": "Iraupena: {duration}",
+  "@shiftTypesDuration": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesEndsNextDay": "Hurrengo egunean amaitzen da · iraupena: {duration}",
+  "@shiftTypesEndsNextDay": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesTwentyFourHours": "24 h irauten du: hurrengo egunean amaitzen da, ordu berean",
+  "shiftTypesSplitLabel": "Txanda zatitua",
+  "shiftTypesSplitHelper": "Bi zati egun berean, tartean lan gisa kontatzen ez den etenaldi batekin.",
+  "shiftTypesSplitTemplate": "Erabili «Zatitua 09–13 / 17–21»",
+  "shiftTypesSplitSecondTitle": "Bigarren zatia",
+  "shiftTypesPickSecondStart": "2. zatiaren hasiera",
+  "shiftTypesPickSecondEnd": "2. zatiaren amaiera",
+  "shiftTypesSplitSummary": "Lana: {first} eta {second}; guztira {total}",
+  "@shiftTypesSplitSummary": {
+    "description": "Resumen de un turno partido bajo las horas, p. ej. «Trabajas 4 h y 4 h: 8 h en total».",
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorSplitIncomplete": "Jarri noiz hasi eta amaitzen den bigarren zatia, edo desaktibatu txanda zatitua.",
+  "shiftTypesErrorSplitStart": "Bigarren zatiaren hasiera-ordua ez da baliozkoa.",
+  "shiftTypesErrorSplitDuration": "Bigarren zatiak minutu 1 eta 24 h bitartean iraun behar du.",
+  "shiftTypesErrorSplitNotAfter": "Bigarren zatia ezin da hasi lehena amaitzen den unean bertan: zati bakarra izango litzateke. Utzi etenaldi bat bien artean.",
+  "shiftTypesErrorSplitTooLong": "Bi zatiak eta haien arteko etenaldia ez dira 24 orduan sartzen. Egiaztatu bigarrena lehena amaitu ondoren hasten dela.",
+  "shiftTypesBreakLabel": "Ordaindu gabeko etenaldia",
+  "shiftTypesBreakUnit": "min",
+  "shiftTypesBreakHint": "0 min",
+  "shiftTypesRateHint": "Preziorik gabe",
+  "shiftTypesBreakHelper": "Ordaintzen ez diren txandako minutuak. Utzi hutsik dena ordaintzen bada.",
+  "shiftTypesPaidHelper": "Ordaindua: {duration}",
+  "@shiftTypesPaidHelper": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesNightLabel": "Gaueko txanda",
+  "shiftTypesNightHelper": "Automatikoa aukerak 22:00 eta 06:00 arteko orduak gaueko gisa kontatzen ditu.",
+  "shiftTypesNightAuto": "Automatikoa",
+  "shiftTypesNightAlways": "Beti gauekoa",
+  "shiftTypesNightNever": "Inoiz ez gauekoa",
+  "shiftTypesFixedPlusLabel": "Txandako osagarria (aukerakoa)",
+  "shiftTypesFixedPlusHelper": "Lan egindako txanda bakoitzeko behin gehitzen da.",
+  "shiftTypesFixedPlusHint": "Osagarririk gabe",
+  "shiftTypesFixedPlusUnit": "€",
+  "shiftTypesRateLabel": "Orduko prezioa (aukerakoa)",
+  "shiftTypesRateHelper": "Hileko laburpenean zenbat irabazten duzun kalkulatzeko.",
+  "shiftTypesRateUnit": "€/h",
+  "shiftTypesPreviewLabel": "Honela ikusiko da hilean",
+  "shiftTypesPreviewLight": "Argia",
+  "shiftTypesPreviewDark": "Iluna",
+  "shiftTypesPreviewContrast": "Kontrastea: {ratio}:1",
+  "@shiftTypesPreviewContrast": {
+    "description": "Contraste del código del turno sobre su casilla, bajo la vista previa, p. ej. «Contraste 7,2:1».",
+    "placeholders": {
+      "ratio": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorCodeEmpty": "Idatzi 1-3 karaktereko kode bat",
+  "shiftTypesErrorCodeTooLong": "Kodeak gehienez 3 karaktere izan ditzake, emojirik eta zuriunerik gabe",
+  "shiftTypesErrorCodeTaken": "Kode hau dagoeneko erabiltzen du txanda honek: «{name}»",
+  "@shiftTypesErrorCodeTaken": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorNameEmpty": "Jarri izen bat txandari",
+  "shiftTypesErrorBreak": "Etenaldiak txandak baino laburragoa izan behar du",
+  "shiftTypesErrorRate": "Idatzi zenbateko baliozko bat; adibidez, 12,50",
+  "paintFab": "Margotu",
+  "paintHeader": "Margotzen",
+  "@paintHeader": {
+    "description": "Etiqueta de la cabecera del modo pintar (se muestra en mayúsculas)."
+  },
+  "paintHeaderShift": "{name} · {times}",
+  "@paintHeaderShift": {
+    "description": "Turno elegido y su horario en la cabecera del modo pintar, p. ej. «Tarde · 14:00–22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      }
+    }
+  },
+  "paintDone": "Eginda",
+  "paintDouble": "Bikoiztu",
+  "paintEraser": "Ezabatu",
+  "paintToolsLabel": "Margotzeko tresnak",
+  "selectionHeader": "Hautapena",
+  "@selectionHeader": {
+    "description": "Etiqueta de la cabecera del modo selección de días (se muestra en mayúsculas)."
+  },
+  "selectionHint": "Ukitu egunak, edo eduki sakatuta eta arrastatu batzuk aukeratzeko",
+  "selectionCount": "{count, plural, =0{Egunik ez} =1{Egun 1} other{{count} egun}}",
+  "@selectionCount": {
+    "description": "Cuántos días hay elegidos en la barra de selección.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionBarLabel": "Aukeratutako egunetarako ekintzak",
+  "selectionSetShift": "Jarri txanda…",
+  "selectionDouble": "Bikoiztu…",
+  "selectionClear": "Ezabatu",
+  "selectionReset": "Itzuli eredura",
+  "selectionCopy": "Kopiatu",
+  "selectionCut": "Ebaki",
+  "selectionPaste": "Itsatsi",
+  "selectionRepeat": "Errepikatu…",
+  "selectionNote": "Oharra…",
+  "selectionCancel": "Utzi",
+  "selectionCellSelected": "aukeratuta",
+  "selectionSetShiftTitle": "Jarri txanda",
+  "selectionSetShiftHelp": "Aukeratutako egunetako txandak ordezten ditu.",
+  "selectionDoubleTitle": "Gehitu bigarren txanda",
+  "selectionDoubleHelp": "Aukeratutako egunek dituzten txandei gehitzen die.",
+  "selectionNoteTitle": "Aukeratutako egunetarako oharra",
+  "selectionNoteHint": "Ohar bera egun guztietan",
+  "selectionNoteSave": "Gorde oharra",
+  "selectionNoteRemove": "Kendu oharrak",
+  "selectionPasteTitle": "Itsatsi egunak",
+  "selectionPasteSummary": "{count, plural, =1{Egun 1 itsatsiko da} other{{count} egun itsatsiko dira}}. Hasiera: {date}.",
+  "@selectionPasteSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionPasteReach": "Itsasteko tartea: {from} – {to}.",
+  "@selectionPasteReach": {
+    "description": "Hasta qué día llega el bloque pegado (con sus huecos); {from} y {to} son «lun 3» y «dom 9 de noviembre», o con el mes en los dos extremos si cruza de mes.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionPasteReplaces": "Egun horietako txandak ordeztu egingo dira. Desegin ahal izango duzu.",
+  "selectionIncludeNotes": "Sartu oharrak",
+  "selectionIncludeNotesHelp": "Kopiatutako egunetako oharrek helmugakoak ordezten dituzte.",
+  "selectionCutNotesMove": "Ebakitzean, oharrak egunekin batera mugitzen dira.",
+  "@selectionCutNotesMove": {
+    "description": "Línea del cuadro de Pegar tras Cortar, en lugar del interruptor «Incluir notas»: las notas, avisos y horas extra viajan siempre con los días cortados."
+  },
+  "selectionPasteConfirm": "Itsatsi",
+  "selectionRepeatTitle": "Errepikatu aukeratutako egunak",
+  "selectionRepeatTimes": "{count, plural, =1{Behin} other{{count} aldiz}}",
+  "@selectionRepeatTimes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRepeatLess": "Behin gutxiago",
+  "selectionRepeatMore": "Behin gehiago",
+  "selectionRepeatPreview": "{count, plural, =1{Egun 1 gehiago aldatuko da (azkena: {date}).} other{{count} egun gehiago aldatuko dira (azkena: {date}).}}",
+  "@selectionRepeatPreview": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRepeatConfirm": "Errepikatu",
+  "selectionChanged": "{count, plural, =1{Egun 1 aldatu da} other{{count} egun aldatu dira}}",
+  "@selectionChanged": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionNothingChanged": "Egun horiek horrela zeuden jada",
+  "selectionCopied": "{count, plural, =1{Egun 1 kopiatu da} other{{count} egun kopiatu dira}}. Aukeratu hasierako eguna eta sakatu Itsatsi.",
+  "@selectionCopied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionCutDone": "{count, plural, =1{Egun 1 ebaki da} other{{count} egun ebaki dira}}. Aukeratu hasierako eguna eta sakatu Itsatsi.",
+  "@selectionCutDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionPasted": "{count, plural, =1{Egun 1 itsatsi da} other{{count} egun itsatsi dira}}",
+  "@selectionPasted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRepeated": "Errepikatuta: {times, plural, =1{behin} other{{times} aldiz}}",
+  "@selectionRepeated": {
+    "placeholders": {
+      "times": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRunsTitle": "Nire txandaketak",
+  "selectionRunsSubtitle": "Amaitu edo kendu eredu bat behingoz",
+  "selectionRunsEmptyTitle": "Txandaketarik ez",
+  "selectionRunsEmptyMessage": "Margotu ataletik eredu bat aplikatzen duzunean, hemen agertuko da.",
+  "selectionRunsRange": "{from} – {to}",
+  "@selectionRunsRange": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsOpenEnded": "Hasiera: {from}; amaiera-datarik gabe",
+  "@selectionRunsOpenEnded": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsStep": "Hasiera: zikloaren {day}. eguna",
+  "@selectionRunsStep": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRunsActive": "Martxan",
+  "selectionRunsFuture": "Oraindik ez da hasi",
+  "selectionRunsEnded": "Amaituta",
+  "selectionRunsEnd": "Amaitu hemen",
+  "selectionRunsEndHelp": "Txandaketarik gabeko lehen eguna",
+  "selectionRunsEndDone": "Txandaketaren amaiera: {date}",
+  "@selectionRunsEndDone": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsDelete": "Ezabatu",
+  "selectionRunsDeleteTitle": "{name} ezabatu nahi duzu?",
+  "@selectionRunsDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsDeleteBody": "Egutegi osotik kentzen da. Eskuz aldatu zenituen egunak eta oharrak dauden bezala geratzen dira. Desegin ahal izango duzu.",
+  "selectionRunsDeleted": "Txandaketa ezabatu da",
+  "agendaTitle": "Agenda",
+  "agendaOpenTooltip": "Oharren agenda",
+  "agendaSearchHint": "Bilatu oharretan eta txandetan",
+  "agendaSearchHintShort": "Bilatu",
+  "agendaModeNotes": "Oharrak",
+  "agendaModeShifts": "Txandak",
+  "agendaSearchScope": "Zure ohar eta jaiegun pertsonal guztietan bilatzen du, eta duela urtebetetik urtebete barrurako txandetan. Datak ere ulertzen ditu: 15/10 edo urriaren 15.",
+  "agendaSearchClear": "Garbitu bilaketa",
+  "agendaEmptyTitle": "Ez dago hurrengo oharrik",
+  "agendaEmptyMessage": "Hurrengo egunetako oharrak eta jaiegun pertsonalak hemen agertuko dira.",
+  "agendaNoResultsTitle": "Ez da ezer aurkitu",
+  "agendaNoResultsMessage": "Ez dago bilaketa honekin bat datorren oharrik edo txandarik: «{query}».",
+  "@agendaNoResultsMessage": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaHoliday": "Jaieguna: {name}",
+  "@agendaHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaTruncated": "Lehenengo {count} emaitzak erakusten dira. Idatzi zerbait gehiago bilaketa zehazteko.",
+  "@agendaTruncated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "agendaResults": "{count, plural, =1{Emaitza 1} other{{count} emaitza}}",
+  "@agendaResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "agendaSemanticsNote": "oharra: {note}",
+  "@agendaSemanticsNote": {
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "patternButton": "Eredua",
+  "@patternButton": {
+    "description": "Botón de la cabecera del modo pintar que abre el asistente de patrón."
+  },
+  "patternTitle": "Aplikatu eredua",
+  "patternStepOf": "Urratsa: {current}/{total}",
+  "@patternStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "patternStepChoose": "Aukeratu eredu bat",
+  "patternStepStart": "Noiz hasten zara?",
+  "patternStepEnd": "Noiz arte?",
+  "patternNext": "Hurrengoa",
+  "patternBack": "Atzera",
+  "patternApply": "Aplikatu",
+  "patternApplied": "Eredua aplikatu da",
+  "patternApplyFailed": "Ezin izan da eredua aplikatu",
+  "patternFromDay": "Hasiera: {date}",
+  "@patternFromDay": {
+    "description": "Día en el que empieza el patrón tras la pulsación larga, p. ej. «Desde el sábado 24 de octubre».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patternGroupHealth": "Osasuna",
+  "patternGroupPolice": "Polizia eta Guardia Zibila",
+  "patternGroupFirefighters": "Suhiltzaileak",
+  "patternGroupIndustry": "Industria",
+  "patternGroupSecurity": "Segurtasuna",
+  "patternGroupOther": "Beste bat",
+  "patternGroupMine": "Nire ereduak",
+  "patternGroupTypical": "Lehen eguna: {shift}",
+  "@patternGroupTypical": {
+    "description": "Sección con los patrones cuyo primer día es el turno de la ficha pulsada, p. ej. «Empiezan por Noche».",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "patternGroupIncluding": "Barne dutenak: {shift}",
+  "@patternGroupIncluding": {
+    "description": "Sección con los patrones que contienen el turno de la ficha pulsada, cuando ninguno empieza por él.",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "patternCycleDays": "{count, plural, =1{Egun 1} other{{count} egun}}",
+  "@patternCycleDays": {
+    "description": "Longitud del ciclo de un patrón.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "patternCreateOwn": "Sortu nirea",
+  "patternCreateOwnHint": "Osatu zure sekuentzia egunez egun",
+  "patternBuilderBack": "Aukeratu zerrendako eredu bat",
+  "patternBuilderName": "Ereduaren izena",
+  "patternBuilderDefaultName": "Nire eredua",
+  "patternBuilderSequence": "Zure sekuentzia",
+  "patternBuilderEmpty": "Ukitu beheko txandak egunak gehitzeko.",
+  "patternBuilderSameDay": "Txanda bat baino gehiago egun batean",
+  "patternBuilderSameDayHint": "Aktibatuta: ukitzen duzun txanda bakoitza sekuentziako azken egunari gehitzen zaio, egun berri bat sortu beharrean.",
+  "patternBuilderRemoveLast": "Kendu azkena",
+  "patternBuilderClear": "Hustu sekuentzia",
+  "patternBuilderAdd": "Gehitu: {name}",
+  "@patternBuilderAdd": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "patternStartLabel": "Hasierako eguna",
+  "patternSuggestedStart": "Eredu hau egun honetan hasi ohi da: {weekday}.",
+  "@patternSuggestedStart": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      }
+    }
+  },
+  "patternWeekdayMonday": "astelehena",
+  "patternWeekdayTuesday": "asteartea",
+  "patternWeekdayWednesday": "asteazkena",
+  "patternWeekdayThursday": "osteguna",
+  "patternWeekdayFriday": "ostirala",
+  "patternWeekdaySaturday": "larunbata",
+  "patternWeekdaySunday": "igandea",
+  "patternOffsetTitle": "Zikloaren zein egunetan zaude egun horretan?",
+  "patternOffsetHelp": "Ukitu data honetan dagokizun ereduaren eguna: {date}.",
+  "@patternOffsetHelp": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patternOffsetThatDay": "Egun horretan: {shifts}",
+  "@patternOffsetThatDay": {
+    "placeholders": {
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "patternChipDay": "{day}. eguna: {shifts}",
+  "@patternChipDay": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "patternEndNever": "Amaierarik gabe",
+  "patternEndNeverHint": "Aldatu arte errepikatzen da.",
+  "patternEndUntil": "Data batera arte",
+  "patternEndUntilHint": "Data horren ondoren, lehen zenuena itzultzen da.",
+  "patternUntilLabel": "Azken eguna",
+  "patternOverridesTitle": "Eskuz aldatu dituzun egunak",
+  "patternOverridesKeep": "Errespetatu eskuz aldatu ditudan egunak",
+  "patternOverridesKeepHint": "Zure aldaketak geratzen dira; ereduak gainerakoa betetzen du.",
+  "patternOverridesReplace": "Ordeztu ereduarekin",
+  "patternOverridesReplaceHint": "Data horietan eskuz egindako aldaketak ezabatzen dira. Oharrak geratzen dira.",
+  "patternPreviewTitle": "Honela geratuko da",
+  "patternPreviewNone": "Aukeratu eredu bat nola geratzen den ikusteko.",
+  "patternPreviewPostNight": "{count, plural, =1{Gau-ondoko automatikoa: egun 1, gau baten ondoren.} other{Gau-ondoko automatikoa: {count} egun, gau baten ondoren.}}",
+  "@patternPreviewPostNight": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "patternPickBanner": "Ukitu eredua hasten den eguna",
+  "onboardingSkip": "Saltatu",
+  "onboardingNext": "Hurrengoa",
+  "onboardingContinue": "Jarraitu",
+  "onboardingProgress": "Urratsa: {current}/{total}",
+  "@onboardingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingProfessionTitle": "Zertan egiten duzu lan?",
+  "onboardingProfessionHelp": "Horrela, zure laneko txandak eta txandaketak prest utziko dizkizugu. Nahi duzunean alda dezakezu.",
+  "onboardingProfessionNursing": "Erizaintza, erizaintzako laguntzaileak eta zeladoreak",
+  "onboardingProfessionNursingHint": "Goi 08–15, Arr 15–22, Gau 22–08 eta gau-ondokoa",
+  "onboardingProfessionMedicine": "Medikuntza (guardiak)",
+  "onboardingProfessionMedicineHint": "Goiza, 24 orduko guardia eta gau-ondokoa",
+  "onboardingProfessionPolice": "Polizia eta Guardia Zibila",
+  "onboardingProfessionPoliceHint": "Goi 07–15, Arr 15–23 eta Gau 23–07",
+  "onboardingProfessionFirefighters": "Suhiltzaileak",
+  "onboardingProfessionFirefightersHint": "24 orduko guardia eta atseden luzeak",
+  "onboardingProfessionIndustry": "Industria",
+  "onboardingProfessionIndustryHint": "Txanda birakariak: Goi 06–14, Arr 14–22 eta Gau 22–06",
+  "onboardingProfessionSecurity": "Segurtasun pribatua",
+  "onboardingProfessionSecurityHint": "12 orduko txandak, egunez eta gauez",
+  "onboardingProfessionHospitality": "Ostalaritza eta merkataritza",
+  "onboardingProfessionHospitalityHint": "Goi 08–16 eta Arr 16–00",
+  "onboardingProfessionOther": "Beste bat",
+  "onboardingProfessionOtherHint": "Betiko txandekin hasiko zara",
+  "onboardingPlaceTitle": "Non egiten duzu lan?",
+  "onboardingPlaceHelp": "Zure erkidegoko eta udalerriko jaiegunak egutegian markatzeko.",
+  "onboardingRegionLabel": "Erkidegoa",
+  "onboardingRegionPick": "Aukeratu erkidegoa",
+  "onboardingRegionSheetTitle": "Zure erkidegoa",
+  "onboardingMunicipalityLabel": "Udalerria (aukerakoa)",
+  "onboardingMunicipalityPick": "Bilatu udalerria",
+  "onboardingMunicipalityNeedsRegion": "Aukeratu lehenik erkidegoa",
+  "onboardingMunicipalitySheetTitle": "Zure udalerria",
+  "onboardingMunicipalitySearch": "Idatzi izena",
+  "onboardingMunicipalityNone": "Ez dago izen hori duen udalerririk",
+  "onboardingMunicipalityClear": "Kendu udalerria",
+  "onboardingLocalHolidaysMissing": "Zure udalerriko tokiko jaiegunak zuk zeuk gehi ditzakezu, bi ukitutan.",
+  "onboardingRotationTitle": "Nolakoa da zure txandaketa?",
+  "onboardingRotationHelp": "Aukeratu antzekoena. Gero esango duzu noiz hasten zaren.",
+  "onboardingRotationTypical": "Zure lanean ohikoena",
+  "onboardingRotationOthers": "Beste txandaketa batzuk",
+  "onboardingRotationAll": "Txandaketak",
+  "onboardingByHand": "Eskuz margotuko dut",
+  "onboardingByHandHint": "Txandaketarik gabe: zuk margotzen dituzu egunak egutegian.",
+  "onboardingStartTitle": "Noiz hasten zara?",
+  "onboardingStartHelp": "Esan zein egunetatik kontatzen den eta zikloaren zein puntutan zauden egun horretan.",
+  "onboardingImportTitle": "Beste aplikazio batetik zatoz?",
+  "onboardingImportBody": "Zure txandak LRHSoft (Shifter), Supershift edo beste aplikazio batean bazeneuzkan, ekarri itzazu haren kopiatik, mugikorreko egutegitik edo fitxategi batetik. Geroago ere egin dezakezu, Ezarpenak atalean.",
+  "onboardingReadyTitle": "Prest",
+  "onboardingReadyBody": "Zure egutegia prest dago. Hau guztia nahi duzunean alda dezakezu Ezarpenak atalean.",
+  "onboardingReadyProfession": "Lana: {name}",
+  "@onboardingReadyProfession": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyPlace": "Jaiegunak: {place}",
+  "@onboardingReadyPlace": {
+    "placeholders": {
+      "place": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyRotation": "Txandaketa: {name}; hasiera: {date}",
+  "@onboardingReadyRotation": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyOffset": "Hasiera: zikloaren {day}. eguna ({shifts})",
+  "@onboardingReadyOffset": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyByHand": "Txandaketa: zuk margotzen duzu eskuz",
+  "onboardingReadyNothing": "Ez duzu ezer aukeratu; beraz, egutegi hutsarekin hasiko zara.",
+  "onboardingReadySaveFailed": "Ezin izan da dena gorde. Berrikusi zure txandak eta jaiegunak Ezarpenak atalean.",
+  "onboardingOpenCalendar": "Ikusi nire egutegia",
+  "onboardingTipTitle": "Margotu zure hila berehala",
+  "onboardingTipBody": "Sakatu Margotu, aukeratu txanda bat eta arrastatu egunen gainetik. Eredua botoiarekin txandaketa oso bat errepikatzen duzu behingoz.",
+  "onboardingTipDismiss": "Ados",
+  "onboardingTipClose": "Itxi aholkua",
+  "paintScrollUp": "Gora egin hilabetean",
+  "paintScrollDown": "Behera egin hilabetean",
+  "monthTipPaint": "Aukeratu txanda bat eta arrastatu.",
+  "@monthTipPaint": { "description": "Texto del consejo compacto de la pantalla del mes: una linea que explica como pintar el mes arrastrando por los dias." },
+  "postNightAutoTitle": "Gau-ondoko automatikoa",
+  "postNightAutoHelp": "Gau baten ondoren, hurrengo eguna Gau-ondokoa bihurtzen da, hutsik edo libre bazegoen.",
+  "yearTitle": "Urteko ikuspegia",
+  "yearOpenTooltip": "Ikusi urtea",
+  "yearPrevious": "Aurreko urtea",
+  "yearNext": "Hurrengo urtea",
+  "yearShare": "Partekatu irudi gisa",
+  "yearShareSubject": "Nire txandak: {year}",
+  "@yearShareSubject": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "yearShareFailed": "Ezin izan da irudia partekatu",
+  "yearImageTitle": "Nire txandak {year}",
+  "@yearImageTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "yearMonthEmpty": "txandarik ez",
+  "yearLegendTitle": "Urteko txandak",
+  "yearLegendEmpty": "Urte honek ez du txandarik.",
+  "yearLegendDays": "{count, plural, =1{Egun 1} other{{count} egun}}",
+  "@yearLegendDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "yearLegendHoliday": "Jaieguna",
+  "summaryTitle": "Laburpena",
+  "summaryOpenTooltip": "Hileko laburpena",
+  "summaryModeMonth": "Hila",
+  "summaryModeYear": "Urtea",
+  "summaryModeRange": "Datak…",
+  "summaryRangeFrom": "Hasiera",
+  "summaryRangeTo": "Amaiera",
+  "summaryRangePrevious": "Aurreko aldia",
+  "summaryRangeNext": "Hurrengo aldia",
+  "summaryRangeDays": "{count, plural, =1{Egun 1 guztira} other{{count} egun guztira}}. Gehienez {max} egun aukera ditzakezu.",
+  "@summaryRangeDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangeClamped": "Gehienez {max} egun: amaiera-data laburtu dugu.",
+  "@summaryRangeClamped": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangePreviousName": "{days, plural, =1{aurreko eguna} other{aurreko {days} egunak}}",
+  "@summaryRangePreviousName": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangeEmptyTitle": "Ez dago txandarik data hauetan",
+  "summaryRangeEmptyBody": "Aukeratu beste data batzuk edo margotu txandak egutegian.",
+  "summaryRangeNoteMidnight": "Gauerdia gainditzen duen txanda baten orduak hasten den egunean kontatzen dira, baita daten azken eguna bada ere.",
+  "summaryEmptyTitle": "Ez dago txandarik hilabete honetan",
+  "summaryEmptyBody": "Margotu txandak egutegian, eta hemen ikusiko dituzu orduak eta estimazioa.",
+  "summaryHoursWorked": "Lan egindako orduak",
+  "summaryShiftsWorked": "Lan egindako txandak",
+  "summaryNightHours": "Gaueko orduak",
+  "summaryRestDays": "Egun libreak",
+  "summaryAbsences": "Absentziak",
+  "summaryHolidayHours": "Jaiegunetako orduak",
+  "summaryHolidayDetail": "{count, plural, =1{Txanda 1 jaiegunean} other{{count} txanda jaiegunetan}}",
+  "@summaryHolidayDetail": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryOvertime": "Aparteko orduak",
+  "summaryEarlyLeave": "Irteera aurreratuak",
+  "summaryExtrasPay": "Estimazioan: {amount}",
+  "@summaryExtrasPay": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryExtrasNoRate": "Badaude aparteko orduak edo irteerak orduko prezioa duen txandarik gabeko egunetan: ez daude estimazioan.",
+  "summaryNoteExtras": "Aparteko orduak eta irteera aurreratuak: egun bakoitzean idazten dituzunak. Aparteko orduak gehitu egiten zaizkie lan egindako orduei, eta irteerak kendu (egun bat ez da 0 h-tik jaisten). Egun horretan prezioa duen lehen txandaren orduko prezioan baloratzen dira.",
+  "summaryDays": "{count, plural, =1{Egun 1} other{{count} egun}}",
+  "@summaryDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryShifts": "{count, plural, =1{Txanda 1} other{{count} txanda}}",
+  "@summaryShifts": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryNightOf": "{hours} gauez",
+  "@summaryNightOf": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNoTimes": "ordutegirik gabe",
+  "summaryNoRate": "prezio gabe",
+  "summaryGroupWork": "Lan-txandak",
+  "summaryGroupRest": "Atsedenak",
+  "summaryEstimateTitle": "Diru-sarrera estimatuak",
+  "summaryFixedPluses": "Osagarriak",
+  "summaryFixedPlusCount": "{count} txanda",
+  "@summaryFixedPlusCount": {"placeholders": {"count": {"type": "int"}}},
+  "summaryEstimateNote": "Estimazioa, zergen aurretik",
+  "summaryEstimateNone": "Jarri orduko prezioa edo txandako osagarria Nire txandak atalean estimazioa ikusteko.",
+  "summaryEstimateMissing": "Orduko preziorik gabe, orduko ordainketa ez da sartzen: {types}.",
+  "@summaryEstimateMissing": {
+    "placeholders": {
+      "types": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryRateAction": "Jarri prezioak Nire txandak atalean",
+  "summaryDelta": "{delta} · alderaketa: {month}",
+  "@summaryDelta": {
+    "placeholders": {
+      "delta": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDeltaSame": "Ordu berak, honekin alderatuta: {month}",
+  "@summaryDeltaSame": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDeltaNone": "Ez dago alderatzeko txandarik: {month}",
+  "@summaryDeltaNone": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNotesTitle": "Nola kontatzen da",
+  "summaryNoteMidnight": "Gauerdia gainditzen duen txanda baten orduak hasten den egunean eta hilean kontatzen dira.",
+  "summaryNoteNight": "Gaueko orduak: 22:00etatik 06:00etara, txandan beste zerbait markatzen ez baduzu.",
+  "summaryNoteDst": "Erlojuko orduak dira: ordu-aldaketaren gauean ez da 7 edo 9 ordura egokitzen.",
+  "summaryNoteNoTimes": "Ordutegirik gabeko txandak txanda gisa kontatzen dira, baina ez dute ordurik gehitzen.",
+  "summaryNoteHoliday": "Jaiegunetako orduak: zure erkidegoko eta udalerriko jaiegun batean egiten direnak, baita txandak gauerdia gainditzen badu ere.",
+  "summaryYearEmpty": "Urte honek ez du txandarik.",
+  "summaryYearHint": "Ukitu hilabete bat xehetasunak ikusteko.",
+  "summaryYearHeaderMonth": "Hila",
+  "summaryYearHeaderShifts": "Txandak",
+  "summaryYearHeaderHours": "Orduak",
+  "summaryYearHeaderNight": "Gaua",
+  "summaryYearHeaderEstimate": "Estimazioa",
+  "summaryYearTotal": "Guztira",
+  "summaryYearEstimated": "Estimatua: {amount}",
+  "@summaryYearEstimated": {
+    "description": "Importe de un mes en la lista del año con texto grande.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryYearMonthEmpty": "Txandarik ez",
+  "summaryYearRowTitle": "Orduak eta estimazioa",
+  "summaryYearRowBody": "Hilabete bakoitzeko txandak, orduak eta euroak",
+  "summaryYearMonthSemantics": "{month}: {shifts}, {hours}",
+  "@summaryYearMonthSemantics": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "shareMonthTooltip": "Partekatu hila irudi gisa",
+  "shareMonthSubject": "Nire txandak: {month}",
+  "@shareMonthSubject": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "shareMonthFailed": "Ezin izan da irudia partekatu",
+  "shareMonthLegendTitle": "Hileko txandak",
+  "shareMonthLegendEmpty": "Hilabete honek ez du txandarik.",
+  "saveFailed": "Ezin izan da aldaketa gorde",
+  "@saveFailed": {
+    "description": "Aviso (SnackBar) cuando falla escribir un cambio en la base de datos; el calendario ya muestra lo que hay guardado."
+  },
+  "settingsTitle": "Ezarpenak",
+  "settingsOpenTooltip": "Ireki ezarpenak",
+  "settingsSectionSchedule": "Zure txanden egutegia",
+  "settingsShiftsTitle": "Nire txandak",
+  "settingsShiftsSubtitle": "Koloreak, kodeak eta orduak",
+  "settingsCalendarsTitle": "Egutegiak",
+  "settingsSectionAppearance": "Itxura",
+  "settingsThemeTitle": "Gaia",
+  "settingsThemeSystemLight": "Sistema (argia)",
+  "settingsThemeSystemDark": "Sistema (iluna)",
+  "settingsThemeLight": "Argia",
+  "settingsThemeDark": "Iluna",
+  "settingsWeekStartTitle": "Asteko lehen eguna",
+  "settingsWeekStartMonday": "Astelehena",
+  "settingsWeekStartSunday": "Igandea",
+  "settingsWeekNumbersTitle": "Erakutsi astearen zenbakia",
+  "settingsWeekNumbersSubtitle": "Zutabe bat hilaren ezkerrean",
+  "settingsLanguageTitle": "Hizkuntza",
+  "settingsLanguageSystem": "Sistema ({language})",
+  "@settingsLanguageSystem": {
+    "description": "Opción «seguir el idioma del móvil», con el idioma que da ahora, p. ej. «Sistema (Español)».",
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageNameEs": "Español",
+  "@languageNameEs": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameCa": "Català",
+  "@languageNameCa": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameGl": "Galego",
+  "@languageNameGl": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameEu": "Euskara",
+  "@languageNameEu": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameEn": "English",
+  "@languageNameEn": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "settingsSaveFailed": "Ezin izan da ezarpena gorde. Saiatu berriro.",
+  "settingsSectionMore": "Abisuak eta datuak",
+  "settingsHolidaysTitle": "Jaiegunak",
+  "settingsAlarmsTitle": "Alarmak",
+  "settingsBackupTitle": "Babeskopia",
+  "settingsPrivacyTitle": "Pribatutasun-politika",
+  "settingsPrivacySubtitle": "Zure nabigatzailean irekiko da",
+  "settingsPrivacyOpenFailed": "Ezin izan da pribatutasun-politika ireki. Saiatu berriro.",
+  "faqAlarmsQIos": "Nola konfiguratzen ditut alarmak, eta zer da jakinarazpenen baimena?",
+  "faqAlarmsAIos": "Ezarpenak › Alarmak atalean, aktibatu «Abisatu txanda bakoitzaren aurretik», aukeratu zenbat lehenago eta, nahi baduzu, aurreko eguneko abisu bat ordu jakin batean. Egun baten xehetasunetan haren alarma ken dezakezu «Alarmarik ez egun honetan» aukerarekin.\n\nJakinarazpenen baimenik gabe, Cuadrantek ezin dizu abisatu. Baimentzeko leihoa agertzen ez bazaizu, aktibatu sistemaren ezarpenetan.",
+  "faqWidgetAIos": "Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Cuadrante.\n\nWidgetak zure hurrengo egunak gordetzen ditu. Sistemak erabakitzen du noiz eguneratu, eta egun-aldaketa atzeratu dezake. Daturik gabe geratzen bada, ireki Cuadrante eguneratzeko.",
+  "settingsSectionHelp": "Laguntza",
+  "settingsHelpTitle": "Laguntza eta harremana",
+  "settingsHelpSubtitle": "Idatzi iezaguzu zerbait ondo ez badabil",
+  "settingsHelpBody": "Zalantzak dituzu edo zerbait ez dabil ondo? Kontatu zer gertatzen zaizun eta zein bertsio erabiltzen duzun.",
+  "settingsHelpSubtitleSoon": "Laguntza-helbide elektronikoa prestatzen ari gara",
+  "settingsHelpBodySoon": "Oraindik ez dugu laguntza-helbide elektronikorik. Bitartean, begiratu ohiko galderak eta, zerbait ondo ez badabil, izan eskura erabiltzen duzun bertsioa.",
+  "settingsHelpNoEmail": "Laguntza-helbide elektronikoa dendako bertsioarekin iritsiko da.",
+  "settingsHelpCopyEmail": "Kopiatu helbidea",
+  "settingsHelpCopyVersion": "Kopiatu bertsioa",
+  "settingsFaqTitle": "Ohiko galderak",
+  "settingsFaqSubtitle": "Margotzea, txandaketak, alarmak, widgeta eta gehiago",
+  "faqIntro": "Cuadrante nola dabilen azaltzeko erantzun azkarrak. Dena gailu honetan dago: ez da konturik ez konexiorik behar.",
+  "faqNotFound": "Ez duzu bilatzen duzuna aurkitzen?",
+  "faqContact": "Laguntza eta harremana",
+  "faqPaintQ": "Nola margotzen dut hila?",
+  "faqPaintA": "Sakatu «Margotu» egutegian, aukeratu txanda bat behean eta ukitu egunak edo pasatu hatza haien gainetik. Egun bat husteko, erabili «Ezabatu». Trazu bakoitza desegin eta berregin daiteke barrako geziekin. Sakatu «Eginda» amaitzean.\n\nMargotzen ari ez zarela egun bat ukitzen baduzu, haren xehetasunak irekitzen dira: han txanda aldatzen duzu, ohar bat gehitzen duzu edo eredura itzultzen zara. Egun bat sakatuta edukitzen baduzu, batzuk aldi berean aukeratzen hasiko zara: txanda jarri, kopiatu, ebaki eta itsatsi, edo aste bat errepikatu ditzakezu.",
+  "faqPatternQ": "Nola aplikatzen dut txandaketa bat, eta zer da desfasea?",
+  "faqPatternA": "Margotze moduan, sakatu «Eredua» botoia eta jarraitu urratsei: aukeratu zure txandaketa (edo sortu zurea), hasten zaren eguna eta noiz arte errepikatzen den.\n\nDesfasea hasierako egunean zikloaren zein puntutan zauden da. Egun horretan gaua egokitzen bazaizu, «Zikloaren zein egunetan zaude egun horretan?» urratsean gaua ukitzen duzu, eta gainerakoa bere kasa egokitzen da. Eskuz aldatu zenituen egunak errespetatu edo ordeztu egiten dira, nahiago duzun bezala. Txandaketa bat amaitzeko edo kentzeko, joan Ezarpenak › Nire txandaketak atalera.",
+  "faqDoubleQ": "Nola bikoizten dut txanda bat?",
+  "faqDoubleA": "Bikoiztea egun berean bi txanda egitea da. Ukitu eguna eta, haren xehetasunetan, erabili «Gehitu bigarren txanda». Margotzen ari bazara, aktibatu «Bikoiztu» eta ukitu egunak. Egun batzuk aukeratuta, «Bikoiztu…» aukerak txanda guztiei gehitzen die.\n\nEgun batek behar dituzun txandak izan ditzake, eta bakoitzak bere orduak gehitzen ditu bereiz.",
+  "faqPostNightQ": "Zer da gau-ondoko automatikoa?",
+  "faqPostNightA": "Gau baten hurrengo eguneko atsedena da. Ezarpenak › Gau-ondoko automatikoa atalean aktibatzen baduzu, gau bat margotzean edo aplikatzean, hurrengo eguna Gau-ondokoa bihurtzen da, hutsik edo libre bazegoen. Beste txanda bat zuten egunak ez dira ukitzen. Desaktibatuta dator.",
+  "faqNotesQ": "Nola erabiltzen ditut oharrak eta agenda?",
+  "faqNotesA": "Ukitu egun bat eta idatzi oharraren eremuan; oharra duten egunak egutegian markatzen dira. Ireki agenda egutegiaren goiko aldean: «Oharrak» atalak oharrak eta jaiegun pertsonalak biltzen ditu; «Txandak» atalak hurrengo txandak erakusten ditu.\n\nBilatu testua, maiuskulak eta azentuak kontuan hartu gabe, edo data: adibidez, 15/10 edo urr 15. Bilaketak ohar eta jaiegun pertsonal guztiak hartzen ditu, baita duela urtebetetik datorren urtera arteko txandak ere.",
+  "faqAlarmsQ": "Nola konfiguratzen ditut alarmak, eta zer da alarma zehatzen baimena?",
+  "faqAlarmsA": "Ezarpenak › Alarmak atalean, aktibatu «Abisatu txanda bakoitzaren aurretik», aukeratu zenbat lehenago eta, nahi baduzu, aurreko eguneko abisu bat ordu jakin batean. Egun baten xehetasunetan haren alarma ken dezakezu «Alarmarik ez egun honetan» aukerarekin.\n\nAndroiden, jakinarazpenak eta sistemaren ezarpenetako «Alarmak eta abisuak» baimena behar dira: hori gabe, Androidek minutu batzuk atzeratu dezake abisua. Alarmen pantailak esaten dizu zer falta den eta ezarpenetara eramaten zaitu. Zure mugikorrak bateria modu oldarkorrean aurrezten badu, utzi Cuadrante murrizketarik gabe, abisuak geldi ez ditzan.",
+  "faqHolidaysQ": "Nola gehitzen dut tokiko jaiegun bat?",
+  "faqHolidaysA": "Ezarpenak › Jaiegunak atalean, aukeratu zure erkidegoa eta udalerria, eta dagozkizun jaiegunak ikusiko dituzu. Zure herrikoa falta bada, ukitu egun hori egutegian eta aktibatu «Jaiegun pertsonala»: izena jartzen diozu, eta une horretatik aurrera jaiegun gisa kontatzen da.\n\nMugikorreko egutegiko jaiegunak ere ekar ditzakezu, Ezarpenak › Jaiegunak atalean. Aukeratu egutegiak eta datak, eta berrikusi aurrebista: egun osoko gertaerak bakarrik irakurtzen dira, lehendik dituzun jaiegunak saltatzen dira eta ekintza desegin dezakezu. Ez da egutegiko gertaerarik aldatzen.",
+  "faqWidgetQ": "Nola gehitzen dut widgeta, eta zergatik aldatzen da bere kasa?",
+  "faqWidgetA": "Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Androiden, eduki sakatuta hasierako pantailako gune huts bat, aukeratu Widgetak eta bilatu Cuadrante.\n\nWidgetak beti erakusten du gaurko eguna: gauerdian aldatzen da, aplikazioa ireki ez arren, hurrengo egunak gordeta dituelako. Denbora luzez Cuadrante ireki gabe egoten bazara, datuak agortzen zaizkio eta aplikazioa irekitzeko eskatzen dizu, eguneratzeko.",
+  "faqBackupQ": "Nola egin kopia eta aldatu gailuz?",
+  "faqBackupA": "Ezarpenak › Babeskopia atalak kopia automatikoak gordetzen ditu gailu honetan aldaketa bakoitzaren ondoren, baina gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, galdu egiten dira. Esportatu fitxategi bat «Esportatu fitxategia» aukerarekin eta gorde Driven, edo bidali zeure buruari WhatsApp edo posta elektroniko bidez.\n\nGailuz aldatzeko: esportatu fitxategia, instalatu Cuadrante gailu berrian, ireki fitxategia aplikazioarekin (edo erabili «Inportatu fitxategia» babeskopian) eta berrikusi aurrebista leheneratu aurretik. «Probatu leheneratzea» aukerak egiaztatzen du zure azken kopia osorik berreskura daitekeela.",
+  "faqImportQ": "Nire txandak egutegira inportatu edo esporta ditzaket?",
+  "faqImportA": "Bai. Ezarpenak › Inportatu txandak atalean, LRHSoft aplikazioaren «.Shifter» kopia bat, mugikorreko egutegiko txandak, .ics fitxategi bat edo CSV bat ekar ditzakezu. LRHSoft aplikazioan, sortu kopia bat Menua › Babeskopia › Tokiko kopia atalean, eta aukeratu Documents › ShifterBackups karpetako fitxategia. Berrikusi datak, txanda motak eta aurrebista inportatu aurretik.\n\n«Esportatu mugikorreko egutegira» aukerak behin kopiatzen ditu zure txandak telefonoko egutegi batera. Berriro esportatzen baduzu, ez dira bikoizten: Cuadrantek sortutako gertaerak bakarrik ukitzen dira.",
+  "faqCalendarsQ": "Egutegi bat baino gehiago izan eta alderatu ditzaket?",
+  "faqCalendarsA": "Bai. Ezarpenak › Egutegiak atalean, egutegi bat sortzen duzu zure bikotearentzat, bigarren lan batentzat edo seme-alaba batentzat: bakoitzak bere txandaketak eta egunak ditu, eta txanda motak berak dira. Bi edo gehiago dituzunean, hilaren gaineko egutegi-izenarekin batetik bestera alda zaitezke. Widgetak eta alarmek «Widgeta eta alarmak» gisa markatutako egutegia jarraitzen dute.\n\nNoiz zaudeten biak libre ikusteko, sakatu «Alderatu egutegiak» orri berean: bi aukeratzen dituzu eta haien txandak elkarrekin ikusten dituzu, baita hilabeteko egun libre komunak ere.",
+  "faqSummaryQ": "Nola kalkulatzen dira orduak eta euroak?",
+  "faqSummaryA": "Egutegiko laburpen-ikonoak txandak, orduak, gaueko orduak eta jaiegunetakoak erakusten ditu, hilabetekoak, urte osokoak edo «Datak…» atalean aukeratzen dituzun datetakoak (366 egun arte). Txanda bat hasten den egunean kontatzen da, gauerdia gainditzen badu ere.\n\nEuroak ikusteko, jarri txanden orduko prezioa eta, baduzu, txanda motaren osagarri finkoa Ezarpenak › Nire txandak atalean. Estimazioak osagarri finko horiek barne hartzen ditu, zergen aurretik. Ez ditu gaueko edo jaiegunetako orduen osagarriak ez atxikipenak barne hartzen.\n\n«Txandako osagarria» behin gehitzen da mota horretako txanda landu bakoitzeko, baita zatitutakoa bada ere; ez da ordu kopuruaren araberakoa. Atsedenek eta absentziek ez dute gehitzen.",
+  "settingsVersionCopied": "Bertsioa kopiatu da",
+  "settingsEmailCopied": "Helbidea kopiatu da",
+  "settingsAboutTitle": "Honi buruz",
+  "settingsAboutVersion": "Bertsioa: {version}",
+  "@settingsAboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsAboutVersionDev": "Garapen-bertsioa",
+  "settingsAboutTagline": "Cuadrantek konexiorik eta konturik gabe funtzionatzen du: zure txandak zure mugikorrean geratzen dira.",
+  "settingsAboutLicenses": "Kode irekiko lizentziak",
+  "calendarWeekNumberSemantics": "{number}. astea",
+  "@calendarWeekNumberSemantics": {
+    "description": "Lectura en voz alta del número de semana ISO de una fila del mes.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "importSectionTitle": "Inportatu eta esportatu",
+  "importRowTitle": "Inportatu txandak",
+  "importRowSubtitle": "LRHSoft kopia, mugikorreko egutegia, .ics edo CSV",
+  "calExportRowTitle": "Esportatu txandak",
+  "calExportRowSubtitle": "Mugikorreko egutegira, bikoiztu gabe",
+  "importTitle": "Inportatu txandak",
+  "importStepOf": "Urratsa: {current}/{total}",
+  "@importStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importNext": "Hurrengoa",
+  "importReading": "Irakurtzen…",
+  "importSourceTitle": "Nondik datoz zure txandak?",
+  "importSourceHelp": "Cuadrantek hementxe irakurtzen ditu gertaerak, zure mugikorrean, eta ez ditu inora bidaltzen. Zuk erabakitzen duzu zer inportatzen den.",
+  "importSourceDevice": "Mugikorreko egutegia",
+  "importSourceDeviceHelp": "Google, iCloud, Outlook… egutegi-aplikazioan duzuna.",
+  "importSourceIcs": ".ics fitxategia",
+  "importSourceIcsHelp": "Esportatutako egutegi bat, gertaera bakoitzeko txanda batekin.",
+  "importSourceCsv": "CSV fitxategia",
+  "importSourceCsvHelp": "Errenkada bakoitzean data bat eta txanda bat dituen orri bat.",
+  "importSourceLrhsoft": "LRHSoft kopia (Txanden Egutegia)",
+  "importSourceLrhsoftHelp": "Zure kopia lokaleko .Shifter fitxategia",
+  "importFileLrhsoft": "LRHSoft kopia",
+  "importHowToTitle": "LRHSoft edo Supershift aplikaziotik zatoz?",
+  "importHowToBody": "LRHSoft edo Shifter: aplikazioan, Menua › Babeskopia › Kopia lokala. Gero, aukeratu hemen .Shifter fitxategi hori. Mugikorraren memorian dago: Documents › ShifterBackups.\nSupershift: esportatu zure txandak mugikorreko egutegira eta aukeratu «Mugikorreko egutegia».",
+  "calExportPermissionTitle": "Egutegiaren baimena falta da",
+  "calExportPermissionReadBody": "Inportatzeko, Cuadrantek zure egutegietako gertaerak irakurri behar ditu. Orain bakarrik egiten du, inportatzen ari zaren bitartean, eta ez du ezer gordetzen mugikorretik kanpo.",
+  "calExportPermissionWriteBody": "Zure txandak gehitzeko, Cuadrantek zure egutegietarako sarbidea behar du. Bere gertaerak bakarrik gehitzen edo aldatzen ditu, eta zuk esportatzen duzunean bakarrik. Aukeratzen duzun egutegia kontu batekin sinkronizatzen bada (Google, iCloud...), kontu horrek ere jasoko ditu txandak.",
+  "calExportPermissionAgainBody": "Ez duzu baimenik eman. Baimenik gabe ezin ditugu zure egutegiak erabili, baina orain eman dezakezu. Berriro ukatzen baduzu, sistemaren ezarpenetan aktibatu beharko duzu.",
+  "calExportPermissionAllow": "Eman sarbidea",
+  "calExportPermissionDeniedTitle": "Egutegirako sarbidea desaktibatuta dago",
+  "calExportPermissionDeniedBody": "Aktibatu sistemaren ezarpenetan (Baimenak › Egutegia) eta itzuli hona.",
+  "calExportPermissionSettings": "Ireki ezarpenak",
+  "calExportPermissionRecheck": "Egiaztatu berriro",
+  "calExportPermissionRestrictedTitle": "Mugikor honek ez du uzten egutegia erabiltzen",
+  "calExportPermissionRestrictedBody": "Gurasoen kontrola edo laneko profil bat izan daiteke. Inportatzen ari bazara, probatu .ics fitxategi batekin.",
+  "calExportPermissionWriteOnlyBody": "Sistemak gertaerak gehitzeko baimena bakarrik eman du. Cuadrantek sarbide osoa behar du egutegiak irakurtzeko edo aurreko esportazio baten gertaerak ordezteko.",
+  "importCalendarsTitle": "Aukeratu egutegiak",
+  "importCalendarsHelp": "Markatu nondik datozen zure txandak. Besteak ez dira ukitzen.",
+  "importCalendarsEmpty": "Ez dago egutegirik mugikor honetan.",
+  "importCalendarsNoAccount": "Konturik gabe",
+  "importCalendarsReadOnly": "Irakurtzeko soilik",
+  "importCalendarSemantics": "{name}, {account}",
+  "@importCalendarSemantics": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "importRangeTitle": "Zein datatakoak?",
+  "importRangeHelp": "Egun hauetako gertaerak bakarrik begiratzen dira.",
+  "importRangeFrom": "Hasiera",
+  "importRangeTo": "Amaiera",
+  "importRangeDefault": "Azken 12 hilabeteak eta hurrengo 6ak",
+  "importRangeInvalid": "Amaiera-data ezin da hasiera-data baino lehenagokoa izan.",
+  "importRangeClamped": "Gehienez 5 urte: hasiera moztu da.",
+  "importRangeFile": "Fitxategia: {name}",
+  "@importRangeFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importRangeFileEvents": "{count, plural, =1{Fitxategiak gertaera 1 dauka.} other{Fitxategiak {count} gertaera dauzka.}}",
+  "@importRangeFileEvents": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRangeFileSkipped": "{count, plural, =1{Gertaera batek ez du data baliozkorik, eta ez da irakurriko.} other{{count} gertaerak ez dute data baliozkorik, eta ez dira irakurriko.}}",
+  "@importRangeFileSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRangeFileRules": "{count, plural, =1{Gertaera batek ulertzen ez dugun errepikapen bat du, eta behin bakarrik kontatzen da.} other{{count} gertaerak ulertzen ez dugun errepikapen bat dute, eta behin bakarrik kontatzen dira.}}",
+  "@importRangeFileRules": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importColumnsTitle": "Zer da zutabe bakoitza?",
+  "importColumnsHelp": "Begiratu lehen errenkadak eta berretsi zein den data eta zein txanda.",
+  "importColumnsHeader": "Lehen errenkadan izenburuak daude",
+  "importColumnDate": "Data",
+  "importColumnTitle": "Txanda edo kodea",
+  "importColumnStart": "Hasiera-ordua (aukerakoa)",
+  "importColumnEnd": "Amaiera-ordua (aukerakoa)",
+  "importColumnNone": "Bat ere ez",
+  "importColumnNumber": "{number}. zutabea",
+  "@importColumnNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "importColumnNamed": "{number}: {name}",
+  "@importColumnNamed": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importColumnsScrollHint": "Irristatu alboetara zutabe guztiak ikusteko.",
+  "importColumnsPreview": "Lehen errenkadak",
+  "importMappingTitle": "Zein txanda dagokio izenburu bakoitzari?",
+  "importMappingHelp": "Gertaerak izenburuaren arabera taldekatzen ditugu. Aukeratu zure txandetako bat, sortu berri bat edo ez ikusi egin.",
+  "importMappingSummary": "{days, plural, =1{Egun 1} other{{days} egun}} · {groups, plural, =1{izenburu 1} other{{groups} izenburu}}",
+  "@importMappingSummary": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "groups": {
+        "type": "int"
+      }
+    }
+  },
+  "importMappingTruncated": "{limit} gertaera baino gehiago daude: lehenengoak bakarrik irakurri dira. Laburtu datak gainerakoak ikusteko.",
+  "@importMappingTruncated": {
+    "placeholders": {
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "importMappingSkippedRows": "{count, plural, =1{Errenkada bat saltatu da, ez duelako data edo txanda baliozkorik (adibidez, lerro hau: {line}).} other{{count} errenkada saltatu dira, ez dutelako data edo txanda baliozkorik (adibidez, lerro hau: {line}).}}",
+  "@importMappingSkippedRows": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "importMappingNothing": "Aukeratu gutxienez izenburu bat inportatzeko.",
+  "importGroupDays": "{count, plural, =1{Egun 1} other{{count} egun}}",
+  "@importGroupDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importGroupAllDay": "Egun osoa",
+  "importGroupExamples": "adib. {dates}",
+  "@importGroupExamples": {
+    "placeholders": {
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "importGroupUntitled": "Izenbururik gabe",
+  "importMapIgnore": "Ez ikusi egin",
+  "importMapCreate": "Sortu mota berria",
+  "importMapChoose": "Aukeratu txanda",
+  "importMapSuggested": "Iradokia",
+  "importMapNew": "Berria: {name}",
+  "@importMapNew": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importMapPickTitle": "Zein txanda da «{title}»?",
+  "@importMapPickTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "importMapSemantics": "{title}: {choice}",
+  "@importMapSemantics": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "choice": {
+        "type": "String"
+      }
+    }
+  },
+  "importNewTypeTitle": "Txanda mota berria",
+  "importNewTypeUse": "Erabili mota hau",
+  "importPreviewTitle": "Honela geratuko da",
+  "importPreviewHelp": "Berrikusi hilabeteak. Ez da ezer gordeko Inportatu sakatu arte.",
+  "importPreviewTarget": "Egutegi honetan inportatuko da: «{name}».",
+  "@importPreviewTarget": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importPreviewDays": "{count, plural, =1{Egun 1 idatziko da.} other{{count} egun idatziko dira.}}",
+  "@importPreviewDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewUnchanged": "{count, plural, =1{Egun 1 berdin zegoen jada.} other{{count} egun berdin zeuden jada.}}",
+  "@importPreviewUnchanged": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewNewTypes": "{count, plural, =1{Txanda mota berri 1 sortuko da.} other{{count} txanda mota berri sortuko dira.}}",
+  "@importPreviewNewTypes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewEmpty": "Aukera hauekin ez da egunik aldatzen.",
+  "importPreviewMoreMonths": "{count, plural, =1{Eta erakutsi gabeko hilabete 1 gehiago.} other{Eta erakutsi gabeko {count} hilabete gehiago.}}",
+  "@importPreviewMoreMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictsTitle": "{count, plural, =1{Egun batek badu txanda jada} other{{count} egunek badute txanda jada}}",
+  "@importConflictsTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictsHelp": "Zer egingo dugu haiekin?",
+  "importConflictReplace": "Ordeztu",
+  "importConflictKeep": "Mantendu nirea",
+  "importConflictsExamples": "Adibidez: {dates}",
+  "@importConflictsExamples": {
+    "placeholders": {
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "importApply": "{count, plural, =1{Inportatu egun 1} other{Inportatu {count} egun}}",
+  "@importApply": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importApplied": "{count, plural, =1{Egun 1 inportatu da.} other{{count} egun inportatu dira.}}",
+  "@importApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAppliedWithTypes": "{days, plural, =1{Egun 1 inportatu da} other{{days} egun inportatu dira}}, {types, plural, =1{txanda mota berri 1 barne} other{{types} txanda mota berri barne}}.",
+  "@importAppliedWithTypes": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "types": {
+        "type": "int"
+      }
+    }
+  },
+  "importUndoDone": "Inportazioa desegin da.",
+  "importUndoKeptTypes": "{count, plural, =1{Mota «{names}» geratzen da: zerbaitek erabiltzen du.} other{Motak «{names}» geratzen dira: zerbaitek erabiltzen ditu.}}",
+  "@importUndoKeptTypes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "importApplyFailed": "Ezin izan da inportatu. Saiatu berriro.",
+  "importProblemPermissionDenied": "Baimenik gabe ezin ditugu zure egutegiak irakurri.",
+  "importProblemPermissionRestricted": "Mugikor honek ez dio Cuadranteri egutegia erabiltzen uzten. Probatu fitxategi batekin.",
+  "importProblemCalendarUnavailable": "Mugikor honek ez du egutegirik erabilgarri.",
+  "importProblemReadFailed": "Ezin izan dira gertaerak irakurri. Saiatu berriro.",
+  "importProblemFileTooLarge": "Fitxategiak 5 MB baino gehiago ditu. Esportatzean, aukeratu data gutxiago.",
+  "importProblemFileUnreadable": "Ezin izan dugu fitxategi hori ireki. .csv, .ics eta .Shifter (LRHSoft) fitxategiak onartzen ditugu.",
+  "importProblemNotCalendar": "Fitxategi hori ez dirudi .ics egutegi bat.",
+  "importProblemNotCsv": "Ez dugu daten zutaberik aurkitu CSV horretan.",
+  "importProblemNoEvents": "Ez dago gertaerarik data horietan.",
+  "importProblemTooComplex": "Fitxategi hori handiegia edo konplexuegia da, eta gehiegi behar du. Esportatzean, aukeratu data gutxiago.",
+  "importProblemUnknown": "Zerbaitek huts egin du fitxategia irakurtzean. Probatu beste batekin.",
+  "importProblemNotLrhsoft": "Fitxategi hori ez dirudi LRHSoft kopia bat (.Shifter). Saiatu beste kopia lokal bat sortzen.",
+  "importRangeLrhsoftDays": "{count, plural, =1{Kopiak egun 1 dauka.} other{Kopiak {count} egun dauzka.}}",
+  "importMappingInvalidRows": "{count, plural, =1{Baliozkoa ez zen errenkada 1 baztertu da.} other{Baliozkoak ez ziren {count} errenkada baztertu dira.}}",
+  "importLrhsoftNotImported": "Alarmak, marrazkiak, argazkiak eta aparteko orduak ez dira ekartzen.",
+  "importNoteCount": "{count, plural, =1{Ohar 1} other{{count} ohar}}",
+  "importApplyNotes": "{count, plural, =1{Inportatu ohar 1} other{Inportatu {count} ohar}}",
+  "importAppliedNotes": "{count, plural, =1{Ohar 1 inportatu da.} other{{count} ohar inportatu dira.}}",
+  "importPreviewNotes": "{count, plural, =1{Ohar 1 gehituko da.} other{{count} ohar gehituko dira.}}",
+  "calExportTitle": "Esportatu txandak",
+  "calExportHelp": "Zure txandak gertaera gisa gehitzen ditu mugikorreko egutegi batean, behin bakarrik. Errepikatzen baduzu, Cuadrantek data horietako bere aurreko gertaerak ordezten ditu, bikoiztu beharrean.",
+  "calExportSource": "Egutegi honetako txandak esportatuko dira: «{name}».",
+  "@calExportSource": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calExportCalendarLabel": "Egutegia",
+  "calExportNewCalendar": "Sortu «Cuadrante» egutegia",
+  "calExportNewCalendarHelp": "Horrela, nahi duzunean ezkutatu edo osorik ezabatu ahal izango duzu.",
+  "calExportRangeLabel": "Datak",
+  "calExportFrom": "Hasiera",
+  "calExportTo": "Amaiera",
+  "calExportIncludeRest": "Sartu egun libreak",
+  "calExportIncludeRestHelp": "Libre eta Gau-ondokoa ere gehitzen dira, egun osoko gertaera gisa.",
+  "calExportIncludeAbsences": "Sartu absentziak",
+  "calExportIncludeAbsencesHelp": "Oporrak, bajak eta beste absentzia batzuk. Egutegi horri eta harekin sinkronizatzen den kontuari gehituko litzaizkieke.",
+  "calExportSynced": "Egutegi hau kontu honekin sinkronizatzen da: {account}. Zure txandak bertan ikusiko dira.",
+  "@calExportSynced": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "calExportSyncedUnnamed": "Egutegi hau kontu batekin sinkronizatzen da: zure txandak bertan ikusiko dira.",
+  "calExportPlanAdd": "{count, plural, =1{Gertaera 1 gehituko da.} other{{count} gertaera gehituko dira.}}",
+  "@calExportPlanAdd": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanReplace": "{count, plural, =1{Aurreko esportazio bateko gertaera 1 ordeztuko da.} other{Aurreko esportazio bateko {count} gertaera ordeztuko dira.}}",
+  "@calExportPlanReplace": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanRemove": "{count, plural, =1{Aurreko esportazio bateko gertaera 1 kenduko da.} other{Aurreko esportazio bateko {count} gertaera kenduko dira.}}",
+  "calExportPlanSame": "{count, plural, =1{Gertaera 1 eguneratuta dago jada.} other{{count} gertaera eguneratuta daude jada.}}",
+  "@calExportPlanSame": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanNothing": "Dena eguneratuta dago: ez dago ezer aldatzeko.",
+  "calExportPlanNone": "Ez dago txandarik data horietan.",
+  "calExportButton": "Esportatu",
+  "calExportRunning": "Esportatzen… {done}/{total}",
+  "@calExportRunning": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneTitle": "Esportazioa eginda",
+  "calExportDoneCalendar": "«Cuadrante» egutegia sortu da.",
+  "calExportDoneCreated": "{count, plural, =1{Gertaera 1 gehitu da} other{{count} gertaera gehitu dira}}",
+  "@calExportDoneCreated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneReplaced": "{count, plural, =1{Aurreko gertaera 1 ordeztu da} other{Aurreko {count} gertaera ordeztu dira}}",
+  "calExportDoneRemoved": "{count, plural, =1{Gertaera 1 kendu da} other{{count} gertaera kendu dira}}",
+  "@calExportDoneRemoved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneSame": "{count, plural, =1{Gertaera 1 eguneratuta zegoen jada} other{{count} gertaera eguneratuta zeuden jada}}",
+  "@calExportDoneSame": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneFailed": "{count, plural, =1{Ezin izan da gertaera 1 idatzi. Esportatu berriro osatzeko.} other{Ezin izan dira {count} gertaera idatzi. Esportatu berriro osatzeko.}}",
+  "@calExportDoneFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportProblemPermission": "Baimenik gabe ezin dugu zure egutegian idatzi.",
+  "calExportProblemUnavailable": "Mugikor honek ez du egutegirik erabilgarri.",
+  "calExportProblemFailed": "Ezin izan da esportatu. Saiatu berriro.",
+  "calExportRangeClamped": "Gehienez urtebete: amaiera moztu da.",
+  "onboardingImportButton": "Inportatu orain",
+  "onboardingImportLrhsoftButton": "Inportatu LRHSoft kopia",
+  "backupUiRowSubtitle": "Automatikoa, esportatu eta inportatu",
+  "backupUiStatusNoneTitle": "Oraindik ez dago kopiarik",
+  "backupUiStatusNoneBody": "Egin bat orain: segundo bat behar du. Kopiarik ez duzun bitartean, gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, zure txanden egutegia galduko da.",
+  "backupUiStatusLast": "Azken kopia",
+  "backupUiStatusWhere": "Gailu honetan",
+  "backupUiStatusRunning": "Kopia gordetzen…",
+  "backupUiStatusPending": "Aldaketa berriak daude: segundo batzuk barru egingo da kopia.",
+  "backupUiStatusPendingAt": "Aldaketa berriak daude: hurrengo kopia {time} inguruan egingo da. Itxaron nahi ez baduzu, sakatu «Egin kopia orain».",
+  "backupUiStatusPendingLater": "Aldaketa berriak daude: hurrengo kopia minutu batzuen buruan egingo da. Itxaron nahi ez baduzu, sakatu «Egin kopia orain».",
+  "backupUiStatusFailedTitle": "Azken kopia automatikoak huts egin du",
+  "backupUiStatusFailedWithGood": "Saiatu gara ({when}), baina ezin izan da gorde. Azken kopia ona: {good}.",
+  "@backupUiStatusFailedWithGood": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "good": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiStatusFailedNoGood": "Saiatu gara ({when}), baina ezin izan da gorde. Oraindik ez duzu kopia onik.",
+  "@backupUiStatusFailedNoGood": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiFailDiskFull": "Gailuak ez du leku librerik.",
+  "backupUiFailGeneric": "Ezin izan da kopiaren fitxategia idatzi.",
+  "backupUiRetry": "Saiatu berriro",
+  "backupUiSystemOn": "Androideko sistemaren babeskopia: aktibatuta",
+  "backupUiSystemOff": "Androideko sistemaren babeskopia: desaktibatuta. Aktibatu Androideko ezarpenetan beste kopia bat izateko.",
+  "backupUiSystemUnknown": "Androideko sistemaren babeskopia: ezin dugu aplikaziotik egiaztatu. Begiratu Androideko ezarpenetan aktibatuta dagoela.",
+  "backupUiWarning": "Kopia hauek gailu honetan gordetzen dira. Beste kopiarik gabe aplikazioa desinstalatzen baduzu, galdu egiten da. Esportatu fitxategi bat eta gorde Driven, edo bidali WhatsApp edo posta elektroniko bidez.",
+  "backupUiBackupNow": "Egin kopia orain",
+  "backupUiBackupDone": "Kopia eginda",
+  "backupUiBackupFailed": "Ezin izan da kopia egin. Zure datuak lehen bezala daude.",
+  "backupUiAutoTitle": "Kopia automatikoak",
+  "backupUiAutoOn": "Zerbait aldatu ondoren, konturatu gabe. Azken 7ak gordetzen ditugu, eta egunean bat 30 egunez.",
+  "backupUiAutoOff": "Desaktibatuta: zuk eskatzen duzunean bakarrik egiten da kopia.",
+  "backupUiSectionFile": "Fitxategia",
+  "backupUiSectionCheck": "Egiaztatu",
+  "backupUiSectionCopies": "Gailu honetako kopiak",
+  "backupUiExport": "Esportatu fitxategia",
+  "backupUiExportSubtitle": "Driven gordetzeko edo WhatsApp edo posta elektroniko bidez bidaltzeko",
+  "backupUiExportFailed": "Ezin izan da fitxategia esportatu.",
+  "backupUiSave": "Gorde gailuan",
+  "backupUiSaveSubtitle": "Aukeratu karpeta bat; adibidez, Deskargak",
+  "backupUiSaveDone": "Fitxategia gorde da",
+  "backupUiSaveFailed": "Ezin izan da fitxategia gorde. Saiatu beste karpeta batekin edo erabili «Esportatu fitxategia».",
+  "backupUiImport": "Inportatu fitxategia",
+  "backupUiImportSubtitle": "Berreskuratu Cuadranteren fitxategi bat",
+  "backupUiVerify": "Probatu leheneratzea",
+  "backupUiVerifySubtitle": "Zure azken kopia osorik berreskura daitekeela egiaztatzen du",
+  "backupUiVerifyRunning": "Kopia egiaztatzen…",
+  "backupUiVerifyNone": "Oraindik ez dago probatzeko kopiarik. Egin bat lehenik.",
+  "backupUiVerifyOk": "{days, plural, =1{Kopia osorik dago: egun 1 egiaztatu da} other{Kopia osorik dago: {days} egun egiaztatu dira}}",
+  "@backupUiVerifyOk": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "backupUiVerifySame": "Orain duzunaren berdina da.",
+  "backupUiVerifyOlder": "Orain duzuna baino zaharragoa da (aldatzen den lehen eguna: {day}). Normala da geroago aldaketak egin badituzu.",
+  "@backupUiVerifyOlder": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiVerifyOlderNoDay": "Orain duzuna baino zaharragoa da. Normala da geroago aldaketak egin badituzu.",
+  "backupUiVerifyMismatch": "Kopia ez da berdin berreraikitzen. Desberdina den lehen eguna: {day}. Egin kopia berri bat eta jakinarazi iezaguzu.",
+  "@backupUiVerifyMismatch": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiVerifyMismatchNoDay": "Kopia ez da berdin berreraikitzen: gordetako datuak ez datoz bat. Egin kopia berri bat eta jakinarazi iezaguzu.",
+  "backupUiVerifyError": "Ezin izan da kopia probatu. {reason}",
+  "@backupUiVerifyError": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiCopiesEmpty": "Zure kopiak hemen agertuko dira.",
+  "backupUiCopyLocal": "Gailuko kopia",
+  "backupUiCopySafety": "Leheneratu aurretik",
+  "backupUiCopyMeta": "{kind} · {size}",
+  "@backupUiCopyMeta": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiCopyMetaVersion": "{kind} · {version} · {size}",
+  "backupUiCopyRestore": "Leheneratu hau",
+  "backupUiCopyRestoreLabel": "Leheneratu kopia ({when})",
+  "@backupUiCopyRestoreLabel": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenToday": "gaur, {time}",
+  "@backupUiWhenToday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenYesterday": "atzo, {time}",
+  "@backupUiWhenYesterday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenDate": "{date}, {time}",
+  "@backupUiWhenDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewTitle": "Leheneratu kopia",
+  "backupUiPreviewReading": "Fitxategia irakurtzen…",
+  "backupUiOriginFile": "Aukeratu duzun fitxategia",
+  "backupUiOriginShared": "Beste aplikazio batetik jasotako fitxategia",
+  "backupUiOriginLocal": "Gailu honetako kopia",
+  "backupUiOriginSafety": "Leheneratu aurretik egindako kopia",
+  "backupUiOriginCloud": "iCloudeko kopia",
+  "backupUiPreviewSaved": "Gordeta: {when}",
+  "@backupUiPreviewSaved": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewSender": "Bidaltzailea: {sender}",
+  "@backupUiPreviewSender": {
+    "placeholders": {
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewSenderHint": "Gailuak adierazten du. Fitxategi hau espero ez bazenuen, utzi.",
+  "backupUiPreviewTurnsOffTitle": "Kopia honek aktibatuta dituzun ezarpenak desaktibatzen ditu",
+  "backupUiPreviewTurnsOffAuto": "Kopia automatikoak desaktibatzen ditu.",
+  "backupUiPreviewTurnsOffAlarms": "Txanden alarmak desaktibatzen ditu.",
+  "backupUiPreviewContains": "Zer dakar",
+  "backupUiPreviewNow": "Orain: {value}",
+  "@backupUiPreviewNow": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewCalendars": "Egutegiak",
+  "backupUiPreviewArchived": "{name} (artxibatuta)",
+  "@backupUiPreviewArchived": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewDays": "Eskuz jarritako txanda edo oharra duten egunak",
+  "backupUiPreviewRuns": "Txandaketak",
+  "backupUiPreviewTypes": "Txanda motak",
+  "backupUiPreviewRange": "Datak",
+  "backupUiPreviewRangeValue": "{from} – {to}",
+  "@backupUiPreviewRangeValue": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewRangeOpen": "{from} – {to}, eta txandaketa batek aurrera jarraitzen du",
+  "@backupUiPreviewRangeOpen": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewRangeNone": "Datarik gabe",
+  "backupUiPreviewReplace": "Honek orain duzuna ordezten du; aurretik kopia bat gordetzen dugu.",
+  "backupUiPreviewConfirm": "Ordeztu dudana",
+  "backupUiPreviewCancel": "Utzi",
+  "backupUiRestoring": "Zure txanden egutegia leheneratzen…",
+  "backupUiRestoringHint": "Ez itxi aplikazioa.",
+  "backupUiDoneTitle": "Eginda, zure txanden egutegia leheneratu da",
+  "backupUiDoneBody": "Ezer aldatu aurretik, zeneukana gorde dugu. Espero zenuena ez bazen, atzera egin dezakezu.",
+  "backupUiDoneView": "Ikusi nire egutegia",
+  "backupUiDoneUndo": "Itzuli lehengora",
+  "backupUiErrorNotOurs": "Fitxategi hau ez da Cuadranteren kopia bat.",
+  "backupUiErrorNewer": "Fitxategi hau Cuadranteren bertsio berriago batekoa da: eguneratu aplikazioa.",
+  "backupUiErrorCorrupt": "Fitxategia hondatuta edo osatu gabe dago, eta ezin da erabili.",
+  "backupUiErrorTooLarge": "Fitxategi hau handiegia da Cuadranteren kopia bat izateko.",
+  "backupUiErrorUnreadable": "Ezin izan da fitxategia irakurri.",
+  "backupUiErrorUntouched": "Ez dugu ezer aldatu: zure datuak lehen bezala daude.",
+  "backupUiErrorRestoreFailed": "Ezin izan da leheneratu. Zure datuak lehen bezala daude.",
+  "backupUiErrorRestoreReload": "Zure datuak leheneratu ditugu, baina ezin izan da pantaila eguneratu. Itxi Cuadrante eta ireki berriro.",
+  "backupUiBack": "Itzuli",
+  "widgetWeekdaysShort": "al,ar,az,og,or,lr,ig",
+  "@widgetWeekdaysShort": {
+    "description": "Widget: los siete días de la semana abreviados, de lunes a domingo, separados por comas (sin espacios)."
+  },
+  "widgetWeekdayHeaders": "Al,Ar,Az,Og,Or,Lr,Ig",
+  "@widgetWeekdayHeaders": {
+    "description": "Widget: inicial de cada día de la semana, de lunes a domingo, separadas por comas."
+  },
+  "widgetMonthNames": "urtarrila,otsaila,martxoa,apirila,maiatza,ekaina,uztaila,abuztua,iraila,urria,azaroa,abendua",
+  "@widgetMonthNames": {
+    "description": "Widget: los doce meses en minúsculas, separados por comas (sin espacios)."
+  },
+  "widgetTomorrow": "Bihar",
+  "@widgetTomorrow": {
+    "description": "Widget: prefijo de la línea del día siguiente («Mañana: T 14–22»)."
+  },
+  "widgetEmptyCircular": "–",
+  "widgetStaleTitle": "Cuadrante",
+  "widgetStaleBody": "Ireki Cuadrante eguneratuta egoteko",
+  "@widgetStaleBody": {
+    "description": "Widget: aviso cuando los datos publicados ya no cubren el día de hoy."
+  },
+  "widgetAddTitle": "Gehitu widgeta",
+  "widgetAddSubtitle": "Zure gaurko txanda hasierako pantailan",
+  "widgetAddBody": "Widgetak beti erakusten du gaurko eguna, aplikazioa ireki ez arren.",
+  "widgetAddSmall": "Txikia: gaur eta bihar",
+  "widgetAddMedium": "Ertaina: hurrengo 7 egunak",
+  "widgetAddLarge": "Handia: hilabete osoa",
+  "widgetAddAgenda": "Agenda: hurrengo txandak",
+  "widgetAddTwoWeeks": "Bi aste: aste hau eta hurrengoa",
+  "widgetAddManualAndroid": "Eduki sakatuta hasierako pantailako gune huts bat, aukeratu Widgetak eta bilatu Cuadrante.",
+  "widgetAddManualIos": "Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Cuadrante.",
+  "compareTitle": "Alderatu egutegiak",
+  "compareOpen": "Alderatu egutegiak",
+  "compareOpenSubtitle": "Ikusi noiz zaudeten biak libre",
+  "compareSwap": "Trukatu",
+  "compareIntro": "Aukeratu bi egutegi eta ikusi haien txandak elkarrekin. Bien egun libreak markatuta daude.",
+  "compareFirstLabel": "Lehen egutegia",
+  "compareSecondLabel": "Bigarren egutegia",
+  "comparePickTitle": "Aukeratu egutegi bat",
+  "compareNeedTwoTitle": "Bi egutegi behar dituzu",
+  "compareNeedTwoBody": "Sortu beste egutegi bat (zure bikotea, bigarren lan bat) noiz zaudeten biak libre ikusteko.",
+  "compareCount": "{count, plural, =0{Ez dago egun libre komunik hilabete honetan} =1{Egun libre komun 1 hilabete honetan} other{{count} egun libre komun hilabete honetan}}",
+  "@compareCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "compareFreeListTitle": "Egun libre komunak",
+  "compareLegendFree": "Biak libre",
+  "compareNote": "Lan-txandarik gabeko eguna libretzat hartzen da: hutsik, libre edo absentzia batekin (oporrak, baja…). Txanda bakoitza hasten den egunean kontatzen da.",
+  "compareNoShiftMark": "–",
+  "compareBothFree": "biak libre",
+  "compareCellCalendar": "{calendar}: {shifts}",
+  "@compareCellCalendar": {
+    "placeholders": {
+      "calendar": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "compareLoadFailed": "Ezin izan dira egutegiak irakurri.",
+  "calendarsTitle": "Egutegiak",
+  "calendarsIntro": "Egutegi bakoitzak bere txanden egutegia du: zurea, zure bikotearena, bigarren lan batena. Txanda motak berak dira guztietan.",
+  "calendarsActiveBadge": "Aktiboa",
+  "calendarsPrimaryBadge": "Widgeta eta alarmak",
+  "calendarsAdd": "Egutegi berria",
+  "calendarsNewTitle": "Egutegi berria",
+  "calendarsEditTitle": "Editatu egutegia",
+  "calendarsNameLabel": "Izena",
+  "calendarsNameHint": "Bikotea, bigarren lana…",
+  "calendarsColorLabel": "Kolorea",
+  "calendarsColorOption": "Kolorea: {index}",
+  "@calendarsColorOption": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarsCreate": "Sortu",
+  "calendarsMakePrimary": "Erabili widgeterako eta alarmetarako",
+  "calendarsPrimaryHelp": "Widgetak eta alarmek egutegi hau jarraitzen dute, beste bat ikusten ari bazara ere.",
+  "calendarsArchive": "Artxibatu",
+  "calendarsArchiveTitle": "«{name}» artxibatu nahi duzu?",
+  "@calendarsArchiveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsArchiveBody": "Ez da zerrendan agertuko, baina «Artxibatuak» ataletik berreskuratu ahal izango duzu. Haren txandak mugikorrean gordeta geratzen dira.",
+  "calendarsArchivePrimaryNote": "Widgeta eta alarmak egutegi honetara pasatuko dira: «{name}».",
+  "@calendarsArchivePrimaryNote": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsArchivedSection": "Artxibatuak ({count})",
+  "@calendarsArchivedSection": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarsRestore": "Berreskuratu",
+  "calendarsRestoreSemantic": "Berreskuratu «{name}»",
+  "@calendarsRestoreSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsRestored": "«{name}» berreskuratu da",
+  "@calendarsRestored": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsLastError": "Ezin duzu azken egutegia artxibatu: beti egon behar da bat.",
+  "calendarsNameRequired": "Jarri izen bat egutegiari.",
+  "calendarsNotFoundError": "Egutegi hori ez dago jada.",
+  "calendarsSaveFailed": "Ezin izan da egutegia gorde. Saiatu berriro.",
+  "calendarsSwitcherLabel": "Egutegia: {name}. Aldatu egutegia",
+  "@calendarsSwitcherLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsSwitcherTitle": "Aldatu egutegia",
+  "calendarsSwitchFailed": "Ezin izan da egutegia aldatu.",
+  "calendarsManage": "Kudeatu egutegiak",
+  "holidayImportAction": "Ekarri jaiegunak mugikorreko egutegitik",
+  "holidayImportTitle": "Jaiegunak",
+  "holidayImportHelp": "Egun osoko gertaerak bakarrik. Dena zure mugikorrean geratzen da; zure egutegia ez da aldatzen.",
+  "holidayImportRangeHelp": "Hasieran, aurtengoa eta hurrengo urtea.",
+  "holidayImportSkipped": "Badago · saltatuko da",
+  "holidayImportReady": "Gehituko da",
+  "holidayImportIgnored": "{count, plural, =1{Ordua duen gertaera 1 saltatuko da.} other{Ordua duten {count} gertaera saltatuko dira.}}",
+  "@holidayImportIgnored": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportCapped": "{count, plural, =1{31 egun baino gehiagoko gertaera 1 laburtuko da.} other{31 egun baino gehiagoko {count} gertaera laburtuko dira.}}",
+  "@holidayImportCapped": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportAdd": "{count, plural, =1{Gehitu jaiegun 1} other{Gehitu {count} jaiegun}}",
+  "@holidayImportAdd": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportAdded": "{count, plural, =1{Jaiegun 1 gehitu da} other{{count} jaiegun gehitu dira}}",
+  "@holidayImportAdded": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportEmpty": "Ez dago jaiegun berririk.",
+  "holidayImportPreviewHelp": "Dagoeneko jaieguna duten datak saltatuko dira.",
+
+  "holidaysSettingsRegionTitle": "Autonomia-erkidegoa",
+  "holidaysSettingsRegionUnset": "Aukeratu gabe",
+  "holidaysSettingsRegionClear": "Erkidegorik gabe",
+  "holidaysSettingsMunicipalityTitle": "Udalerria",
+  "holidaysSettingsMunicipalityNone": "Bat ere ez",
+  "holidaysSettingsMunicipalitySearch": "Bilatu udalerria",
+  "holidaysSettingsMunicipalityNoMatch": "Ez dago bilaketa honekin bat datorren udalerririk: «{query}»",
+  "@holidaysSettingsMunicipalityNoMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsMunicipalityLoadFailed": "Ezin izan da udalerrien zerrenda kargatu.",
+  "holidaysSettingsStatusNoRegion": "Erkidegorik gabe, estatuko jaiegunak bakarrik agertzen dira. Aukeratu zurea erkidegokoak ikusteko.",
+  "holidaysSettingsStatusNoMunicipality": "Aukeratu zure udalerria haren tokiko jaiegunak ikusteko, edo gehitu zuk zeuk behean.",
+  "holidaysSettingsStatusLocalIncluded": "Tokiko jaiegunak ({municipality}): barne",
+  "@holidaysSettingsStatusLocalIncluded": {
+    "placeholders": {
+      "municipality": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusYearPending": "Urte honetako jaiegun ofizialak eguneratze batekin iritsiko dira: {year}",
+  "@holidaysSettingsStatusYearPending": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusLocalMissing": "Oraindik ez ditugu zure udalerrikoak: gehitu zuk zeuk behean",
+  "holidaysSettingsStatusLocalMissingYear": "Oraindik ez ditugu jaiegun hauek: {municipality}, {year}. Gehitu zuk zeuk behean",
+  "@holidaysSettingsStatusLocalMissingYear": {
+    "placeholders": {
+      "municipality": {
+        "type": "String"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusLocalPartial": "Baliteke bat falta izatea: egiaztatu.",
+  "holidaysSettingsAdd": "Gehitu tokiko jaieguna",
+  "holidaysSettingsAddName": "Izena",
+  "holidaysSettingsAddDefaultName": "Tokiko jaia",
+  "holidaysSettingsEmptyYear": "Oraindik ez ditugu urte honetako jaiegunak: {year}.",
+  "@holidaysSettingsEmptyYear": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsScopeNational": "Estatukoa",
+  "holidaysSettingsScopeLocal": "Tokikoa",
+  "holidaysSettingsScopeUser": "Zurea",
+  "holidaysSettingsNoteReplaces": "Honen ordez: {name}",
+  "@holidaysSettingsNoteReplaces": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsNoteCovered": "Zure egutegian beste honek estaltzen du: «{name}»",
+  "@holidaysSettingsNoteCovered": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsSubstitutedTitle": "Ez dira jaiegun hemen: {region}",
+  "@holidaysSettingsSubstitutedTitle": {
+    "placeholders": {
+      "region": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsSubstitutedBody": "Erkidego batek estatuko jaiegun hauek bere beste batzuekin ordez ditzake.",
+  "holidaysSettingsRemove": "Kendu jaieguna",
+  "holidaysSettingsRemoved": "Jaieguna kenduta: {name}",
+  "@holidaysSettingsRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsRowSemantics": "{date}. {name}. {scope}",
+  "@holidaysSettingsRowSemantics": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      },
+      "scope": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmTitle": "{name} txanda: {start}",
+  "@alarmTitle": {
+    "description": "Título del aviso de turno, p. ej. «Turno de Noche a las 22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmBody": "{name}: {start}–{end}",
+  "@alarmBody": {
+    "description": "Cuerpo del aviso de turno, p. ej. «Noche: de 22:00 a 06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmChannelName": "Txanden alarmak",
+  "@alarmChannelName": {
+    "description": "Nombre del canal de notificaciones de Android para las alarmas de turno."
+  },
+  "alarmChannelDescription": "Txanda bakoitza hasi aurretik abisatzen dizu.",
+  "@alarmChannelDescription": {
+    "description": "Descripción del canal de Android de las alarmas de turno."
+  },
+  "alarmsNotifDayBeforeTitle": "Bihar: {name} txanda, {start}",
+  "@alarmsNotifDayBeforeTitle": {
+    "description": "Título del aviso del día anterior, p. ej. «Mañana: turno de Noche a las 22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNotifSnooze": "Atzeratu 10 min",
+  "@alarmsNotifSnooze": {
+    "description": "Botón del aviso de turno: vuelve a sonar dentro de 10 minutos."
+  },
+  "alarmsNotifAwake": "Esna nago",
+  "@alarmsNotifAwake": {
+    "description": "Botón del aviso de turno: lo descarta."
+  },
+  "alarmsNotifTestTitle": "Proba-abisua",
+  "alarmsNotifTestBody": "Honela abisatuko dizu Cuadrantek zure txanda baino lehen.",
+  "alarmsRowOn": "Aktibatuta",
+  "alarmsRowOff": "Desaktibatuta",
+  "alarmsMasterTitle": "Abisatu txanda bakoitzaren aurretik",
+  "alarmsMasterHelp": "Abisu bat mugikorrean, konexiorik eta konturik gabe.",
+  "alarmsPermOkTitle": "Dena prest",
+  "alarmsPermOkBody": "Jakinarazpenak eta ordu zehatzeko alarmak baimenduta daude.",
+  "alarmsPermNotifTitle": "Jakinarazpenak falta dira",
+  "alarmsPermNotifBody": "Jakinarazpenen baimenik gabe, Cuadrantek ezin dizu abisatu. Baimentzeko leihoa agertzen ez bazaizu, aktibatu sistemaren ezarpenetan.",
+  "alarmsPermNotifAllow": "Baimendu",
+  "alarmsPermNotifBlockedBody": "Androidek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu sistemaren ezarpenetan, eta Cuadrantek abisatu ahal izango dizu.",
+  "alarmsPermNotifOpenSettings": "Ireki ezarpenak",
+  "alarmsPermExactTitle": "Alarmak eta abisuak",
+  "alarmsPermExactBody": "Alarmak minutu batzuk berandu irits daitezke. Ordu zehatzean jo dezaten, baimendu «Alarmak eta abisuak» sistemaren ezarpenetan.",
+  "alarmsPermExactOpen": "Ireki ezarpenak",
+  "alarmsSectionTypes": "Txanda motak",
+  "alarmsTypesEmpty": "Zure txandetako batek ere ez du ordutegirik. Jarri ordua Nire txandak atalean, Cuadrantek abisatu ahal izan diezazun.",
+  "alarmsBeforeTitle": "Txandaren aurretik",
+  "alarmsBeforeAtStart": "Hastean",
+  "alarmsBeforeSheetTitle": "Txanda baino zenbat lehenago",
+  "alarmsBeforeCustom": "Pertsonalizatua",
+  "alarmsBeforeCustomTitle": "Aurrerapen pertsonalizatua",
+  "alarmsBeforeCustomHelp": "Txanda hasi baino zenbat ordu eta minutu lehenago.",
+  "alarmsBeforeCustomApply": "Gorde",
+  "alarmsSecondSegmentTitle": "Abisatu bigarren zatiaren aurretik ere",
+  "alarmsSecondSegmentHelper": "Bigarren abisu bat, aurrerapen berarekin, lanera itzuli aurretik.",
+  "alarmsDayBeforeTitle": "Aurreko eguneko abisua",
+  "alarmsDayBeforeAt": "Ordua: {time}",
+  "@alarmsDayBeforeAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsDayBeforeTimeTitle": "Abisuaren ordua",
+  "alarmsLabelTitle": "Abisuaren testua",
+  "alarmsLabelDefault": "Betikoa",
+  "alarmsLabelHint": "Adibidez: Lanera!",
+  "alarmsLabelApply": "Gorde",
+  "alarmsLabelReset": "Erabili betikoa",
+  "alarmsTestButton": "Probatu abisua",
+  "alarmsTestScheduled": "10 segundo barru abisatuko dizugu.",
+  "alarmsTestDenied": "Jakinarazpenen baimenik gabe ezin dugu abisua probatu.",
+  "alarmsNextLine": "Hurrengo abisua: {when} · {shift}",
+  "@alarmsNextLine": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextLineDayBefore": "Hurrengo abisua: {when} · {shift}, aurreko egunean",
+  "@alarmsNextLineDayBefore": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextWhen": "{weekday}, {month} {day}, {time}",
+  "@alarmsNextWhen": {
+    "description": "Cuándo suena el próximo aviso, p. ej. «mié 21 de octubre, 20:30».",
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "day": {
+        "type": "int"
+      },
+      "month": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextNone": "Ez dago abisurik aurreikusita hurrengo egunetan.",
+  "alarmsNextOff": "Alarmak desaktibatuta daude.",
+  "alarmsSkipDay": "Alarmarik ez egun honetan",
+  "alarmsReminderTitle": "Gogorarazpena",
+  "@alarmsReminderTitle": {
+    "description": "Título de la notificación del recordatorio de una nota."
+  },
+  "alarmsReminderEmptyBody": "Gogorarazpen bat duzu gaurko",
+  "@alarmsReminderEmptyBody": {
+    "description": "Texto de la notificación del recordatorio cuando la nota no tiene texto."
+  },
+  "alarmsReminderChannelName": "Oharren gogorarazpenak",
+  "@alarmsReminderChannelName": {
+    "description": "Nombre del canal de notificaciones de Android para los recordatorios de las notas."
+  },
+  "alarmsReminderChannelDescription": "Egun bateko oharrean aukeratzen duzun orduan abisatzen dizu.",
+  "@alarmsReminderChannelDescription": {
+    "description": "Descripción del canal de Android de los recordatorios de notas."
+  },
+  "dayReminderAdd": "Abisatu",
+  "@dayReminderAdd": {
+    "description": "Botón del detalle del día, bajo la nota: pide una hora y programa un aviso."
+  },
+  "dayReminderAt": "Abisua: {time}",
+  "@dayReminderAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dayReminderChange": "Aldatu abisuaren ordua",
+  "@dayReminderChange": {
+    "description": "Descripción accesible de la fila del aviso: tocarla cambia la hora."
+  },
+  "dayReminderRemove": "Kendu abisua",
+  "dayReminderRemoved": "Abisua kenduta",
+  "dayReminderPickHelp": "Abisuaren ordua",
+  "dayReminderPast": "Ordu hori pasatu da: ez du joko.",
+  "dayReminderNoPermission": "Jakinarazpenak desaktibatuta daude; beraz, abisuak ez du joko. Aktibatu mugikorraren ezarpenetan.",
+  "dayReminderOnlyPrimary": "Egutegi nagusiko abisuek bakarrik jotzen dute.",
+  "agendaSemanticsReminder": "abisua: {time}",
+  "@agendaSemanticsReminder": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesAlarmSection": "Alarma",
+  "@shiftTypesAlarmSection": {
+    "description": "Cabecera de la sección de alarma del editor de un tipo de turno."
+  },
+  "shiftTypesSoundLabel": "Soinua",
+  "shiftTypesSoundHelper": "Alarmen bolumenarekin jotzen du, txanda honen alarma Ezarpenak atalean aktibatzen duzunean.",
+  "shiftTypesSoundDefault": "Lehenetsia",
+  "shiftTypesSoundCustom": "Mugikorreko soinua",
+  "@shiftTypesSoundCustom": {
+    "description": "Valor de la fila Sonido cuando hay un sonido elegido pero el móvil no ha dado su nombre."
+  },
+  "shiftTypesSoundMissing": "Ez dago erabilgarri: lehenetsiak jotzen du",
+  "shiftTypesSoundReset": "Erabili lehenetsia",
+  "catalogShiftMorningName": "Goiza",
+  "@catalogShiftMorningName": {
+    "description": "Plantillas de tipo de turno: nombre y código (1 a 3 caracteres, sin espacios, distinto en cada plantilla). Solo se usan al crear el tipo (instalación nueva, saliente automático…); los tipos ya guardados no se renombran."
+  },
+  "catalogShiftMorningCode": "Goi",
+  "catalogShiftAfternoonName": "Arratsaldea",
+  "catalogShiftAfternoonCode": "Arr",
+  "catalogShiftNightName": "Gaua",
+  "catalogShiftNightCode": "Gau",
+  "catalogShiftRestName": "Libre",
+  "catalogShiftRestCode": "L",
+  "catalogShiftGuard24Name": "Guardia 24 h",
+  "catalogShiftGuard24Code": "G24",
+  "catalogShiftPostNightName": "Gau-ondokoa",
+  "catalogShiftPostNightCode": "GO",
+  "catalogShiftVacationName": "Oporrak",
+  "catalogShiftVacationCode": "Opo",
+  "catalogShiftPersonalDayName": "Norberaren eguna",
+  "catalogShiftPersonalDayCode": "NE",
+  "catalogShiftDay12Name": "Eguna 12 h",
+  "catalogShiftDay12Code": "E12",
+  "catalogShiftNight12Name": "Gaua 12 h",
+  "catalogShiftNight12Code": "G12",
+  "catalogShiftSplitName": "Zatitua",
+  "@catalogShiftSplitName": {
+    "description": "Nombre que propone «Usar «Partido 09–13 / 17–21»» en el editor de turnos."
+  },
+  "catalogShiftSplitCode": "Zat",
+  "catalogPatternCorreturnosName": "Txanda birakariak",
+  "@catalogPatternCorreturnosName": {
+    "description": "Catálogo de rotaciones: nombre y descripción de cada patrón (asistente de patrón y primer uso)."
+  },
+  "catalogPatternCorreturnosDescription": "5 goiz, 2 libre, 5 arratsalde, 2 libre, 5 gau, 2 libre",
+  "catalogPattern24x72Name": "24 x 72",
+  "catalogPattern24x72Description": "24 orduko guardia eta 72 ordu libre",
+  "catalogPattern12hName": "12 ordu",
+  "catalogPattern12hDescription": "Eguna 12 h, gaua 12 h, gau-ondokoa eta librea",
+  "catalogPattern6x4Name": "6 x 4",
+  "catalogPattern6x4Description": "6 goiz eta 4 libre",
+  "catalogPattern4x4Name": "4 x 4",
+  "catalogPattern4x4Description": "12 orduko 4 egun eta 4 libre",
+  "catalogPattern5x2Name": "5 x 2",
+  "catalogPattern5x2Description": "5 goiz eta 2 libre (astelehenetik ostiralera)",
+  "catalogPattern223Name": "2-2-3",
+  "catalogPattern223Description": "12 orduko bi egun, bi libre, 12 orduko hiru, bi libre, 12 orduko bi eta hiru libre (2-2-3-2-2-3 ere bai)",
+  "catalogPatternContinentalName": "Kontinentala",
+  "catalogPatternContinentalDescription": "28 eguneko txanda jarraitua 4 talderekin: 2 eta 3 goiz, arratsalde eta gauetako blokeak, eta 7 libre",
+  "catalogPatternDupontName": "DuPont",
+  "catalogPatternDupontDescription": "28 eguneko zikloa 12 orduko txandetan: 4 gau, 3 libre, 3 egun, libre 1, 3 gau, 3 libre, 4 egun eta 7 libre",
+  "holidayNameNewYear": "Urteberri eguna",
+  "holidayNameEpiphany": "Errege eguna",
+  "holidayNameMaundyThursday": "Ostegun Santua",
+  "holidayNameGoodFriday": "Ostiral Santua",
+  "holidayNameEasterMonday": "Pazko astelehena",
+  "holidayNameLabourDay": "Langileen eguna",
+  "holidayNameAssumption": "Andre Mariaren Jasokundea",
+  "holidayNameNationalDay": "Espainiako Jai Nazionala",
+  "holidayNameAllSaints": "Santu Guztien eguna",
+  "holidayNameConstitution": "Konstituzio eguna",
+  "holidayNameImmaculate": "Sortzez Garbiaren eguna",
+  "holidayNameChristmas": "Eguberri eguna",
+  "holidayNameStStephen": "San Esteban",
+  "holidayNameStJoseph": "San José",
+  "holidayNameStJames": "Santiago Apostolua",
+  "holidayNameGaliciaDay": "Galiziako eguna",
+  "holidayNameStJamesGalicia": "Santiago Apostolua / Galiziako eguna",
+  "holidayNameCataloniaDay": "Kataluniako Diada",
+  "holidayNameBasqueDay": "Euskadiko eguna",
+  "catalogCalendarMainName": "Nire txanden egutegia",
+  "historyUndone": "Aldaketa desegin da",
+  "historyRedone": "Aldaketa berregin da",
+  "historyNothingToUndo": "Ez dago ezer desegiteko",
+  "historyNothingToRedo": "Ez dago ezer berregiteko",
+  "monthPresentationGrid": "Sareta",
+  "monthPresentationList": "Zerrenda",
+  "monthSelectDays": "Hautatu egunak",
+  "monthSelectDay": "Sakatu egun hau hautatzeko",
+  "monthListRecommended": "Ordutegi osoak eta testu handia ikusteko, zerrenda gomendatzen da.",
+  "monthListSelected": "Zerrenda ikuspegia",
+  "monthGridSelected": "Sareta ikuspegia"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher label of the app. -->
+    <string name="app_name">Cuadrante</string>
+</resources>

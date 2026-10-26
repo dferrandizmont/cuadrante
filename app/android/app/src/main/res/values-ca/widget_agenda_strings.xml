@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_agenda_label">Cuadrante: pròxims dies</string>
+    <string name="widget_two_weeks_label">Cuadrante: dues setmanes</string>
+    <string name="widget_agenda_description">Avui i els pròxims dies, amb torns i notes. Canvia de dia sol.</string>
+    <string name="widget_two_weeks_description">Aquesta setmana i la següent, des de dilluns. Canvia de dia sol.</string>
+    <string name="widget_no_shift">Sense torn</string>
+    <string name="widget_has_note">Té nota</string>
+    <string name="widget_today">avui</string>
+    <string name="widget_empty_title">Cuadrante</string>
+    <string name="widget_empty_body">Obre Cuadrante per veure els teus torns</string>
+</resources>

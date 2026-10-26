@@ -1,0 +1,56 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  legal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - run: python3 -B web/legal/test_legal.py
+
+  app:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Tests simulate a phone in Spain; runners default to UTC.
+      TZ: Europe/Madrid
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: 3.47.7
+          cache: true
+      - run: flutter pub get
+      # Generated files (*.g.dart, *.freezed.dart, l10n) are committed. Regenerate
+      # them and fail if anything differs (a changed table whose *.g.dart was not
+      # committed). A table changed without a drift_schemas/ dump and migration
+      # fails in `flutter test` (test/drift/app_database/schema_matches_dump_test.dart).
+      - run: dart run build_runner build
+      - name: Generated files are up to date
+        run: |
+          git add -N .
+          git diff --exit-code
+      - run: flutter analyze
+      - run: flutter test

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_small_label">Cuadrante: hoy</string>
+    <string name="widget_medium_label">Cuadrante: semana</string>
+    <string name="widget_large_label">Cuadrante: mes</string>
+    <string name="widget_small_description">Tu turno de hoy y el de mañana. Cambia de día solo.</string>
+    <string name="widget_medium_description">Los próximos 7 días con sus turnos. Cambia de día solo.</string>
+    <string name="widget_large_description">El mes entero con tus turnos y hoy marcado. Cambia de día y de mes solo.</string>
+    <!-- Spoken after the number of today's cell of the month grid. -->
+    <string name="widget_today">hoy</string>
+    <!-- Shown when the app has not published anything yet. -->
+    <string name="widget_empty_title">Cuadrante</string>
+    <string name="widget_empty_body">Abre Cuadrante para ver tus turnos</string>
+</resources>

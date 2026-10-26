@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Auto Backup rules for Android 11 and below (android:fullBackupContent).
+  Android 12+ uses data_extraction_rules.xml instead; keep the two in step.
+  See docs/copia-de-seguridad.md, "Copia del sistema de Android".
+
+  Application Support on Android is the app's files/ directory, which is the
+  "file" domain: cuadrante.sqlite (the database) and backups/ (the .cuadrante
+  copies, the copies made before a restore and before a migration).
+
+  As soon as there is an <include>, only what is included is backed up, so the
+  shared preferences (the scheduled alarms of flutter_local_notifications, which
+  are derived from the data and planned again at start-up), the cache, the
+  code cache and no_backup/ stay out. Caches and temporary exports (the .cuadrante
+  handed to the share sheet) live in cache/, which is never backed up.
+-->
+<full-backup-content>
+    <include domain="file" path="."/>
+</full-backup-content>

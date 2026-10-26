@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen widgets, design B "Noche" (docs/diseno.md), light theme. The
+     colours of the shifts are not here: they come in the snapshot. These are
+     the neutral tokens; values-night/widget_colors.xml has the dark ones. -->
+<resources>
+    <color name="widget_surface">#FFFFFF</color>
+    <color name="widget_text_primary">#15151A</color>
+    <color name="widget_text_secondary">#3A3A44</color>
+    <color name="widget_text_muted">#5A5A64</color>
+    <color name="widget_border">#DCDCE2</color>
+    <color name="widget_holiday">#D93036</color>
+    <color name="widget_today_ring">#15151A</color>
+    <!-- Picker previews only; exact ShiftSwatch colours from the Dart fixture. -->
+    <color name="widget_preview_n_bar">#FF4B4FD1</color>
+    <color name="widget_preview_n_tint">#FFEDEDFA</color>
+    <color name="widget_preview_n_ink">#FF4B4FD1</color>
+    <color name="widget_preview_n_disc">#FFDFDFF7</color>
+    <color name="widget_preview_t_bar">#FFF06A3F</color>
+    <color name="widget_preview_t_tint">#FFFEF0EC</color>
+    <color name="widget_preview_t_ink">#FFBF3A0F</color>
+    <color name="widget_preview_t_disc">#FFFCE4DC</color>
+    <color name="widget_preview_m_bar">#FFF5A524</color>
+    <color name="widget_preview_m_tint">#FFFEF6E9</color>
+    <color name="widget_preview_m_ink">#FF986007</color>
+    <color name="widget_preview_m_disc">#FFFDEFD8</color>
+    <color name="widget_preview_l_bar">#C9C9D2</color>
+    <color name="widget_preview_l_tint">@color/widget_surface</color>
+    <color name="widget_preview_l_ink">@color/widget_text_muted</color>
+    <color name="widget_preview_l_disc">@color/widget_surface</color>
+</resources>

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "appVersion": "1.0.0",
+  "exportedAt": "2026-11-10T09:00:00Z",
+  "checksum": "sha256:5e70fb5f28c2c5e321b2d56ea49b0dc2551bba9893bf45287f85675839867e46",
+  "fingerprint": {
+    "from": "2026-01-01",
+    "to": "2027-12-31",
+    "days": 730,
+    "digest": "fd6f4cb50ef42267bb4475bf7ed0d95dd906d8e4e670c49f89d4b632073b995d"
+  },
+  "counts": {
+    "shiftTypes": 10,
+    "patterns": 3,
+    "patternRuns": 3,
+    "dayEntries": 40,
+    "holidays": 1,
+    "absenceBalances": 3,
+    "settings": 4
+  }
+}

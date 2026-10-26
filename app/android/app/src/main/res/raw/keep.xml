@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Resources that only Dart (or a string name) references. R8 / shrinkResources
+     cannot see those references and would strip them from the release APK.
+     tool/qa/release_apk_check.sh reads this list and fails the release check if
+     any of them is missing from the APK.
+       - ic_stat_alarm: small icon of the alarm notifications, passed by name to
+         flutter_local_notifications (local_alarm_scheduler.dart).
+     Widget layouts, previews and drawables are referenced from Kotlin (R.*) or
+     from the manifest/appwidget XML, so the shrinker keeps them. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_alarm" />

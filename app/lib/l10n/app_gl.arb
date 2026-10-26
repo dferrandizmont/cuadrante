@@ -1,0 +1,2761 @@
+{
+  "@@locale": "gl",
+  "appName": "Cuadrante",
+  "@appName": {
+    "description": "Nombre de la app (título de ventana y cabeceras)."
+  },
+  "cancel": "Cancelar",
+  "close": "Pechar",
+  "delete": "Borrar",
+  "save": "Gardar",
+  "undo": "Desfacer",
+  "redo": "Refacer",
+  "retry": "Tentar de novo",
+  "back": "Atrás",
+  "loadingLabel": "Cargando",
+  "errorGeneric": "Algo non foi ben. Proba outra vez.",
+  "calendarToday": "Hoxe",
+  "calendarPickMonth": "{month}, escoller mes",
+  "calendarPreviousMonth": "Mes anterior",
+  "calendarNextMonth": "Mes seguinte",
+  "calendarHeaderTomorrow": "Mañá ({date}): quenda de {shifts}",
+  "@calendarHeaderTomorrow": {
+    "description": "Última línea de la tarjeta de hoy, con la fecha del día siguiente para no confundir «mañana» con un turno llamado Mañana, p. ej. «Mañana (mié 21 oct): turno de Noche».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarHeaderTomorrowNone": "Mañá ({date}): sen quenda",
+  "@calendarHeaderTomorrowNone": {
+    "description": "Última línea de la tarjeta de hoy cuando el día siguiente no tiene turno.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLabelNow": "Agora",
+  "@todayLabelNow": {
+    "description": "Etiqueta de la tarjeta de hoy con un turno en curso (se muestra en mayúsculas)."
+  },
+  "todayLabelTonight": "Esta noite",
+  "@todayLabelTonight": {
+    "description": "Etiqueta cuando el próximo turno de hoy empieza a partir de las 20:00."
+  },
+  "todayLabelToday": "Hoxe",
+  "@todayLabelToday": {
+    "description": "Etiqueta cuando el próximo turno de hoy empieza antes de las 20:00."
+  },
+  "todayLabelFree": "Hoxe libre",
+  "@todayLabelFree": {
+    "description": "Etiqueta cuando hoy no queda turno."
+  },
+  "todayLabelDone": "Hoxe rematado",
+  "@todayLabelDone": {
+    "description": "Etiqueta de la tarjeta de hoy cuando el turno de hoy ya ha terminado y no queda otro hoy (se muestra en mayúsculas)."
+  },
+  "todayFinishedAt": "Rematou ás {time}",
+  "@todayFinishedAt": {
+    "description": "Hora a la que terminó el último turno de hoy, p. ej. «Terminó a las 22:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLabelGap": "Pausa",
+  "@todayLabelGap": {
+    "description": "Etiqueta de la tarjeta de hoy entre los dos tramos de un turno partido (se muestra en mayúsculas)."
+  },
+  "todayBackAt": "Volves ás {time}",
+  "@todayBackAt": {
+    "description": "Entre los dos tramos de un turno partido: hora a la que empieza el segundo, p. ej. «Vuelves a las 17:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayBackIn": "Volves en {duration}",
+  "@todayBackIn": {
+    "description": "Cuenta atrás hasta el segundo tramo de un turno partido, p. ej. «Vuelves en 2 h 10 min».",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayFreeTitle": "Libre",
+  "todayUntil": "Ata as {time}",
+  "@todayUntil": {
+    "description": "Fin del turno en curso, p. ej. «Hasta las 06:00».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayStartsIn": "Comeza en {duration}",
+  "@todayStartsIn": {
+    "description": "Cuenta atrás hasta el inicio del turno, p. ej. «Empieza en 3 h 40 min».",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayEndsIn": "Remata en {duration}",
+  "@todayEndsIn": {
+    "description": "Cuenta atrás hasta el final del turno en curso.",
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNext": "Seguinte: {name}, {weekday} {time}",
+  "@todayNext": {
+    "description": "Próximo turno cuando hoy es libre, p. ej. «Próximo: Mañana, mié 06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "weekday": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNoNext": "Sen quendas á vista",
+  "todayAlso": "+ {shift}",
+  "@todayAlso": {
+    "description": "Otro turno de hoy, p. ej. «+ Tarde 14:00–22:00».",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "durationDaysHours": "{days} d {hours} h",
+  "@durationDaysHours": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "durationDays": "{days} d",
+  "@durationDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "durationHoursMinutes": "{hours} h {minutes} min",
+  "@durationHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "durationHours": "{hours} h",
+  "@durationHours": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "durationMinutes": "{minutes} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarNoShift": "Sen quenda",
+  "calendarShiftWithTimes": "{name} {times}",
+  "@calendarShiftWithTimes": {
+    "description": "Turno con su horario, p. ej. «Noche 22:00–06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarWeekdayMon": "L",
+  "calendarWeekdayTue": "M",
+  "calendarWeekdayWed": "M",
+  "calendarWeekdayThu": "X",
+  "calendarWeekdayFri": "V",
+  "calendarWeekdaySat": "S",
+  "calendarWeekdaySun": "D",
+  "daySemanticsToday": "hoxe",
+  "daySemanticsNoShift": "sen quenda",
+  "daySemanticsShift": "{name} de {start} a {end}",
+  "@daySemanticsShift": {
+    "description": "Lectura en voz alta de un turno con horario.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsShiftSplit": "{name} de {start} a {end} e de {start2} a {end2}",
+  "@daySemanticsShiftSplit": {
+    "description": "Lectura en voz alta de un turno partido (dos tramos).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      },
+      "start2": {
+        "type": "String"
+      },
+      "end2": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsAnd": "{first} e {second}",
+  "@daySemanticsAnd": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsHoliday": "festivo: {name}",
+  "@daySemanticsHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsNote": "con nota",
+  "daySemanticsOvertime": "horas extra: {duration}",
+  "@daySemanticsOvertime": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "daySemanticsEarlyLeave": "saída anticipada: {duration}",
+  "@daySemanticsEarlyLeave": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "daySheetHoliday": "Festivo: {name}",
+  "@daySheetHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "daySheetNote": "Nota",
+  "daySheetEmpty": "Este día non ten quenda.",
+  "dayPaneClose": "Pechar o día",
+  "upcomingTitle": "Próximos días",
+  "dayDetailSourcePattern": "Segundo o teu patrón",
+  "dayDetailSourceOverride": "Cambiado a man",
+  "dayDetailAdd": "Engadir quenda",
+  "@dayDetailAdd": {
+    "description": "Etiqueta (se muestra en mayúsculas) de las fichas para añadir un turno a un día sin turno."
+  },
+  "dayDetailDouble": "Engadir unha segunda quenda",
+  "@dayDetailDouble": {
+    "description": "Etiqueta (se muestra en mayúsculas) de las fichas para añadir un segundo turno a un día que ya tiene uno."
+  },
+  "dayDetailReset": "Volver ao patrón",
+  "dayDetailPatternGives": "O patrón dá: {shifts}",
+  "@dayDetailPatternGives": {
+    "description": "Lo que daría la rotación ese día, bajo «Volver al patrón», p. ej. «El patrón da: Noche 22:00–06:00».",
+    "placeholders": {
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "dayDetailNoteHint": "Escribe unha nota para este día",
+  "dayDetailUserHoliday": "Festivo propio",
+  "dayDetailUserHolidayDefault": "Festivo propio",
+  "dayDetailUserHolidayNameHint": "Nome do festivo",
+  "dayDetailDuplicate": "Duplicar noutro día",
+  "dayDetailDuplicateHelp": "Copiar neste día",
+  "dayDetailDuplicated": "Copiado: {date}",
+  "@dayDetailDuplicated": {
+    "description": "Aviso tras duplicar un día, p. ej. «Copiado en jueves, 22 de octubre».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "dayDetailClear": "Borrar día",
+  "dayDetailCleared": "Día borrado",
+  "@dayDetailCleared": {
+    "description": "Aviso tras «Borrar día», con la acción de deshacer."
+  },
+  "dayDetailMoveUp": "Subir",
+  "dayDetailMoveDown": "Baixar",
+  "dayDetailRemove": "Quitar {name}",
+  "@dayDetailRemove": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasTitle": "Horas extra / Saín antes",
+  "dayExtrasOvertime": "Horas extra",
+  "dayExtrasEarlyLeave": "Saín antes",
+  "dayExtrasNone": "Ningunha",
+  "dayExtrasHelper": "Suman ou restan nas horas do mes e na estimación. Con 0 quítase.",
+  "dayExtrasMore": "Máis {label}",
+  "@dayExtrasMore": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasLess": "Menos {label}",
+  "@dayExtrasLess": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "dayExtrasValue": "{label}: {value}",
+  "@dayExtrasValue": {
+    "description": "Lectura en voz alta de un contador de la sección de horas extra, p. ej. «Horas extra: 1 h 30 min».",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesTitle": "As miñas quendas",
+  "shiftTypesEditEntry": "Editar quendas",
+  "shiftTypesEmptyTitle": "Non tes quendas",
+  "shiftTypesEmptyMessage": "Crea a primeira para poder pintala no calendario.",
+  "shiftTypesNew": "Nova quenda",
+  "shiftTypesNewTitle": "Nova quenda",
+  "shiftTypesEditTitle": "Editar quenda",
+  "shiftTypesNotFound": "Non atopamos esta quenda",
+  "shiftTypesNotFoundMessage": "Pode que a arquivases. Volve á lista de quendas.",
+  "shiftTypesArchive": "Arquivar",
+  "shiftTypesArchiveTitle": "Queres arquivar «{name}»?",
+  "@shiftTypesArchiveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesArchiveBody": "Deixará de saír ao pintar. Os días que xa a usan seguirana amosando.",
+  "shiftTypesArchiveConfirm": "Arquivar",
+  "shiftTypesDragHandle": "Arrastrar para reordenar",
+  "shiftTypesArchivedSection": "Arquivadas ({count})",
+  "@shiftTypesArchivedSection": {
+    "description": "Cabecera plegable, al final de Mis turnos, con los turnos archivados.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesArchivedHelp": "Deixaron de saír ao pintar. Recupéraas e volven á paleta.",
+  "shiftTypesRestore": "Recuperar",
+  "shiftTypesRestoreSemantic": "Recuperar «{name}»",
+  "@shiftTypesRestoreSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesRestored": "«{name}» recuperada",
+  "@shiftTypesRestored": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesDiscardTitle": "Queres descartar os cambios?",
+  "shiftTypesDiscardBody": "O que cambiaches nesta quenda non se gardará.",
+  "shiftTypesDiscardKeep": "Seguir editando",
+  "shiftTypesDiscardConfirm": "Descartar",
+  "shiftTypesNoTimes": "Sen horario",
+  "shiftTypesRatePerHour": "{rate}/h",
+  "shiftTypesFixedPlusPerShift": "+{amount} por quenda",
+  "@shiftTypesRatePerHour": {
+    "description": "Precio por hora de un turno en la lista, p. ej. «12,50 €/h».",
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesCategoryWork": "Traballo",
+  "shiftTypesCategoryRest": "Descanso",
+  "shiftTypesCategoryAbsence": "Ausencia",
+  "shiftTypesNameLabel": "Nome",
+  "shiftTypesCodeLabel": "Código",
+  "shiftTypesCodeHelper": "De 1 a 3 caracteres. É o que se ve en cada casa do mes.",
+  "shiftTypesColorLabel": "Cor",
+  "shiftTypesColorOption": "Cor {number} de {total}",
+  "@shiftTypesColorOption": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorOptionNamed": "{name}, {number} de {total}",
+  "shiftColorNameOrange": "Laranxa",
+  "shiftColorNameCoral": "Coral",
+  "shiftColorNameIndigo": "Índigo",
+  "shiftColorNameLightGrey": "Gris claro",
+  "shiftColorNameRed": "Vermello",
+  "shiftColorNameLilac": "Lila",
+  "shiftColorNameGreen": "Verde",
+  "shiftColorNameTeal": "Turquesa",
+  "shiftColorNameRaspberry": "Framboesa",
+  "shiftColorNamePink": "Rosa",
+  "shiftColorNameTangerine": "Mandarina",
+  "shiftColorNameYellow": "Amarelo",
+  "shiftColorNameLime": "Lima",
+  "shiftColorNameForest": "Verde bosque",
+  "shiftColorNameMint": "Menta",
+  "shiftColorNameCyan": "Cian",
+  "shiftColorNameSkyBlue": "Azul ceo",
+  "shiftColorNameBlue": "Azul",
+  "shiftColorNameCobalt": "Cobalto",
+  "shiftColorNameViolet": "Violeta",
+  "shiftColorNamePurple": "Morado",
+  "shiftColorNameBrown": "Marrón",
+  "shiftColorNameGrey": "Gris",
+  "shiftColorNameGraphite": "Grafito",
+  "shiftTypesColorCurrent": "Cor actual",
+  "shiftTypesIconLabel": "Icona",
+  "shiftTypesIconHelper": "Opcional. Vese xunto ao código cando hai sitio; o código e a cor sempre están.",
+  "shiftTypesIconNone": "Sen icona",
+  "shiftTypesIconChoose": "Escoller icona",
+  "shiftTypesIconCurrent": "Icona: {name}",
+  "@shiftTypesIconCurrent": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftIconNameSun": "Sol",
+  "shiftIconNameMoon": "Lúa",
+  "shiftIconNameSunrise": "Amencer",
+  "shiftIconNameHospital": "Hospital",
+  "shiftIconNameAmbulance": "Ambulancia",
+  "shiftIconNamePolice": "Policía",
+  "shiftIconNameFire": "Bombeiros",
+  "shiftIconNameFactory": "Fábrica",
+  "shiftIconNameTruck": "Camión",
+  "shiftIconNamePlane": "Avión",
+  "shiftIconNameSchool": "Colexio",
+  "shiftIconNameHome": "Casa",
+  "shiftIconNameBeach": "Praia",
+  "shiftIconNameBed": "Cama",
+  "shiftIconNameStar": "Estrela",
+  "shiftIconNameHeart": "Corazón",
+  "shiftIconNameCoffee": "Café",
+  "shiftIconNameBook": "Libro",
+  "shiftIconNameMoney": "Diñeiro",
+  "shiftIconNameAlert": "Aviso",
+  "shiftIconNamePhone": "Teléfono",
+  "shiftIconNameCar": "Coche",
+  "shiftIconNameTrain": "Tren",
+  "shiftIconNameBus": "Autobús",
+  "shiftIconNameShop": "Tenda",
+  "shiftIconNameTool": "Ferramentas",
+  "shiftIconNameBaby": "Bebé",
+  "shiftIconNameSport": "Deporte",
+  "shiftIconNameParty": "Festa",
+  "shiftIconNameMedical": "Médico",
+  "shiftTypesColorMore": "Máis cores…",
+  "shiftTypesColorPickerTitle": "Escolle a túa cor",
+  "shiftTypesColorPickerHelp": "Mira como queda a casa en claro e en escuro. O texto axústase só para que se lea ben.",
+  "shiftTypesColorHue": "Ton",
+  "shiftTypesColorSaturation": "Intensidade",
+  "shiftTypesColorLightness": "Luminosidade",
+  "shiftTypesColorHueSpoken": "{degrees} graos",
+  "@shiftTypesColorHueSpoken": {
+    "placeholders": {
+      "degrees": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorPercentSpoken": "{percent} por cento",
+  "@shiftTypesColorPercentSpoken": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftTypesColorHexLabel": "Código hexadecimal",
+  "shiftTypesColorHexError": "Escribe 6 cifras ou letras da A á F, por exemplo #1C7ED6.",
+  "shiftTypesColorUse": "Usar esta cor",
+  "shiftTypesCategoryLabel": "Categoría",
+  "shiftTypesTimesLabel": "Horario",
+  "shiftTypesStarts": "Comeza {time}",
+  "@shiftTypesStarts": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesEnds": "Remata {time}",
+  "@shiftTypesEnds": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesPickStart": "Hora de inicio",
+  "shiftTypesPickEnd": "Hora de fin",
+  "shiftTypesDuration": "Dura {duration}",
+  "@shiftTypesDuration": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesEndsNextDay": "Remata ao día seguinte · dura {duration}",
+  "@shiftTypesEndsNextDay": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesTwentyFourHours": "Dura 24 h: remata ao día seguinte á mesma hora",
+  "shiftTypesSplitLabel": "Quenda partida",
+  "shiftTypesSplitHelper": "Dous tramos o mesmo día, cunha pausa no medio que non conta como traballada.",
+  "shiftTypesSplitTemplate": "Usar «Partida 09–13 / 17–21»",
+  "shiftTypesSplitSecondTitle": "Segundo tramo",
+  "shiftTypesPickSecondStart": "Inicio do tramo 2",
+  "shiftTypesPickSecondEnd": "Fin do tramo 2",
+  "shiftTypesSplitSummary": "Traballas {first} e {second}: {total} en total",
+  "@shiftTypesSplitSummary": {
+    "description": "Resumen de un turno partido bajo las horas, p. ej. «Trabajas 4 h y 4 h: 8 h en total».",
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorSplitIncomplete": "Pon cando comeza e cando remata o segundo tramo, ou desactiva a quenda partida.",
+  "shiftTypesErrorSplitStart": "A hora de inicio do segundo tramo non é válida.",
+  "shiftTypesErrorSplitDuration": "O segundo tramo ten que durar entre 1 minuto e 24 h.",
+  "shiftTypesErrorSplitNotAfter": "O segundo tramo non pode comezar xusto cando remata o primeiro: sería un só tramo. Deixa unha pausa entre os dous.",
+  "shiftTypesErrorSplitTooLong": "Os dous tramos e a pausa entre eles non caben en 24 h. Comproba que o segundo comeza despois de que remate o primeiro.",
+  "shiftTypesBreakLabel": "Pausa non pagada",
+  "shiftTypesBreakUnit": "min",
+  "shiftTypesBreakHint": "0 min",
+  "shiftTypesRateHint": "Sen prezo",
+  "shiftTypesBreakHelper": "Minutos da quenda que non se pagan. Déixao baleiro se se paga todo.",
+  "shiftTypesPaidHelper": "Páganse {duration}",
+  "@shiftTypesPaidHelper": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesNightLabel": "Quenda nocturna",
+  "shiftTypesNightHelper": "Automático conta como noite as horas entre as 22:00 e as 06:00.",
+  "shiftTypesNightAuto": "Automático",
+  "shiftTypesNightAlways": "Sempre nocturna",
+  "shiftTypesNightNever": "Nunca nocturna",
+  "shiftTypesFixedPlusLabel": "Plus por quenda (opcional)",
+  "shiftTypesFixedPlusHelper": "Súmase unha vez por cada quenda traballada.",
+  "shiftTypesFixedPlusHint": "Sen plus",
+  "shiftTypesFixedPlusUnit": "€",
+  "shiftTypesRateLabel": "Prezo por hora (opcional)",
+  "shiftTypesRateHelper": "Para calcular canto gañas no resumo do mes.",
+  "shiftTypesRateUnit": "€/h",
+  "shiftTypesPreviewLabel": "Así se verá no mes",
+  "shiftTypesPreviewLight": "Claro",
+  "shiftTypesPreviewDark": "Escuro",
+  "shiftTypesPreviewContrast": "Contraste {ratio}:1",
+  "@shiftTypesPreviewContrast": {
+    "description": "Contraste del código del turno sobre su casilla, bajo la vista previa, p. ej. «Contraste 7,2:1».",
+    "placeholders": {
+      "ratio": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorCodeEmpty": "Escribe un código de 1 a 3 caracteres",
+  "shiftTypesErrorCodeTooLong": "O código admite ata 3 caracteres, sen emojis nin espazos",
+  "shiftTypesErrorCodeTaken": "Este código xa o usa «{name}»",
+  "@shiftTypesErrorCodeTaken": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesErrorNameEmpty": "Ponlle un nome á quenda",
+  "shiftTypesErrorBreak": "A pausa ten que ser menor que a duración da quenda",
+  "shiftTypesErrorRate": "Escribe un importe válido, por exemplo 12,50",
+  "paintFab": "Pintar",
+  "paintHeader": "Pintando",
+  "@paintHeader": {
+    "description": "Etiqueta de la cabecera del modo pintar (se muestra en mayúsculas)."
+  },
+  "paintHeaderShift": "{name} · {times}",
+  "@paintHeaderShift": {
+    "description": "Turno elegido y su horario en la cabecera del modo pintar, p. ej. «Tarde · 14:00–22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "times": {
+        "type": "String"
+      }
+    }
+  },
+  "paintDone": "Feito",
+  "paintDouble": "Dobrar",
+  "paintEraser": "Borrar",
+  "paintToolsLabel": "Ferramentas para pintar",
+  "selectionHeader": "Selección",
+  "@selectionHeader": {
+    "description": "Etiqueta de la cabecera del modo selección de días (se muestra en mayúsculas)."
+  },
+  "selectionHint": "Toca os días ou mantén premido e arrastra para escoller varios",
+  "selectionCount": "{count, plural, =0{Ningún día} =1{1 día} other{{count} días}}",
+  "@selectionCount": {
+    "description": "Cuántos días hay elegidos en la barra de selección.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionBarLabel": "Accións para os días escollidos",
+  "selectionSetShift": "Poñer quenda…",
+  "selectionDouble": "Dobrar con…",
+  "selectionClear": "Borrar",
+  "selectionReset": "Volver ao patrón",
+  "selectionCopy": "Copiar",
+  "selectionCut": "Cortar",
+  "selectionPaste": "Pegar",
+  "selectionRepeat": "Repetir…",
+  "selectionNote": "Nota…",
+  "selectionCancel": "Cancelar",
+  "selectionCellSelected": "escollido",
+  "selectionSetShiftTitle": "Poñer quenda",
+  "selectionSetShiftHelp": "Substitúe as quendas dos días escollidos.",
+  "selectionDoubleTitle": "Engadir unha segunda quenda",
+  "selectionDoubleHelp": "Engade a quenda ás que xa teñan os días escollidos.",
+  "selectionNoteTitle": "Nota para os días escollidos",
+  "selectionNoteHint": "A mesma nota en todos os días",
+  "selectionNoteSave": "Gardar nota",
+  "selectionNoteRemove": "Quitar notas",
+  "selectionPasteTitle": "Pegar días",
+  "selectionPasteSummary": "{count, plural, =1{Pégase 1 día} other{Péganse {count} días}} a partir do {date}.",
+  "@selectionPasteSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionPasteReach": "Pegarase do {from} ao {to}.",
+  "@selectionPasteReach": {
+    "description": "Hasta qué día llega el bloque pegado (con sus huecos); {from} y {to} son «lun 3» y «dom 9 de noviembre», o con el mes en los dos extremos si cruza de mes.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionPasteReplaces": "As quendas deses días substitúense. Poderás desfacelo.",
+  "selectionIncludeNotes": "Incluír notas",
+  "selectionIncludeNotesHelp": "As notas dos días copiados substitúen as que haxa no destino.",
+  "selectionCutNotesMove": "Ao cortar, as notas móvense cos días.",
+  "@selectionCutNotesMove": {
+    "description": "Línea del cuadro de Pegar tras Cortar, en lugar del interruptor «Incluir notas»: las notas, avisos y horas extra viajan siempre con los días cortados."
+  },
+  "selectionPasteConfirm": "Pegar",
+  "selectionRepeatTitle": "Repetir os días escollidos",
+  "selectionRepeatTimes": "{count, plural, =1{1 vez} other{{count} veces}}",
+  "@selectionRepeatTimes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRepeatLess": "Unha vez menos",
+  "selectionRepeatMore": "Unha vez máis",
+  "selectionRepeatPreview": "{count, plural, =1{Cambia 1 día máis, ata o {date}.} other{Cambia {count} días máis, ata o {date}.}}",
+  "@selectionRepeatPreview": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRepeatConfirm": "Repetir",
+  "selectionChanged": "{count, plural, =1{1 día cambiado} other{{count} días cambiados}}",
+  "@selectionChanged": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionNothingChanged": "Eses días xa estaban así",
+  "selectionCopied": "{count, plural, =1{1 día copiado} other{{count} días copiados}}. Escolle o día de inicio e preme Pegar.",
+  "@selectionCopied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionCutDone": "{count, plural, =1{1 día cortado} other{{count} días cortados}}. Escolle o día de inicio e preme Pegar.",
+  "@selectionCutDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionPasted": "{count, plural, =1{1 día pegado} other{{count} días pegados}}",
+  "@selectionPasted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRepeated": "Repetido {times, plural, =1{1 vez} other{{times} veces}}",
+  "@selectionRepeated": {
+    "placeholders": {
+      "times": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRunsTitle": "As miñas rotacións",
+  "selectionRunsSubtitle": "Remata ou quita un patrón dunha vez",
+  "selectionRunsEmptyTitle": "Sen rotacións",
+  "selectionRunsEmptyMessage": "Cando apliques un patrón desde Pintar, aparecerá aquí.",
+  "selectionRunsRange": "Do {from} ao {to}",
+  "@selectionRunsRange": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsOpenEnded": "Desde o {from}, sen data de fin",
+  "@selectionRunsOpenEnded": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsStep": "Comeza no día {day} do ciclo",
+  "@selectionRunsStep": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "selectionRunsActive": "En curso",
+  "selectionRunsFuture": "Aínda non comezou",
+  "selectionRunsEnded": "Rematada",
+  "selectionRunsEnd": "Rematar aquí",
+  "selectionRunsEndHelp": "Primeiro día sen a rotación",
+  "selectionRunsEndDone": "A rotación remata o {date}",
+  "@selectionRunsEndDone": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsDelete": "Eliminar",
+  "selectionRunsDeleteTitle": "Queres eliminar {name}?",
+  "@selectionRunsDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectionRunsDeleteBody": "Quítase do calendario enteiro. Os días que cambiaches a man e as notas quedan como están. Poderás desfacelo.",
+  "selectionRunsDeleted": "Rotación eliminada",
+  "agendaTitle": "Axenda",
+  "agendaOpenTooltip": "Axenda de notas",
+  "agendaSearchHint": "Buscar en notas e quendas",
+  "agendaSearchHintShort": "Buscar",
+  "agendaModeNotes": "Notas",
+  "agendaModeShifts": "Quendas",
+  "agendaSearchScope": "Busca en todas as túas notas e festivos propios, e nas quendas desde hai un ano ata dentro dun ano. Tamén entende datas: 15/10 ou 15 out.",
+  "agendaSearchClear": "Borrar busca",
+  "agendaEmptyTitle": "Sen notas próximas",
+  "agendaEmptyMessage": "As notas e os festivos propios dos próximos días aparecerán aquí.",
+  "agendaNoResultsTitle": "Non se atopou nada",
+  "agendaNoResultsMessage": "Non hai notas nin quendas que coincidan con «{query}».",
+  "@agendaNoResultsMessage": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaHoliday": "Festivo: {name}",
+  "@agendaHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "agendaTruncated": "Amósanse os primeiros {count} resultados. Escribe algo máis para afinar.",
+  "@agendaTruncated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "agendaResults": "{count, plural, =1{1 resultado} other{{count} resultados}}",
+  "@agendaResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "agendaSemanticsNote": "nota: {note}",
+  "@agendaSemanticsNote": {
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
+  "patternButton": "Patrón",
+  "@patternButton": {
+    "description": "Botón de la cabecera del modo pintar que abre el asistente de patrón."
+  },
+  "patternTitle": "Aplicar patrón",
+  "patternStepOf": "Paso {current} de {total}",
+  "@patternStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "patternStepChoose": "Escolle un patrón",
+  "patternStepStart": "Cando comezas?",
+  "patternStepEnd": "Ata cando?",
+  "patternNext": "Seguinte",
+  "patternBack": "Atrás",
+  "patternApply": "Aplicar",
+  "patternApplied": "Patrón aplicado",
+  "patternApplyFailed": "Non se puido aplicar o patrón",
+  "patternFromDay": "Desde o {date}",
+  "@patternFromDay": {
+    "description": "Día en el que empieza el patrón tras la pulsación larga, p. ej. «Desde el sábado 24 de octubre».",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patternGroupHealth": "Sanidade",
+  "patternGroupPolice": "Policía e Garda Civil",
+  "patternGroupFirefighters": "Bombeiros",
+  "patternGroupIndustry": "Industria",
+  "patternGroupSecurity": "Seguridade",
+  "patternGroupOther": "Outro",
+  "patternGroupMine": "Os meus patróns",
+  "patternGroupTypical": "Comezan por: {shift}",
+  "@patternGroupTypical": {
+    "description": "Sección con los patrones cuyo primer día es el turno de la ficha pulsada, p. ej. «Empiezan por Noche».",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "patternGroupIncluding": "Inclúen: {shift}",
+  "@patternGroupIncluding": {
+    "description": "Sección con los patrones que contienen el turno de la ficha pulsada, cuando ninguno empieza por él.",
+    "placeholders": {
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "patternCycleDays": "{count, plural, =1{1 día} other{{count} días}}",
+  "@patternCycleDays": {
+    "description": "Longitud del ciclo de un patrón.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "patternCreateOwn": "Crear o meu",
+  "patternCreateOwnHint": "Monta a túa secuencia día a día",
+  "patternBuilderBack": "Escoller un patrón da lista",
+  "patternBuilderName": "Nome do patrón",
+  "patternBuilderDefaultName": "O meu patrón",
+  "patternBuilderSequence": "A túa secuencia",
+  "patternBuilderEmpty": "Toca as quendas de abaixo para ir engadindo días.",
+  "patternBuilderSameDay": "Varias quendas nun día",
+  "patternBuilderSameDayHint": "Activado: cada quenda que toques súmase ao último día da secuencia, en vez de crear un día novo.",
+  "patternBuilderRemoveLast": "Quitar o último",
+  "patternBuilderClear": "Baleirar a secuencia",
+  "patternBuilderAdd": "Engadir {name}",
+  "@patternBuilderAdd": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "patternStartLabel": "Día de inicio",
+  "patternSuggestedStart": "Este patrón adoita comezar un {weekday}.",
+  "@patternSuggestedStart": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      }
+    }
+  },
+  "patternWeekdayMonday": "luns",
+  "patternWeekdayTuesday": "martes",
+  "patternWeekdayWednesday": "mércores",
+  "patternWeekdayThursday": "xoves",
+  "patternWeekdayFriday": "venres",
+  "patternWeekdaySaturday": "sábado",
+  "patternWeekdaySunday": "domingo",
+  "patternOffsetTitle": "En que día do ciclo estás ese día?",
+  "patternOffsetHelp": "Toca o día do patrón que che toca o {date}.",
+  "@patternOffsetHelp": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "patternOffsetThatDay": "Ese día tócache: {shifts}",
+  "@patternOffsetThatDay": {
+    "placeholders": {
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "patternChipDay": "Día {day}: {shifts}",
+  "@patternChipDay": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "patternEndNever": "Sen fin",
+  "patternEndNeverHint": "Repítese ata que o cambies.",
+  "patternEndUntil": "Ata unha data",
+  "patternEndUntilHint": "Despois desa data volve o que tiñas.",
+  "patternUntilLabel": "Último día",
+  "patternOverridesTitle": "Días que xa cambiaches a man",
+  "patternOverridesKeep": "Respectar os días que xa cambiei a man",
+  "patternOverridesKeepHint": "Os teus cambios quedan; o patrón enche o resto.",
+  "patternOverridesReplace": "Substituílos polo patrón",
+  "patternOverridesReplaceHint": "Bórranse os teus cambios a man desas datas. As notas quedan.",
+  "patternPreviewTitle": "Así quedará",
+  "patternPreviewNone": "Escolle un patrón para ver como queda.",
+  "patternPreviewPostNight": "{count, plural, =1{Saínte automático: 1 día despois dunha noite.} other{Saínte automático: {count} días despois dunha noite.}}",
+  "@patternPreviewPostNight": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "patternPickBanner": "Toca o día en que comeza o patrón",
+  "onboardingSkip": "Omitir",
+  "onboardingNext": "Seguinte",
+  "onboardingContinue": "Continuar",
+  "onboardingProgress": "Paso {current} de {total}",
+  "@onboardingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingProfessionTitle": "A que te dedicas?",
+  "onboardingProfessionHelp": "Así deixámosche as quendas e as rotacións do teu traballo. Cámbiao cando queiras.",
+  "onboardingProfessionNursing": "Enfermaría, TCAE e celadores",
+  "onboardingProfessionNursingHint": "M 08–15, T 15–22, N 22–08 e saínte",
+  "onboardingProfessionMedicine": "Medicina (gardas)",
+  "onboardingProfessionMedicineHint": "Mañá, garda de 24 h e saínte",
+  "onboardingProfessionPolice": "Policía e Garda Civil",
+  "onboardingProfessionPoliceHint": "M 07–15, T 15–23 e N 23–07",
+  "onboardingProfessionFirefighters": "Bombeiros",
+  "onboardingProfessionFirefightersHint": "Garda de 24 h e descansos longos",
+  "onboardingProfessionIndustry": "Industria",
+  "onboardingProfessionIndustryHint": "Quendas rotativas: M 06–14, T 14–22 e N 22–06",
+  "onboardingProfessionSecurity": "Seguridade privada",
+  "onboardingProfessionSecurityHint": "Quendas de 12 h, de día e de noite",
+  "onboardingProfessionHospitality": "Hostalaría e comercio",
+  "onboardingProfessionHospitalityHint": "M 08–16 e T 16–00",
+  "onboardingProfessionOther": "Outro",
+  "onboardingProfessionOtherHint": "Comezas coas quendas de sempre",
+  "onboardingPlaceTitle": "Onde traballas?",
+  "onboardingPlaceHelp": "Para marcarche no calendario os festivos da túa comunidade e do teu concello.",
+  "onboardingRegionLabel": "Comunidade",
+  "onboardingRegionPick": "Escoller comunidade",
+  "onboardingRegionSheetTitle": "A túa comunidade",
+  "onboardingMunicipalityLabel": "Concello (opcional)",
+  "onboardingMunicipalityPick": "Buscar concello",
+  "onboardingMunicipalityNeedsRegion": "Escolle antes a comunidade",
+  "onboardingMunicipalitySheetTitle": "O teu concello",
+  "onboardingMunicipalitySearch": "Escribe o nome",
+  "onboardingMunicipalityNone": "Ningún concello se chama así",
+  "onboardingMunicipalityClear": "Quitar concello",
+  "onboardingLocalHolidaysMissing": "Os festivos locais do teu concello podes engadilos ti en dous toques.",
+  "onboardingRotationTitle": "Como é a túa rotación?",
+  "onboardingRotationHelp": "Escolle a que máis se pareza. Logo dis cando comezas.",
+  "onboardingRotationTypical": "O habitual no teu traballo",
+  "onboardingRotationOthers": "Outras rotacións",
+  "onboardingRotationAll": "Rotacións",
+  "onboardingByHand": "Píntoo a man",
+  "onboardingByHandHint": "Sen rotación: pintas ti os días no calendario.",
+  "onboardingStartTitle": "Cando comezas?",
+  "onboardingStartHelp": "Di desde que día conta e en que punto do ciclo estás ese día.",
+  "onboardingImportTitle": "Vés doutra app?",
+  "onboardingImportBody": "Se xa levabas as túas quendas en LRHSoft (Shifter), Supershift ou outra app, tráeas desde a súa copia, o calendario do móbil ou un ficheiro. Tamén podes facelo máis tarde, en Configuración.",
+  "onboardingReadyTitle": "Listo",
+  "onboardingReadyBody": "O teu calendario está preparado. Todo isto podes cambialo cando queiras en Configuración.",
+  "onboardingReadyProfession": "Traballo: {name}",
+  "@onboardingReadyProfession": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyPlace": "Festivos: {place}",
+  "@onboardingReadyPlace": {
+    "placeholders": {
+      "place": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyRotation": "Rotación: {name}, desde o {date}",
+  "@onboardingReadyRotation": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyOffset": "Comezas no día {day} do ciclo ({shifts})",
+  "@onboardingReadyOffset": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyByHand": "Rotación: píntala ti a man",
+  "onboardingReadyNothing": "Non escolliches nada, así que comezas co calendario en branco.",
+  "onboardingReadySaveFailed": "Non se puido gardar todo. Revisa as túas quendas e festivos en Configuración.",
+  "onboardingOpenCalendar": "Ver o meu calendario",
+  "onboardingTipTitle": "Pinta o teu mes nun momento",
+  "onboardingTipBody": "Toca Pintar, escolle unha quenda e arrastra polos días. Co botón Patrón repites unha rotación enteira dunha vez.",
+  "onboardingTipDismiss": "Entendido",
+  "onboardingTipClose": "Pechar o consello",
+  "paintScrollUp": "Subir polo mes",
+  "paintScrollDown": "Baixar polo mes",
+  "monthTipPaint": "Escolle unha quenda e arrasta.",
+  "@monthTipPaint": { "description": "Texto do consello compacto da pantalla do mes: unha liña que explica como pintar o mes arrastrando polos dias." },
+  "postNightAutoTitle": "Saínte automático",
+  "postNightAutoHelp": "Despois dunha noite, o día seguinte pasa a Saínte se estaba baleiro ou libre.",
+  "yearTitle": "Vista anual",
+  "yearOpenTooltip": "Ver o ano",
+  "yearPrevious": "Ano anterior",
+  "yearNext": "Ano seguinte",
+  "yearShare": "Compartir como imaxe",
+  "yearShareSubject": "As miñas quendas de {year}",
+  "@yearShareSubject": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "yearShareFailed": "Non se puido compartir a imaxe",
+  "yearImageTitle": "As miñas quendas {year}",
+  "@yearImageTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "yearMonthEmpty": "sen quendas",
+  "yearLegendTitle": "Quendas do ano",
+  "yearLegendEmpty": "Este ano non ten quendas.",
+  "yearLegendDays": "{count, plural, =1{1 día} other{{count} días}}",
+  "@yearLegendDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "yearLegendHoliday": "Festivo",
+  "summaryTitle": "Resumo",
+  "summaryOpenTooltip": "Resumo do mes",
+  "summaryModeMonth": "Mes",
+  "summaryModeYear": "Ano",
+  "summaryModeRange": "Datas…",
+  "summaryRangeFrom": "Desde",
+  "summaryRangeTo": "Ata",
+  "summaryRangePrevious": "Período anterior",
+  "summaryRangeNext": "Período seguinte",
+  "summaryRangeDays": "{count, plural, =1{1 día en total} other{{count} días en total}}. Podes escoller ata {max}.",
+  "@summaryRangeDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangeClamped": "O máximo son {max} días: acurtamos a data final.",
+  "@summaryRangeClamped": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangePreviousName": "{days, plural, =1{o día anterior} other{os {days} días anteriores}}",
+  "@summaryRangePreviousName": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryRangeEmptyTitle": "Sen quendas nestas datas",
+  "summaryRangeEmptyBody": "Escolle outras datas ou pinta quendas no calendario.",
+  "summaryRangeNoteMidnight": "As horas dunha quenda que cruza a medianoite cóntanse no día en que comeza, tamén se é o último día das datas.",
+  "summaryEmptyTitle": "Sen quendas este mes",
+  "summaryEmptyBody": "Pinta quendas no calendario e aquí verás as horas e a estimación.",
+  "summaryHoursWorked": "Horas traballadas",
+  "summaryShiftsWorked": "Quendas traballadas",
+  "summaryNightHours": "Horas nocturnas",
+  "summaryRestDays": "Días libres",
+  "summaryAbsences": "Ausencias",
+  "summaryHolidayHours": "Horas en festivo",
+  "summaryHolidayDetail": "{count, plural, =1{1 quenda en festivo} other{{count} quendas en festivo}}",
+  "@summaryHolidayDetail": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryOvertime": "Horas extra",
+  "summaryEarlyLeave": "Saídas anticipadas",
+  "summaryExtrasPay": "{amount} na estimación",
+  "@summaryExtrasPay": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryExtrasNoRate": "Hai horas extra ou saídas en días sen quenda con prezo por hora: non están na estimación.",
+  "summaryNoteExtras": "Horas extra e saídas anticipadas: as que anotas en cada día. As extra suman e as saídas restan das horas traballadas (un día non baixa de 0 h). Valóranse ao prezo por hora da primeira quenda con prezo dese día.",
+  "summaryDays": "{count, plural, =1{1 día} other{{count} días}}",
+  "@summaryDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryShifts": "{count, plural, =1{1 quenda} other{{count} quendas}}",
+  "@summaryShifts": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "summaryNightOf": "{hours} nocturnas",
+  "@summaryNightOf": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNoTimes": "sen horario",
+  "summaryNoRate": "sen prezo",
+  "summaryGroupWork": "Quendas de traballo",
+  "summaryGroupRest": "Descansos",
+  "summaryEstimateTitle": "Ingresos estimados",
+  "summaryFixedPluses": "Complementos",
+  "summaryFixedPlusCount": "{count, plural, one{1 quenda} other{{count} quendas}}",
+  "@summaryFixedPlusCount": {"placeholders": {"count": {"type": "int"}}},
+  "summaryEstimateNote": "Estimación, antes de impostos",
+  "summaryEstimateNone": "Pon o prezo por hora ou o complemento por quenda en As miñas quendas para ver a estimación.",
+  "summaryEstimateMissing": "Non inclúe o pago por hora de {types}: sen prezo.",
+  "@summaryEstimateMissing": {
+    "placeholders": {
+      "types": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryRateAction": "Poñer prezos en As miñas quendas",
+  "summaryDelta": "{delta} respecto a {month}",
+  "@summaryDelta": {
+    "placeholders": {
+      "delta": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDeltaSame": "As mesmas horas ca en {month}",
+  "@summaryDeltaSame": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDeltaNone": "Sen quendas en {month} para comparar",
+  "@summaryDeltaNone": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryNotesTitle": "Como se conta",
+  "summaryNoteMidnight": "As horas dunha quenda que cruza a medianoite cóntanse no día e no mes en que comeza.",
+  "summaryNoteNight": "Nocturnas: de 22:00 a 06:00, salvo que marques outra cousa na quenda.",
+  "summaryNoteDst": "Son horas de reloxo: na noite do cambio de hora non se axusta a 7 ou 9 horas.",
+  "summaryNoteNoTimes": "As quendas sen horario contan como quenda, pero non suman horas.",
+  "summaryNoteHoliday": "Horas en festivo: as que caen nun día festivo da túa comunidade e concello, tamén se a quenda cruza a medianoite.",
+  "summaryYearEmpty": "Este ano non ten quendas.",
+  "summaryYearHint": "Toca un mes para ver o seu detalle.",
+  "summaryYearHeaderMonth": "Mes",
+  "summaryYearHeaderShifts": "Quendas",
+  "summaryYearHeaderHours": "Horas",
+  "summaryYearHeaderNight": "Noct.",
+  "summaryYearHeaderEstimate": "Estimado",
+  "summaryYearTotal": "Total",
+  "summaryYearEstimated": "{amount} estimado",
+  "@summaryYearEstimated": {
+    "description": "Importe de un mes en la lista del año con texto grande.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryYearMonthEmpty": "Sen quendas",
+  "summaryYearRowTitle": "Horas e estimación",
+  "summaryYearRowBody": "Quendas, horas e euros de cada mes",
+  "summaryYearMonthSemantics": "{month}: {shifts}, {hours}",
+  "@summaryYearMonthSemantics": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "shareMonthTooltip": "Compartir o mes como imaxe",
+  "shareMonthSubject": "As miñas quendas de {month}",
+  "@shareMonthSubject": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "shareMonthFailed": "Non se puido compartir a imaxe",
+  "shareMonthLegendTitle": "Quendas do mes",
+  "shareMonthLegendEmpty": "Este mes non ten quendas.",
+  "saveFailed": "Non se puido gardar o cambio",
+  "@saveFailed": {
+    "description": "Aviso (SnackBar) cuando falla escribir un cambio en la base de datos; el calendario ya muestra lo que hay guardado."
+  },
+  "settingsTitle": "Configuración",
+  "settingsOpenTooltip": "Abrir configuración",
+  "settingsSectionSchedule": "O teu cadro de quendas",
+  "settingsShiftsTitle": "As miñas quendas",
+  "settingsShiftsSubtitle": "Cores, códigos e horas",
+  "settingsCalendarsTitle": "Calendarios",
+  "settingsSectionAppearance": "Aparencia",
+  "settingsThemeTitle": "Tema",
+  "settingsThemeSystemLight": "Sistema (claro)",
+  "settingsThemeSystemDark": "Sistema (escuro)",
+  "settingsThemeLight": "Claro",
+  "settingsThemeDark": "Escuro",
+  "settingsWeekStartTitle": "Primeiro día da semana",
+  "settingsWeekStartMonday": "Luns",
+  "settingsWeekStartSunday": "Domingo",
+  "settingsWeekNumbersTitle": "Amosar o número de semana",
+  "settingsWeekNumbersSubtitle": "Unha columna á esquerda do mes",
+  "settingsLanguageTitle": "Idioma",
+  "settingsLanguageSystem": "Sistema ({language})",
+  "@settingsLanguageSystem": {
+    "description": "Opción «seguir el idioma del móvil», con el idioma que da ahora, p. ej. «Sistema (Español)».",
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageNameEs": "Español",
+  "@languageNameEs": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameCa": "Català",
+  "@languageNameCa": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameGl": "Galego",
+  "@languageNameGl": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameEu": "Euskara",
+  "@languageNameEu": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "languageNameEn": "English",
+  "@languageNameEn": {
+    "description": "Nombre del idioma en su propia lengua: igual en todos los idiomas de la app."
+  },
+  "settingsSaveFailed": "Non se puido gardar o axuste. Proba outra vez.",
+  "settingsSectionMore": "Avisos e datos",
+  "settingsHolidaysTitle": "Festivos",
+  "settingsAlarmsTitle": "Alarmas",
+  "settingsBackupTitle": "Copia de seguranza",
+  "settingsPrivacyTitle": "Política de privacidade",
+  "settingsPrivacySubtitle": "Ábrese no teu navegador",
+  "settingsPrivacyOpenFailed": "Non se puido abrir a política de privacidade. Téntao de novo.",
+  "faqAlarmsQIos": "Como configuro as alarmas e que é o permiso de notificacións?",
+  "faqAlarmsAIos": "En Configuración › Alarmas activa «Avisar antes de cada quenda», escolle canto antes e, se queres, un aviso o día anterior a unha hora fixa. No detalle dun día podes quitar a súa alarma con «Sen alarma este día».\n\nSen o permiso de notificacións, Cuadrante non pode avisarte. Se non che sae a xanela para permitilas, actívaas na configuración do sistema.",
+  "faqWidgetAIos": "En Configuración › Engadir widget ves os tamaños (pequeno: hoxe e mañá; mediano: os próximos 7 días; grande: o mes enteiro) e como colocalo. Mantén premida a pantalla de inicio, toca o + de arriba e busca Cuadrante.\n\nO widget garda os teus próximos días. O sistema decide cando o actualiza e pode atrasar o cambio de día. Se queda sen datos, abre Cuadrante para poñelo ao día.",
+  "settingsSectionHelp": "Axuda",
+  "settingsHelpTitle": "Axuda e contacto",
+  "settingsHelpSubtitle": "Escríbenos se algo non vai ben",
+  "settingsHelpBody": "Tes dúbidas ou algo non vai ben? Cóntanos que che pasa e que versión usas.",
+  "settingsHelpSubtitleSoon": "Estamos preparando o correo de soporte",
+  "settingsHelpBodySoon": "Aínda non temos correo de soporte. Mentres tanto, mira as preguntas frecuentes e, se algo non vai ben, ten á man a versión que usas.",
+  "settingsHelpNoEmail": "O correo de soporte chegará coa versión da tenda.",
+  "settingsHelpCopyEmail": "Copiar correo",
+  "settingsHelpCopyVersion": "Copiar versión",
+  "settingsFaqTitle": "Preguntas frecuentes",
+  "settingsFaqSubtitle": "Pintar, rotacións, alarmas, widget e máis",
+  "faqIntro": "Respostas rápidas sobre como funciona Cuadrante. Todo está neste dispositivo: non fai falta conta nin conexión.",
+  "faqNotFound": "Non atopas o que buscas?",
+  "faqContact": "Axuda e contacto",
+  "faqPaintQ": "Como pinto o mes?",
+  "faqPaintA": "Preme «Pintar» no calendario, escolle unha quenda abaixo e toca os días ou pasa o dedo por eles. Para baleirar un día usa «Borrar». Cada trazo pódese desfacer e refacer coas frechas da barra. Preme «Feito» cando remates.\n\nSe tocas un día sen estar pintando ábrese o seu detalle: aí cambias a quenda, engades unha nota ou volves ao patrón. Se mantés premido un día comezas a escoller varios á vez: podes poñerlles quenda, copialos, cortalos e pegalos, ou repetir unha semana.",
+  "faqPatternQ": "Como aplico unha rotación e que é o desfase?",
+  "faqPatternA": "No modo pintar preme o botón «Patrón» e segue os pasos: escolle a túa rotación (ou crea a túa), o día en que comezas e ata cando se repite.\n\nO desfase é o punto do ciclo no que estás o día de inicio. Se ese día che toca a noite, no paso «En que día do ciclo estás ese día?» tocas a noite e o resto axústase só. Os días que xa cambiaches a man respéctanse ou substitúense, como prefiras. Para rematar ou quitar unha rotación vai a Configuración › As miñas rotacións.",
+  "faqDoubleQ": "Como dobro unha quenda?",
+  "faqDoubleA": "Dobrar é facer dúas quendas o mesmo día. Toca o día e, no seu detalle, usa «Engadir unha segunda quenda». Se estás pintando, activa «Dobrar» e toca os días. Con varios días escollidos, «Dobrar con…» engade a quenda a todos.\n\nUn día pode levar as quendas que necesites e cada unha suma as súas horas por separado.",
+  "faqPostNightQ": "Que é o saínte automático?",
+  "faqPostNightA": "É o descanso do día seguinte a unha noite. Se o activas en Configuración › Saínte automático, ao pintar ou aplicar unha noite o día seguinte pasa a Saínte cando estaba baleiro ou libre. Os días que xa tiñan outra quenda non se tocan. Vén desactivado.",
+  "faqNotesQ": "Como uso as notas e a axenda?",
+  "faqNotesA": "Toca un día e escribe no campo da nota; os días con nota márcanse no calendario. Abre a axenda desde arriba do calendario: «Notas» reúne as notas e os festivos propios; «Quendas» amosa as quendas próximas.\n\nBusca por texto, sen importar maiúsculas nin tiles, ou por data: por exemplo, 15/10 ou 15 out. A busca inclúe todas as notas e os festivos propios, e as quendas desde hai un ano ata dentro dun ano.",
+  "faqAlarmsQ": "Como configuro as alarmas e que é o permiso de alarmas exactas?",
+  "faqAlarmsA": "En Configuración › Alarmas activa «Avisar antes de cada quenda», escolle canto antes e, se queres, un aviso o día anterior a unha hora fixa. No detalle dun día podes quitar a súa alarma con «Sen alarma este día».\n\nEn Android fan falta as notificacións e o permiso «Alarmas e recordatorios» da configuración do sistema: sen el, Android pode atrasar o aviso uns minutos. A pantalla de alarmas diche que falta e lévate á configuración. Se o teu móbil aforra batería de forma agresiva, deixa Cuadrante sen restricións para que non pare os avisos.",
+  "faqHolidaysQ": "Como engado un festivo local?",
+  "faqHolidaysA": "En Configuración › Festivos escolle a túa comunidade e o teu concello e verás os festivos que che tocan. Se falta o da túa vila, toca ese día no calendario e activa «Festivo propio»: pónslle nome e desde ese momento conta como festivo.\n\nTamén podes traer festivos do calendario do móbil desde Configuración › Festivos. Escolle os calendarios e as datas e revisa a vista previa: só se len eventos de día completo, omítense os festivos que xa tes e podes desfacer a acción. Non se cambian os eventos do calendario.",
+  "faqWidgetQ": "Como engado o widget e por que cambia só?",
+  "faqWidgetA": "En Configuración › Engadir widget ves os tamaños (pequeno: hoxe e mañá; mediano: os próximos 7 días; grande: o mes enteiro) e como colocalo. En Android, mantén premida unha zona baleira da pantalla de inicio, escolle Widgets e busca Cuadrante.\n\nO widget sempre amosa o día de hoxe: cambia de día á medianoite aínda que non abras a app, porque leva gardados os teus próximos días. Se pasa moito tempo sen abrir Cuadrante, queda sen datos e pídeche abrir a app para poñerse ao día.",
+  "faqBackupQ": "Como fago unha copia e cambio de dispositivo?",
+  "faqBackupA": "Configuración › Copia de seguranza garda copias automáticas neste dispositivo despois de cada cambio, pero pérdense se o perdes ou desinstalas a app. Exporta un ficheiro con «Exportar ficheiro» e gárdao en Drive ou envíao a ti mesmo por WhatsApp ou correo.\n\nPara cambiar de dispositivo: exporta o ficheiro, instala Cuadrante no novo, abre o ficheiro coa app (ou usa «Importar ficheiro» na copia de seguranza) e revisa a vista previa antes de restaurar. «Probar restauración» comproba que a túa última copia se pode recuperar enteira.",
+  "faqImportQ": "Podo importar ou exportar as miñas quendas ao calendario?",
+  "faqImportA": "Si. En Configuración › Importar quendas podes traer unha copia «.Shifter» de LRHSoft, quendas do calendario do móbil, un ficheiro .ics ou un CSV. En LRHSoft, crea unha copia en Menú › Copia de seguranza › Copia local e escolle o ficheiro de Documents › ShifterBackups. Revisa as datas, os tipos de quenda e a vista previa antes de importar.\n\n«Exportar ao calendario do móbil» copia as túas quendas unha vez a un calendario do teléfono. Se exportas outra vez non se duplican: só se tocan os eventos que creou Cuadrante.",
+  "faqCalendarsQ": "Podo levar varios calendarios e comparalos?",
+  "faqCalendarsA": "Si. En Configuración › Calendarios creas un para a túa parella, un segundo traballo ou un fillo: cada un ten as súas rotacións e os seus días, e os tipos de quenda son os mesmos. Con dous ou máis, o nome do calendario sobre o mes déixache cambiar dun a outro. O widget e as alarmas seguen o calendario marcado como «Widget e alarmas».\n\nPara ver cando coincidides libres, preme «Comparar calendarios» nesa mesma folla: escolles dous e ves as súas quendas xuntas e os días libres en común do mes.",
+  "faqSummaryQ": "Como se calculan as horas e os euros?",
+  "faqSummaryA": "A icona de resumo do calendario amosa as quendas, as horas, as nocturnas e as de festivo do mes, dun ano enteiro ou das datas que escollas en «Datas…» (ata 366 días). Unha quenda conta no día en que comeza, aínda que cruce a medianoite.\n\nPara ver euros, pon o prezo por hora e, se o tes, o complemento fixo por tipo de quenda en Configuración › As miñas quendas. A estimación inclúe eses complementos fixos, antes de impostos. Non inclúe complementos por hora nocturna ou festiva nin retencións.\n\nO «Plus por quenda» súmase unha vez por cada quenda traballada dese tipo, tamén se é partida; non depende das horas. Os descansos e as ausencias non o suman.",
+  "settingsVersionCopied": "Versión copiada",
+  "settingsEmailCopied": "Correo copiado",
+  "settingsAboutTitle": "Acerca de",
+  "settingsAboutVersion": "Versión {version}",
+  "@settingsAboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsAboutVersionDev": "Versión de desenvolvemento",
+  "settingsAboutTagline": "Cuadrante funciona sen conexión e sen conta: as túas quendas quedan no teu móbil.",
+  "settingsAboutLicenses": "Licenzas de código aberto",
+  "calendarWeekNumberSemantics": "Semana {number}",
+  "@calendarWeekNumberSemantics": {
+    "description": "Lectura en voz alta del número de semana ISO de una fila del mes.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "importSectionTitle": "Importar e exportar",
+  "importRowTitle": "Importar quendas",
+  "importRowSubtitle": "Copia de LRHSoft, calendario do móbil, .ics ou CSV",
+  "calExportRowTitle": "Exportar quendas",
+  "calExportRowSubtitle": "Ao calendario do móbil, sen duplicados",
+  "importTitle": "Importar quendas",
+  "importStepOf": "Paso {current} de {total}",
+  "@importStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importNext": "Seguinte",
+  "importReading": "Lendo…",
+  "importSourceTitle": "De onde veñen as túas quendas?",
+  "importSourceHelp": "Cuadrante le os eventos aquí mesmo, no teu móbil, e non os envía a ningún sitio. Ti decides que se importa.",
+  "importSourceDevice": "Calendario do móbil",
+  "importSourceDeviceHelp": "Google, iCloud, Outlook… o que teñas na app de calendario.",
+  "importSourceIcs": "Ficheiro .ics",
+  "importSourceIcsHelp": "Un calendario exportado, cunha quenda por evento.",
+  "importSourceCsv": "Ficheiro CSV",
+  "importSourceCsvHelp": "Unha folla cunha data e unha quenda en cada fila.",
+  "importSourceLrhsoft": "Copia de LRHSoft (Calendario de Turnos)",
+  "importSourceLrhsoftHelp": "O ficheiro .Shifter da túa copia local",
+  "importFileLrhsoft": "Copia de LRHSoft",
+  "importHowToTitle": "Vés de LRHSoft ou Supershift?",
+  "importHowToBody": "LRHSoft ou Shifter: na app, Menú › Copia de seguranza › Copia local. Despois escolle aquí ese ficheiro .Shifter: está na memoria do móbil, en Documents › ShifterBackups.\nSupershift: exporta as túas quendas ao calendario do móbil e escolle «Calendario do móbil».",
+  "calExportPermissionTitle": "Falta o permiso do calendario",
+  "calExportPermissionReadBody": "Para importar, Cuadrante necesita ler os eventos dos teus calendarios. Só o fai agora, mentres importas, e non garda nada fóra do móbil.",
+  "calExportPermissionWriteBody": "Para engadir as túas quendas, Cuadrante necesita acceso aos teus calendarios. Só engade ou cambia os seus propios eventos, e só cando ti exportas. Se o calendario que escollas se sincroniza cunha conta (Google, iCloud...), esa conta tamén recibirá as quendas.",
+  "calExportPermissionAgainBody": "Non deches o permiso. Sen el non podemos usar os teus calendarios, pero podes permitilo agora. Se o rexeitas outra vez, terás que activalo nos axustes do sistema.",
+  "calExportPermissionAllow": "Permitir acceso",
+  "calExportPermissionDeniedTitle": "O acceso ao calendario está desactivado",
+  "calExportPermissionDeniedBody": "Actívao na configuración do sistema (Permisos › Calendario) e volve aquí.",
+  "calExportPermissionSettings": "Abrir configuración",
+  "calExportPermissionRecheck": "Comprobar de novo",
+  "calExportPermissionRestrictedTitle": "Este móbil non deixa usar o calendario",
+  "calExportPermissionRestrictedBody": "Pode ser un control parental ou un perfil de traballo. Se importas, proba cun ficheiro .ics.",
+  "calExportPermissionWriteOnlyBody": "O sistema só deu permiso para engadir eventos. Cuadrante necesita acceso completo para ler os calendarios ou para substituír os eventos dunha exportación anterior.",
+  "importCalendarsTitle": "Escolle os calendarios",
+  "importCalendarsHelp": "Marca de onde veñen as túas quendas. Os demais non se tocan.",
+  "importCalendarsEmpty": "Non hai calendarios neste móbil.",
+  "importCalendarsNoAccount": "Sen conta",
+  "importCalendarsReadOnly": "Só lectura",
+  "importCalendarSemantics": "{name}, {account}",
+  "@importCalendarSemantics": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "importRangeTitle": "De que datas?",
+  "importRangeHelp": "Só se miran os eventos destes días.",
+  "importRangeFrom": "Desde",
+  "importRangeTo": "Ata",
+  "importRangeDefault": "Últimos 12 meses e próximos 6",
+  "importRangeInvalid": "A data final non pode ser anterior á inicial.",
+  "importRangeClamped": "O máximo son 5 anos: recortouse o principio.",
+  "importRangeFile": "Ficheiro: {name}",
+  "@importRangeFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importRangeFileEvents": "{count, plural, =1{O ficheiro trae 1 evento.} other{O ficheiro trae {count} eventos.}}",
+  "@importRangeFileEvents": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRangeFileSkipped": "{count, plural, =1{1 evento non ten unha data válida e non se lerá.} other{{count} eventos non teñen unha data válida e non se lerán.}}",
+  "@importRangeFileSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRangeFileRules": "{count, plural, =1{1 evento ten unha repetición que non entendemos e conta unha soa vez.} other{{count} eventos teñen unha repetición que non entendemos e contan unha soa vez.}}",
+  "@importRangeFileRules": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importColumnsTitle": "Que é cada columna?",
+  "importColumnsHelp": "Mira as primeiras filas e confirma cal é a data e cal a quenda.",
+  "importColumnsHeader": "A primeira fila son os títulos",
+  "importColumnDate": "Data",
+  "importColumnTitle": "Quenda ou código",
+  "importColumnStart": "Hora de inicio (opcional)",
+  "importColumnEnd": "Hora de fin (opcional)",
+  "importColumnNone": "Ningunha",
+  "importColumnNumber": "Columna {number}",
+  "@importColumnNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "importColumnNamed": "{number}: {name}",
+  "@importColumnNamed": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importColumnsScrollHint": "Despraza cara aos lados para ver todas as columnas.",
+  "importColumnsPreview": "Primeiras filas",
+  "importMappingTitle": "A que quenda corresponde cada título?",
+  "importMappingHelp": "Agrupamos os eventos por título. Escolle unha das túas quendas, crea unha nova ou ignóraos.",
+  "importMappingSummary": "{days, plural, =1{1 día} other{{days} días}} en {groups, plural, =1{1 título} other{{groups} títulos}}",
+  "@importMappingSummary": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "groups": {
+        "type": "int"
+      }
+    }
+  },
+  "importMappingTruncated": "Hai máis de {limit} eventos: só se leron os primeiros. Acurta as datas para ver o resto.",
+  "@importMappingTruncated": {
+    "placeholders": {
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "importMappingSkippedRows": "{count, plural, =1{Saltouse 1 fila por non ter unha data ou unha quenda válidas (por exemplo, a liña {line}).} other{Saltáronse {count} filas por non ter unha data ou unha quenda válidas (por exemplo, a liña {line}).}}",
+  "@importMappingSkippedRows": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "importMappingNothing": "Escolle polo menos un título para importar.",
+  "importGroupDays": "{count, plural, =1{1 día} other{{count} días}}",
+  "@importGroupDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importGroupAllDay": "Todo o día",
+  "importGroupExamples": "p. ex. {dates}",
+  "@importGroupExamples": {
+    "placeholders": {
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "importGroupUntitled": "Sen título",
+  "importMapIgnore": "Ignorar",
+  "importMapCreate": "Crear tipo novo",
+  "importMapChoose": "Escoller quenda",
+  "importMapSuggested": "Suxerido",
+  "importMapNew": "Novo: {name}",
+  "@importMapNew": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importMapPickTitle": "Que quenda é «{title}»?",
+  "@importMapPickTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "importMapSemantics": "{title}: {choice}",
+  "@importMapSemantics": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "choice": {
+        "type": "String"
+      }
+    }
+  },
+  "importNewTypeTitle": "Tipo de quenda novo",
+  "importNewTypeUse": "Usar este tipo",
+  "importPreviewTitle": "Así quedará",
+  "importPreviewHelp": "Revisa os meses. Non se garda nada ata que premas Importar.",
+  "importPreviewTarget": "Impórtase en «{name}».",
+  "@importPreviewTarget": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "importPreviewDays": "{count, plural, =1{Escribirase 1 día.} other{Escribiranse {count} días.}}",
+  "@importPreviewDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewUnchanged": "{count, plural, =1{1 día xa estaba igual.} other{{count} días xa estaban igual.}}",
+  "@importPreviewUnchanged": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewNewTypes": "{count, plural, =1{Crearase 1 tipo de quenda novo.} other{Crearanse {count} tipos de quenda novos.}}",
+  "@importPreviewNewTypes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importPreviewEmpty": "Con estas eleccións non cambia ningún día.",
+  "importPreviewMoreMonths": "{count, plural, =1{E 1 mes máis sen amosar.} other{E {count} meses máis sen amosar.}}",
+  "@importPreviewMoreMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictsTitle": "{count, plural, =1{1 día xa ten quenda} other{{count} días xa teñen quenda}}",
+  "@importConflictsTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictsHelp": "Que facemos con eles?",
+  "importConflictReplace": "Substituír",
+  "importConflictKeep": "Manter o meu",
+  "importConflictsExamples": "Por exemplo: {dates}",
+  "@importConflictsExamples": {
+    "placeholders": {
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "importApply": "{count, plural, =1{Importar 1 día} other{Importar {count} días}}",
+  "@importApply": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importApplied": "{count, plural, =1{Importouse 1 día.} other{Importáronse {count} días.}}",
+  "@importApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importAppliedWithTypes": "{days, plural, =1{Importouse 1 día} other{Importáronse {days} días}} e {types, plural, =1{1 tipo de quenda novo} other{{types} tipos de quenda novos}}.",
+  "@importAppliedWithTypes": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "types": {
+        "type": "int"
+      }
+    }
+  },
+  "importUndoDone": "Desfízose a importación.",
+  "importUndoKeptTypes": "{count, plural, =1{Queda o tipo «{names}»: algo o usa.} other{Quedan os tipos «{names}»: algo os usa.}}",
+  "@importUndoKeptTypes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "importApplyFailed": "Non se puido importar. Proba outra vez.",
+  "importProblemPermissionDenied": "Sen o permiso non podemos ler os teus calendarios.",
+  "importProblemPermissionRestricted": "Este móbil non deixa a Cuadrante usar o calendario. Proba cun ficheiro.",
+  "importProblemCalendarUnavailable": "Este móbil non ten calendarios dispoñibles.",
+  "importProblemReadFailed": "Non se puideron ler os eventos. Proba outra vez.",
+  "importProblemFileTooLarge": "O ficheiro pesa máis de 5 MB. Ao exportalo, escolle menos datas.",
+  "importProblemFileUnreadable": "Non puidemos abrir ese ficheiro. Aceptamos .csv, .ics e a copia .Shifter de LRHSoft.",
+  "importProblemNotCalendar": "Ese ficheiro non parece un calendario .ics.",
+  "importProblemNotCsv": "Non atopamos unha columna de datas nese CSV.",
+  "importProblemNoEvents": "Non hai eventos nesas datas.",
+  "importProblemTooComplex": "Ese ficheiro é demasiado grande ou complicado e tarda demasiado. Ao exportalo, escolle menos datas.",
+  "importProblemUnknown": "Algo non foi ben ao ler o ficheiro. Proba con outro.",
+  "importProblemNotLrhsoft": "Ese ficheiro non parece unha copia de LRHSoft (.Shifter). Proba a crear outra copia local.",
+  "importRangeLrhsoftDays": "{count, plural, =1{A copia trae 1 día.} other{A copia trae {count} días.}}",
+  "importMappingInvalidRows": "{count, plural, =1{Ignorouse 1 fila non válida.} other{Ignoráronse {count} filas non válidas.}}",
+  "importLrhsoftNotImported": "Non se traen as alarmas, os debuxos, as fotos nin as horas extra.",
+  "importNoteCount": "{count, plural, =1{1 nota} other{{count} notas}}",
+  "importApplyNotes": "{count, plural, =1{Importar 1 nota} other{Importar {count} notas}}",
+  "importAppliedNotes": "{count, plural, =1{Importouse 1 nota.} other{Importáronse {count} notas.}}",
+  "importPreviewNotes": "{count, plural, =1{Engadirase 1 nota.} other{Engadiranse {count} notas.}}",
+  "calExportTitle": "Exportar quendas",
+  "calExportHelp": "Engade as túas quendas como eventos a un calendario do móbil, unha soa vez. Se o repites, Cuadrante substitúe os seus eventos anteriores nesas datas en vez de duplicalos.",
+  "calExportSource": "Expórtanse as quendas de «{name}».",
+  "@calExportSource": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calExportCalendarLabel": "Calendario",
+  "calExportNewCalendar": "Crear o calendario «Cuadrante»",
+  "calExportNewCalendarHelp": "Así podes ocultalo ou borralo enteiro cando queiras.",
+  "calExportRangeLabel": "Datas",
+  "calExportFrom": "Desde",
+  "calExportTo": "Ata",
+  "calExportIncludeRest": "Incluír os días libres",
+  "calExportIncludeRestHelp": "Libre e Saínte tamén se engaden, como eventos de todo o día.",
+  "calExportIncludeAbsences": "Incluír ausencias",
+  "calExportIncludeAbsencesHelp": "Vacacións, baixas e outras ausencias. Engadiríanse a ese calendario e á conta coa que se sincronice.",
+  "calExportSynced": "Este calendario sincronízase con {account}: as túas quendas veranse alí.",
+  "@calExportSynced": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "calExportSyncedUnnamed": "Este calendario sincronízase cunha conta: as túas quendas veranse alí.",
+  "calExportPlanAdd": "{count, plural, =1{Engadirase 1 evento.} other{Engadiranse {count} eventos.}}",
+  "@calExportPlanAdd": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanReplace": "{count, plural, =1{Substituirase 1 evento dunha exportación anterior.} other{Substituiranse {count} eventos dunha exportación anterior.}}",
+  "@calExportPlanReplace": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanRemove": "{count, plural, =1{Quitarase 1 evento dunha exportación anterior.} other{Quitaranse {count} eventos dunha exportación anterior.}}",
+  "calExportPlanSame": "{count, plural, =1{1 evento xa está ao día.} other{{count} eventos xa están ao día.}}",
+  "@calExportPlanSame": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportPlanNothing": "Todo está ao día: non hai nada que cambiar.",
+  "calExportPlanNone": "Non hai quendas nesas datas.",
+  "calExportButton": "Exportar",
+  "calExportRunning": "Exportando… {done} de {total}",
+  "@calExportRunning": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneTitle": "Exportación feita",
+  "calExportDoneCalendar": "Creouse o calendario «Cuadrante».",
+  "calExportDoneCreated": "{count, plural, =1{1 evento engadido} other{{count} eventos engadidos}}",
+  "@calExportDoneCreated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneReplaced": "{count, plural, =1{1 evento anterior substituído} other{{count} eventos anteriores substituídos}}",
+  "calExportDoneRemoved": "{count, plural, =1{1 evento quitado} other{{count} eventos quitados}}",
+  "@calExportDoneRemoved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneSame": "{count, plural, =1{1 evento xa estaba ao día} other{{count} eventos xa estaban ao día}}",
+  "@calExportDoneSame": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportDoneFailed": "{count, plural, =1{Non se puido escribir 1 evento. Volve exportar para completalo.} other{Non se puideron escribir {count} eventos. Volve exportar para completalos.}}",
+  "@calExportDoneFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calExportProblemPermission": "Sen o permiso non podemos escribir no teu calendario.",
+  "calExportProblemUnavailable": "Este móbil non ten calendarios dispoñibles.",
+  "calExportProblemFailed": "Non se puido exportar. Proba outra vez.",
+  "calExportRangeClamped": "O máximo é un ano: recortouse o final.",
+  "onboardingImportButton": "Importar agora",
+  "onboardingImportLrhsoftButton": "Importar a copia de LRHSoft",
+  "backupUiRowSubtitle": "Automática, exportar e importar",
+  "backupUiStatusNoneTitle": "Aínda non hai ningunha copia",
+  "backupUiStatusNoneBody": "Fai unha agora: tarda un segundo. Mentres non a teñas, se perdes o dispositivo ou desinstalas a app pérdese o teu cadro de quendas.",
+  "backupUiStatusLast": "Última copia",
+  "backupUiStatusWhere": "Neste dispositivo",
+  "backupUiStatusRunning": "Gardando a copia…",
+  "backupUiStatusPending": "Hai cambios novos: a copia farase nuns segundos.",
+  "backupUiStatusPendingAt": "Hai cambios novos: a próxima copia farase arredor das {time}. Se non queres esperar, toca «Facer copia agora».",
+  "backupUiStatusPendingLater": "Hai cambios novos: a próxima copia farase nuns minutos. Se non queres esperar, toca «Facer copia agora».",
+  "backupUiStatusFailedTitle": "A última copia automática fallou",
+  "backupUiStatusFailedWithGood": "Tentámolo {when} e non se puido gardar. A túa última copia boa é de {good}.",
+  "@backupUiStatusFailedWithGood": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "good": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiStatusFailedNoGood": "Tentámolo {when} e non se puido gardar. Aínda non tes ningunha copia boa.",
+  "@backupUiStatusFailedNoGood": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiFailDiskFull": "O dispositivo non ten espazo libre.",
+  "backupUiFailGeneric": "Non se puido escribir o ficheiro da copia.",
+  "backupUiRetry": "Tentar de novo",
+  "backupUiSystemOn": "Copia do sistema de Android: activada",
+  "backupUiSystemOff": "Copia do sistema de Android: desactivada. Actívaa na configuración de Android para ter outra copia.",
+  "backupUiSystemUnknown": "Copia do sistema de Android: non podemos comprobala desde a app. Mira na configuración de Android que estea activada.",
+  "backupUiWarning": "Estas copias gárdanse neste dispositivo. Se desinstalas a app sen outra copia, pérdese. Exporta un ficheiro e gárdao en Drive ou envíao por WhatsApp ou correo.",
+  "backupUiBackupNow": "Facer copia agora",
+  "backupUiBackupDone": "Copia feita",
+  "backupUiBackupFailed": "Non se puido facer a copia. Os teus datos seguen como estaban.",
+  "backupUiAutoTitle": "Copias automáticas",
+  "backupUiAutoOn": "Despois de cambiar algo, sen que o notes. Gardamos as 7 últimas e unha por día durante 30 días.",
+  "backupUiAutoOff": "Desactivadas: só se copia cando ti o pides.",
+  "backupUiSectionFile": "Ficheiro",
+  "backupUiSectionCheck": "Comprobar",
+  "backupUiSectionCopies": "Copias neste dispositivo",
+  "backupUiExport": "Exportar ficheiro",
+  "backupUiExportSubtitle": "Para gardalo en Drive ou mandalo por WhatsApp ou correo",
+  "backupUiExportFailed": "Non se puido exportar o ficheiro.",
+  "backupUiSave": "Gardar no dispositivo",
+  "backupUiSaveSubtitle": "Escolle un cartafol, por exemplo Descargas",
+  "backupUiSaveDone": "Ficheiro gardado",
+  "backupUiSaveFailed": "Non se puido gardar o ficheiro. Proba con outro cartafol ou usa «Exportar ficheiro».",
+  "backupUiImport": "Importar ficheiro",
+  "backupUiImportSubtitle": "Recupera un ficheiro de Cuadrante",
+  "backupUiVerify": "Probar restauración",
+  "backupUiVerifySubtitle": "Comproba que a túa última copia se pode recuperar enteira",
+  "backupUiVerifyRunning": "Comprobando a copia…",
+  "backupUiVerifyNone": "Aínda non hai ningunha copia que probar. Fai unha primeiro.",
+  "backupUiVerifyOk": "{days, plural, =1{A copia está completa: 1 día comprobado} other{A copia está completa: {days} días comprobados}}",
+  "@backupUiVerifyOk": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "backupUiVerifySame": "É idéntica ao que tes agora.",
+  "backupUiVerifyOlder": "É anterior ao que tes agora (o primeiro día que cambia é {day}). É normal se fixeches cambios despois.",
+  "@backupUiVerifyOlder": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiVerifyOlderNoDay": "É anterior ao que tes agora. É normal se fixeches cambios despois.",
+  "backupUiVerifyMismatch": "A copia non se reconstrúe igual. Primeiro día distinto: {day}. Fai unha copia nova e avísanos.",
+  "@backupUiVerifyMismatch": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiVerifyMismatchNoDay": "A copia non se reconstrúe igual: os datos gardados non coinciden. Fai unha copia nova e avísanos.",
+  "backupUiVerifyError": "Non se puido probar a copia. {reason}",
+  "@backupUiVerifyError": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiCopiesEmpty": "Aquí aparecerán as túas copias.",
+  "backupUiCopyLocal": "Copia do dispositivo",
+  "backupUiCopySafety": "Antes de restaurar",
+  "backupUiCopyMeta": "{kind} · {size}",
+  "@backupUiCopyMeta": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiCopyMetaVersion": "{kind} · {version} · {size}",
+  "backupUiCopyRestore": "Restaurar esta",
+  "backupUiCopyRestoreLabel": "Restaurar a copia do {when}",
+  "@backupUiCopyRestoreLabel": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenToday": "hoxe ás {time}",
+  "@backupUiWhenToday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenYesterday": "onte ás {time}",
+  "@backupUiWhenYesterday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiWhenDate": "o {date} ás {time}",
+  "@backupUiWhenDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewTitle": "Restaurar copia",
+  "backupUiPreviewReading": "Lendo o ficheiro…",
+  "backupUiOriginFile": "Ficheiro que escolliches",
+  "backupUiOriginShared": "Ficheiro recibido doutra app",
+  "backupUiOriginLocal": "Copia deste dispositivo",
+  "backupUiOriginSafety": "Copia de xusto antes de restaurar",
+  "backupUiOriginCloud": "Copia en iCloud",
+  "backupUiPreviewSaved": "Gardada {when}",
+  "@backupUiPreviewSaved": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewSender": "Enviado desde {sender}",
+  "@backupUiPreviewSender": {
+    "placeholders": {
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewSenderHint": "Indícao o dispositivo. Se non esperabas este ficheiro, cancela.",
+  "backupUiPreviewTurnsOffTitle": "Esta copia apaga axustes que tes acendidos",
+  "backupUiPreviewTurnsOffAuto": "Desactiva as copias automáticas.",
+  "backupUiPreviewTurnsOffAlarms": "Desactiva as alarmas de quenda.",
+  "backupUiPreviewContains": "Que trae",
+  "backupUiPreviewNow": "Agora: {value}",
+  "@backupUiPreviewNow": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewCalendars": "Calendarios",
+  "backupUiPreviewArchived": "{name} (arquivado)",
+  "@backupUiPreviewArchived": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewDays": "Días con quenda ou nota postos a man",
+  "backupUiPreviewRuns": "Rotacións",
+  "backupUiPreviewTypes": "Tipos de quenda",
+  "backupUiPreviewRange": "Datas",
+  "backupUiPreviewRangeValue": "Do {from} ao {to}",
+  "@backupUiPreviewRangeValue": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewRangeOpen": "Do {from} ao {to}, e unha rotación segue despois",
+  "@backupUiPreviewRangeOpen": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "backupUiPreviewRangeNone": "Sen datas",
+  "backupUiPreviewReplace": "Isto substitúe o que tes agora; antes gardamos unha copia.",
+  "backupUiPreviewConfirm": "Substituír o que teño",
+  "backupUiPreviewCancel": "Cancelar",
+  "backupUiRestoring": "Restaurando o teu cadro de quendas…",
+  "backupUiRestoringHint": "Non peches a app.",
+  "backupUiDoneTitle": "Listo, o teu cadro de quendas está restaurado",
+  "backupUiDoneBody": "Antes de cambiar nada gardamos o que tiñas. Se non era o que esperabas, podes volver atrás.",
+  "backupUiDoneView": "Ver o meu calendario",
+  "backupUiDoneUndo": "Volver a como estaba",
+  "backupUiErrorNotOurs": "Este ficheiro non é unha copia de Cuadrante.",
+  "backupUiErrorNewer": "Este ficheiro é dunha versión máis nova de Cuadrante: actualiza a app.",
+  "backupUiErrorCorrupt": "O ficheiro está danado ou incompleto e non se pode usar.",
+  "backupUiErrorTooLarge": "Este ficheiro é demasiado grande para ser unha copia de Cuadrante.",
+  "backupUiErrorUnreadable": "Non se puido ler o ficheiro.",
+  "backupUiErrorUntouched": "Non cambiamos nada: os teus datos seguen como estaban.",
+  "backupUiErrorRestoreFailed": "Non se puido restaurar. Os teus datos seguen como estaban.",
+  "backupUiErrorRestoreReload": "Restauramos os teus datos, pero a pantalla non se puido actualizar. Pecha Cuadrante e volve abrilo.",
+  "backupUiBack": "Volver",
+  "widgetWeekdaysShort": "luns,mar,mér,xov,ven,sáb,dom",
+  "@widgetWeekdaysShort": {
+    "description": "Widget: los siete días de la semana abreviados, de lunes a domingo, separados por comas (sin espacios)."
+  },
+  "widgetWeekdayHeaders": "L,M,M,X,V,S,D",
+  "@widgetWeekdayHeaders": {
+    "description": "Widget: inicial de cada día de la semana, de lunes a domingo, separadas por comas."
+  },
+  "widgetMonthNames": "xaneiro,febreiro,marzo,abril,maio,xuño,xullo,agosto,setembro,outubro,novembro,decembro",
+  "@widgetMonthNames": {
+    "description": "Widget: los doce meses en minúsculas, separados por comas (sin espacios)."
+  },
+  "widgetTomorrow": "Mañá",
+  "@widgetTomorrow": {
+    "description": "Widget: prefijo de la línea del día siguiente («Mañana: T 14–22»)."
+  },
+  "widgetEmptyCircular": "–",
+  "widgetStaleTitle": "Cuadrante",
+  "widgetStaleBody": "Abre Cuadrante para estar ao día",
+  "@widgetStaleBody": {
+    "description": "Widget: aviso cuando los datos publicados ya no cubren el día de hoy."
+  },
+  "widgetAddTitle": "Engadir widget",
+  "widgetAddSubtitle": "A túa quenda de hoxe na pantalla de inicio",
+  "widgetAddBody": "O widget sempre amosa o día de hoxe, aínda que non abras a app.",
+  "widgetAddSmall": "Pequeno: hoxe e mañá",
+  "widgetAddMedium": "Mediano: os próximos 7 días",
+  "widgetAddLarge": "Grande: o mes enteiro",
+  "widgetAddAgenda": "Axenda: próximas quendas",
+  "widgetAddTwoWeeks": "Dúas semanas: actual e seguinte",
+  "widgetAddManualAndroid": "Mantén premida unha zona baleira da pantalla de inicio, escolle Widgets e busca Cuadrante.",
+  "widgetAddManualIos": "Mantén premida a pantalla de inicio, toca o + de arriba e busca Cuadrante.",
+  "compareTitle": "Comparar calendarios",
+  "compareOpen": "Comparar calendarios",
+  "compareOpenSubtitle": "Mira cando coincidides libres",
+  "compareSwap": "Intercambiar",
+  "compareIntro": "Escolle dous calendarios e mira as súas quendas xuntas. Márcanse os días libres dos dous.",
+  "compareFirstLabel": "Primeiro calendario",
+  "compareSecondLabel": "Segundo calendario",
+  "comparePickTitle": "Escolle un calendario",
+  "compareNeedTwoTitle": "Necesitas dous calendarios",
+  "compareNeedTwoBody": "Crea outro calendario (a túa parella, un segundo traballo) para ver cando coincidides libres.",
+  "compareCount": "{count, plural, =0{Ningún día libre en común este mes} =1{1 día libre en común este mes} other{{count} días libres en común este mes}}",
+  "@compareCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "compareFreeListTitle": "Días libres en común",
+  "compareLegendFree": "Libres os dous",
+  "compareNote": "Conta como libre un día sen quenda de traballo: baleiro, libre ou cunha ausencia (vacacións, baixa…). Cada quenda conta no día en que comeza.",
+  "compareNoShiftMark": "–",
+  "compareBothFree": "libres os dous",
+  "compareCellCalendar": "{calendar}: {shifts}",
+  "@compareCellCalendar": {
+    "placeholders": {
+      "calendar": {
+        "type": "String"
+      },
+      "shifts": {
+        "type": "String"
+      }
+    }
+  },
+  "compareLoadFailed": "Non se puideron ler os calendarios.",
+  "calendarsTitle": "Calendarios",
+  "calendarsIntro": "Cada calendario ten o seu propio cadro de quendas: o teu, o da túa parella, un segundo traballo. Os tipos de quenda son os mesmos en todos.",
+  "calendarsActiveBadge": "Activo",
+  "calendarsPrimaryBadge": "Widget e alarmas",
+  "calendarsAdd": "Novo calendario",
+  "calendarsNewTitle": "Novo calendario",
+  "calendarsEditTitle": "Editar calendario",
+  "calendarsNameLabel": "Nome",
+  "calendarsNameHint": "Parella, segundo traballo…",
+  "calendarsColorLabel": "Cor",
+  "calendarsColorOption": "Cor {index}",
+  "@calendarsColorOption": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarsCreate": "Crear",
+  "calendarsMakePrimary": "Usar para widget e alarmas",
+  "calendarsPrimaryHelp": "O widget e as alarmas seguen este calendario aínda que esteas vendo outro.",
+  "calendarsArchive": "Arquivar",
+  "calendarsArchiveTitle": "Queres arquivar «{name}»?",
+  "@calendarsArchiveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsArchiveBody": "Deixará de saír na lista, pero poderás recuperalo desde «Arquivados». As súas quendas quedan gardadas no móbil.",
+  "calendarsArchivePrimaryNote": "O widget e as alarmas pasarán a «{name}».",
+  "@calendarsArchivePrimaryNote": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsArchivedSection": "Arquivados ({count})",
+  "@calendarsArchivedSection": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarsRestore": "Recuperar",
+  "calendarsRestoreSemantic": "Recuperar «{name}»",
+  "@calendarsRestoreSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsRestored": "«{name}» recuperado",
+  "@calendarsRestored": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsLastError": "Non podes arquivar o último calendario: sempre ten que haber un.",
+  "calendarsNameRequired": "Ponlle un nome ao calendario.",
+  "calendarsNotFoundError": "Ese calendario xa non existe.",
+  "calendarsSaveFailed": "Non se puido gardar o calendario. Proba outra vez.",
+  "calendarsSwitcherLabel": "Calendario {name}. Cambiar de calendario",
+  "@calendarsSwitcherLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarsSwitcherTitle": "Cambiar de calendario",
+  "calendarsSwitchFailed": "Non se puido cambiar de calendario.",
+  "calendarsManage": "Xestionar calendarios",
+  "holidayImportAction": "Traer festivos do calendario do móbil",
+  "holidayImportTitle": "Festivos",
+  "holidayImportHelp": "Só eventos de día completo. Todo queda no teu móbil; o teu calendario non cambia.",
+  "holidayImportRangeHelp": "De inicio, este ano e o seguinte.",
+  "holidayImportSkipped": "Xa existe · omítese",
+  "holidayImportReady": "Engadirase",
+  "holidayImportIgnored": "{count, plural, =1{Omítese 1 evento con hora.} other{Omítense {count} eventos con hora.}}",
+  "@holidayImportIgnored": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportCapped": "{count, plural, =1{1 evento supera 31 días: recórtase.} other{{count} eventos superan 31 días: recórtanse.}}",
+  "@holidayImportCapped": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportAdd": "{count, plural, =1{Engadir 1 festivo} other{Engadir {count} festivos}}",
+  "@holidayImportAdd": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportAdded": "{count, plural, =1{1 festivo engadido} other{{count} festivos engadidos}}",
+  "@holidayImportAdded": { "placeholders": { "count": { "type": "int" } } },
+  "holidayImportEmpty": "Non hai festivos novos.",
+  "holidayImportPreviewHelp": "Omítense as datas que xa teñen festivo.",
+
+  "holidaysSettingsRegionTitle": "Comunidade autónoma",
+  "holidaysSettingsRegionUnset": "Sen escoller",
+  "holidaysSettingsRegionClear": "Sen comunidade",
+  "holidaysSettingsMunicipalityTitle": "Concello",
+  "holidaysSettingsMunicipalityNone": "Ningún",
+  "holidaysSettingsMunicipalitySearch": "Buscar concello",
+  "holidaysSettingsMunicipalityNoMatch": "Ningún concello coincide con «{query}»",
+  "@holidaysSettingsMunicipalityNoMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsMunicipalityLoadFailed": "Non se puido cargar a lista de concellos.",
+  "holidaysSettingsStatusNoRegion": "Sen comunidade só saen os festivos estatais. Escolle a túa para ver os autonómicos.",
+  "holidaysSettingsStatusNoMunicipality": "Escolle o teu concello para ver os seus festivos locais, ou engádeos ti abaixo.",
+  "holidaysSettingsStatusLocalIncluded": "Festivos locais de {municipality}: incluídos",
+  "@holidaysSettingsStatusLocalIncluded": {
+    "placeholders": {
+      "municipality": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusYearPending": "Os festivos oficiais de {year} chegarán cunha actualización",
+  "@holidaysSettingsStatusYearPending": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusLocalMissing": "Aínda non temos os do teu concello: engádeos ti abaixo",
+  "holidaysSettingsStatusLocalMissingYear": "Aínda non temos os de {municipality} en {year}: engádeos ti abaixo",
+  "@holidaysSettingsStatusLocalMissingYear": {
+    "placeholders": {
+      "municipality": {
+        "type": "String"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsStatusLocalPartial": "Pode que falte algún: compróbaos.",
+  "holidaysSettingsAdd": "Engadir festivo local",
+  "holidaysSettingsAddName": "Nome",
+  "holidaysSettingsAddDefaultName": "Festa local",
+  "holidaysSettingsEmptyYear": "Aínda non temos os festivos de {year}.",
+  "@holidaysSettingsEmptyYear": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsScopeNational": "Estatal",
+  "holidaysSettingsScopeLocal": "Local",
+  "holidaysSettingsScopeUser": "Teu",
+  "holidaysSettingsNoteReplaces": "Substitúe a {name}",
+  "@holidaysSettingsNoteReplaces": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsNoteCovered": "No teu calendario tápao «{name}»",
+  "@holidaysSettingsNoteCovered": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsSubstitutedTitle": "Non son festivo en {region}",
+  "@holidaysSettingsSubstitutedTitle": {
+    "placeholders": {
+      "region": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsSubstitutedBody": "Unha comunidade pode cambiar estes festivos estatais por outros propios.",
+  "holidaysSettingsRemove": "Quitar festivo",
+  "holidaysSettingsRemoved": "Festivo quitado: {name}",
+  "@holidaysSettingsRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "holidaysSettingsRowSemantics": "{date}. {name}. {scope}",
+  "@holidaysSettingsRowSemantics": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      },
+      "scope": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmTitle": "Quenda de {name} ás {start}",
+  "@alarmTitle": {
+    "description": "Título del aviso de turno, p. ej. «Turno de Noche a las 22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmBody": "{name}: de {start} a {end}",
+  "@alarmBody": {
+    "description": "Cuerpo del aviso de turno, p. ej. «Noche: de 22:00 a 06:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmChannelName": "Alarmas de quenda",
+  "@alarmChannelName": {
+    "description": "Nombre del canal de notificaciones de Android para las alarmas de turno."
+  },
+  "alarmChannelDescription": "Avísate antes de que comece cada quenda.",
+  "@alarmChannelDescription": {
+    "description": "Descripción del canal de Android de las alarmas de turno."
+  },
+  "alarmsNotifDayBeforeTitle": "Mañá: quenda de {name} ás {start}",
+  "@alarmsNotifDayBeforeTitle": {
+    "description": "Título del aviso del día anterior, p. ej. «Mañana: turno de Noche a las 22:00».",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNotifSnooze": "Adiar 10 min",
+  "@alarmsNotifSnooze": {
+    "description": "Botón del aviso de turno: vuelve a sonar dentro de 10 minutos."
+  },
+  "alarmsNotifAwake": "Xa estou esperto",
+  "@alarmsNotifAwake": {
+    "description": "Botón del aviso de turno: lo descarta."
+  },
+  "alarmsNotifTestTitle": "Aviso de proba",
+  "alarmsNotifTestBody": "Así te avisará Cuadrante antes da túa quenda.",
+  "alarmsRowOn": "Activadas",
+  "alarmsRowOff": "Desactivadas",
+  "alarmsMasterTitle": "Avisar antes de cada quenda",
+  "alarmsMasterHelp": "Un aviso no móbil, sen conexión e sen conta.",
+  "alarmsPermOkTitle": "Todo listo",
+  "alarmsPermOkBody": "As notificacións e as alarmas á hora exacta están permitidas.",
+  "alarmsPermNotifTitle": "Faltan as notificacións",
+  "alarmsPermNotifBody": "Sen o permiso de notificacións, Cuadrante non pode avisarte. Se non che sae a xanela para permitilas, actívaas na configuración do sistema.",
+  "alarmsPermNotifAllow": "Permitir",
+  "alarmsPermNotifBlockedBody": "Android xa non che pregunta polas notificacións. Actívaas na configuración do sistema e Cuadrante poderá avisarte.",
+  "alarmsPermNotifOpenSettings": "Abrir configuración",
+  "alarmsPermExactTitle": "Alarmas e recordatorios",
+  "alarmsPermExactBody": "As alarmas poden chegar cuns minutos de atraso. Para que soen á hora exacta, permite «Alarmas e recordatorios» na configuración do sistema.",
+  "alarmsPermExactOpen": "Abrir configuración",
+  "alarmsSectionTypes": "Tipos de quenda",
+  "alarmsTypesEmpty": "Ningunha das túas quendas ten horario. Ponlle hora en As miñas quendas para que Cuadrante poida avisarte.",
+  "alarmsBeforeTitle": "Antes da quenda",
+  "alarmsBeforeAtStart": "Ao comezar",
+  "alarmsBeforeSheetTitle": "Canto antes da quenda",
+  "alarmsBeforeCustom": "Personalizado",
+  "alarmsBeforeCustomTitle": "Antelación personalizada",
+  "alarmsBeforeCustomHelp": "Horas e minutos antes de que comece a quenda.",
+  "alarmsBeforeCustomApply": "Gardar",
+  "alarmsSecondSegmentTitle": "Avisar tamén antes do segundo tramo",
+  "alarmsSecondSegmentHelper": "Un segundo aviso, coa mesma antelación, antes de volver ao traballo.",
+  "alarmsDayBeforeTitle": "Aviso o día anterior",
+  "alarmsDayBeforeAt": "Ás {time}",
+  "@alarmsDayBeforeAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsDayBeforeTimeTitle": "Hora do aviso",
+  "alarmsLabelTitle": "Texto do aviso",
+  "alarmsLabelDefault": "O de sempre",
+  "alarmsLabelHint": "Por exemplo: A traballar",
+  "alarmsLabelApply": "Gardar",
+  "alarmsLabelReset": "Usar o de sempre",
+  "alarmsTestButton": "Probar aviso",
+  "alarmsTestScheduled": "Avisarémoste en 10 segundos.",
+  "alarmsTestDenied": "Sen o permiso de notificacións non podemos probar o aviso.",
+  "alarmsNextLine": "Próximo aviso: {when} · {shift}",
+  "@alarmsNextLine": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextLineDayBefore": "Próximo aviso: {when} · {shift}, o día anterior",
+  "@alarmsNextLineDayBefore": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      },
+      "shift": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextWhen": "{weekday} {day} de {month}, {time}",
+  "@alarmsNextWhen": {
+    "description": "Cuándo suena el próximo aviso, p. ej. «mié 21 de octubre, 20:30».",
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "day": {
+        "type": "int"
+      },
+      "month": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "alarmsNextNone": "Non hai ningún aviso previsto nos próximos días.",
+  "alarmsNextOff": "As alarmas están desactivadas.",
+  "alarmsSkipDay": "Sen alarma este día",
+  "alarmsReminderTitle": "Recordatorio",
+  "@alarmsReminderTitle": {
+    "description": "Título de la notificación del recordatorio de una nota."
+  },
+  "alarmsReminderEmptyBody": "Tes un recordatorio para hoxe",
+  "@alarmsReminderEmptyBody": {
+    "description": "Texto de la notificación del recordatorio cuando la nota no tiene texto."
+  },
+  "alarmsReminderChannelName": "Recordatorios de notas",
+  "@alarmsReminderChannelName": {
+    "description": "Nombre del canal de notificaciones de Android para los recordatorios de las notas."
+  },
+  "alarmsReminderChannelDescription": "Avísate á hora que escollas na nota dun día.",
+  "@alarmsReminderChannelDescription": {
+    "description": "Descripción del canal de Android de los recordatorios de notas."
+  },
+  "dayReminderAdd": "Avisarme",
+  "@dayReminderAdd": {
+    "description": "Botón del detalle del día, bajo la nota: pide una hora y programa un aviso."
+  },
+  "dayReminderAt": "Aviso ás {time}",
+  "@dayReminderAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dayReminderChange": "Cambiar a hora do aviso",
+  "@dayReminderChange": {
+    "description": "Descripción accesible de la fila del aviso: tocarla cambia la hora."
+  },
+  "dayReminderRemove": "Quitar aviso",
+  "dayReminderRemoved": "Aviso quitado",
+  "dayReminderPickHelp": "Hora do aviso",
+  "dayReminderPast": "Esa hora xa pasou: non soará.",
+  "dayReminderNoPermission": "As notificacións están desactivadas, así que o aviso non soará. Actívaas na configuración do móbil.",
+  "dayReminderOnlyPrimary": "Só soan os avisos do calendario principal.",
+  "agendaSemanticsReminder": "aviso ás {time}",
+  "@agendaSemanticsReminder": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftTypesAlarmSection": "Alarma",
+  "@shiftTypesAlarmSection": {
+    "description": "Cabecera de la sección de alarma del editor de un tipo de turno."
+  },
+  "shiftTypesSoundLabel": "Son",
+  "shiftTypesSoundHelper": "Soa co volume das alarmas, cando actives a alarma desta quenda en Configuración.",
+  "shiftTypesSoundDefault": "Predeterminado",
+  "shiftTypesSoundCustom": "Son do móbil",
+  "@shiftTypesSoundCustom": {
+    "description": "Valor de la fila Sonido cuando hay un sonido elegido pero el móvil no ha dado su nombre."
+  },
+  "shiftTypesSoundMissing": "Non dispoñible: soa o predeterminado",
+  "shiftTypesSoundReset": "Usar o predeterminado",
+  "catalogShiftMorningName": "Mañá",
+  "@catalogShiftMorningName": {
+    "description": "Plantillas de tipo de turno: nombre y código (1 a 3 caracteres, sin espacios, distinto en cada plantilla). Solo se usan al crear el tipo (instalación nueva, saliente automático…); los tipos ya guardados no se renombran."
+  },
+  "catalogShiftMorningCode": "M",
+  "catalogShiftAfternoonName": "Tarde",
+  "catalogShiftAfternoonCode": "T",
+  "catalogShiftNightName": "Noite",
+  "catalogShiftNightCode": "N",
+  "catalogShiftRestName": "Libre",
+  "catalogShiftRestCode": "L",
+  "catalogShiftGuard24Name": "Garda 24 h",
+  "catalogShiftGuard24Code": "G",
+  "catalogShiftPostNightName": "Saínte",
+  "catalogShiftPostNightCode": "S",
+  "catalogShiftVacationName": "Vacacións",
+  "catalogShiftVacationCode": "V",
+  "catalogShiftPersonalDayName": "Libre disposición",
+  "catalogShiftPersonalDayCode": "LD",
+  "catalogShiftDay12Name": "Día 12 h",
+  "catalogShiftDay12Code": "D",
+  "catalogShiftNight12Name": "Noite 12 h",
+  "catalogShiftNight12Code": "N12",
+  "catalogShiftSplitName": "Partida",
+  "@catalogShiftSplitName": {
+    "description": "Nombre que propone «Usar «Partido 09–13 / 17–21»» en el editor de turnos."
+  },
+  "catalogShiftSplitCode": "P",
+  "catalogPatternCorreturnosName": "Quendas rotativas",
+  "@catalogPatternCorreturnosName": {
+    "description": "Catálogo de rotaciones: nombre y descripción de cada patrón (asistente de patrón y primer uso)."
+  },
+  "catalogPatternCorreturnosDescription": "5 mañás, 2 libres, 5 tardes, 2 libres, 5 noites, 2 libres",
+  "catalogPattern24x72Name": "24 x 72",
+  "catalogPattern24x72Description": "Garda de 24 h e 72 h libres",
+  "catalogPattern12hName": "12 horas",
+  "catalogPattern12hDescription": "Día 12 h, noite 12 h, saínte e libre",
+  "catalogPattern6x4Name": "6 x 4",
+  "catalogPattern6x4Description": "6 mañás e 4 libres",
+  "catalogPattern4x4Name": "4 x 4",
+  "catalogPattern4x4Description": "4 días de 12 h e 4 libres",
+  "catalogPattern5x2Name": "5 x 2",
+  "catalogPattern5x2Description": "5 mañás e 2 libres (de luns a venres)",
+  "catalogPattern223Name": "2-2-3",
+  "catalogPattern223Description": "Dous días de 12 h, dous libres, tres de 12 h, dous libres, dous de 12 h e tres libres (tamén 2-2-3-2-2-3)",
+  "catalogPatternContinentalName": "Continental",
+  "catalogPatternContinentalDescription": "Quenda continua de 28 días con 4 equipos: bloques de 2 e 3 mañás, tardes e noites, e 7 libres",
+  "catalogPatternDupontName": "DuPont",
+  "catalogPatternDupontDescription": "Ciclo de 28 días en quendas de 12 h: 4 noites, 3 libres, 3 días, 1 libre, 3 noites, 3 libres, 4 días e 7 libres",
+  "holidayNameNewYear": "Aninovo",
+  "holidayNameEpiphany": "Reis",
+  "holidayNameMaundyThursday": "Xoves Santo",
+  "holidayNameGoodFriday": "Venres Santo",
+  "holidayNameEasterMonday": "Luns de Pascua",
+  "holidayNameLabourDay": "Festa do Traballo",
+  "holidayNameAssumption": "Asunción",
+  "holidayNameNationalDay": "Festa Nacional de España",
+  "holidayNameAllSaints": "Santos",
+  "holidayNameConstitution": "Día da Constitución",
+  "holidayNameImmaculate": "Inmaculada Concepción",
+  "holidayNameChristmas": "Nadal",
+  "holidayNameStStephen": "Santo Estevo",
+  "holidayNameStJoseph": "San Xosé",
+  "holidayNameStJames": "Santiago Apóstolo",
+  "holidayNameGaliciaDay": "Día Nacional de Galicia",
+  "holidayNameStJamesGalicia": "Santiago Apóstolo / Día Nacional de Galicia",
+  "holidayNameCataloniaDay": "Diada de Cataluña",
+  "holidayNameBasqueDay": "Día do País Vasco",
+  "catalogCalendarMainName": "O meu cadro de quendas",
+  "historyUndone": "Cambio desfeito",
+  "historyRedone": "Cambio refeito",
+  "historyNothingToUndo": "Nada que desfacer",
+  "historyNothingToRedo": "Nada que refacer",
+  "monthPresentationGrid": "Cuadrícula",
+  "monthPresentationList": "Lista",
+  "monthSelectDays": "Seleccionar días",
+  "monthSelectDay": "Toca para escoller este día",
+  "monthListRecommended": "Lista recomendada para ver os horarios completos e o texto grande.",
+  "monthListSelected": "Presentación de lista",
+  "monthGridSelected": "Presentación de cuadrícula"
+}

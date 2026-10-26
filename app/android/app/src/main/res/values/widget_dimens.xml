@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Corner radius of the widget background (the system one on Android 12+). -->
+    <dimen name="widget_radius">24dp</dimen>
+    <dimen name="widget_cell_radius">12dp</dimen>
+    <!-- Cells of the month grid are smaller than those of the strip. -->
+    <dimen name="widget_month_cell_radius">8dp</dimen>
+    <!-- Native widget equivalents of the design spacing and typography tokens. -->
+    <dimen name="widget_space_xxs">2dp</dimen>
+    <dimen name="widget_space_xs">4dp</dimen>
+    <dimen name="widget_space_s">8dp</dimen>
+    <dimen name="widget_space_m">12dp</dimen>
+    <dimen name="widget_space_l">16dp</dimen>
+    <dimen name="widget_caption_size">12sp</dimen>
+    <dimen name="widget_label_size">13sp</dimen>
+    <dimen name="widget_cell_time_size">10sp</dimen>
+    <dimen name="widget_preview_title_size">16sp</dimen>
+    <dimen name="widget_stale_title_size">18sp</dimen>
+    <dimen name="widget_stale_body_size">14sp</dimen>
+    <dimen name="widget_agenda_date_width">72dp</dimen>
+    <dimen name="widget_agenda_min_row">44dp</dimen>
+    <dimen name="widget_agenda_shift_height">28dp</dimen>
+    <dimen name="widget_agenda_chip_width">32dp</dimen>
+    <dimen name="widget_note_size">12dp</dimen>
+    <dimen name="widget_note_small_size">8dp</dimen>
+    <dimen name="widget_shift_bar_height">3dp</dimen>
+    <dimen name="widget_chip_inset">6dp</dimen>
+</resources>

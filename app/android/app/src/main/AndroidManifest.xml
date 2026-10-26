@@ -1,0 +1,208 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shift alarms (docs/alarmas.md). Runtime notification permission on
+         Android 13+. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- Re-arm the pending alarms after a reboot or an app update. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Exact alarms: SCHEDULE_EXACT_ALARM, which the user grants under
+         "Alarms and reminders" (denied by default on Android 14+). Not
+         USE_EXACT_ALARM: Google Play reserves it for apps whose core function
+         is an alarm clock or calendar and reviews it. Without the grant the
+         app falls back to inexact alarms. maxSdkVersion is not set: the
+         permission is needed on 12L through current. -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <!-- Restore preview against tapjacking (MainActivity.setPreviewProtection):
+         lets the window hide other apps' overlays on Android 12+. Normal
+         permission, granted at install. -->
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS"/>
+    <!-- Import from / export to the phone calendar (docs/importar.md). Runtime
+         permissions (one group): only requested when the user starts an import
+         or an export, never at launch. READ to bring the shift history from
+         another app's calendar; WRITE to add and replace the "Cuadrante" events
+         of a one-off export. Nothing is read or written in the background. -->
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <!-- Backup (docs/copia-de-seguridad.md, "Copia del sistema de Android"):
+         Auto Backup is on and the rules say exactly what goes into the Google
+         backup (android:fullBackupContent, Android 11 and below) and into the
+         cloud backup and the device-to-device transfer (android:dataExtractionRules,
+         Android 12+): the database and the .cuadrante copies in files/, and
+         nothing else. -->
+    <application
+        android:label="@string/app_name"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <!-- The URL of a VIEW intent is not a route of the app: the file
+                 goes through the backup channel (MainActivity). -->
+            <meta-data
+              android:name="flutter_deeplinking_enabled"
+              android:value="false"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- Open a .cuadrante from WhatsApp, Files or Drive (docs/copia-de-seguridad.md,
+                 "Abrir un .cuadrante desde otra app"). Nothing is restored by
+                 itself: the file goes to the preview, where the user confirms.
+                 Only content:// is handled (see MainActivity). No BROWSABLE
+                 category, so a web page cannot start it. -->
+            <!-- VIEW with a MIME type: WhatsApp and Drive send the file as an
+                 opaque binary (the name is not in the URI), Files may say gzip. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/gzip"/>
+                <data android:mimeType="application/x-gzip"/>
+            </intent-filter>
+            <!-- VIEW of any type whose path ends in .cuadrante (file managers
+                 and providers that keep the name in the URI). pathPattern has
+                 no "anything" wildcard that includes dots, hence one entry per
+                 number of dots. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.cuadrante"/>
+                <data android:pathPattern=".*\\..*\\.cuadrante"/>
+                <data android:pathPattern=".*\\..*\\..*\\.cuadrante"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.cuadrante"/>
+            </intent-filter>
+            <!-- "Share" / "Send to" from other apps. Not */*: Cuadrante must
+                 not appear in the share sheet of every photo and text. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/octet-stream"/>
+                <data android:mimeType="application/gzip"/>
+                <data android:mimeType="application/x-gzip"/>
+            </intent-filter>
+        </activity>
+        <!-- flutter_local_notifications: fires the alarms and re-schedules them
+             after a reboot or an update (the plugin does not declare them). -->
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <!-- Buttons of the alarm notifications ("Posponer 10 min", "Ya estoy
+             despierto"): the plugin handles the tap here and runs the Dart
+             handler in a background isolate, with the app closed too. -->
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+            android:exported="false"/>
+        <!-- ==== Home-screen widgets (docs/widget-contrato.md, "Android") ====
+             Three widgets: 2x2 (today and tomorrow), 4x2 (seven days) and 4x4
+             (the month grid). The
+             class names are part of the contract with the Dart side and with
+             the widgets already placed. -->
+        <receiver
+            android:name=".widget.CuadranteSmallWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_small_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/cuadrante_widget_small"/>
+        </receiver>
+        <receiver
+            android:name=".widget.CuadranteMediumWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_medium_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/cuadrante_widget_medium"/>
+        </receiver>
+        <receiver
+            android:name=".widget.CuadranteLargeWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_large_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/cuadrante_widget_large"/>
+        </receiver>
+        <receiver android:name=".widget.CuadranteAgendaWidgetProvider" android:exported="true" android:label="@string/widget_agenda_label">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/cuadrante_widget_agenda" />
+        </receiver>
+        <receiver android:name=".widget.CuadranteTwoWeeksWidgetProvider" android:exported="true" android:label="@string/widget_two_weeks_label">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/cuadrante_widget_two_weeks" />
+        </receiver>
+        <!-- Redraws the widgets (the day is read from the clock on every draw)
+             when the date, the time or the time zone change, after a reboot or
+             an update of the app, and when our own alarm for the next local
+             midnight goes off. Not exported: the system's broadcasts and our
+             own PendingIntent reach it anyway. -->
+        <receiver
+            android:name=".widget.WidgetRefreshReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <!-- ==== end of the home-screen widgets ==== -->
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>

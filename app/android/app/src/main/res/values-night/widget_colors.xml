@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen widgets, design B "Noche" (docs/diseno.md), dark theme. -->
+<resources>
+    <color name="widget_surface">#15151B</color>
+    <color name="widget_text_primary">#ECECF1</color>
+    <color name="widget_text_secondary">#C9C9D2</color>
+    <color name="widget_text_muted">#8E8E99</color>
+    <color name="widget_border">#23232B</color>
+    <color name="widget_holiday">#FF6369</color>
+    <color name="widget_today_ring">#F5B547</color>
+    <!-- Picker previews only; exact ShiftSwatch colours from the Dart fixture. -->
+    <color name="widget_preview_n_bar">#FF676BD8</color>
+    <color name="widget_preview_n_tint">#FF1D1D34</color>
+    <color name="widget_preview_n_ink">#FFA8AAE9</color>
+    <color name="widget_preview_n_disc">#FF24254E</color>
+    <color name="widget_preview_t_bar">#FFF06A3F</color>
+    <color name="widget_preview_t_tint">#FF342120</color>
+    <color name="widget_preview_t_ink">#FFF7B099</color>
+    <color name="widget_preview_t_disc">#FF522D25</color>
+    <color name="widget_preview_m_bar">#FFF5A524</color>
+    <color name="widget_preview_m_tint">#FF34291C</color>
+    <color name="widget_preview_m_ink">#FFF9C777</color>
+    <color name="widget_preview_m_disc">#FF543D1E</color>
+    <color name="widget_preview_l_bar">#34343E</color>
+    <color name="widget_preview_l_tint">@color/widget_surface</color>
+    <color name="widget_preview_l_ink">@color/widget_text_muted</color>
+    <color name="widget_preview_l_disc">@color/widget_surface</color>
+</resources>
