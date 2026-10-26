@@ -1,0 +1,58 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f6;
+  --surface: #fff;
+  --text: #15151a;
+  --secondary: #3a3a44;
+  --accent: #4b4fd1;
+  --border: #dcdce2;
+  --muted: #ececf1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0d;
+    --surface: #15151b;
+    --text: #ececf1;
+    --secondary: #c9c9d2;
+    --accent: #a5a8ff;
+    --border: #34343e;
+    --muted: #1c1c23;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 780px; margin: auto; padding: 48px 24px 64px; }
+h1, h2, h3 { line-height: 1.25; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 5vw, 3rem); letter-spacing: -.04em; margin: 24px 0 16px; }
+h2 { font-size: 1.35rem; margin: 2.5rem 0 .75rem; }
+h3 { font-size: 1.1rem; margin: 1.75rem 0 .5rem; }
+p, ul { margin: 0 0 1.25rem; }
+li { margin-bottom: .6rem; }
+a { color: var(--accent); text-underline-offset: 4px; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+nav { text-align: right; }
+.etiqueta { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 700; margin: 28px 0 0; color: var(--secondary); }
+.entradilla { font-size: 1.4rem; font-weight: 600; }
+.tarjeta { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 24px; margin: 32px 0; }
+.tarjeta h2 { margin-top: 0; }
+.tarjeta ul { margin-bottom: 0; padding-left: 24px; }
+.marca { width: 72px; height: 72px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: #141418; padding: 12px; border-radius: 16px; }
+.marca i { background: #2a2a31; border-radius: 2px; }
+.marca i:nth-child(4) { background: #f5a524; }
+.marca i:nth-child(5) { background: #f06a3f; }
+.marca i:nth-child(6) { background: #4b4fd1; }
+.tabla { overflow-x: auto; margin-bottom: 1.5rem; }
+table { border-collapse: collapse; min-width: 560px; width: 100%; font-size: .9rem; }
+td, th { border: 1px solid var(--border); padding: 12px; text-align: left; vertical-align: top; }
+th { background: var(--muted); }
+code { font-size: .9em; overflow-wrap: anywhere; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+footer { border-top: 1px solid var(--border); padding-top: 24px; margin-top: 40px; color: var(--secondary); font-size: .9rem; }
+@media (max-width: 400px) { main { padding: 24px 16px 40px; } .tarjeta { padding: 20px; } }
