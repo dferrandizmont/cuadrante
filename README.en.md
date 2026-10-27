@@ -20,13 +20,31 @@ testing; iPhone is coming soon. Light and dark themes.
 
 ## Downloads
 
-- **Android: Google Play closed test.** Two steps, in this order and with the same Google account:
-  1. Join the [cuadrante-testers](https://groups.google.com/g/cuadrante-testers) group.
-  2. Opt in to the test on [Google Play](https://play.google.com/apps/testing/es.cuadrante.app) and install the app from there.
-- **iPhone: App Store (coming soon).**
-- **Android: direct APK on [GitHub Releases](https://github.com/dferrandizmont/cuadrante/releases/latest).** You have
-  to allow installing apps from unknown sources. It is signed with a different key from the Google Play version, so one
-  does not update the other: to switch, first export a `.cuadrante` backup from Settings.
+<p>
+  <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta on Google Play"></a>
+  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Available_on-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Available on GitHub"></a>
+  <!--
+  <a href="[APP_STORE_LINK]"><img src="https://img.shields.io/badge/App_Store-Download-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Available on the App Store"></a>
+  -->
+</p>
+
+### Google Play beta
+
+The app is in a closed test on Google Play and anyone can join:
+
+> **Google is reviewing the first version right now.** You can already join the group (step 1); the link in step 2 will work as soon as it is approved, usually within a few days.
+
+1. Join the testers group: [cuadrante-testers](https://groups.google.com/g/cuadrante-testers). With your Google account, tap "Join group".
+2. Accept the test from your phone or computer: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
+3. Install the app from Google Play. It will update itself.
+
+If you can, stay in the test for at least 14 days and use it now and then (for example, check tomorrow's shift or add the widget): Google requires 12 testers for 14 days before it can be published for everyone. Feedback to dev@mainshai.com.
+
+### APK on GitHub
+
+You can also download the APK of the [latest release](https://github.com/dferrandizmont/cuadrante/releases/latest) and install it by hand (you have to allow installing apps from unknown sources). It is signed with a different key from the Google Play version, so one does not update the other: to switch, first export a `.cuadrante` backup from the app.
+
+Coming soon on the App Store.
 
 ## Screenshots
 

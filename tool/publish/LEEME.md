@@ -133,3 +133,20 @@ debe partir de un commit que incluya todos los cambios: ejecutar el exportador
 con cambios locales sin confirmar **no los publica**. Si trabajas con un agente
 que no puede confirmar su rama, quien recibe la entrega debe confirmar y repetir
 la exportación de `HEAD` antes de dar por validado el candidato definitivo.
+
+## Actualizar el repositorio público
+
+El exportador crea siempre un repositorio nuevo de un commit. Para publicar cambios en
+`dferrandizmont/cuadrante` sin perder su historial (hecho así el 27-oct-2026):
+
+1. Exporta `HEAD` a una carpeta vacía: `sh tool/publish/export_public.sh HEAD ../cq-public-export`.
+   Si falla alguna comprobación, se corrige en el repositorio privado y se vuelve a exportar.
+2. En el clon del público (`../cuadrante-public`, al día con `origin/main`), sustituye el árbol entero:
+   `git rm -r -q --cached .`, borra todo menos `.git`, y extrae la exportación con
+   `(cd ../cq-public-export && git archive HEAD) | tar -x -C .`; luego `git add -A`.
+3. Commit **en inglés** con la identidad pública:
+   `git -c user.name="Daniel Mont Ferrandiz" -c user.email="dev@mainshai.com" commit -m "<resumen>"`.
+4. `git push origin main` (con el «sí» del dueño) y borra `../cq-public-export`.
+
+Las releases públicas llevan los APK firmados con la upload key (`docs/release-signing.md`), con
+`SHA256SUMS.txt` y la huella SHA-256 del certificado en las notas, en español e inglés.

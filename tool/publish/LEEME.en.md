@@ -132,3 +132,20 @@ On Windows, use the Madrid system time zone and `flutter test` without `TZ`.
 All candidate changes must be committed: exporting with a dirty worktree does
 **not** include those changes. If an agent cannot commit its branch, the receiving
 lead must commit and export `HEAD` again before approving the final candidate.
+
+## Updating the public repository
+
+The exporter always creates a new single-commit repository. To publish changes to
+`dferrandizmont/cuadrante` while keeping its history (first done on 27-Oct-2026):
+
+1. Export `HEAD` to an empty folder: `sh tool/publish/export_public.sh HEAD ../cq-public-export`.
+   If a check fails, fix it in the private repository and export again.
+2. In the public clone (`../cuadrante-public`, up to date with `origin/main`), replace the whole tree:
+   `git rm -r -q --cached .`, delete everything except `.git`, extract the export with
+   `(cd ../cq-public-export && git archive HEAD) | tar -x -C .`, then `git add -A`.
+3. Commit **in English** with the public identity:
+   `git -c user.name="Daniel Mont Ferrandiz" -c user.email="dev@mainshai.com" commit -m "<summary>"`.
+4. `git push origin main` (with the owner's go-ahead) and delete `../cq-public-export`.
+
+Public releases carry the APKs signed with the upload key (`docs/release-signing.md`), with
+`SHA256SUMS.txt` and the certificate SHA-256 fingerprint in the notes, in Spanish and English.

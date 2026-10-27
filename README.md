@@ -20,13 +20,31 @@ Android en pruebas; iPhone, próximamente. Modo claro y oscuro.
 
 ## Descargas
 
-- **Android: prueba cerrada de Google Play.** Dos pasos, en este orden y con la misma cuenta de Google:
-  1. Únete al grupo [cuadrante-testers](https://groups.google.com/g/cuadrante-testers).
-  2. Apúntate a la prueba en [Google Play](https://play.google.com/apps/testing/es.cuadrante.app) e instala la app desde ahí.
-- **iPhone: App Store (próximamente).**
-- **Android: APK directo en [GitHub Releases](https://github.com/dferrandizmont/cuadrante/releases/latest).** Hay que
-  permitir «instalar aplicaciones de origen desconocido». Va firmado con otra clave que la versión de Google Play, así
-  que una no actualiza a la otra: para cambiar, exporta antes una copia `.cuadrante` desde Ajustes.
+<p>
+  <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta en Google Play"></a>
+  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Disponible_en-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible en GitHub"></a>
+  <!--
+  <a href="[ENLACE_APP_STORE]"><img src="https://img.shields.io/badge/App_Store-Descargar-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Disponible en App Store"></a>
+  -->
+</p>
+
+### Beta en Google Play
+
+La app está en prueba cerrada en Google Play y cualquiera puede apuntarse:
+
+> **Ahora mismo Google está revisando la primera versión.** Ya puedes unirte al grupo (paso 1); el enlace del paso 2 funcionará en cuanto la aprueben, normalmente en pocos días.
+
+1. Únete al grupo de testers: [cuadrante-testers](https://groups.google.com/g/cuadrante-testers). Con tu cuenta de Google, pulsa «Unirse al grupo».
+2. Acepta la prueba desde el móvil o el ordenador: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
+3. Instala la app desde Google Play. Se actualizará sola.
+
+Si puedes, quédate en la prueba al menos 14 días y úsala de vez en cuando (por ejemplo, mira tu turno de mañana o pon el widget): Google exige 12 testers durante 14 días para publicarla para todo el mundo. Los comentarios, a dev@mainshai.com.
+
+### APK en GitHub
+
+También puedes descargar el APK de la [última versión](https://github.com/dferrandizmont/cuadrante/releases/latest) e instalarlo a mano (hay que permitir «instalar aplicaciones de origen desconocido»). Va firmado con otra clave que la versión de Google Play, así que una no actualiza a la otra: para cambiar, exporta antes una copia `.cuadrante` desde la app.
+
+Próximamente en App Store.
 
 ## Capturas
 
