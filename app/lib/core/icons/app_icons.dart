@@ -88,6 +88,14 @@ class AppIcons {
     Symbols.calendar_view_month_rounded,
   );
 
+  /// The month as a grid of day cells (the presentation switch).
+  static IconData get gridView =>
+      _pick(CupertinoIcons.square_grid_2x2, Symbols.grid_view_rounded);
+
+  /// The month as a list of days (the presentation switch).
+  static IconData get listView =>
+      _pick(CupertinoIcons.list_bullet, Symbols.view_agenda_rounded);
+
   /// The monthly summary (hours and estimated pay).
   static IconData get summary =>
       _pick(CupertinoIcons.chart_bar, Symbols.bar_chart_rounded);
@@ -171,6 +179,7 @@ class AppIcons {
   /// A stepper going down by one step.
   static IconData get minus =>
       _pick(CupertinoIcons.minus, Symbols.remove_rounded);
+
   /// A reminder / alarm (bell).
   static IconData get bell =>
       _pick(CupertinoIcons.bell, Symbols.notifications_rounded);
