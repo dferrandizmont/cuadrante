@@ -27,7 +27,8 @@ está disponible, la generación falla en vez de usar la fuente cuadrada de test
 En Windows se usa la zona del sistema: no definas `TZ=Europe/Madrid`, porque
 su runtime no interpreta ese identificador IANA como Linux.
 
-Salidas versionadas en **`docs/readme/es/` y `docs/readme/en/`**, ocho por idioma:
+Salidas versionadas en **`docs/readme/<idioma>/`** para los cinco idiomas de la app
+(`es`, `ca`, `gl`, `eu`, `en`), ocho por idioma:
 
 | Archivo | Tamaño | Contenido |
 |---|---|---|
@@ -71,15 +72,15 @@ TZ=Europe/Madrid flutter test --dart-define=GENERATE_STORE=true --dart-define=ST
 
 | Target | Lienzo | Salida regenerable |
 |---|---|---|
-| `play` | 1080 × 1920 | `app/build/store/play/{es,en}/` |
-| `ios69` | 1320 × 2868 | `app/build/store/ios69/{es,en}/` |
-| `ios65` | 1242 × 2688 | `app/build/store/ios65/{es,en}/` |
+| `play` | 1080 × 1920 | `app/build/store/play/{es,ca,gl,eu,en}/` |
+| `ios69` | 1320 × 2868 | `app/build/store/ios69/{es,ca,gl,eu,en}/` |
+| `ios65` | 1242 × 2688 | `app/build/store/ios65/{es,ca,gl,eu,en}/` |
 
 El target iOS selecciona controles Flutter de iOS; estos renders **no sustituyen
 la validación del build de iPhone** ni las capturas de widgets nativos. Comprueba
 los tamaños aceptados en cada consola y revisa visualmente cada PNG antes de
-subirlo. Este generador entrega seis escenas en es/en; el guion de ocho capturas
-y cinco idiomas de `docs/tienda/capturas.md` sigue siendo otra entrega.
+subirlo. Este generador entrega seis escenas en los cinco idiomas; el guion de ocho
+capturas de `docs/tienda/capturas.md` sigue siendo otra entrega.
 
 Para validar sin escribir imágenes: `flutter analyze` y
 `TZ=Europe/Madrid flutter test`. No se necesitan `flutter run`, `adb` ni pruebas

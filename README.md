@@ -1,4 +1,4 @@
-[English](README.en.md)
+[Español](README.md) · [Català](README.ca.md) · [Galego](README.gl.md) · [Euskara](README.eu.md) · [English](README.en.md)
 
 <p align="center">
   <img src="docs/readme/es/header.png" alt="Cuadrante — Tus turnos, de un vistazo. Gratis, sin anuncios y sin conexión." width="1024">

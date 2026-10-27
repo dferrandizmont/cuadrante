@@ -11,7 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'readme_render_support.dart';
 
-const _readme = {'es', 'en'};
+const _readme = {'es', 'ca', 'gl', 'eu', 'en'};
 const _subtitle = {
   'es': 'Tus turnos, de un vistazo',
   'ca': "Els teus torns, d'un cop d'ull",
@@ -88,8 +88,7 @@ void main() {
           try {
             await writeStorePng(
               image,
-              // The README shows es and en; the other store languages
-              // only need the Play feature graphic.
+              // The README is published in every app language.
               '${_readme.contains(language) ? '../docs/readme' : 'build/store/play'}'
               '/$language/${isHeader ? 'header' : 'icon-512'}.png',
             );

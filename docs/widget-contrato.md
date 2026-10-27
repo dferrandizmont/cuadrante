@@ -13,9 +13,9 @@ resuelto, igual que en la app.
 
 | Dato | Valor |
 |---|---|
-| App Group (iOS) | `group.app.cuadrante` (constante Dart `kWidgetAppGroupId`) |
+| App Group (iOS) | `group.es.cuadrante.app` (constante Dart `kWidgetAppGroupId`) |
 | Clave | `cuadrante.widget.snapshot` (`kWidgetSnapshotKey`) |
-| Almacén | `UserDefaults(suiteName: "group.app.cuadrante")`, valor `String` con el JSON |
+| Almacén | `UserDefaults(suiteName: "group.es.cuadrante.app")`, valor `String` con el JSON |
 | `kind` del widget (iOS) | `CuadranteWidget` (`kWidgetIosKind`): un solo `kind` con las seis familias |
 | Versión del JSON | `v = 2` (`kWidgetSnapshotVersion`); lectores Dart y Android compatibles con v1 |
 | Escribe | solo la app (`WidgetPublisher.publish`, luego recarga las líneas de tiempo) |
@@ -316,7 +316,7 @@ refresque ni de que se abra la app.
 
 ```
 getTimeline(in:completion:)
-  snapshot = decode(UserDefaults(suiteName: "group.app.cuadrante").string(forKey: "cuadrante.widget.snapshot"))
+  snapshot = decode(UserDefaults(suiteName: "group.es.cuadrante.app").string(forKey: "cuadrante.widget.snapshot"))
   si falta, no decodifica o v no es 1 ni 2:
       entries = [ .stale(date: now) ]            // textos locales de la extensión
       policy  = .after(now + 1 h)

@@ -32,6 +32,10 @@
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>es</string>
+		<string>ca</string>
+		<string>gl</string>
+		<string>eu</string>
+		<string>en</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>cuadrante</string>

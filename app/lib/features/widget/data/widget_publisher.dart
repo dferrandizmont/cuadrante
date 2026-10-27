@@ -58,7 +58,7 @@ enum WidgetSize {
 }
 
 /// Hands the snapshot to the platform widgets (iOS App Group
-/// `group.app.cuadrante`, Android `HomeWidgetPreferences`). Everything is best
+/// `group.es.cuadrante.app`, Android `HomeWidgetPreferences`). Everything is best
 /// effort: a host without widgets must never break the app.
 abstract class WidgetPublisher {
   /// Stores [snapshotJson] under [kWidgetSnapshotKey] and reloads the widgets'

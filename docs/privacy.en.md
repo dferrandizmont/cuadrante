@@ -93,7 +93,7 @@ system picker (`file_selector`) and shared with the system share sheet (`share_p
 
 ## Widgets (`docs/widget-contrato.md`)
 The app writes a JSON with the next 60 days (plus the auxiliary agenda and two-week days) to the store shared with
-the widgets: `UserDefaults` of the App Group `group.app.cuadrante` on iOS and `home_widget` preferences on Android,
+the widgets: `UserDefaults` of the App Group `group.es.cuadrante.app` on iOS and `home_widget` preferences on Android,
 which are not part of the system backup. Only this app's widgets read it.
 
 ## Support and links

@@ -9,7 +9,7 @@ import '../../schedule/domain/civil_date.dart';
 const String kWidgetSnapshotKey = 'cuadrante.widget.snapshot';
 
 /// App Group shared by the app and the WidgetKit extension.
-const String kWidgetAppGroupId = 'group.app.cuadrante';
+const String kWidgetAppGroupId = 'group.es.cuadrante.app';
 
 /// `kind` of the iOS widget (one kind, six families).
 const String kWidgetIosKind = 'CuadranteWidget';

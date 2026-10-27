@@ -94,7 +94,7 @@ con el selector del sistema (`file_selector`) y se comparten con la hoja del sis
 
 ## Widgets (`docs/widget-contrato.md`)
 La app escribe un JSON con los próximos 60 días (y los auxiliares de agenda y dos semanas) en el almacén compartido
-con los widgets: `UserDefaults` del App Group `group.app.cuadrante` en iOS y las preferencias de `home_widget` en
+con los widgets: `UserDefaults` del App Group `group.es.cuadrante.app` en iOS y las preferencias de `home_widget` en
 Android, que no entran en la copia del sistema. Solo lo leen los widgets de esta app.
 
 ## Soporte y enlaces

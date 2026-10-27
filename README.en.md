@@ -1,4 +1,4 @@
-[Español](README.md)
+[Español](README.md) · [Català](README.ca.md) · [Galego](README.gl.md) · [Euskara](README.eu.md) · [English](README.en.md)
 
 <p align="center">
   <img src="docs/readme/en/header.png" alt="Cuadrante — Your shifts at a glance. Free, no ads, offline." width="1024">
