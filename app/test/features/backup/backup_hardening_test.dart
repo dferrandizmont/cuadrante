@@ -121,7 +121,7 @@ void main() {
   group('alarm sounds from outside the system are dropped, not rejected', () {
     const media = 'content://media/internal/audio/media/42';
     const settings = 'content://settings/system/notification_sound';
-    const share = 'content://app.cuadrante.cuadrante.flutter.share_provider/x';
+    const share = 'content://es.cuadrante.app.flutter.share_provider/x';
 
     test('isSystemAlarmSound allows media and settings only', () {
       expect(isSystemAlarmSound(media), isTrue);

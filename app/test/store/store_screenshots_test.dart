@@ -46,21 +46,64 @@ const _targets = {
   'ios65': Size(1242, 2688),
 };
 const _shots = [
-  ('01-mes', 'Tus turnos, de un vistazo', 'Your shifts at a glance'),
-  ('02-lista', 'Cada horario, al detalle', 'Every shift in detail'),
-  ('03-pintar', 'Pinta tus turnos', 'Paint your shifts'),
-  ('04-rotaciones', 'Tu rotación, a tu manera', 'Your rotation, your way'),
-  (
-    '05-horas',
-    'Noches y festivos, por separado',
-    'Night and public holiday hours',
-  ),
-  (
-    '06-festivos',
-    'Tus festivos, sin conexión',
-    'Your public holidays, offline',
-  ),
+  '01-mes',
+  '02-lista',
+  '03-pintar',
+  '04-rotaciones',
+  '05-horas',
+  '06-festivos',
 ];
+// One caption per shot, in the order of [_shots]. Vocabulary from
+// docs/glosario-idiomas.md; ca, gl and eu are pending native review.
+const _captions = {
+  'es': [
+    'Tus turnos, de un vistazo',
+    'Cada horario, al detalle',
+    'Pinta tus turnos',
+    'Tu rotación, a tu manera',
+    'Noches y festivos, por separado',
+    'Tus festivos, sin conexión',
+  ],
+  'ca': [
+    "Els teus torns, d'un cop d'ull",
+    'Cada horari, al detall',
+    'Pinta els teus torns',
+    'La teva rotació, a la teva manera',
+    'Nits i festius, per separat',
+    'Els teus festius, sense connexió',
+  ],
+  'gl': [
+    'As túas quendas, dunha ollada',
+    'Cada horario, ao detalle',
+    'Pinta as túas quendas',
+    'A túa rotación, ao teu xeito',
+    'Noites e festivos, por separado',
+    'Os teus festivos, sen conexión',
+  ],
+  'eu': [
+    'Zure txandak, begi-kolpe batean',
+    'Ordutegi bakoitza, xehetasunez',
+    'Margotu zure txandak',
+    'Zure txandaketa, zure erara',
+    'Gauak eta jaiegunak, bereiz',
+    'Zure jaiegunak, konexiorik gabe',
+  ],
+  'en': [
+    'Your shifts at a glance',
+    'Every shift in detail',
+    'Paint your shifts',
+    'Your rotation, your way',
+    'Night and public holiday hours',
+    'Your public holidays, offline',
+  ],
+};
+const _industry = {
+  'es': 'Industria',
+  'ca': 'Indústria',
+  'gl': 'Industria',
+  'eu': 'Industria',
+  'en': 'Industry',
+};
 
 void main() {
   setUpAll(() async {
@@ -68,10 +111,10 @@ void main() {
   });
   tearDownAll(() => AppTypography.debugFamily = null);
 
-  for (final language in ['es', 'en']) {
+  for (final language in _captions.keys) {
     for (final (index, shot) in _shots.indexed) {
       testWidgets(
-        '$language/${shot.$1} ($_targetName)',
+        '$language/$shot ($_targetName)',
         (tester) async {
           final target = _targets[_targetName];
           expect(
@@ -104,10 +147,7 @@ void main() {
                 storage.database,
                 now: () => _now,
                 newId: () => 'store-industry',
-              ).create(
-                name: language == 'es' ? 'Industria' : 'Industry',
-                colorValue: 0xFF4B4FD1,
-              );
+              ).create(name: _industry[language]!, colorValue: 0xFF4B4FD1);
             }
             // Keep a useful, compact palette; archived types remain in history.
             for (final t in shiftTemplates) {
@@ -178,9 +218,7 @@ void main() {
                       themeMode: index == 0 || index == 2
                           ? ThemeMode.dark
                           : ThemeMode.light,
-                      language: language == 'es'
-                          ? AppLanguage.es
-                          : AppLanguage.en,
+                      language: AppLanguage.values.byName(language),
                     ),
                   ),
                 ],
@@ -247,13 +285,13 @@ void main() {
                 final image = await _compose(
                   screen,
                   target!,
-                  language == 'es' ? shot.$2 : shot.$3,
+                  _captions[language]![index],
                   index,
                 );
                 try {
                   final path = _targetName == 'readme'
-                      ? '../docs/readme/$language/${shot.$1}.png'
-                      : 'build/store/$_targetName/$language/${shot.$1}.png';
+                      ? '../docs/readme/$language/$shot.png'
+                      : 'build/store/$_targetName/$language/$shot.png';
                   await writeStorePng(image, path);
                 } finally {
                   image.dispose();

@@ -71,11 +71,11 @@ void main() {
       expect(layer.store[kWidgetSnapshotKey], '{"v":1}');
       expect(layer.calls, [
         'save:$kWidgetSnapshotKey',
-        'android:app.cuadrante.cuadrante.widget.CuadranteSmallWidgetProvider',
-        'android:app.cuadrante.cuadrante.widget.CuadranteMediumWidgetProvider',
-        'android:app.cuadrante.cuadrante.widget.CuadranteLargeWidgetProvider',
-        'android:app.cuadrante.cuadrante.widget.CuadranteAgendaWidgetProvider',
-        'android:app.cuadrante.cuadrante.widget.CuadranteTwoWeeksWidgetProvider',
+        'android:es.cuadrante.app.widget.CuadranteSmallWidgetProvider',
+        'android:es.cuadrante.app.widget.CuadranteMediumWidgetProvider',
+        'android:es.cuadrante.app.widget.CuadranteLargeWidgetProvider',
+        'android:es.cuadrante.app.widget.CuadranteAgendaWidgetProvider',
+        'android:es.cuadrante.app.widget.CuadranteTwoWeeksWidgetProvider',
       ]);
       expect(await publisher.readPublished(), '{"v":1}');
     });
@@ -116,11 +116,11 @@ void main() {
       await publisher.requestPin(WidgetSize.agenda);
       await publisher.requestPin(WidgetSize.twoWeeks);
       expect(layer.calls, [
-        'pin:app.cuadrante.cuadrante.widget.CuadranteSmallWidgetProvider',
-        'pin:app.cuadrante.cuadrante.widget.CuadranteMediumWidgetProvider',
-        'pin:app.cuadrante.cuadrante.widget.CuadranteLargeWidgetProvider',
-        'pin:app.cuadrante.cuadrante.widget.CuadranteAgendaWidgetProvider',
-        'pin:app.cuadrante.cuadrante.widget.CuadranteTwoWeeksWidgetProvider',
+        'pin:es.cuadrante.app.widget.CuadranteSmallWidgetProvider',
+        'pin:es.cuadrante.app.widget.CuadranteMediumWidgetProvider',
+        'pin:es.cuadrante.app.widget.CuadranteLargeWidgetProvider',
+        'pin:es.cuadrante.app.widget.CuadranteAgendaWidgetProvider',
+        'pin:es.cuadrante.app.widget.CuadranteTwoWeeksWidgetProvider',
       ]);
       layer.pinSupported = false;
       expect(await publisher.canPin(), isFalse);

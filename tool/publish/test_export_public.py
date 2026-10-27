@@ -105,6 +105,12 @@ class ScannerTest(unittest.TestCase):
         # The name of the field on its own is not a password.
         exporter.scan_file('app/lib/a.dart', b'el campo store' + b'Password se guarda cifrado')
         exporter.scan_file('app/lib/a.dart', b'`store' + b'Password` y `key' + b'Password`')
+        # Reading it from the gitignored key.properties is not a password either.
+        exporter.scan_file('app/android/app/build.gradle.kts',
+                           b'store' + b'Password = keyProperties.getProperty("store' + b'Password")')
+        with self.assertRaises(ValueError):
+            exporter.scan_file('app/android/app/build.gradle.kts',
+                               b'store' + b'Password = keyProperties.getProperty("x") ?: "synthetic"')
 
     def test_jwt_variants_are_rejected(self):
         # The literals are split: the exporter scans this very file too.

@@ -11,6 +11,22 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'readme_render_support.dart';
 
+const _readme = {'es', 'en'};
+const _subtitle = {
+  'es': 'Tus turnos, de un vistazo',
+  'ca': "Els teus torns, d'un cop d'ull",
+  'gl': 'As túas quendas, dunha ollada',
+  'eu': 'Zure txandak, begi-kolpe batean',
+  'en': 'Your shifts at a glance',
+};
+const _tagline = {
+  'es': 'Gratis · Sin anuncios · Sin conexión',
+  'ca': 'Gratis · Sense anuncis · Sense connexió',
+  'gl': 'Gratis · Sen anuncios · Sen conexión',
+  'eu': 'Doan · Iragarkirik gabe · Konexiorik gabe',
+  'en': 'Free · No ads · Offline',
+};
+
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUpAll(() async {
@@ -18,7 +34,7 @@ void main() {
   });
   tearDownAll(() => AppTypography.debugFamily = null);
 
-  for (final language in ['es', 'en']) {
+  for (final language in _subtitle.keys) {
     test('Gráficos $language: cabecera 1024×500 e icono 512×512', () async {
       final bytes = File('assets/icon/icon.png').readAsBytesSync();
       final codec = await ui.instantiateImageCodec(bytes);
@@ -53,17 +69,13 @@ void main() {
             );
             paintCaption(
               canvas,
-              language == 'es'
-                  ? 'Tus turnos, de un vistazo'
-                  : 'Your shifts at a glance',
+              _subtitle[language]!,
               const Rect.fromLTWH(348, 237, 628, 90),
               type.bodyStrong.copyWith(fontSize: 32),
             );
             paintCaption(
               canvas,
-              language == 'es'
-                  ? 'Gratis · Sin anuncios · Sin conexión'
-                  : 'Free · No ads · Offline',
+              _tagline[language]!,
               const Rect.fromLTWH(348, 325, 628, 60),
               type.body.copyWith(fontSize: 25, color: colors.highlight),
             );
@@ -76,7 +88,10 @@ void main() {
           try {
             await writeStorePng(
               image,
-              '../docs/readme/$language/${isHeader ? 'header' : 'icon-512'}.png',
+              // The README shows es and en; the other store languages
+              // only need the Play feature graphic.
+              '${_readme.contains(language) ? '../docs/readme' : 'build/store/play'}'
+              '/$language/${isHeader ? 'header' : 'icon-512'}.png',
             );
           } finally {
             image.dispose();

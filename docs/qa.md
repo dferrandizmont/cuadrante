@@ -348,8 +348,8 @@ QA_DEVICE=emulator-5580 tool/qa/single_activity_check.sh   # app ya instalada; s
 ```
 
 A mano: abre Cuadrante, pulsa Inicio, abre un `.cuadrante` desde Archivos (o `adb shell am start -a
-android.intent.action.VIEW -n app.cuadrante.cuadrante/.MainActivity -t application/octet-stream -d content://...`) y
-mira `adb shell dumpsys activity activities`: **una** sola `ActivityRecord` de `app.cuadrante.cuadrante/.MainActivity`
+android.intent.action.VIEW -n es.cuadrante.app/.MainActivity -t application/octet-stream -d content://...`) y
+mira `adb shell dumpsys activity activities`: **una** sola `ActivityRecord` de `es.cuadrante.app/.MainActivity`
 (antes del cambio salían dos). Aparte, con la app en segundo plano: tocar un día del widget abre ese día
 (`cuadrante://widget/day/<fecha>`) y tocar una notificación de alarma abre la app, siempre en la misma actividad.
 El script lo escribió y revisó quien hizo el cambio **sin ejecutarlo** (no hay emulador en esa sesión): la primera

@@ -362,7 +362,7 @@ parecer buena: la interfaz muestra el error y la fecha de la última buena, R8).
 
 Lo que `ICloudBackupStore` espera del Swift (`AppDelegate.didInitializeImplicitFlutterEngine`, patrón
 `registerPathsChannel` de Mochila). Todo en **la carpeta `Documents/` del contenedor ubicuo**
-`iCloud.app.cuadrante.cuadrante` (`FileManager.default.url(forUbiquityContainerIdentifier: nil)`), que es la que
+`iCloud.es.cuadrante.app` (`FileManager.default.url(forUbiquityContainerIdentifier: nil)`), que es la que
 aparece en Archivos › iCloud Drive › Cuadrante cuando `Info.plist` declara `NSUbiquitousContainers`.
 
 | Método | Argumentos | Respuesta |
@@ -757,20 +757,20 @@ Con un móvil o emulador con servicios de Google y la copia activada (Ajustes �
 ```
 adb shell bmgr enabled                              # Backup Manager is currently enabled
 adb shell bmgr list transports                      # el actual lleva * (com.google.android.gms/.backup.BackupTransportService)
-adb shell bmgr backupnow app.cuadrante.cuadrante    # fuerza la copia de la app ahora
+adb shell bmgr backupnow es.cuadrante.app    # fuerza la copia de la app ahora
 adb shell dumpsys backup | grep -A3 app.cuadrante   # (PowerShell: | Select-String -Context 0,3 cuadrante) última copia
 ```
 
 Restaurar (mismo móvil o uno nuevo con el mismo Google):
 
 ```
-adb uninstall app.cuadrante.cuadrante               # o pm clear; el dato en la nube se queda
+adb uninstall es.cuadrante.app               # o pm clear; el dato en la nube se queda
 adb install app-release.apk
 adb shell bmgr list sets                            # token del conjunto de datos
-adb shell bmgr restore <token> app.cuadrante.cuadrante
+adb shell bmgr restore <token> es.cuadrante.app
 ```
 
-(En versiones recientes basta `adb shell bmgr restore app.cuadrante.cuadrante`; con la restauración automática del
+(En versiones recientes basta `adb shell bmgr restore es.cuadrante.app`; con la restauración automática del
 sistema activada, al instalar desde Play se restaura sola.) Después, abrir la app y comprobar: el calendario es el de
 antes, y **Ajustes › Copia de seguridad › Probar restauración** sobre la copia recuperada da «completa» (la matriz compara
 la huella de los 730 días: `scheduleFingerprint`).
@@ -780,7 +780,7 @@ Sin cuenta de Google (emulador sin Play), con el transporte local:
 ```
 adb shell bmgr enable true
 adb shell bmgr transport com.android.localtransport/.LocalTransport
-adb shell bmgr backupnow app.cuadrante.cuadrante
+adb shell bmgr backupnow es.cuadrante.app
 ```
 
 y se restaura igual que arriba. Para comprobar que las reglas XML se leen y qué se incluye:

@@ -13,7 +13,7 @@ set -u
 QA_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 QA_APP="$QA_ROOT/app"
 QA_OUT="${QA_OUT:-$QA_ROOT/build/qa}"
-QA_PACKAGE="app.cuadrante.cuadrante"
+QA_PACKAGE="es.cuadrante.app"
 
 export ANDROID_HOME="${ANDROID_HOME:-$HOME/AppData/Local/Android/Sdk}"
 ADB="$ANDROID_HOME/platform-tools/adb"

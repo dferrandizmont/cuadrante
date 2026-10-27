@@ -7,19 +7,19 @@ import 'package:home_widget/home_widget.dart';
 import '../domain/widget_snapshot.dart';
 
 /// Qualified class names of the Android widget providers
-/// (`android/app/src/main/kotlin/app/cuadrante/cuadrante/widget/`). They are
+/// (`android/app/src/main/kotlin/es/cuadrante/app/widget/`). They are
 /// part of the contract: placed widgets survive updates only while the names
 /// stay.
 const String kWidgetSmallProvider =
-    'app.cuadrante.cuadrante.widget.CuadranteSmallWidgetProvider';
+    'es.cuadrante.app.widget.CuadranteSmallWidgetProvider';
 const String kWidgetMediumProvider =
-    'app.cuadrante.cuadrante.widget.CuadranteMediumWidgetProvider';
+    'es.cuadrante.app.widget.CuadranteMediumWidgetProvider';
 const String kWidgetLargeProvider =
-    'app.cuadrante.cuadrante.widget.CuadranteLargeWidgetProvider';
+    'es.cuadrante.app.widget.CuadranteLargeWidgetProvider';
 const String kWidgetAgendaProvider =
-    'app.cuadrante.cuadrante.widget.CuadranteAgendaWidgetProvider';
+    'es.cuadrante.app.widget.CuadranteAgendaWidgetProvider';
 const String kWidgetTwoWeeksProvider =
-    'app.cuadrante.cuadrante.widget.CuadranteTwoWeeksWidgetProvider';
+    'es.cuadrante.app.widget.CuadranteTwoWeeksWidgetProvider';
 
 /// Every Android provider the snapshot feeds.
 const List<String> kWidgetProviders = [

@@ -1,11 +1,61 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+// Release signing (docs/release-signing.md). The upload key lives outside the
+// repository; android/key.properties (gitignored) points at it.
+val keyPropertiesFile = rootProject.file("key.properties")
+val keyProperties = Properties().apply {
+    if (keyPropertiesFile.exists()) keyPropertiesFile.inputStream().use { load(it) }
+}
+val hasReleaseKey = listOf("storeFile", "storePassword", "keyAlias", "keyPassword")
+    .all { !keyProperties.getProperty(it).isNullOrBlank() }
+
+// `-PallowDebugSigning=true` signs the release with this machine's Android
+// debug key, even when key.properties exists: ONLY for local tests and the
+// test APKs of tool/release_android.sh (so they keep updating the installed
+// test app), never for Google Play.
+// Read from the command line only: a stale entry in a gradle.properties file
+// must never debug-sign a Play build.
+val allowDebugSigning =
+    gradle.startParameter.projectProperties["allowDebugSigning"]?.toBoolean() == true
+
+val releaseProblems: List<String> = buildList {
+    if (allowDebugSigning && gradle.startParameter.taskNames.any { it.startsWith("bundle") }) {
+        add("-PallowDebugSigning=true is for test APKs only; an app bundle (.aab) goes to Google Play.")
+    }
+    if (allowDebugSigning) return@buildList
+    if (keyPropertiesFile.exists() && !hasReleaseKey) {
+        add("android/key.properties must define storeFile, storePassword, keyAlias and keyPassword.")
+    } else if (!hasReleaseKey) {
+        add(
+            "android/key.properties is missing, so there is no upload key. " +
+                "Local test builds only: add -PallowDebugSigning=true.",
+        )
+    }
+}
+
+fun releaseFailure(): GradleException = GradleException(
+    "\n==============================================================\n" +
+        " Refusing to build a RELEASE:\n" +
+        releaseProblems.joinToString("\n") { " - $it" } +
+        "\n See docs/release-signing.md for the exact commands.\n" +
+        "==============================================================",
+)
+
+// Fail before anything is compiled when a release task was requested...
+if (releaseProblems.isNotEmpty() &&
+    gradle.startParameter.taskNames.any { it.contains("Release") }
+) {
+    throw releaseFailure()
+}
+
 android {
-    namespace = "app.cuadrante.cuadrante"
+    namespace = "es.cuadrante.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -17,8 +67,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "app.cuadrante.cuadrante"
+        applicationId = "es.cuadrante.app"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -31,12 +80,42 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        if (hasReleaseKey) {
+            create("release") {
+                storeFile = rootProject.file(keyProperties.getProperty("storeFile"))
+                storePassword = keyProperties.getProperty("storePassword")
+                keyAlias = keyProperties.getProperty("keyAlias")
+                keyPassword = keyProperties.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = if (allowDebugSigning) {
+                logger.warn(
+                    "\n==============================================================\n" +
+                        " -PallowDebugSigning=true: the RELEASE build is signed\n" +
+                        " with the DEBUG key. Local test builds only.\n" +
+                        "==============================================================",
+                )
+                signingConfigs.getByName("debug")
+            } else if (hasReleaseKey) {
+                signingConfigs.getByName("release")
+            } else {
+                null // the release guard fails the build
+            }
         }
+    }
+}
+
+// ...and as a backstop when a release variant is built through another entry
+// point (an IDE, a task name without "Release").
+tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+    val failure = if (releaseProblems.isEmpty()) null else releaseFailure().message
+    doFirst {
+        if (failure != null) throw GradleException(failure)
     }
 }
 

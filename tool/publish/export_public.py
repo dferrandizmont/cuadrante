@@ -47,8 +47,10 @@ SECRETS = re.compile(
     # always starts with "eyJ". The payload may be the short "e30".
     rb'eyJ[A-Za-z0-9_-]{2,}\.[A-Za-z0-9_-]{2,}(?:\.[A-Za-z0-9_-]*)?|'
     # A signing password in JSON, YAML, Gradle or Groovy: the key can be
-    # quoted and the value can follow with "=", ":" or a parenthesis.
+    # quoted and the value can follow with "=", ":" or a parenthesis. Reading
+    # it from the gitignored key.properties (build.gradle.kts) is not a value.
     rb'["\']?(?:store|key)[Pp]assword["\']?\s*(?:=|:|\(|\s+["\'])'
+    rb'(?!\s*keyProperties\.getProperty\(["\'](?:store|key)[Pp]assword["\']\))'
 )
 INTERNAL = {
     'docs/handoff.md', 'docs/preguntas.md', 'docs/analisis-mercado.md',

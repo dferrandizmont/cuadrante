@@ -8,7 +8,8 @@
 #   tool/qa/release_apk_check.sh [path/to/app-release.apk]
 #
 # Without an argument (or QA_RELEASE_APK) it builds one:
-#   flutter build apk --release --dart-define=USE_DEMO_DATA=false --target-platform android-x64
+#   flutter build apk --release --dart-define=USE_DEMO_DATA=false --target-platform android-x64 \
+#     -PallowDebugSigning=true
 # Called first thing by tool/qa/release_check.sh.
 set -u
 
@@ -31,7 +32,8 @@ if [ -z "$APK" ]; then
   echo "[apk-check] compilando el APK de release (varios minutos)"
   (
     cd "$APP" &&
-      flutter build apk --release --dart-define=USE_DEMO_DATA=false --target-platform android-x64
+      flutter build apk --release --dart-define=USE_DEMO_DATA=false --target-platform android-x64 \
+        -PallowDebugSigning=true
   ) || fail "flutter build apk --release falló"
   APK="$APP/build/app/outputs/flutter-apk/app-release.apk"
 fi

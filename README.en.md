@@ -20,10 +20,13 @@ testing; iPhone is coming soon. Light and dark themes.
 
 ## Downloads
 
-- **Android: Google Play testing group** — Coming soon.
-  <!-- TODO: add the Google Play testing group link -->
+- **Android: Google Play closed test.** Two steps, in this order and with the same Google account:
+  1. Join the [cuadrante-testers](https://groups.google.com/g/cuadrante-testers) group.
+  2. Opt in to the test on [Google Play](https://play.google.com/apps/testing/es.cuadrante.app) and install the app from there.
 - **iPhone: App Store (coming soon).**
-- **Test APK: [GitHub Releases](https://github.com/dferrandizmont/cuadrante/releases).**
+- **Android: direct APK on [GitHub Releases](https://github.com/dferrandizmont/cuadrante/releases/latest).** You have
+  to allow installing apps from unknown sources. It is signed with a different key from the Google Play version, so one
+  does not update the other: to switch, first export a `.cuadrante` backup from Settings.
 
 ## Screenshots
 

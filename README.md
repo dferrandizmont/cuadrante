@@ -20,10 +20,13 @@ Android en pruebas; iPhone, próximamente. Modo claro y oscuro.
 
 ## Descargas
 
-- **Android: grupo de pruebas de Google Play** — Próximamente.
-  <!-- PENDIENTE: enlace del grupo de pruebas de Google Play -->
+- **Android: prueba cerrada de Google Play.** Dos pasos, en este orden y con la misma cuenta de Google:
+  1. Únete al grupo [cuadrante-testers](https://groups.google.com/g/cuadrante-testers).
+  2. Apúntate a la prueba en [Google Play](https://play.google.com/apps/testing/es.cuadrante.app) e instala la app desde ahí.
 - **iPhone: App Store (próximamente).**
-- **APK de prueba: [GitHub Releases](https://github.com/dferrandizmont/cuadrante/releases).**
+- **Android: APK directo en [GitHub Releases](https://github.com/dferrandizmont/cuadrante/releases/latest).** Hay que
+  permitir «instalar aplicaciones de origen desconocido». Va firmado con otra clave que la versión de Google Play, así
+  que una no actualiza a la otra: para cambiar, exporta antes una copia `.cuadrante` desde Ajustes.
 
 ## Capturas
 

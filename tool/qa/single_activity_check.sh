@@ -22,7 +22,7 @@ set -u
 export ANDROID_HOME="${ANDROID_HOME:-$HOME/AppData/Local/Android/Sdk}"
 ADB="$ANDROID_HOME/platform-tools/adb"
 [ -x "$ADB" ] || ADB="$ANDROID_HOME/platform-tools/adb.exe"
-PACKAGE="app.cuadrante.cuadrante"
+PACKAGE="es.cuadrante.app"
 COMPONENT="$PACKAGE/.MainActivity"
 
 fail() { echo "[single-activity] FAIL: $*" >&2; exit 1; }

@@ -402,7 +402,7 @@ comprobar que `09–13 · 17–21` no se corta en el widget pequeño y en el de 
 ## 9. Android
 
 Mismo JSON, mismas reglas de oro (la parte nativa no calcula turnos, ni formatea horas, ni traduce, ni elige colores)
-y mismo aviso de caducado. Código en `app/android/app/src/main/kotlin/app/cuadrante/cuadrante/widget/`.
+y mismo aviso de caducado. Código en `app/android/app/src/main/kotlin/es/cuadrante/app/widget/`.
 
 ### Qué hay
 

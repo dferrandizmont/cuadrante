@@ -82,7 +82,7 @@ Future<void> _alarms(QaContext qa) async {
     AlarmPermission.granted,
     reason:
         'falta el permiso de notificaciones '
-        '(adb shell pm grant app.cuadrante.cuadrante '
+        '(adb shell pm grant es.cuadrante.app '
         'android.permission.POST_NOTIFICATIONS)',
   );
 

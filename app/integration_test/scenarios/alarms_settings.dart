@@ -73,7 +73,7 @@ Future<QaApp> _open(
     AlarmPermission.granted,
     reason:
         'falta el permiso de notificaciones '
-        '(adb shell pm grant app.cuadrante.cuadrante '
+        '(adb shell pm grant es.cuadrante.app '
         'android.permission.POST_NOTIFICATIONS)',
   );
   await t.runAsync(plugin.cancelAll);
