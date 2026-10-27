@@ -7,6 +7,7 @@
 .gitattributes
 .github/workflows/ci.yml
 .gitignore
+CHANGELOG.md
 CONTRIBUTING.en.md
 CONTRIBUTING.md
 LICENSE
