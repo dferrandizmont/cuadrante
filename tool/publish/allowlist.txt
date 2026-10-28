@@ -959,6 +959,8 @@ tool/publish/export_public.py
 tool/publish/export_public.sh
 tool/publish/test_export_public.py
 tool/qa/common.sh
+tool/qa/lanzamiento_android.sh
+tool/qa/lanzamiento_ios.sh
 tool/qa/release_apk_check.sh
 tool/qa/release_check.sh
 tool/qa/report.dart

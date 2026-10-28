@@ -14,6 +14,20 @@ sobre la cuadrícula, el texto grande en una pantalla real.
 
 ## Cómo se ejecuta
 
+**Antes de publicar, la forma guiada** (la ejecutas tú en una terminal, porque hace preguntas):
+
+```bash
+bash tool/qa/lanzamiento_android.sh   # Windows, emulador Cuadrante_QA
+bash tool/qa/lanzamiento_ios.sh       # Mac, simulador de iPhone
+```
+
+Primero arranca el emulador o el simulador **con ventana** y te pregunta lo que solo puedes hacer tú (en Android,
+iniciar sesión con una cuenta de Google de pruebas y apuntarte a la prueba cerrada; en iOS no hace falta Apple ID).
+Después va solo: en Android, `release_check.sh` (APK de release, batería y U02), los widgets y la comprobación de una
+sola actividad sobre el mismo emulador; en iOS, análisis y pruebas, integración en el simulador, capturas de la App
+Store y la app instalada. Si se lo pides, al final te guía por la instalación desde Play o por las comprobaciones
+visuales. Deja `build/qa/lanzamiento-<fecha>/resumen.md` (o `lanzamiento-ios-<fecha>/`). Las etapas una a una:
+
 Desde la raíz del repositorio, en Git Bash (Windows):
 
 ```bash

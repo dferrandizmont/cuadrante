@@ -10,6 +10,11 @@ at once, so they can skip numbers.
 
 ## Unreleased
 
+## 0.6.13 · 2026-10-28
+
+Internal test build (private prerelease). The app ID is now `es.cuadrante.app`, so it installs as a new app next
+to 0.6.12 test builds: export a `.cuadrante` backup from the old one and restore it in the new one.
+
 - iPhone: texts no longer point to Android settings or to Drive (backup, calendar permission, alarm permissions), and
   "Snooze" on a shift alarm works with the app closed.
 - The month's Grid / List switch is now a single segmented control with an icon and a label. When the list reads
