@@ -3530,6 +3530,30 @@ abstract class AppLocalizations {
   /// **'En Ajustes › Añadir widget ves los tamaños (pequeño: hoy y mañana; mediano: los próximos 7 días; grande: el mes entero) y cómo colocarlo. Mantén pulsada la pantalla de inicio, toca el + de arriba y busca Cuadrante.\n\nEl widget guarda tus próximos días. El sistema decide cuándo lo actualiza y puede retrasar el cambio de día. Si se queda sin datos, abre Cuadrante para ponerlo al día.'**
   String get faqWidgetAIos;
 
+  /// No description provided for @faqBackupAIos.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustes › Copia de seguridad guarda copias automáticas en este dispositivo después de cada cambio, pero se pierden si lo pierdes o desinstalas la app. Exporta un archivo con «Exportar archivo» y guárdalo en iCloud Drive o envíatelo por WhatsApp o correo.\n\nPara cambiar de dispositivo: exporta el archivo, instala Cuadrante en el nuevo, abre el archivo con la app (o usa «Importar archivo» en la copia de seguridad) y revisa la vista previa antes de restaurar. «Probar restauración» comprueba que tu última copia se puede recuperar entera.'**
+  String get faqBackupAIos;
+
+  /// No description provided for @calExportPermissionDeniedBodyIos.
+  ///
+  /// In es, this message translates to:
+  /// **'Actívalo en los ajustes del sistema (Cuadrante › Calendarios) y vuelve aquí.'**
+  String get calExportPermissionDeniedBodyIos;
+
+  /// No description provided for @backupUiWarningIos.
+  ///
+  /// In es, this message translates to:
+  /// **'Estas copias se guardan en este dispositivo. Si desinstalas la app sin otra copia, se pierde. Exporta un archivo y guárdalo en iCloud Drive o envíalo por WhatsApp o correo.'**
+  String get backupUiWarningIos;
+
+  /// No description provided for @backupUiExportSubtitleIos.
+  ///
+  /// In es, this message translates to:
+  /// **'Para guardarlo en iCloud Drive o mandarlo por WhatsApp o correo'**
+  String get backupUiExportSubtitleIos;
+
   /// No description provided for @settingsSectionHelp.
   ///
   /// In es, this message translates to:
@@ -6071,6 +6095,12 @@ abstract class AppLocalizations {
   /// **'Las notificaciones y las alarmas a la hora exacta están permitidas.'**
   String get alarmsPermOkBody;
 
+  /// No description provided for @alarmsPermOkBodyIos.
+  ///
+  /// In es, this message translates to:
+  /// **'Las notificaciones están permitidas.'**
+  String get alarmsPermOkBodyIos;
+
   /// No description provided for @alarmsPermNotifTitle.
   ///
   /// In es, this message translates to:
@@ -6094,6 +6124,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Android ya no te pregunta por las notificaciones. Actívalas en los ajustes del sistema y Cuadrante podrá avisarte.'**
   String get alarmsPermNotifBlockedBody;
+
+  /// No description provided for @alarmsPermNotifBlockedBodyIos.
+  ///
+  /// In es, this message translates to:
+  /// **'iOS ya no te pregunta por las notificaciones. Actívalas en Ajustes › Cuadrante › Notificaciones y Cuadrante podrá avisarte.'**
+  String get alarmsPermNotifBlockedBodyIos;
 
   /// No description provided for @alarmsPermNotifOpenSettings.
   ///

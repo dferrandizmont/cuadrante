@@ -10,9 +10,12 @@ at once, so they can skip numbers.
 
 ## Unreleased
 
+- iPhone: texts no longer point to Android settings or to Drive (backup, calendar permission, alarm permissions), and
+  "Snooze" on a shift alarm works with the app closed.
 - The month's Grid / List switch is now a single segmented control with an icon and a label. When the list reads
   better (large text, or shifts that do not fit in the day cell), a dot next to "List" says so.
-- iOS (in preparation): the app name and the calendar permission texts in all five languages.
+- Switching to the list now centres the day instead of leaving it under the "Paint" button.
+- iPhone: the app name and the calendar permission texts in all five languages.
 
 ## 0.6.12 · 2026-10-27
 

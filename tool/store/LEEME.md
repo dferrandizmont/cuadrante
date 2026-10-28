@@ -68,6 +68,7 @@ ni cortar la pantalla. Desde `app/`:
 TZ=Europe/Madrid flutter test --dart-define=GENERATE_STORE=true --dart-define=STORE_TARGET=play test/store/store_screenshots_test.dart
 TZ=Europe/Madrid flutter test --dart-define=GENERATE_STORE=true --dart-define=STORE_TARGET=ios69 test/store/store_screenshots_test.dart
 TZ=Europe/Madrid flutter test --dart-define=GENERATE_STORE=true --dart-define=STORE_TARGET=ios65 test/store/store_screenshots_test.dart
+TZ=Europe/Madrid flutter test --dart-define=GENERATE_STORE=true --dart-define=STORE_TARGET=ios63 test/store/store_screenshots_test.dart
 ```
 
 | Target | Lienzo | Salida regenerable |
@@ -75,6 +76,7 @@ TZ=Europe/Madrid flutter test --dart-define=GENERATE_STORE=true --dart-define=ST
 | `play` | 1080 × 1920 | `app/build/store/play/{es,ca,gl,eu,en}/` |
 | `ios69` | 1320 × 2868 | `app/build/store/ios69/{es,ca,gl,eu,en}/` |
 | `ios65` | 1242 × 2688 | `app/build/store/ios65/{es,ca,gl,eu,en}/` |
+| `ios63` | 1206 × 2622 | `app/build/store/ios63/{es,ca,gl,eu,en}/` (**obligatorio** en App Store Connect: «iPhone with Dynamic Island, medium display», comprobado el 28-oct-2026) |
 
 El target iOS selecciona controles Flutter de iOS; estos renders **no sustituyen
 la validación del build de iPhone** ni las capturas de widgets nativos. Comprueba

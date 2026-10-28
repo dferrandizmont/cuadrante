@@ -2129,6 +2129,22 @@ class AppLocalizationsEs extends AppLocalizations {
       'En Ajustes › Añadir widget ves los tamaños (pequeño: hoy y mañana; mediano: los próximos 7 días; grande: el mes entero) y cómo colocarlo. Mantén pulsada la pantalla de inicio, toca el + de arriba y busca Cuadrante.\n\nEl widget guarda tus próximos días. El sistema decide cuándo lo actualiza y puede retrasar el cambio de día. Si se queda sin datos, abre Cuadrante para ponerlo al día.';
 
   @override
+  String get faqBackupAIos =>
+      'Ajustes › Copia de seguridad guarda copias automáticas en este dispositivo después de cada cambio, pero se pierden si lo pierdes o desinstalas la app. Exporta un archivo con «Exportar archivo» y guárdalo en iCloud Drive o envíatelo por WhatsApp o correo.\n\nPara cambiar de dispositivo: exporta el archivo, instala Cuadrante en el nuevo, abre el archivo con la app (o usa «Importar archivo» en la copia de seguridad) y revisa la vista previa antes de restaurar. «Probar restauración» comprueba que tu última copia se puede recuperar entera.';
+
+  @override
+  String get calExportPermissionDeniedBodyIos =>
+      'Actívalo en los ajustes del sistema (Cuadrante › Calendarios) y vuelve aquí.';
+
+  @override
+  String get backupUiWarningIos =>
+      'Estas copias se guardan en este dispositivo. Si desinstalas la app sin otra copia, se pierde. Exporta un archivo y guárdalo en iCloud Drive o envíalo por WhatsApp o correo.';
+
+  @override
+  String get backupUiExportSubtitleIos =>
+      'Para guardarlo en iCloud Drive o mandarlo por WhatsApp o correo';
+
+  @override
   String get settingsSectionHelp => 'Ayuda';
 
   @override
@@ -3933,6 +3949,9 @@ class AppLocalizationsEs extends AppLocalizations {
       'Las notificaciones y las alarmas a la hora exacta están permitidas.';
 
   @override
+  String get alarmsPermOkBodyIos => 'Las notificaciones están permitidas.';
+
+  @override
   String get alarmsPermNotifTitle => 'Faltan las notificaciones';
 
   @override
@@ -3945,6 +3964,10 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get alarmsPermNotifBlockedBody =>
       'Android ya no te pregunta por las notificaciones. Actívalas en los ajustes del sistema y Cuadrante podrá avisarte.';
+
+  @override
+  String get alarmsPermNotifBlockedBodyIos =>
+      'iOS ya no te pregunta por las notificaciones. Actívalas en Ajustes › Cuadrante › Notificaciones y Cuadrante podrá avisarte.';
 
   @override
   String get alarmsPermNotifOpenSettings => 'Abrir ajustes';

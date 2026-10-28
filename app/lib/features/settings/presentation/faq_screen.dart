@@ -61,7 +61,11 @@ List<FaqEntry> faqEntries(AppLocalizations l10n, {TargetPlatform? platform}) {
       question: l10n.faqWidgetQ,
       answer: apple ? l10n.faqWidgetAIos : l10n.faqWidgetA,
     ),
-    FaqEntry(id: 'backup', question: l10n.faqBackupQ, answer: l10n.faqBackupA),
+    FaqEntry(
+      id: 'backup',
+      question: l10n.faqBackupQ,
+      answer: apple ? l10n.faqBackupAIos : l10n.faqBackupA,
+    ),
     FaqEntry(id: 'import', question: l10n.faqImportQ, answer: l10n.faqImportA),
     FaqEntry(
       id: 'calendars',

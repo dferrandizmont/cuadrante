@@ -307,6 +307,22 @@ void main() {
     }
   }
 
+  testWidgets('switching to the list leaves today clear of the Pintar button', (
+    tester,
+  ) async {
+    await pumpCalendar(tester);
+    await _choose(tester, 'list');
+    final today = tester.getRect(
+      find.byWidgetPredicate((w) => w is MonthListDay && w.isToday),
+    );
+    final fab = tester.getRect(find.byType(FloatingActionButton));
+    expect(
+      today.bottom <= fab.top || today.top >= fab.bottom,
+      isTrue,
+      reason: 'today $today, Pintar $fab',
+    );
+  });
+
   testWidgets(
     'Sunday groups, week numbers and past/future navigation use the same month',
     (tester) async {

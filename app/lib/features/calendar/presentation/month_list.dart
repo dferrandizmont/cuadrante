@@ -48,7 +48,12 @@ class _MonthListState extends ConsumerState<MonthList> {
     if (index < 0 || index >= _nodes.length || _nodes[index].context == null) {
       return;
     }
-    FocusTraversalPolicy.defaultTraversalRequestFocusCallback(_nodes[index]);
+    // Centred, not at the bottom edge (the default): the floating «Pintar»
+    // button would cover the day there.
+    FocusTraversalPolicy.defaultTraversalRequestFocusCallback(
+      _nodes[index],
+      alignment: 0.5,
+    );
   }
 
   @override

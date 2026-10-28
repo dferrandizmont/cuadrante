@@ -2123,6 +2123,22 @@ class AppLocalizationsCa extends AppLocalizations {
       'A Configuració › Afegeix un widget veus les mides (petit: avui i demà; mitjà: els propers 7 dies; gran: el mes sencer) i com col·locar-lo. Mantén premuda la pantalla d’inici, toca el + de dalt i cerca Cuadrante.\n\nEl widget desa els teus propers dies. El sistema decideix quan l’actualitza i pot endarrerir el canvi de dia. Si es queda sense dades, obre Cuadrante per posar-lo al dia.';
 
   @override
+  String get faqBackupAIos =>
+      'Configuració › Còpia de seguretat desa còpies automàtiques en aquest dispositiu després de cada canvi, però es perden si el perds o desinstal·les l’app. Exporta un fitxer amb «Exporta un fitxer» i desa’l a iCloud Drive o envia-te’l per WhatsApp o correu.\n\nPer canviar de dispositiu: exporta el fitxer, instal·la Cuadrante al nou, obre el fitxer amb l’app (o fes servir «Importa un fitxer» a la còpia de seguretat) i revisa la previsualització abans de restaurar. «Prova la restauració» comprova que la teva última còpia es pot recuperar sencera.';
+
+  @override
+  String get calExportPermissionDeniedBodyIos =>
+      'Activa’l a la configuració del sistema (Cuadrante › Calendaris) i torna aquí.';
+
+  @override
+  String get backupUiWarningIos =>
+      'Aquestes còpies es desen en aquest dispositiu. Si desinstal·les l’app sense una altra còpia, es perd. Exporta un fitxer i desa’l a iCloud Drive o envia’l per WhatsApp o correu.';
+
+  @override
+  String get backupUiExportSubtitleIos =>
+      'Per desar-lo a iCloud Drive o enviar-lo per WhatsApp o correu';
+
+  @override
   String get settingsSectionHelp => 'Ajuda';
 
   @override
@@ -3929,6 +3945,9 @@ class AppLocalizationsCa extends AppLocalizations {
       'Les notificacions i les alarmes a l’hora exacta estan permeses.';
 
   @override
+  String get alarmsPermOkBodyIos => 'Les notificacions estan permeses.';
+
+  @override
   String get alarmsPermNotifTitle => 'Falten les notificacions';
 
   @override
@@ -3941,6 +3960,10 @@ class AppLocalizationsCa extends AppLocalizations {
   @override
   String get alarmsPermNotifBlockedBody =>
       'Android ja no et pregunta per les notificacions. Activa-les a la configuració del sistema i Cuadrante et podrà avisar.';
+
+  @override
+  String get alarmsPermNotifBlockedBodyIos =>
+      'L’iOS ja no et pregunta per les notificacions. Activa-les a Configuració › Cuadrante › Notificacions i Cuadrante et podrà avisar.';
 
   @override
   String get alarmsPermNotifOpenSettings => 'Obre la configuració';

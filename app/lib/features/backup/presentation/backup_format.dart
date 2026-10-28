@@ -20,12 +20,13 @@ import '../domain/backup_errors.dart';
 class BackupIcons {
   const BackupIcons._();
 
-  static bool get _apple =>
+  /// Apple platforms, which also get their own texts (iCloud Drive, not Drive).
+  static bool get apple =>
       defaultTargetPlatform == TargetPlatform.iOS ||
       defaultTargetPlatform == TargetPlatform.macOS;
 
   static IconData _pick(IconData apple, IconData material) =>
-      _apple ? apple : material;
+      BackupIcons.apple ? apple : material;
 
   /// Make a copy now.
   static IconData get save =>

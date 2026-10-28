@@ -202,7 +202,9 @@ class _Segment extends StatelessWidget {
         duration: Motion.state,
         constraints: const BoxConstraints(minHeight: Sp.touch),
         decoration: BoxDecoration(
-          color: selected ? colors.surface : Colors.transparent,
+          // The soft accent, not `surface`: in dark mode `surface` and the
+          // track are almost the same colour.
+          color: selected ? colors.accentSoft : Colors.transparent,
           borderRadius: radius,
           border: Border.all(
             color: selected ? colors.borderStrong : Colors.transparent,

@@ -2121,6 +2121,22 @@ class AppLocalizationsEn extends AppLocalizations {
       'In Settings › Add widget you’ll see the sizes (small: today and tomorrow; medium: the next 7 days; large: the whole month) and how to place it. Touch and hold the home screen, tap the + at the top and look for Cuadrante.\n\nThe widget stores your upcoming days. The system decides when to update it and may delay the change of day. If it runs out of data, open Cuadrante to bring it up to date.';
 
   @override
+  String get faqBackupAIos =>
+      'Settings › Backup saves automatic backups on this device after each change, but they are lost if you lose it or uninstall the app. Export a file with “Export file” and save it to iCloud Drive or send it to yourself by WhatsApp or email.\n\nTo change devices: export the file, install Cuadrante on the new device, open the file with the app (or use “Import file” in Backup), and review the preview before restoring. “Test restore” checks that your latest backup can be fully recovered.';
+
+  @override
+  String get calExportPermissionDeniedBodyIos =>
+      'Turn it on in the system settings (Cuadrante › Calendars) and come back here.';
+
+  @override
+  String get backupUiWarningIos =>
+      'These backups are kept on this device. If you uninstall the app without another copy, it’s lost. Export a file and save it to iCloud Drive or send it by WhatsApp or email.';
+
+  @override
+  String get backupUiExportSubtitleIos =>
+      'To save it to iCloud Drive or send it by WhatsApp or email';
+
+  @override
   String get settingsSectionHelp => 'Help';
 
   @override
@@ -3920,6 +3936,9 @@ class AppLocalizationsEn extends AppLocalizations {
       'Notifications and exact-time alarms are allowed.';
 
   @override
+  String get alarmsPermOkBodyIos => 'Notifications are allowed.';
+
+  @override
   String get alarmsPermNotifTitle => 'Notifications are off';
 
   @override
@@ -3932,6 +3951,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get alarmsPermNotifBlockedBody =>
       'Android no longer asks you about notifications. Turn them on in the system settings and Cuadrante will be able to alert you.';
+
+  @override
+  String get alarmsPermNotifBlockedBodyIos =>
+      'iOS no longer asks you about notifications. Turn them on in Settings › Cuadrante › Notifications and Cuadrante will be able to alert you.';
 
   @override
   String get alarmsPermNotifOpenSettings => 'Open settings';

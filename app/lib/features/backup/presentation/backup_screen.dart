@@ -209,7 +209,9 @@ class _BackupScreenState extends ConsumerState<BackupScreen> {
                     key: const ValueKey('backup-export'),
                     icon: AppIcons.share,
                     title: l10n.backupUiExport,
-                    subtitle: l10n.backupUiExportSubtitle,
+                    subtitle: BackupIcons.apple
+                        ? l10n.backupUiExportSubtitleIos
+                        : l10n.backupUiExportSubtitle,
                     onTap: _export,
                   ),
                   if (ref.watch(backupSaveSupportedProvider))
@@ -387,7 +389,9 @@ class _StatusSection extends ConsumerWidget {
                   const SizedBox(width: Sp.s),
                   Expanded(
                     child: Text(
-                      l10n.backupUiWarning,
+                      BackupIcons.apple
+                          ? l10n.backupUiWarningIos
+                          : l10n.backupUiWarning,
                       key: const ValueKey('backup-warning'),
                       style: type.meta.copyWith(color: colors.textMuted),
                     ),

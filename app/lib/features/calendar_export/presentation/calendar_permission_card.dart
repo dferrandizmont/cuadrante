@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/icons/app_icons.dart';
@@ -49,6 +50,9 @@ class CalendarPermissionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
+    final apple =
+        defaultTargetPlatform == TargetPlatform.iOS ||
+        defaultTargetPlatform == TargetPlatform.macOS;
     final body = purpose == CalendarPermissionPurpose.read
         ? l10n.calExportPermissionReadBody
         : l10n.calExportPermissionWriteBody;
@@ -57,7 +61,9 @@ class CalendarPermissionCard extends StatelessWidget {
         titleKey: const ValueKey('calendar-permission-denied'),
         icon: AppIcons.error,
         title: l10n.calExportPermissionDeniedTitle,
-        message: l10n.calExportPermissionDeniedBody,
+        message: apple
+            ? l10n.calExportPermissionDeniedBodyIos
+            : l10n.calExportPermissionDeniedBody,
         primaryKey: const ValueKey('calendar-permission-settings'),
         primaryLabel: l10n.calExportPermissionSettings,
         onPrimary: busy ? null : onOpenSettings,

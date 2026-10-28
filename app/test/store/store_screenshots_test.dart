@@ -44,6 +44,8 @@ const _targets = {
   'play': Size(1080, 1920),
   'ios69': Size(1320, 2868),
   'ios65': Size(1242, 2688),
+  // Required by App Store Connect: iPhone with Dynamic Island, medium display.
+  'ios63': Size(1206, 2622),
 };
 const _shots = [
   '01-mes',

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -225,7 +226,9 @@ class _PermissionCard extends ConsumerWidget {
         icon: AppIcons.error,
         tone: TonePair(colors.dangerContainer, colors.danger),
         title: l10n.alarmsPermNotifTitle,
-        message: l10n.alarmsPermNotifBlockedBody,
+        message: defaultTargetPlatform == TargetPlatform.iOS
+            ? l10n.alarmsPermNotifBlockedBodyIos
+            : l10n.alarmsPermNotifBlockedBody,
         primaryKey: const ValueKey('alarms-permission-notifications-settings'),
         primaryLabel: l10n.alarmsPermNotifOpenSettings,
         onPrimary: () async {
@@ -271,7 +274,10 @@ class _PermissionCard extends ConsumerWidget {
       icon: AppIcons.check,
       tone: TonePair(colors.successContainer, colors.success),
       title: l10n.alarmsPermOkTitle,
-      message: l10n.alarmsPermOkBody,
+      // iOS has no exact-alarm permission: only notifications.
+      message: defaultTargetPlatform == TargetPlatform.iOS
+          ? l10n.alarmsPermOkBodyIos
+          : l10n.alarmsPermOkBody,
     );
   }
 }

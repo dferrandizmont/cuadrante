@@ -2123,6 +2123,22 @@ class AppLocalizationsEu extends AppLocalizations {
       'Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Cuadrante.\n\nWidgetak zure hurrengo egunak gordetzen ditu. Sistemak erabakitzen du noiz eguneratu, eta egun-aldaketa atzeratu dezake. Daturik gabe geratzen bada, ireki Cuadrante eguneratzeko.';
 
   @override
+  String get faqBackupAIos =>
+      'Ezarpenak › Babeskopia atalak kopia automatikoak gordetzen ditu gailu honetan aldaketa bakoitzaren ondoren, baina gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, galdu egiten dira. Esportatu fitxategi bat «Esportatu fitxategia» aukerarekin eta gorde iCloud Driven, edo bidali zeure buruari WhatsApp edo posta elektroniko bidez.\n\nGailuz aldatzeko: esportatu fitxategia, instalatu Cuadrante gailu berrian, ireki fitxategia aplikazioarekin (edo erabili «Inportatu fitxategia» babeskopian) eta berrikusi aurrebista leheneratu aurretik. «Probatu leheneratzea» aukerak egiaztatzen du zure azken kopia osorik berreskura daitekeela.';
+
+  @override
+  String get calExportPermissionDeniedBodyIos =>
+      'Aktibatu sistemaren ezarpenetan (Cuadrante › Egutegiak) eta itzuli hona.';
+
+  @override
+  String get backupUiWarningIos =>
+      'Kopia hauek gailu honetan gordetzen dira. Beste kopiarik gabe aplikazioa desinstalatzen baduzu, galdu egiten da. Esportatu fitxategi bat eta gorde iCloud Driven, edo bidali WhatsApp edo posta elektroniko bidez.';
+
+  @override
+  String get backupUiExportSubtitleIos =>
+      'iCloud Driven gordetzeko edo WhatsApp edo posta elektroniko bidez bidaltzeko';
+
+  @override
   String get settingsSectionHelp => 'Laguntza';
 
   @override
@@ -3939,6 +3955,9 @@ class AppLocalizationsEu extends AppLocalizations {
       'Jakinarazpenak eta ordu zehatzeko alarmak baimenduta daude.';
 
   @override
+  String get alarmsPermOkBodyIos => 'Jakinarazpenak baimenduta daude.';
+
+  @override
   String get alarmsPermNotifTitle => 'Jakinarazpenak falta dira';
 
   @override
@@ -3951,6 +3970,10 @@ class AppLocalizationsEu extends AppLocalizations {
   @override
   String get alarmsPermNotifBlockedBody =>
       'Androidek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu sistemaren ezarpenetan, eta Cuadrantek abisatu ahal izango dizu.';
+
+  @override
+  String get alarmsPermNotifBlockedBodyIos =>
+      'iOSek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu Ezarpenak › Cuadrante › Jakinarazpenak atalean, eta Cuadrantek abisatu ahal izango dizu.';
 
   @override
   String get alarmsPermNotifOpenSettings => 'Ireki ezarpenak';
