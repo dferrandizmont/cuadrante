@@ -52,11 +52,31 @@ Future<void> alarmNotificationBackgroundHandler(
   }
 }
 
+/// How an alarm of [kind] is handed to Android's AlarmManager.
+///
+/// A shift alarm is a wake-up alarm: as an alarm clock (`setAlarmClock`)
+/// neither Doze, battery saver nor the manufacturers' batching delay it. On a
+/// OnePlus with battery saver the same alarm requested as `exactAllowWhileIdle`
+/// arrived up to 2 minutes late (docs/qa/lanzamiento-android-2026-10-29.md).
+/// The price: the system shows it as the next alarm (status bar icon, lock
+/// screen). Reminders and the evening-before notice stay exact, not clocks.
+AndroidScheduleMode androidScheduleModeFor(
+  AlarmKind kind, {
+  required bool exact,
+}) {
+  if (!exact) return AndroidScheduleMode.inexactAllowWhileIdle;
+  return kind == AlarmKind.shift
+      ? AndroidScheduleMode.alarmClock
+      : AndroidScheduleMode.exactAllowWhileIdle;
+}
+
 /// `flutter_local_notifications` implementation.
 ///
-/// Android: exact alarms (`exactAllowWhileIdle`) when the user has granted
-/// "Alarms and reminders" (`SCHEDULE_EXACT_ALARM`), otherwise inexact ones
-/// (`inexactAllowWhileIdle`, a few minutes of drift). The plugin's boot and
+/// Android: with "Alarms and reminders" (`SCHEDULE_EXACT_ALARM`) granted,
+/// shift alarms, their snoozes and the test alarm are alarm clocks (`setAlarmClock`) and
+/// the other alarms exact ones (`exactAllowWhileIdle`); without it, inexact
+/// ones (`inexactAllowWhileIdle`, a few minutes of drift). See
+/// [androidScheduleModeFor]. The plugin's boot and
 /// package-replaced receivers (AndroidManifest) re-arm everything after a
 /// reboot or an update. The channel is high importance with the alarm audio
 /// usage, so it follows the alarm volume instead of the ringer.
@@ -436,9 +456,11 @@ class LocalAlarmScheduler implements AlarmScheduler {
 
   @override
   Future<void> scheduleOneOff(OneOffAlarm alarm) async {
-    final mode = await _exactAllowed()
-        ? AndroidScheduleMode.exactAllowWhileIdle
-        : AndroidScheduleMode.inexactAllowWhileIdle;
+    // A snoozed shift alarm, or the test of one: rings like the shift alarm.
+    final mode = androidScheduleModeFor(
+      AlarmKind.shift,
+      exact: await _exactAllowed(),
+    );
     await _plugin.zonedSchedule(
       id: alarm.id,
       title: alarm.title,
@@ -474,9 +496,7 @@ class LocalAlarmScheduler implements AlarmScheduler {
   @override
   Future<void> replaceAll(List<PlannedAlarm> alarms) => _mutex.run(() async {
     await initialize();
-    final mode = await canScheduleExactAlarms()
-        ? AndroidScheduleMode.exactAllowWhileIdle
-        : AndroidScheduleMode.inexactAllowWhileIdle;
+    final exact = await canScheduleExactAlarms();
     final location = await _currentZone();
     // Custom sounds: the ones that can still be played get their own channel
     // (created before the first alarm that needs it); a missing one falls
@@ -528,7 +548,7 @@ class LocalAlarmScheduler implements AlarmScheduler {
             kind: alarm.kind,
             sound: sound,
           ),
-          androidScheduleMode: mode,
+          androidScheduleMode: androidScheduleModeFor(alarm.kind, exact: exact),
           payload: alarm.payload,
         );
       } catch (error, stack) {

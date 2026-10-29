@@ -61,9 +61,19 @@ w_fail() { WQ_FAIL="$*"; qa_log "$WQ_CUR FAILED: $*"; return 1; }
 
 w_shot() { qa_adb exec-out screencap -p >"$WQ_OUT/shots/${WQ_CUR}_$1.png" 2>/dev/null; }
 
+# uiautomator fails now and then (e.g. "could not get idle state" while Flutter or
+# the launcher animates) and leaves nothing: retry until a hierarchy comes out.
 w_ui_dump() {
-  qa_adb shell uiautomator dump //sdcard/w_ui.xml >/dev/null 2>&1
-  qa_adb exec-out cat //sdcard/w_ui.xml >"$WQ_OUT/ui_$1.xml" 2>/dev/null
+  local i
+  for i in 1 2 3 4 5; do
+    qa_adb shell rm -f //sdcard/w_ui.xml >/dev/null 2>&1
+    qa_adb shell uiautomator dump //sdcard/w_ui.xml >"$WQ_OUT/uia_err.txt" 2>&1
+    qa_adb exec-out cat //sdcard/w_ui.xml >"$WQ_OUT/ui_$1.xml" 2>/dev/null
+    grep -q "<hierarchy" "$WQ_OUT/ui_$1.xml" 2>/dev/null && return 0
+    cp "$WQ_OUT/uia_err.txt" "$WQ_OUT/uia_err_last.txt" 2>/dev/null
+    sleep 2
+  done
+  return 0
 }
 
 # Taps the first element whose text or content-desc matches the regex $1.
@@ -217,6 +227,9 @@ w_install() {
   command -v cygpath >/dev/null 2>&1 && apk="$(cygpath -w "$WQ_APK")"   # adb.exe wants a Windows path
   qa_adb install -r "$apk" >/dev/null || return 1
   qa_adb shell pm grant "$QA_PACKAGE" android.permission.POST_NOTIFICATIONS >/dev/null 2>&1
+  # The steps look for Spanish labels: fix only this app's language (Android 13+),
+  # whatever the emulator's, never the device's global language.
+  qa_adb shell cmd locale set-app-locales "$QA_PACKAGE" --user current --locales es >/dev/null 2>&1
   if [ "$WQ_EXACT" = 1 ]; then
     qa_adb shell appops set "$QA_PACKAGE" SCHEDULE_EXACT_ALARM allow >/dev/null 2>&1
   fi
@@ -368,7 +381,11 @@ w_month_keys() { w_snapshot | grep -o '"key":"[0-9]*-[0-9]*"' | sed 's/"key":"\(
 # codes and "hoy" for today's cell).
 w_today_cell_is() {
   w_ui_dump now
-  sed 's/>/>\n/g' "$WQ_OUT/ui_now.xml" | grep -qE "content-desc=\"$1( [^\" ]+)* hoy\""
+  # Today's cell reads "hoy. jueves, 29 de octubre de 2026. …" (older builds: "29 … hoy").
+  # The day number alone is not enough: the grid also shows the days of the
+  # neighbouring months (a «29 de septiembre» before 1 October).
+  sed 's/>/>\n/g' "$WQ_OUT/ui_now.xml" |
+    grep -qE "content-desc=\"(hoy\. [^,\"]+, $1 de |$1( [^\" ]+)* hoy\")"
 }
 
 w05() {

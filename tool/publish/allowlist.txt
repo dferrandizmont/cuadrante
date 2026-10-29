@@ -616,6 +616,7 @@ app/test/features/alarms/alarm_actions_test.dart
 app/test/features/alarms/alarm_day_before_test.dart
 app/test/features/alarms/alarm_dst_sync_test.dart
 app/test/features/alarms/alarm_planner_test.dart
+app/test/features/alarms/alarm_schedule_mode_test.dart
 app/test/features/alarms/alarm_settings_repository_test.dart
 app/test/features/alarms/alarm_settings_test.dart
 app/test/features/alarms/alarm_sound_channels_test.dart

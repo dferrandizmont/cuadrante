@@ -249,10 +249,13 @@ a instante está en `data/wall_clock.dart`, con pruebas para 2026-03-29 y 2026-1
   alarma, nunca al arrancar), `RECEIVE_BOOT_COMPLETED` (reprogramar tras reiniciar), `VIBRATE` y
   `SCHEDULE_EXACT_ALARM`. Receptores: `ScheduledNotificationReceiver` y `ScheduledNotificationBootReceiver`
   (arranque, `MY_PACKAGE_REPLACED` y `QUICKBOOT_POWERON`), que sobreviven a reinicios y actualizaciones.
-- **Alarmas exactas.** Se usa `SCHEDULE_EXACT_ALARM` y **no** `USE_EXACT_ALARM`: este último está reservado por
+- **Alarmas exactas.** (29-oct-2026: en un OnePlus 8T con ahorro de batería, `exactAllowWhileIdle` llegó hasta 2 min tarde
+  porque OxygenOS les da ventana; `setAlarmClock` no lo retrasa ningún fabricante, a cambio del icono de alarma en la barra
+  y de salir como «próxima alarma» del sistema. Decisión del usuario.) Se usa `SCHEDULE_EXACT_ALARM` y **no** `USE_EXACT_ALARM`: este último está reservado por
   Google Play a apps cuya función principal es ser despertador o calendario y exige revisión. Desde Android 14 el
   permiso viene denegado en instalaciones nuevas: el usuario lo concede en «Alarmas y recordatorios». Si
-  `canScheduleExactAlarms()` es verdadero se programa con `exactAllowWhileIdle`; si no, con `inexactAllowWhileIdle`
+  `canScheduleExactAlarms()` es verdadero, los avisos de turno (y su «Posponer» y «Probar aviso») se programan como **alarma de despertador**
+  (`alarmClock`, `setAlarmClock`) y los demás (recordatorios, víspera) con `exactAllowWhileIdle`; si no, todos con `inexactAllowWhileIdle`
   (puede retrasarse unos minutos) y la UI debe avisarlo y ofrecer `requestExactAlarmPermission()`, que abre esa
   pantalla del sistema. La app lo comprueba en cada reprogramación, así que concederlo después se aplica al volver.
 - **Icono pequeño (`ic_stat_alarm`).** Solo lo nombra el Dart (`AndroidInitializationSettings('ic_stat_alarm')`), así

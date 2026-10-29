@@ -10,6 +10,13 @@ at once, so they can skip numbers.
 
 ## Unreleased
 
+## 0.6.14 · 2026-10-29
+
+Google Play closed test (with the 0.6.13 changes) and APK on GitHub.
+
+- Android: shift alarms are now system alarm clocks, so battery saver and phone makers can no longer delay them;
+  the next one shows as the next alarm (status bar icon and lock screen).
+
 ## 0.6.13 · 2026-10-28
 
 Internal test build (private prerelease). The app ID is now `es.cuadrante.app`, so it installs as a new app next
