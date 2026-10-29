@@ -1,36 +1,63 @@
-# Colaborar en Cuadrante
+**English** · [Español](CONTRIBUTING.es.md)
 
-[English](CONTRIBUTING.en.md)
+# Contributing
 
-Cuadrante es gratuita, sin cuentas, anuncios ni compras. El código Flutter está en
-`app/`; el alcance está en [turnos-spec.md](turnos-spec.md) y los contratos en
-`docs/`. Explica el problema, el comportamiento esperado y cómo lo has comprobado.
-Para cambios de interfaz o de alcance, acuerda primero la propuesta en una issue.
-No adjuntes cuadrantes personales: usa datos sintéticos.
+Bug reports, ideas and translations are welcome. Describe the problem, the expected
+behaviour and how you checked it. Discuss UI and scope changes in an issue first.
+Use synthetic data instead of attaching personal schedules.
 
-- Los turnos se calculan con `Schedule`, mediante reglas y excepciones. Prueba
-  cualquier cambio del motor. Las fechas de calendario usan `CivilDate`; «hoy»
-  procede de `clockProvider`.
-- Una migración de Drift exige `dart run drift_dev make-migrations`, una prueba
-  de migración y compatibilidad con las copias antiguas. Consulta
-  [datos](docs/datos.md) y [copias](docs/copia-de-seguridad.md).
-- Usa los tokens de [diseño](docs/diseno.md): `context.colors`, `context.type`,
-  `Sp`, `Rad`, `AppIcons`. Cada turno muestra color, código y hora.
-- Todo texto de interfaz va en los cinco ARB (es, ca, gl, eu, en), con tú y sin
-  emojis. Consulta el [glosario](docs/glosario-idiomas.md). Revisa los idiomas y
-  sus placeholders; en euskera no añadas sufijos a un placeholder.
+Cuadrante is free, with no accounts, ads or purchases. Flutter code lives in
+`app/`; scope is defined in [turnos-spec.md](turnos-spec.md), with technical
+contracts in `docs/` (Spanish).
 
-Con Flutter **3.47.7**, desde `app/`:
+- Calculate shifts through `Schedule`, using rules and exceptions. Test engine
+  changes. Calendar dates use `CivilDate`; get today from `clockProvider`.
+- Drift migrations require `dart run drift_dev make-migrations`, migration
+  tests and compatibility with old backups. Read [data](docs/datos.md) and
+  [backups](docs/copia-de-seguridad.md).
+- Use the [design](docs/diseno.md) tokens: `context.colors`, `context.type`,
+  `Sp`, `Rad`, `AppIcons`. Show each shift with colour, code and time.
+- Put UI strings in all five ARB files (es, ca, gl, eu, en). Use a direct,
+  informal tone, without emoji. Follow the [glossary](docs/glosario-idiomas.md),
+  review translations and placeholders, and do not attach Basque suffixes to a
+  placeholder.
 
-```sh
+## Build and test
+
+Requirements: **Flutter 3.47.7**, Android SDK for Android or macOS with Xcode
+for iPhone. The app uses Riverpod, go_router and Drift for state, navigation
+and the local database.
+
+From the repository root:
+
+```bash
+cd app
 flutter pub get
 flutter gen-l10n
 flutter analyze
 TZ=Europe/Madrid flutter test
 ```
 
-En Windows usa la zona de Madrid del sistema y `flutter test` sin `TZ`. Sin red,
-usa `flutter pub get --offline` si ya tienes las dependencias. Si cambias Drift,
-freezed o JSON, ejecuta `dart run build_runner build` y conserva los generados.
-Incluye en el PR los comandos ejecutados y su resultado. Para vulnerabilidades,
-sigue [SECURITY.md](SECURITY.md).
+Offline, use `flutter pub get --offline` with previously downloaded packages.
+On Windows, use the system's Madrid time zone (`Get-TimeZone`) and run
+`flutter test` without setting `TZ`; the Linux IANA identifier changes time
+handling in the Windows runtime.
+
+To build an APK using real storage, without demo data:
+
+```bash
+flutter build apk --release --dart-define=USE_DEMO_DATA=false
+```
+
+Generated files are checked in; after changing Drift, freezed or JSON sources, run
+`dart run build_runner build`.
+
+Prepare the public selection with the [exporter](tool/publish/LEEME.en.md).
+Signing and publishing require separate preparation and review.
+
+Include the commands and results in your PR. Report vulnerabilities following
+[SECURITY.en.md](SECURITY.en.md).
+
+[Regenerate graphics and screenshots](tool/store/LEEME.md) (in Spanish) ·
+[Generate the privacy website](web/legal/LEEME.md) (in Spanish) ·
+[Design](docs/diseno.md) (in Spanish).

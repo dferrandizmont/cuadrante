@@ -43,7 +43,7 @@ submodules fail validation, as do missing entries caused by `export-ignore`.
 Included: Flutter and native sources, generated files, tests, synthetic fixtures,
 assets, portable tools and icons, CI, README, licences, security documents, legal
 web pages, public graphics and technical contracts. Public contribution rules
-are in `CONTRIBUTING.md` and `CONTRIBUTING.en.md`.
+are in `CONTRIBUTING.md` and `CONTRIBUTING.es.md`.
 
 Excluded:
 

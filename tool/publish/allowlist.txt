@@ -8,13 +8,13 @@
 .github/workflows/ci.yml
 .gitignore
 CHANGELOG.md
-CONTRIBUTING.en.md
+CONTRIBUTING.es.md
 CONTRIBUTING.md
 LICENSE
 LICENSE-CONTENT.en.md
 LICENSE-CONTENT.md
 README.ca.md
-README.en.md
+README.es.md
 README.eu.md
 README.gl.md
 README.md

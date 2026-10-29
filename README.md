@@ -1,143 +1,140 @@
-[Español](README.md) · [Català](README.ca.md) · [Galego](README.gl.md) · [Euskara](README.eu.md) · [English](README.en.md)
+**English** · [Español](README.es.md) · [Català](README.ca.md) · [Galego](README.gl.md) · [Euskara](README.eu.md)
 
 <p align="center">
-  <img src="docs/readme/es/header.png" alt="Cuadrante — Tus turnos, de un vistazo. Gratis, sin anuncios y sin conexión." width="1024">
+  <img src="docs/readme/en/header.png" alt="Cuadrante — Your shifts at a glance. Free, no ads, offline." width="1024">
 </p>
 
 # Cuadrante
 
-[![Código: MIT](https://img.shields.io/badge/C%C3%B3digo-MIT-4B4FD1)](LICENSE)
-[![Contenido: CC BY-SA 4.0](https://img.shields.io/badge/Contenido-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
-[![Última versión](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=versi%C3%B3n)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-4B4FD1)](LICENSE)
+[![Content: CC BY-SA 4.0](https://img.shields.io/badge/Content-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.en.md)
+[![Version](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=version&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Downloads](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=downloads&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
 
-Calendario de turnos para quienes trabajan a turnos en España: sanidad, policía,
-bomberos, industria, hostelería o cualquier otro sector. Organiza mañanas, tardes,
-noches, guardias y días libres, y consulta el próximo turno de un vistazo.
+A shift calendar for people who work shifts in Spain: healthcare, police,
+firefighters, industry, hospitality or any other sector. Set up mornings,
+afternoons, nights, on-call shifts and days off, and see your next shift at a
+glance. Five languages: Spanish, Catalan, Galician, Basque and English.
 
-**Totalmente gratis, sin anuncios, sin cuentas y sin conexión. Código abierto.**
-Todas las funciones disponibles están abiertas, sin Pro ni compras dentro de la app.
-Android en pruebas; iPhone, próximamente. Modo claro y oscuro.
+**Free · No ads · No account · Works offline · Open source**
 
-## Descargas
+All available features are included, with no Pro tier or in-app purchases.
+
+## Download
 
 <p>
-  <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta en Google Play"></a>
-  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Disponible_en-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible en GitHub"></a>
+  <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta on Google Play"></a>
+  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Available_on-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Available on GitHub"></a>
   <!--
-  <a href="[ENLACE_APP_STORE]"><img src="https://img.shields.io/badge/App_Store-Descargar-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Disponible en App Store"></a>
+  <a href="[APP_STORE_LINK]"><img src="https://img.shields.io/badge/App_Store-Download-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Available on the App Store"></a>
   -->
 </p>
 
-### Beta en Google Play
+Android is in testing; iPhone is coming soon. Light and dark themes.
 
-La app está en prueba cerrada en Google Play y cualquiera puede apuntarse:
+<details>
+<summary>Join the beta on Google Play</summary>
 
-> **Ahora mismo Google está revisando la primera versión.** Ya puedes unirte al grupo (paso 1); el enlace del paso 2 funcionará en cuanto la aprueben, normalmente en pocos días.
+The app is in a closed test on Google Play and anyone can join:
 
-1. Únete al grupo de testers: [cuadrante-testers](https://groups.google.com/g/cuadrante-testers). Con tu cuenta de Google, pulsa «Unirse al grupo».
-2. Acepta la prueba desde el móvil o el ordenador: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
-3. Instala la app desde Google Play. Se actualizará sola.
+> **Google is reviewing the first version right now.** You can already join the group (step 1); the link in step 2 will work as soon as it is approved, usually within a few days.
 
-Si puedes, quédate en la prueba al menos 14 días y úsala de vez en cuando (por ejemplo, mira tu turno de mañana o pon el widget): Google exige 12 testers durante 14 días para publicarla para todo el mundo. Los comentarios, a dev@mainshai.com.
+1. Join the testers group: [cuadrante-testers](https://groups.google.com/g/cuadrante-testers). With your Google account, tap "Join group".
+2. Accept the test from your phone or computer: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
+3. Install the app from Google Play. It will update itself.
 
-### APK en GitHub
+If you can, stay in the test for at least 14 days and use it now and then (for example, check tomorrow's shift or add the widget): Google requires 12 testers for 14 days before it can be published for everyone. Feedback to dev@mainshai.com.
 
-También puedes descargar el APK de la [última versión](https://github.com/dferrandizmont/cuadrante/releases/latest) e instalarlo a mano (hay que permitir «instalar aplicaciones de origen desconocido»). Va firmado con otra clave que la versión de Google Play, así que una no actualiza a la otra: para cambiar, exporta antes una copia `.cuadrante` desde la app.
+</details>
 
-Próximamente en App Store.
+<details>
+<summary>Install the APK from GitHub</summary>
 
-## Capturas
+You can also download the APK of the [latest release](https://github.com/dferrandizmont/cuadrante/releases/latest) and install it by hand (you have to allow installing apps from unknown sources). It is signed with a different key from the Google Play version, so one does not update the other: to switch, first export a `.cuadrante` backup from the app.
+
+Coming soon on the App Store.
+
+</details>
+
+## Screenshots
 
 <p>
-  <a href="docs/readme/es/01-mes.png"><img src="docs/readme/es/01-mes.png" width="160" alt="Mes pintado y tarjeta del próximo turno, en modo oscuro"></a>
-  <a href="docs/readme/es/02-lista.png"><img src="docs/readme/es/02-lista.png" width="160" alt="El mismo mes en vista Lista, con códigos y horarios completos"></a>
-  <a href="docs/readme/es/03-pintar.png"><img src="docs/readme/es/03-pintar.png" width="160" alt="Modo pintar con la paleta de turnos"></a>
-  <a href="docs/readme/es/04-rotaciones.png"><img src="docs/readme/es/04-rotaciones.png" width="160" alt="Asistente de rotaciones con vista previa antes de aplicar"></a>
-  <a href="docs/readme/es/05-horas.png"><img src="docs/readme/es/05-horas.png" width="160" alt="Resumen mensual de horas trabajadas, nocturnas y festivas"></a>
-  <a href="docs/readme/es/06-festivos.png"><img src="docs/readme/es/06-festivos.png" width="160" alt="Festivos de la Comunidad de Madrid y del municipio Madrid"></a>
+  <a href="docs/readme/en/01-mes.png"><img src="docs/readme/en/01-mes.png" width="19%" alt="Painted month and next shift card in dark mode"></a>
+  <a href="docs/readme/en/02-lista.png"><img src="docs/readme/en/02-lista.png" width="19%" alt="The same month in List view, with shift codes and full times"></a>
+  <a href="docs/readme/en/03-pintar.png"><img src="docs/readme/en/03-pintar.png" width="19%" alt="Paint mode with the shift palette"></a>
+  <a href="docs/readme/en/04-rotaciones.png"><img src="docs/readme/en/04-rotaciones.png" width="19%" alt="Rotation wizard with a preview before applying"></a>
+  <a href="docs/readme/en/05-horas.png"><img src="docs/readme/en/05-horas.png" width="19%" alt="Monthly summary of worked, night and public holiday hours"></a>
 </p>
 
-Pulsa una captura para ampliarla. Pantallas reales con datos ficticios, generadas
-por [tests de Flutter](app/test/store/), también [en inglés](README.en.md#screenshots).
+<details>
+<summary>More screenshots</summary>
 
-## Funciones
+<p>
+  <a href="docs/readme/en/06-festivos.png"><img src="docs/readme/en/06-festivos.png" width="19%" alt="Regional and local public holidays for Madrid"></a>
+</p>
 
-- Mes en **Cuadrícula o Lista**, vista anual, agenda y notas por día. Cada turno
-  lleva color, código y horario; la Lista permite leer los horarios completos.
-- **Pintar turnos** tocando o arrastrando, seleccionar varios días, doblar,
-  copiar y pegar, deshacer y rehacer. Tipos de turno, colores, iconos y horarios editables.
-- **Rotaciones** con asistente y vista previa: correturnos, 24/72, 4×4,
-  6×4, 5×2, 2-2-3 y patrones propios.
-- **Varios calendarios**, sin límite de pago, y comparación entre dos cuadrantes.
-- **Festivos de España**, nacionales y autonómicos incluidos sin conexión;
-  locales para los municipios disponibles y opción de añadir los tuyos.
-- **Alarmas por tipo de turno** y recordatorios de notas. Su puntualidad depende
-  de los permisos y las restricciones del sistema.
-- **Widgets de Android** para consultar tus turnos desde la pantalla de inicio.
-  El widget de iPhone (WidgetKit) está pendiente de desarrollo en el Mac.
-- **Copias de seguridad locales automáticas**, exportación a `.cuadrante`,
-  vista previa al restaurar y «Probar restauración».
-- **Importar** copias `.Shifter` de LRHSoft, archivos `.ics` o CSV y eventos del
-  calendario del móvil, revisando los turnos antes de guardarlos.
-- **Resumen de horas** trabajadas, nocturnas, festivas, extras y salidas anticipadas;
-  estimación de ingresos con precio por hora y plus fijo por turno.
-- Exportación puntual al calendario del móvil e imágenes del mes y del año.
-- **Cinco idiomas:** español, català, galego, euskara y English. Selector de idioma,
-  lector de pantalla, texto ampliable y turnos que nunca dependen solo del color.
+</details>
 
-## Privacidad
+Tap a screenshot to enlarge it. Real screens with made-up data, generated by
+[Flutter tests](app/test/store/).
 
-Los turnos y ajustes se guardan en el móvil. Sin servidor propio, analítica,
-rastreo ni envío de informes de errores. La app pide permiso de **calendario** al
-importar o exportar, y de **notificaciones y alarmas** al activar los avisos.
-No pide ubicación, contactos, cámara ni micrófono.
+## Features
 
-Las copias del sistema de Google o Apple pueden incluir tus datos, también las
-ausencias. Si exportas a un calendario sincronizado o compartes una copia,
-los datos van al destino que elijas. El archivo `.cuadrante` no está cifrado.
+- **Month in Grid or List view.** Annual view, agenda and daily notes. Every shift
+  has a colour, code and times; List view shows full schedules. One-off export to
+  the phone calendar, and images of the month and year.
+- **Paint shifts and rotations.** Tap or drag, select multiple days, work double
+  shifts, copy and paste, undo and redo; a rotation wizard with a preview: rotating
+  morning, afternoon, night, 24/72, 4×4, 6×4, 5×2, 2-2-3 and your own patterns.
+  Edit shift types, colours, icons and times.
+- **Multiple calendars.** With no limit, and comparison between two rosters.
+- **Spanish public holidays.** National and regional dates included offline; local
+  dates for supported municipalities, plus your own holidays.
+- **Alarms and widgets.** An alarm per shift type, note reminders and Android
+  home-screen widgets. Timing depends on system permissions and restrictions. The
+  iPhone widget (WidgetKit) is pending development on the Mac.
+- **Backups and import.** Automatic local backups, export to `.cuadrante`, a
+  restore preview and “Test restore”. Import LRHSoft `.Shifter` backups, `.ics` or
+  CSV files and phone calendar events, reviewing the proposed shifts before saving.
+- **Hours summary.** Worked, night and public holiday hours, overtime and early
+  leave; estimated earnings from hourly rates and fixed shift allowances.
+- **Accessibility.** Language picker, screen-reader support, larger text and
+  shifts that never rely on colour alone.
 
-[Política de privacidad](https://dferrandizmont.github.io/cuadrante/privacidad/) ·
-[Detalle técnico](docs/privacy.md) · Soporte: **dev@mainshai.com**.
+## Privacy
 
-## Compilar y probar
+Shifts and settings are stored on your phone. No server of ours, analytics,
+tracking or crash-report uploads. The app requests **calendar** permission when
+importing or exporting, and **notification and alarm** permissions when enabling
+reminders.
 
-Requisitos: **Flutter 3.47.7**, Android SDK para Android o macOS con Xcode para
-iPhone. La app usa Riverpod, go_router y Drift para el estado, la navegación y
-la base de datos local.
+<details>
+<summary>Permissions and backups</summary>
 
-Desde la raíz:
+It does not request location, contacts, camera or microphone access.
 
-```bash
-cd app
-flutter pub get
-flutter gen-l10n
-flutter analyze
-TZ=Europe/Madrid flutter test
-```
+Google or Apple system backups can include your data, including absences.
+Exporting to a synced calendar or sharing a backup sends data to the destination
+you choose. The `.cuadrante` file is not encrypted.
 
-Sin conexión, usa `flutter pub get --offline` con los paquetes ya descargados.
-En Windows, usa la zona de Madrid del sistema (`Get-TimeZone`) y ejecuta
-`flutter test` sin definir `TZ`; el identificador IANA de Linux altera las horas
-en el runtime de Windows.
+</details>
 
-Para compilar un APK con almacenamiento real, sin los datos de demostración:
+[Privacy policy](https://dferrandizmont.github.io/cuadrante/privacidad/en/) ·
+[Technical details](docs/privacy.en.md) · Support: **dev@mainshai.com**.
 
-```bash
-flutter build apk --release --dart-define=USE_DEMO_DATA=false
-```
+## What's new
 
-La selección pública se prepara con el [exportador](tool/publish/LEEME.md).
-La firma y la publicación requieren una preparación y revisión separadas. Los archivos generados se
-versionan; si cambias Drift, freezed o JSON, ejecuta `dart run build_runner build`.
+See [CHANGELOG.md](CHANGELOG.md) or the [releases](https://github.com/dferrandizmont/cuadrante/releases).
 
-[Regenerar imágenes y capturas](tool/store/LEEME.md) ·
-[Generar la web de privacidad](web/legal/LEEME.md) · [Diseño](docs/diseno.md).
+## Contributing
 
-## Licencias y seguridad
+Bug reports, ideas and translations are welcome. How to build, test and
+contribute: [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Código [MIT](LICENSE), Copyright (c) 2026 Daniel Mont Ferrandiz.
-Contenido propio [CC BY-SA 4.0](LICENSE-CONTENT.md). Las fuentes oficiales de
-festivos y los materiales de terceros conservan sus condiciones, detalladas en
-esas licencias.
+## License
 
-Para comunicar una vulnerabilidad: [SECURITY.md](SECURITY.md).
+Code: [MIT](LICENSE), Copyright (c) 2026 Daniel Mont Ferrandiz. Original content:
+[CC BY-SA 4.0](LICENSE-CONTENT.en.md). Official public holiday sources and
+third-party materials retain their own terms, detailed in those licences.
+
+To report a vulnerability: [SECURITY.en.md](SECURITY.en.md).

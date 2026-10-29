@@ -44,7 +44,7 @@ falla si `export-ignore` elimina un fichero de la selección.
 Se incluyen código, nativos, generados, pruebas, fixtures sintéticos y assets de
 `app/`, iconos y herramientas portables, CI, README, licencias, seguridad, web
 legal, gráficos públicos y contratos técnicos de colaboración. Las reglas
-públicas están en `CONTRIBUTING.md` y `CONTRIBUTING.en.md`.
+públicas están en `CONTRIBUTING.md` y `CONTRIBUTING.es.md`.
 
 Exclusiones revisadas:
 
