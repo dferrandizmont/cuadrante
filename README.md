@@ -10,6 +10,7 @@
 [![Content: CC BY-SA 4.0](https://img.shields.io/badge/Content-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.en.md)
 [![Version](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=version&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
 [![Downloads](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=downloads&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/danielmfdev)
 
 A shift calendar for people who work shifts in Spain: healthcare, police,
 firefighters, industry, hospitality or any other sector. Set up mornings,

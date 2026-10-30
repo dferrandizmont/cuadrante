@@ -10,6 +10,7 @@
 [![Contido: CC BY-SA 4.0](https://img.shields.io/badge/Contido-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
 [![Última versión](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=versi%C3%B3n&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
 [![Descargas](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=descargas&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Conv%C3%ADdame_a_un_caf%C3%A9-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/danielmfdev)
 
 Calendario de quendas para quen traballa a quendas en España: sanidade, policía,
 bombeiros, industria, hostalaría ou calquera outro sector. Organiza mañás, tardes,
