@@ -23,7 +23,7 @@ scheme as Ley al Blanco (`web/legal/`, task T08 of the publication plan):
 2. A test (`web/legal/test_legal.py`) compares the generated HTML with the markdown and fails when they differ, so
    nobody edits the HTML by hand or forgets to regenerate.
 3. The page is pushed to the `gh-pages` branch of the public repository and served by GitHub Pages
-   (`https://dferrandizmont.github.io/cuadrante/privacidad/`, to confirm once the repository exists).
+   (`https://dferrandizmont.github.io/turnly/privacidad/`, to confirm once the repository exists).
 4. That same URL goes into both store listings and the implemented "Privacy policy" row in Settings › Help, which
    opens the external browser only when tapped. The build uses `PRIVACY_URL` for the Spanish policy and
    `PRIVACY_URL_EN` for English (the URLs above by default; override them with `--dart-define`).

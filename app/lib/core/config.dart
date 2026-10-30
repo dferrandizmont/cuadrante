@@ -49,11 +49,11 @@ class AppConfig {
   /// Public policies opened in the external browser only on a user's tap.
   static const String _privacyUrl = String.fromEnvironment(
     'PRIVACY_URL',
-    defaultValue: 'https://dferrandizmont.github.io/cuadrante/privacidad/',
+    defaultValue: 'https://dferrandizmont.github.io/turnly/privacidad/',
   );
   static const String _privacyUrlEn = String.fromEnvironment(
     'PRIVACY_URL_EN',
-    defaultValue: 'https://dferrandizmont.github.io/cuadrante/privacidad/en/',
+    defaultValue: 'https://dferrandizmont.github.io/turnly/privacidad/en/',
   );
 
   /// Shows the developer entries outside debug builds. Off by default.

@@ -10,8 +10,8 @@ Formerly called Cuadrante.
 
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-4B4FD1)](LICENSE)
 [![Content: CC BY-SA 4.0](https://img.shields.io/badge/Content-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.en.md)
-[![Version](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=version&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
-[![Downloads](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=downloads&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Version](https://img.shields.io/github/v/release/dferrandizmont/turnly?include_prereleases&label=version&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
+[![Downloads](https://img.shields.io/github/downloads/dferrandizmont/turnly/total?label=downloads&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/danielmfdev)
 
 A shift calendar for people who work shifts in Spain: healthcare, police,
@@ -27,7 +27,7 @@ Every feature is included: no Pro tier and no in-app purchases.
 
 <p>
   <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta on Google Play"></a>
-  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Available_on-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Available on GitHub"></a>
+  <a href="https://github.com/dferrandizmont/turnly/releases/latest"><img src="https://img.shields.io/badge/Available_on-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Available on GitHub"></a>
   <!--
   <a href="[APP_STORE_LINK]"><img src="https://img.shields.io/badge/App_Store-Download-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Available on the App Store"></a>
   -->
@@ -53,7 +53,7 @@ Please stay in the test for 14 days and open the app now and then: Google needs 
 <details>
 <summary>Install the APK from GitHub</summary>
 
-Or download the APK of the [latest release](https://github.com/dferrandizmont/cuadrante/releases/latest) and install it by hand (allow installs from unknown sources). It uses a different signing key from the Google Play version, so one does not update the other: to switch, export a backup first (`.turnly`; older versions use `.cuadrante`).
+Or download the APK of the [latest release](https://github.com/dferrandizmont/turnly/releases/latest) and install it by hand (allow installs from unknown sources). It uses a different signing key from the Google Play version, so one does not update the other: to switch, export a backup first (`.turnly`; older versions use `.cuadrante`).
 
 Coming soon on the App Store.
 
@@ -128,12 +128,12 @@ you choose. The `.turnly` backup file is not encrypted.
 
 </details>
 
-[Privacy policy](https://dferrandizmont.github.io/cuadrante/privacidad/en/) ·
+[Privacy policy](https://dferrandizmont.github.io/turnly/privacidad/en/) ·
 [Technical details](docs/privacy.en.md) · Support: **dev@mainshai.com**.
 
 ## What's new
 
-See [CHANGELOG.md](CHANGELOG.md) or the [releases](https://github.com/dferrandizmont/cuadrante/releases).
+See [CHANGELOG.md](CHANGELOG.md) or the [releases](https://github.com/dferrandizmont/turnly/releases).
 
 ## Contributing
 

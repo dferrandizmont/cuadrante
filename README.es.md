@@ -10,8 +10,8 @@ Antes se llamaba Cuadrante.
 
 [![Código: MIT](https://img.shields.io/badge/C%C3%B3digo-MIT-4B4FD1)](LICENSE)
 [![Contenido: CC BY-SA 4.0](https://img.shields.io/badge/Contenido-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
-[![Versión](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=versi%C3%B3n&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
-[![Descargas](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=descargas&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Versión](https://img.shields.io/github/v/release/dferrandizmont/turnly?include_prereleases&label=versi%C3%B3n&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
+[![Descargas](https://img.shields.io/github/downloads/dferrandizmont/turnly/total?label=descargas&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Inv%C3%ADtame_a_un_caf%C3%A9-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/danielmfdev)
 
 Calendario de turnos para quienes trabajan a turnos en España: sanidad, policía,
@@ -28,7 +28,7 @@ la app.
 
 <p>
   <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta en Google Play"></a>
-  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Disponible_en-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible en GitHub"></a>
+  <a href="https://github.com/dferrandizmont/turnly/releases/latest"><img src="https://img.shields.io/badge/Disponible_en-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible en GitHub"></a>
   <!--
   <a href="[ENLACE_APP_STORE]"><img src="https://img.shields.io/badge/App_Store-Descargar-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Disponible en App Store"></a>
   -->
@@ -54,7 +54,7 @@ Si puedes, quédate en la prueba al menos 14 días y úsala de vez en cuando (po
 <details>
 <summary>Instala el APK desde GitHub</summary>
 
-También puedes descargar el APK de la [última versión](https://github.com/dferrandizmont/cuadrante/releases/latest) e instalarlo a mano (hay que permitir «instalar aplicaciones de origen desconocido»). Va firmado con otra clave que la versión de Google Play, así que una no actualiza a la otra: para cambiar, exporta antes una copia desde la app (`.turnly`; las versiones anteriores la guardan como `.cuadrante`).
+También puedes descargar el APK de la [última versión](https://github.com/dferrandizmont/turnly/releases/latest) e instalarlo a mano (hay que permitir «instalar aplicaciones de origen desconocido»). Va firmado con otra clave que la versión de Google Play, así que una no actualiza a la otra: para cambiar, exporta antes una copia desde la app (`.turnly`; las versiones anteriores la guardan como `.cuadrante`).
 
 Próximamente en App Store.
 
@@ -130,13 +130,13 @@ datos van al destino que elijas. El archivo de copia `.turnly` no está cifrado.
 
 </details>
 
-[Política de privacidad](https://dferrandizmont.github.io/cuadrante/privacidad/) ·
+[Política de privacidad](https://dferrandizmont.github.io/turnly/privacidad/) ·
 [Detalle técnico](docs/privacy.md) · Soporte: **dev@mainshai.com**.
 
 ## Novedades
 
 Lo que cambia en cada versión está en [CHANGELOG.md](CHANGELOG.md) y en las
-[versiones publicadas](https://github.com/dferrandizmont/cuadrante/releases).
+[versiones publicadas](https://github.com/dferrandizmont/turnly/releases).
 
 ## Contribuir
 

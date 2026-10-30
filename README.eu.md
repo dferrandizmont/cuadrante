@@ -10,8 +10,8 @@ Lehen Cuadrante zuen izena.
 
 [![Kodea: MIT](https://img.shields.io/badge/Kodea-MIT-4B4FD1)](LICENSE)
 [![Edukia: CC BY-SA 4.0](https://img.shields.io/badge/Edukia-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
-[![Azken bertsioa](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=bertsioa&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
-[![Deskargak](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=deskargak&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Azken bertsioa](https://img.shields.io/github/v/release/dferrandizmont/turnly?include_prereleases&label=bertsioa&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
+[![Deskargak](https://img.shields.io/github/downloads/dferrandizmont/turnly/total?label=deskargak&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Lagundu_proiektua-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/danielmfdev)
 
 Txanden egutegia Espainian txandaka lan egiten dutenentzat: osasungintza, polizia,
@@ -28,7 +28,7 @@ barneko erosketarik gabe.
 
 <p>
   <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Google Play-ko beta"></a>
-  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Deskargatu-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Deskargatu GitHub-etik"></a>
+  <a href="https://github.com/dferrandizmont/turnly/releases/latest"><img src="https://img.shields.io/badge/Deskargatu-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Deskargatu GitHub-etik"></a>
   <!--
   <a href="[ENLACE_APP_STORE]"><img src="https://img.shields.io/badge/App_Store-Deskargatu-0D96F6?logo=appstore&amp;style=for-the-badge" alt="App Store-n eskuragarri"></a>
   -->
@@ -54,7 +54,7 @@ Ahal baduzu, egon proban gutxienez 14 egunez eta erabili noizean behin (adibidez
 <details>
 <summary>Instalatu APKa GitHub-etik</summary>
 
-[Azken bertsioaren](https://github.com/dferrandizmont/cuadrante/releases/latest) APKa ere deskarga dezakezu eta eskuz instalatu (jatorri ezezaguneko aplikazioak instalatzea baimendu behar da). Google Play-ko bertsioaren beste gako batekin dago sinatuta; beraz, batak ez du bestea eguneratzen: aldatzeko, esportatu lehenago kopia bat aplikaziotik (`.turnly`; aurreko bertsioek `.cuadrante` gisa gordetzen dute).
+[Azken bertsioaren](https://github.com/dferrandizmont/turnly/releases/latest) APKa ere deskarga dezakezu eta eskuz instalatu (jatorri ezezaguneko aplikazioak instalatzea baimendu behar da). Google Play-ko bertsioaren beste gako batekin dago sinatuta; beraz, batak ez du bestea eguneratzen: aldatzeko, esportatu lehenago kopia bat aplikaziotik (`.turnly`; aurreko bertsioek `.cuadrante` gisa gordetzen dute).
 
 Laster App Store-n.
 
@@ -137,13 +137,13 @@ dago zifratuta.
 
 </details>
 
-[Pribatutasun-politika](https://dferrandizmont.github.io/cuadrante/privacidad/) ·
+[Pribatutasun-politika](https://dferrandizmont.github.io/turnly/privacidad/) ·
 [Xehetasun teknikoak](docs/privacy.md) (gaztelaniaz) · Laguntza: **dev@mainshai.com**.
 
 ## Berriak
 
 Zer aldatu den bertsio bakoitzean [CHANGELOG.md](CHANGELOG.md) eta
-[argitalpenetan](https://github.com/dferrandizmont/cuadrante/releases) dago.
+[argitalpenetan](https://github.com/dferrandizmont/turnly/releases) dago.
 
 ## Lagundu
 

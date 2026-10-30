@@ -137,7 +137,7 @@ la exportación de `HEAD` antes de dar por validado el candidato definitivo.
 ## Actualizar el repositorio público
 
 El exportador crea siempre un repositorio nuevo de un commit. Para publicar cambios en
-`dferrandizmont/cuadrante` sin perder su historial (hecho así el 27-oct-2026):
+`dferrandizmont/turnly` sin perder su historial (hecho así el 27-oct-2026):
 
 1. Exporta `HEAD` a una carpeta vacía: `sh tool/publish/export_public.sh HEAD ../cq-public-export`.
    Si falla alguna comprobación, se corrige en el repositorio privado y se vuelve a exportar.

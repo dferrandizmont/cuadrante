@@ -117,7 +117,7 @@ def pagina(idioma):
 <meta name="color-scheme" content="light dark">
 <title>{titulo}</title>
 <meta name="description" content="{titulo}">
-<link rel="canonical" href="https://dferrandizmont.github.io/cuadrante/{ruta}">
+<link rel="canonical" href="https://dferrandizmont.github.io/turnly/{ruta}">
 <link rel="stylesheet" href="{raiz}styles.css">
 </head>
 <body>

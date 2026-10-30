@@ -136,7 +136,7 @@ lead must commit and export `HEAD` again before approving the final candidate.
 ## Updating the public repository
 
 The exporter always creates a new single-commit repository. To publish changes to
-`dferrandizmont/cuadrante` while keeping its history (first done on 27-Oct-2026):
+`dferrandizmont/turnly` while keeping its history (first done on 27-Oct-2026):
 
 1. Export `HEAD` to an empty folder: `sh tool/publish/export_public.sh HEAD ../cq-public-export`.
    If a check fails, fix it in the private repository and export again.

@@ -103,8 +103,8 @@ The address is **dev@mainshai.com**, defined in `kSupportEmail`
 "Open-source licences" opens Flutter's licence page, offline.
 "Privacy policy" (Settings › Help) opens the website in the **external browser**, only when tapped, through the
 official `url_launcher` plugin. It sends no roster data and adds no `INTERNET` permission to the app: the browser
-makes the connection. `PRIVACY_URL` defaults to `https://dferrandizmont.github.io/cuadrante/privacidad/`;
-English uses `PRIVACY_URL_EN` (`https://dferrandizmont.github.io/cuadrante/privacidad/en/`). Both URLs can be
+makes the connection. `PRIVACY_URL` defaults to `https://dferrandizmont.github.io/turnly/privacidad/`;
+English uses `PRIVACY_URL_EN` (`https://dferrandizmont.github.io/turnly/privacidad/en/`). Both URLs can be
 overridden with `--dart-define`. Other languages use the authoritative Spanish policy.
 
 ## Store declarations

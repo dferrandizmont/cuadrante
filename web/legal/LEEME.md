@@ -4,7 +4,7 @@ Mismo mecanismo que Ley al Blanco: portada estática, CSS compartido, políticas
 generadas desde Markdown y una prueba que impide publicar textos desactualizados.
 Sin JavaScript, cookies, fuentes remotas ni analítica.
 
-URL prevista de GitHub Pages: **https://dferrandizmont.github.io/cuadrante/**.
+URL prevista de GitHub Pages: **https://dferrandizmont.github.io/turnly/**.
 La preparación de estos archivos no publica el sitio ni configura el repositorio remoto.
 
 ## Regenerar y comprobar
@@ -33,16 +33,16 @@ python -B web/legal/rellenar.py
 
 La raíz del sitio debe ser **el contenido de `web/legal/dist/`**, sin añadir el
 prefijo `web/legal/` en la URL. Para publicación por rama, lleva ese contenido a
-la raíz de `gh-pages` del repositorio público `dferrandizmont/cuadrante` y elige
+la raíz de `gh-pages` del repositorio público `dferrandizmont/turnly` y elige
 **Settings → Pages → Deploy from a branch → gh-pages → /(root)**. No subas el
 repositorio completo como sitio. Otra opción es entregar el mismo directorio a
 un workflow de GitHub Pages con autorización de despliegue.
 
 Comprueba tras publicar:
 
-- `/cuadrante/`, `/cuadrante/privacidad/` y `/cuadrante/privacidad/en/`.
+- `/turnly/`, `/turnly/privacidad/` y `/turnly/privacidad/en/`.
 - Enlaces de idioma, soporte y estilos tanto en claro como en oscuro.
 - URL en las fichas de ambas tiendas: la española es
-  `https://dferrandizmont.github.io/cuadrante/privacidad/`.
+  `https://dferrandizmont.github.io/turnly/privacidad/`.
 
 CI ejecuta `python -B web/legal/test_legal.py`; no publica ni hace push.

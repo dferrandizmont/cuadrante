@@ -104,8 +104,8 @@ La dirección es **dev@mainshai.com**, definida en `kSupportEmail`
 «Licencias de código abierto» abre la página de licencias de Flutter, sin conexión.
 «Política de privacidad» (Ajustes › Ayuda) abre la web en el **navegador externo**, solo al tocar la fila, mediante
 el plugin oficial `url_launcher`. No envía datos del cuadrante ni añade permiso `INTERNET` a la app: el navegador
-hace la conexión. `PRIVACY_URL` apunta por defecto a `https://dferrandizmont.github.io/cuadrante/privacidad/`;
-en inglés se usa `PRIVACY_URL_EN` (`https://dferrandizmont.github.io/cuadrante/privacidad/en/`). Las dos URL pueden
+hace la conexión. `PRIVACY_URL` apunta por defecto a `https://dferrandizmont.github.io/turnly/privacidad/`;
+en inglés se usa `PRIVACY_URL_EN` (`https://dferrandizmont.github.io/turnly/privacidad/en/`). Las dos URL pueden
 cambiarse con `--dart-define`. La web española es la referencia para los demás idiomas.
 
 ## Declaraciones en tiendas

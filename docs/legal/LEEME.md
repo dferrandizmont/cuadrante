@@ -23,7 +23,7 @@ mismo esquema que Ley al Blanco (`web/legal/`, tarea T08 del plan de publicació
 2. Un test (`web/legal/test_legal.py`) compara el HTML generado con el markdown y falla si no coinciden, para que
    nadie edite el HTML por su cuenta ni se olvide de regenerar.
 3. La página se sube a la rama `gh-pages` del repositorio público y queda en GitHub Pages
-   (`https://dferrandizmont.github.io/cuadrante/privacidad/`, a confirmar cuando exista el repositorio).
+   (`https://dferrandizmont.github.io/turnly/privacidad/`, a confirmar cuando exista el repositorio).
 4. Esa misma URL va en las fichas de las dos tiendas y en la fila «Política de privacidad» de Ajustes › Ayuda, ya
    implementada: abre el navegador externo solo al tocarla. El build usa `PRIVACY_URL` para la política española y
    `PRIVACY_URL_EN` para la inglesa (las URL de arriba por defecto; se pueden sustituir con `--dart-define`).

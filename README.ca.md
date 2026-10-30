@@ -10,8 +10,8 @@ Abans es deia Cuadrante.
 
 [![Codi: MIT](https://img.shields.io/badge/Codi-MIT-4B4FD1)](LICENSE)
 [![Contingut: CC BY-SA 4.0](https://img.shields.io/badge/Contingut-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
-[![Darrera versió](https://img.shields.io/github/v/release/dferrandizmont/cuadrante?include_prereleases&label=versi%C3%B3&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
-[![Baixades](https://img.shields.io/github/downloads/dferrandizmont/cuadrante/total?label=baixades&color=4B4FD1)](https://github.com/dferrandizmont/cuadrante/releases)
+[![Darrera versió](https://img.shields.io/github/v/release/dferrandizmont/turnly?include_prereleases&label=versi%C3%B3&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
+[![Baixades](https://img.shields.io/github/downloads/dferrandizmont/turnly/total?label=baixades&color=4B4FD1)](https://github.com/dferrandizmont/turnly/releases)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Convida%27m_a_un_caf%C3%A8-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/danielmfdev)
 
 Calendari de torns per a qui treballa a torns a Espanya: sanitat, policia,
@@ -27,7 +27,7 @@ Totes les funcions disponibles són obertes, sense Pro ni compres dins de l’ap
 
 <p>
   <a href="https://play.google.com/apps/testing/es.cuadrante.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta a Google Play"></a>
-  <a href="https://github.com/dferrandizmont/cuadrante/releases/latest"><img src="https://img.shields.io/badge/Disponible_a-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible a GitHub"></a>
+  <a href="https://github.com/dferrandizmont/turnly/releases/latest"><img src="https://img.shields.io/badge/Disponible_a-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible a GitHub"></a>
   <!--
   <a href="[ENLACE_APP_STORE]"><img src="https://img.shields.io/badge/App_Store-Baixa-0D96F6?logo=appstore&amp;style=for-the-badge" alt="Disponible a l’App Store"></a>
   -->
@@ -53,7 +53,7 @@ Si pots, queda’t a la prova almenys 14 dies i fes-la servir de tant en tant (p
 <details>
 <summary>Instal·la l’APK des de GitHub</summary>
 
-També pots baixar l’APK de la [darrera versió](https://github.com/dferrandizmont/cuadrante/releases/latest) i instal·lar-lo a mà (cal permetre «instal·lar aplicacions d’origen desconegut»). Està signat amb una clau diferent de la de la versió de Google Play, així que l’una no actualitza l’altra: per canviar, exporta abans una còpia des de l’app (`.turnly`; les versions anteriors la desen com a `.cuadrante`).
+També pots baixar l’APK de la [darrera versió](https://github.com/dferrandizmont/turnly/releases/latest) i instal·lar-lo a mà (cal permetre «instal·lar aplicacions d’origen desconegut»). Està signat amb una clau diferent de la de la versió de Google Play, així que l’una no actualitza l’altra: per canviar, exporta abans una còpia des de l’app (`.turnly`; les versions anteriors la desen com a `.cuadrante`).
 
 Aviat a l’App Store.
 
@@ -130,13 +130,13 @@ dades van a la destinació que triïs. El fitxer de còpia `.turnly` no està xi
 
 </details>
 
-[Política de privacitat](https://dferrandizmont.github.io/cuadrante/privacidad/) ·
+[Política de privacitat](https://dferrandizmont.github.io/turnly/privacidad/) ·
 [Detall tècnic](docs/privacy.md) (en castellà) · Suport: **dev@mainshai.com**.
 
 ## Novetats
 
 Els canvis de cada versió són al [CHANGELOG.md](CHANGELOG.md) i a les
-[versions publicades](https://github.com/dferrandizmont/cuadrante/releases).
+[versions publicades](https://github.com/dferrandizmont/turnly/releases).
 
 ## Contribuir
 

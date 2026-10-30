@@ -5,10 +5,17 @@ the next version on the day it ships.
 
 Numbering: the last number goes up with fixes (0.6.12 → 0.6.13), the middle one with new features (→ 0.7.0), and 1.0.0
 will be the production launch in the stores. Every version ships on
-[GitHub](https://github.com/dferrandizmont/cuadrante/releases) and TestFlight; Google Play and the App Store get several
+[GitHub](https://github.com/dferrandizmont/turnly/releases) and TestFlight; Google Play and the App Store get several
 at once, so they can skip numbers.
 
 ## Unreleased
+
+## 0.6.16 · 2026-10-30
+
+Google Play closed test (with the 0.6.13 to 0.6.15 changes).
+
+- The privacy policy link in Settings opens its new address, `dferrandizmont.github.io/turnly`, after the GitHub
+  repository was renamed to `turnly`.
 
 ## 0.6.15 · 2026-10-30
 
