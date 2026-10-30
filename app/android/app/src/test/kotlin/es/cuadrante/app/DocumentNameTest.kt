@@ -7,8 +7,8 @@ class DocumentNameTest {
     @Test
     fun aPlainNameIsKept() {
         assertEquals(
-            "cuadrante-2026-11-10-235907.cuadrante",
-            DocumentName.sanitize("cuadrante-2026-11-10-235907.cuadrante"),
+            "turnly-2026-11-10-235907.turnly",
+            DocumentName.sanitize("turnly-2026-11-10-235907.turnly"),
         )
     }
 
@@ -20,9 +20,9 @@ class DocumentNameTest {
 
     @Test
     fun anEmptyNameFallsBackToADefault() {
-        assertEquals("cuadrante.cuadrante", DocumentName.sanitize(""))
-        assertEquals("cuadrante.cuadrante", DocumentName.sanitize("  "))
-        assertEquals("cuadrante.cuadrante", DocumentName.sanitize("a/"))
+        assertEquals("turnly.turnly", DocumentName.sanitize(""))
+        assertEquals("turnly.turnly", DocumentName.sanitize("  "))
+        assertEquals("turnly.turnly", DocumentName.sanitize("a/"))
     }
 
     @Test

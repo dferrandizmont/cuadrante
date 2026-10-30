@@ -8,10 +8,15 @@ import 'device_calendar_api.dart';
 const String exportTagPrefix = 'cuadrante:v1';
 
 /// First line of the description of every exported event. An event is only
-/// ours when its description starts with exactly this line **and** has the tag
-/// as a line of its own (see [ExportTag.parse]). Never change it, for the same
-/// reason as [exportTagPrefix].
-const String exportMarkerLine = 'Creado con Cuadrante';
+/// ours when its description starts with exactly this line (or one of
+/// [legacyExportMarkerLines]) **and** has the tag as a line of its own (see
+/// [ExportTag.parse]).
+const String exportMarkerLine = 'Creado con Turnly';
+
+/// Marker lines written by older versions, before the app was renamed to
+/// Turnly. Never remove one, for the same reason as [exportTagPrefix]: their
+/// events would stop being recognised and a re-export would duplicate them.
+const List<String> legacyExportMarkerLines = ['Creado con Cuadrante'];
 
 /// How far from the exported dates a re-export looks for its own events: an
 /// event the user dragged to another day is still found by its tag.
@@ -120,13 +125,18 @@ class ExportTag {
   /// The tag in [description], or `null` when the event is not ours.
   ///
   /// Strict, because a match means the event may be deleted: the first line
-  /// of the description must be exactly [exportMarkerLine] and the tag must
-  /// be a whole line of its own. A tag quoted inside other text, or on an
-  /// event whose description starts with anything else, is not ours.
+  /// of the description must be exactly [exportMarkerLine] (or a legacy one)
+  /// and the tag must be a whole line of its own. A tag quoted inside other
+  /// text, or on an event whose description starts with anything else, is not
+  /// ours.
   static ExportTag? parse(String? description) {
     if (description == null) return null;
     final lines = description.split(RegExp(r'\r\n|\n|\r'));
-    if (lines.length < 2 || lines.first != exportMarkerLine) return null;
+    if (lines.length < 2) return null;
+    if (lines.first != exportMarkerLine &&
+        !legacyExportMarkerLines.contains(lines.first)) {
+      return null;
+    }
     for (final line in lines.skip(1)) {
       final match = _tagLine.firstMatch(line);
       if (match == null) continue;

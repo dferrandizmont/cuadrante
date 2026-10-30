@@ -38,13 +38,13 @@ class BackupRetention {
 
   /// `<prefix>-<stamp>` plus `-<n>` for the n-th copy of the same second.
   static final RegExp _idPattern = RegExp(
-    r'^(.+-\d{8}-\d{6})(?:-(\d+))?\.cuadrante$',
+    r'^.+-(\d{8}-\d{6})(?:-(\d+))?\.(?:turnly|cuadrante)$',
   );
 
   /// Orders two ids that have the same modification time, newest first, the
   /// way `listBackupFiles` does: the same stamp with a higher counter is the
   /// newer copy (`-2` after the plain one, `-10` after `-9`). Plain text order
-  /// would put `...-2.cuadrante` before `....cuadrante` and `-10` before
+  /// would put `...-2.turnly` before `....turnly` and `-10` before
   /// `-9`.
   static int _newerIdFirst(String a, String b) {
     final ma = _idPattern.firstMatch(a);
@@ -54,7 +54,8 @@ class BackupRetention {
     if (byBase != 0) return byBase;
     final na = int.tryParse(ma[2] ?? '') ?? 1;
     final nb = int.tryParse(mb[2] ?? '') ?? 1;
-    return nb.compareTo(na);
+    final byCounter = nb.compareTo(na);
+    return byCounter != 0 ? byCounter : b.compareTo(a);
   }
 
   /// The entries [idsToKeep] drops.

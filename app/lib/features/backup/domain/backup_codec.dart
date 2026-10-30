@@ -8,7 +8,7 @@ import 'backup_data.dart';
 import 'backup_errors.dart';
 import 'canonical_json.dart';
 
-/// A decoded `.cuadrante` file: the data plus the envelope fields.
+/// A decoded `.turnly` or legacy `.cuadrante` file: data and envelope fields.
 class BackupFile {
   const BackupFile({
     required this.schemaVersion,
@@ -32,7 +32,8 @@ class BackupFile {
   final BackupData data;
 }
 
-/// Reads and writes the `.cuadrante` format (docs/copia-de-seguridad.md):
+/// Reads and writes the `.turnly` format (also accepted as `.cuadrante`):
+/// see docs/copia-de-seguridad.md.
 /// gzip-compressed UTF-8 JSON
 /// `{appVersion, checksum, data, exportedAt, format, schemaVersion}` in
 /// canonical form (sorted keys, no whitespace).
@@ -75,12 +76,12 @@ class BackupCodec {
   static String checksumOfJson(Object? dataJson) =>
       '$_checksumPrefix${sha256Hex(canonicalJsonBytes(dataJson))}';
 
-  /// File name the UI suggests when sharing: `Cuadrante-2026-11-10.cuadrante`.
+  /// Date-only file name for callers outside the UI: `turnly-2026-11-10.turnly`.
   static String suggestedFileName(DateTime at) {
     final t = at.toUtc();
     String two(int n) => n.toString().padLeft(2, '0');
-    return 'Cuadrante-${t.year.toString().padLeft(4, '0')}-${two(t.month)}-'
-        '${two(t.day)}.cuadrante';
+    return 'turnly-${t.year.toString().padLeft(4, '0')}-${two(t.month)}-'
+        '${two(t.day)}.turnly';
   }
 
   /// Compressed bytes [peekAppVersion] looks at (it never inflates more than

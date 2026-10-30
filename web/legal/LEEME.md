@@ -1,4 +1,4 @@
-# Web pública de Cuadrante
+# Web pública de Turnly
 
 Mismo mecanismo que Ley al Blanco: portada estática, CSS compartido, políticas
 generadas desde Markdown y una prueba que impide publicar textos desactualizados.

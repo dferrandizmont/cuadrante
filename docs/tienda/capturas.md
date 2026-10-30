@@ -1,6 +1,6 @@
 # Capturas de tienda · plan de v1
 
-> **Borrador · 26-oct-2026. La app es totalmente gratuita y de código abierto** (decisión del usuario): sin compras, sin suscripciones, sin anuncios y sin cuentas. No hay ningún precio que incluir en las imágenes. «Cuadrante» es provisional (pregunta 5).
+> **Borrador · 26-oct-2026. La app es totalmente gratuita y de código abierto** (decisión del usuario): sin compras, sin suscripciones, sin anuncios y sin cuentas. No hay ningún precio que incluir en las imágenes. Nombre: «Turnly» (antes «Cuadrante», decisión del 30-oct-2026, pregunta 20); las capturas con el nombre antiguo se rehacen.
 
 Plan de **8 capturas para App Store y 8 para Google Play**, en es, ca, gl, eu y en. Solo planificación: no se han generado imágenes ni ejecutado emuladores. V1 de iOS solo para iPhone; **iPad no entra en v1** (pregunta 17). Política de privacidad o texto legal que se necesite en una superficie enlazada: **(la redacta el usuario)**.
 
@@ -120,7 +120,7 @@ Los números entre paréntesis son recuentos de caracteres Unicode NFC del pie, 
 
 - **Pantalla:** Asistente de importación › Copia de LRHSoft, en la asociación de turnos o en su vista previa.
 - **Datos de demostración:** Archivo .Shifter sintético; usar un calendario de destino vacío para evitar conflictos. Mostrar Mañana/Tarde/Noche y sus correspondencias con código y hora. Elegir la vista previa antes de guardar y descartar después de capturar, para no duplicar el resumen.
-- **Variante por tienda:** AS05/GP05: pantalla de Cuadrante real, sin reproducir la interfaz ni los logotipos de LRHSoft. El nombre de LRHSoft identifica el origen compatible; no insinuar colaboración oficial. Verificar que el selector y lector .Shifter funcionen en el candidato de cada plataforma.
+- **Variante por tienda:** AS05/GP05: pantalla real de Turnly, sin reproducir la interfaz ni los logotipos de LRHSoft. El nombre de LRHSoft identifica el origen compatible; no insinuar colaboración oficial. Verificar que el selector y lector .Shifter funcionen en el candidato de cada plataforma.
 - **Tamaños:** App Store I69 e I65; Google Play A, según la tabla de dimensiones.
 
 | Idioma | Pie | Caracteres |

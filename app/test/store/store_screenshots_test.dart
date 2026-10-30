@@ -37,23 +37,28 @@ const _month = CivilDate(2026, 12, 1);
 const _logical = Size(412, 940);
 const _targetName = String.fromEnvironment(
   'STORE_TARGET',
-  defaultValue: 'readme',
+  defaultValue: 'github',
 );
+const _github = _targetName == 'github';
 const _targets = {
-  'readme': Size(540, 1080),
+  // Raw phone screenshots for the README: no caption, no frame.
+  'github': githubPhysical,
   'play': Size(1080, 1920),
   'ios69': Size(1320, 2868),
   'ios65': Size(1242, 2688),
   // Required by App Store Connect: iPhone with Dynamic Island, medium display.
   'ios63': Size(1206, 2622),
 };
+// (file name, scene index, dark). The dark month shot is only for the README;
+// the store targets keep their own theme per scene (month and paint in dark).
 const _shots = [
-  '01-mes',
-  '02-lista',
-  '03-pintar',
-  '04-rotaciones',
-  '05-horas',
-  '06-festivos',
+  ('01-mes', 0, false),
+  ('02-lista', 1, false),
+  ('03-pintar', 2, false),
+  ('04-rotaciones', 3, false),
+  ('05-horas', 4, false),
+  ('06-festivos', 5, false),
+  ('07-mes-oscuro', 0, true),
 ];
 // One caption per shot, in the order of [_shots]. Vocabulary from
 // docs/glosario-idiomas.md; ca, gl and eu are pending native review.
@@ -114,7 +119,10 @@ void main() {
   tearDownAll(() => AppTypography.debugFamily = null);
 
   for (final language in _captions.keys) {
-    for (final (index, shot) in _shots.indexed) {
+    for (final (shot, index, darkShot) in _shots) {
+      // The dark month shot only exists for the README.
+      if (darkShot && !_github) continue;
+      final dark = _github ? darkShot : index == 0 || index == 2;
       testWidgets(
         '$language/$shot ($_targetName)',
         (tester) async {
@@ -128,8 +136,21 @@ void main() {
               ? TargetPlatform.iOS
               : TargetPlatform.android;
           addTearDown(() => debugDefaultTargetPlatformOverride = null);
-          tester.view.physicalSize = _logical;
-          tester.view.devicePixelRatio = 1;
+          if (_github) {
+            tester.view.physicalSize = githubPhysical;
+            tester.view.devicePixelRatio = githubPixelRatio;
+            // The fake phone has a status bar and a gesture bar: the app
+            // keeps clear of them through its own SafeAreas.
+            final inset = FakeViewPadding(
+              top: githubStatusBarDp * githubPixelRatio,
+              bottom: githubGestureDp * githubPixelRatio,
+            );
+            tester.view.padding = inset;
+            tester.view.viewPadding = inset;
+          } else {
+            tester.view.physicalSize = _logical;
+            tester.view.devicePixelRatio = 1;
+          }
           tester.platformDispatcher.localesTestValue = [Locale(language)];
           tester.platformDispatcher.localeTestValue = Locale(language);
           addTearDown(tester.view.reset);
@@ -217,9 +238,7 @@ void main() {
                   initialHolidaysProvider.overrideWithValue(holidays),
                   initialPreferencesProvider.overrideWithValue(
                     Preferences(
-                      themeMode: index == 0 || index == 2
-                          ? ThemeMode.dark
-                          : ThemeMode.light,
+                      themeMode: dark ? ThemeMode.dark : ThemeMode.light,
                       language: AppLanguage.values.byName(language),
                     ),
                   ),
@@ -277,21 +296,30 @@ void main() {
                 );
             }
             await tester.pumpAndSettle();
+            if (_github && (index == 4 || index == 5)) {
+              // Long scrolling screens: nudge the scroll so that no text ends
+              // up behind the gesture pill (a line struck through by it).
+              await _clearGesturePill(tester);
+            }
             expect(tester.takeException(), isNull);
             final boundary =
                 key.currentContext!.findRenderObject()!
                     as RenderRepaintBoundary;
             await tester.runAsync(() async {
-              final screen = await boundary.toImage(pixelRatio: 3);
+              final screen = await boundary.toImage(
+                pixelRatio: _github ? githubPixelRatio : 3,
+              );
               try {
-                final image = await _compose(
-                  screen,
-                  target!,
-                  _captions[language]![index],
-                  index,
-                );
+                final image = _github
+                    ? await _composeGithub(screen, target!, dark)
+                    : await _compose(
+                        screen,
+                        target!,
+                        _captions[language]![index],
+                        index,
+                      );
                 try {
-                  final path = _targetName == 'readme'
+                  final path = _github
                       ? '../docs/readme/$language/$shot.png'
                       : 'build/store/$_targetName/$language/$shot.png';
                   await writeStorePng(image, path);
@@ -312,6 +340,72 @@ void main() {
         timeout: const Timeout(Duration(minutes: 3)),
       );
     }
+  }
+}
+
+/// Scrolls the biggest vertical list by the smallest amount (up to 160 dp)
+/// that leaves every text and icon clear of the gesture pill.
+Future<void> _clearGesturePill(WidgetTester tester) async {
+  final height = githubPhysical.height / githubPixelRatio;
+  const pillHalfWidth = 54 + 8.0;
+  final pill = Rect.fromLTRB(
+    githubWidthDp / 2 - pillHalfWidth,
+    height - 12 - 2 - 6,
+    githubWidthDp / 2 + pillHalfWidth,
+    height - 12 + 2 + 6,
+  );
+  ScrollableState? list;
+  var listHeight = 0.0;
+  for (final element in find.byType(Scrollable).evaluate()) {
+    final state = (element as StatefulElement).state as ScrollableState;
+    if (axisDirectionToAxis(state.axisDirection) != Axis.vertical) continue;
+    final height = (element.renderObject! as RenderBox).size.height;
+    if (list == null || height > listHeight) {
+      list = state;
+      listHeight = height;
+    }
+  }
+  if (list == null) return;
+  final rects = <Rect>[
+    for (final finder in [find.byType(Text), find.byType(Icon)])
+      for (final element in finder.evaluate())
+        if (element.renderObject case final RenderBox box when box.attached)
+          box.localToGlobal(Offset.zero) & box.size,
+  ];
+  for (var d = 0; d <= 160; d++) {
+    if (rects.every((r) => !r.shift(Offset(0, -d.toDouble())).overlaps(pill))) {
+      if (d > 0) {
+        list.position.jumpTo(list.position.pixels + d);
+        await tester.pumpAndSettle();
+      }
+      return;
+    }
+  }
+}
+
+/// The screen as is, scaled to exactly 1080x2400, with the Android status
+/// bar and gesture pill drawn on top. No caption, frame or tint.
+Future<ui.Image> _composeGithub(ui.Image screen, Size target, bool dark) async {
+  final colors = dark ? AppColors.dark : AppColors.light;
+  final recorder = ui.PictureRecorder();
+  final canvas = Canvas(recorder);
+  canvas.drawImageRect(
+    screen,
+    Rect.fromLTWH(0, 0, screen.width.toDouble(), screen.height.toDouble()),
+    Offset.zero & target,
+    Paint()..filterQuality = FilterQuality.high,
+  );
+  paintAndroidChrome(
+    canvas,
+    size: target,
+    ink: colors.textPrimary,
+    textStyle: AppTypography.from(colors).body,
+  );
+  final picture = recorder.endRecording();
+  try {
+    return await picture.toImage(target.width.toInt(), target.height.toInt());
+  } finally {
+    picture.dispose();
   }
 }
 

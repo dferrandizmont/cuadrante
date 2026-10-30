@@ -1,10 +1,12 @@
 [English](README.md) · [Español](README.es.md) · **Català** · [Galego](README.gl.md) · [Euskara](README.eu.md)
 
 <p align="center">
-  <img src="docs/readme/ca/header.png" alt="Cuadrante — Els teus torns, d’un cop d’ull. Gratis, sense anuncis i sense connexió." width="1024">
+  <img src="docs/readme/ca/header.png" alt="Turnly — Els teus torns, d’un cop d’ull. Gratis, sense anuncis i sense connexió." width="1024">
 </p>
 
-# Cuadrante
+# Turnly
+
+Abans es deia Cuadrante.
 
 [![Codi: MIT](https://img.shields.io/badge/Codi-MIT-4B4FD1)](LICENSE)
 [![Contingut: CC BY-SA 4.0](https://img.shields.io/badge/Contingut-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
@@ -40,7 +42,7 @@ L’app és en prova tancada a Google Play i s’hi pot apuntar qualsevol person
 
 > **Ara mateix Google està revisant la primera versió.** Ja et pots unir al grup (pas 1); l’enllaç del pas 2 funcionarà quan l’aprovin, normalment en pocs dies.
 
-1. Uneix-te al grup de testers: [cuadrante-testers](https://groups.google.com/g/cuadrante-testers). Amb el teu compte de Google, prem «Uneix-te al grup».
+1. Uneix-te al grup de testers: [turnly-testers](https://groups.google.com/g/turnly-testers). Amb el teu compte de Google, prem «Uneix-te al grup».
 2. Accepta la prova des del mòbil o l’ordinador: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
 3. Instal·la l’app des de Google Play. S’actualitzarà sola.
 
@@ -51,7 +53,7 @@ Si pots, queda’t a la prova almenys 14 dies i fes-la servir de tant en tant (p
 <details>
 <summary>Instal·la l’APK des de GitHub</summary>
 
-També pots baixar l’APK de la [darrera versió](https://github.com/dferrandizmont/cuadrante/releases/latest) i instal·lar-lo a mà (cal permetre «instal·lar aplicacions d’origen desconegut»). Està signat amb una clau diferent de la de la versió de Google Play, així que l’una no actualitza l’altra: per canviar, exporta abans una còpia `.cuadrante` des de l’app.
+També pots baixar l’APK de la [darrera versió](https://github.com/dferrandizmont/cuadrante/releases/latest) i instal·lar-lo a mà (cal permetre «instal·lar aplicacions d’origen desconegut»). Està signat amb una clau diferent de la de la versió de Google Play, així que l’una no actualitza l’altra: per canviar, exporta abans una còpia des de l’app (`.turnly`; les versions anteriors la desen com a `.cuadrante`).
 
 Aviat a l’App Store.
 
@@ -60,7 +62,7 @@ Aviat a l’App Store.
 ## Captures
 
 <p>
-  <a href="docs/readme/ca/01-mes.png"><img src="docs/readme/ca/01-mes.png" width="19%" alt="Mes pintat i targeta del proper torn, en mode fosc"></a>
+  <a href="docs/readme/ca/01-mes.png"><img src="docs/readme/ca/01-mes.png" width="19%" alt="Mes pintat i targeta del proper torn"></a>
   <a href="docs/readme/ca/02-lista.png"><img src="docs/readme/ca/02-lista.png" width="19%" alt="El mateix mes en vista Llista, amb codis i horaris complets"></a>
   <a href="docs/readme/ca/03-pintar.png"><img src="docs/readme/ca/03-pintar.png" width="19%" alt="Mode pintar amb la paleta de torns"></a>
   <a href="docs/readme/ca/04-rotaciones.png"><img src="docs/readme/ca/04-rotaciones.png" width="19%" alt="Assistent de rotacions amb vista prèvia abans d’aplicar"></a>
@@ -72,6 +74,7 @@ Aviat a l’App Store.
 
 <p>
   <a href="docs/readme/ca/06-festivos.png"><img src="docs/readme/ca/06-festivos.png" width="19%" alt="Festius de la Comunitat de Madrid i del municipi de Madrid"></a>
+  <a href="docs/readme/ca/07-mes-oscuro.png"><img src="docs/readme/ca/07-mes-oscuro.png" width="19%" alt="El mateix mes amb el tema fosc"></a>
 </p>
 
 </details>
@@ -88,7 +91,6 @@ per [tests de Flutter](app/test/store/), també [en castellà](README.es.md#capt
   doblar, copiar i enganxar, desfer i refer; assistent de rotacions amb vista
   prèvia: torns rotatius, 24/72, 4×4, 6×4, 5×2, 2-2-3 i patrons propis. Tipus de
   torn, colors, icones i horaris editables.
-- **Diversos calendaris.** Sense límit de pagament, i comparació entre dos quadrants.
 - **Festius d’Espanya.** Nacionals i autonòmics inclosos sense connexió; locals
   per als municipis disponibles i opció d’afegir-hi els teus.
 - **Alarmes i widgets.** Alarma per tipus de torn, recordatoris de notes i widgets
@@ -96,13 +98,20 @@ per [tests de Flutter](app/test/store/), també [en castellà](README.es.md#capt
   puntualitat depèn dels permisos i les restriccions del sistema. El widget d’iPhone
   (WidgetKit) està pendent de desenvolupar al Mac.
 - **Còpies de seguretat i importació.** Còpies de seguretat locals automàtiques,
-  exportació a `.cuadrante`, vista prèvia en restaurar i «Prova la restauració».
+  exportació a `.turnly` (les còpies antigues `.cuadrante` encara s’obren), vista prèvia en restaurar i «Prova la restauració».
   Importar còpies `.Shifter` de LRHSoft, fitxers `.ics` o CSV i esdeveniments del
   calendari del mòbil, revisant els torns abans de desar-los.
 - **Resum d’hores.** Treballades, nocturnes, festives, extra i sortides
   anticipades; estimació d’ingressos amb preu per hora i plus fix per torn.
+
+<details>
+<summary>Més funcions</summary>
+
+- **Diversos calendaris.** Sense límit de pagament, i comparació entre dos quadrants.
 - **Accessibilitat.** Selector d’idioma, lector de pantalla, text ampliable i
   torns que mai no depenen només del color.
+
+</details>
 
 ## Privacitat
 
@@ -117,7 +126,7 @@ No demana ubicació, contactes, càmera ni micròfon.
 
 Les còpies del sistema de Google o Apple poden incloure les teves dades, també les
 absències. Si exportes a un calendari sincronitzat o comparteixes una còpia, les
-dades van a la destinació que triïs. El fitxer `.cuadrante` no està xifrat.
+dades van a la destinació que triïs. El fitxer de còpia `.turnly` no està xifrat.
 
 </details>
 

@@ -178,7 +178,7 @@ class WidgetMonthTest {
         val after = WidgetModelBuilder.build(change, Kind.LARGE, at(11, 4, 0, 0, 1), madrid)
         after as WidgetContent.Stale
         assertEquals(WidgetDayLogic.StaleReason.AFTER_LAST, after.reason)
-        assertEquals("Abre Cuadrante para seguir al día", after.body)
+        assertEquals("Abre Turnly para seguir al día", after.body)
         // The last published day is still a month.
         assertTrue(WidgetModelBuilder.build(change, Kind.LARGE, at(11, 3, 23, 59, 59), madrid) is WidgetContent.Large)
         val before = WidgetModelBuilder.build(change, Kind.LARGE, at(10, 29, 23, 59, 59), madrid)

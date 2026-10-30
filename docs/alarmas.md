@@ -183,7 +183,7 @@ Mac):
   y en tipos con horario que no sean ausencias (los únicos que pueden sonar). Se guarda al pulsar «Guardar», como el
   resto del formulario.
 - **Dato.** `ShiftType.alarmSound` (esquema v3): URI `content://` del sistema, hasta 512 caracteres, `null` = el del
-  canal por defecto. Va en la copia `.cuadrante` v3. La URI es de este móvil: restaurada en otro, si no existe, se cae
+  canal por defecto. Va en la copia `.turnly` v3 (formato de las antiguas `.cuadrante`). La URI es de este móvil: restaurada en otro, si no existe, se cae
   al sonido por defecto sin error.
 - **Selector.** `MainActivity` registra `app.cuadrante/sounds` (`AlarmSoundChannel.kt`): `pick` lanza
   `RingtoneManager.ACTION_RINGTONE_PICKER` (sonidos de alarma y de notificación, con la entrada «predeterminado» y
@@ -273,7 +273,7 @@ a instante está en `data/wall_clock.dart`, con pruebas para 2026-03-29 y 2026-1
   deja adjuntar una versión pública propia (`publicVersion`, «Aviso de turno»); si hiciera falta ese texto concreto
   habría que escribir la notificación en Kotlin. Las ausencias ya no generan avisos (ver el planificador).
 - **Declaración en Play Console.** Hay que declarar el uso de `SCHEDULE_EXACT_ALARM` (formulario «Alarmas y
-  recordatorios exactos» en el contenido de la app). Texto propuesto: «Cuadrante avisa a trabajadores a turnos a una
+  recordatorios exactos» en el contenido de la app). Texto propuesto: «Turnly avisa a trabajadores a turnos a una
   hora exacta antes de que empiece su turno (por ejemplo, un turno de noche a las 22:00). Un aviso con minutos de
   retraso puede hacer que lleguen tarde al trabajo. El permiso lo concede el usuario y la app sigue funcionando sin él
   con avisos aproximados.»

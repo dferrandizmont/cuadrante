@@ -20,8 +20,8 @@ class WidgetStrings {
     this.absence = 'Ausencia',
     this.tomorrow = 'Mañana',
     this.emptyCircular = '–',
-    this.staleTitle = 'Cuadrante',
-    this.staleBody = 'Abre Cuadrante para seguir al día',
+    this.staleTitle = 'Turnly',
+    this.staleBody = 'Abre Turnly para seguir al día',
   });
 
   /// The texts of the current locale, from the ARB file (`widget*` keys). The

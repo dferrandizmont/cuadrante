@@ -21,7 +21,7 @@ void main() {
           l10n,
           const NewerFormatVersion(found: 3, supported: 2),
         ),
-        'Este archivo es de una versión más nueva de Cuadrante: actualiza la '
+        'Este archivo es de una versión más nueva de Turnly: actualiza la '
         'app.',
       );
     });
@@ -29,7 +29,7 @@ void main() {
     test('a file that is not ours', () {
       expect(
         backupErrorMessage(l10n, const NotACuadranteFile('x')),
-        'Este archivo no es una copia de Cuadrante.',
+        'Este archivo no es una copia de Turnly.',
       );
     });
 
@@ -43,7 +43,7 @@ void main() {
     test('a file that is too big, and one that cannot be read', () {
       expect(
         backupErrorMessage(l10n, IncomingFileProblem.tooLarge),
-        'Este archivo es demasiado grande para ser una copia de Cuadrante.',
+        'Este archivo es demasiado grande para ser una copia de Turnly.',
       );
       expect(
         backupErrorMessage(l10n, IncomingFileProblem.unreadable),
@@ -135,11 +135,11 @@ void main() {
     test('lower case, with the local date and time', () {
       expect(
         exportFileName(DateTime(2026, 11, 10, 23, 59, 7)),
-        'cuadrante-2026-11-10-235907.cuadrante',
+        'turnly-2026-11-10-235907.turnly',
       );
       expect(
         exportFileName(DateTime(2026, 1, 5)),
-        'cuadrante-2026-01-05-000000.cuadrante',
+        'turnly-2026-01-05-000000.turnly',
       );
     });
 

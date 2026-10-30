@@ -107,7 +107,7 @@ abstract class AppLocalizations {
   /// Nombre de la app (título de ventana y cabeceras).
   ///
   /// In es, this message translates to:
-  /// **'Cuadrante'**
+  /// **'Turnly'**
   String get appName;
 
   /// No description provided for @cancel.
@@ -3521,25 +3521,25 @@ abstract class AppLocalizations {
   /// No description provided for @faqAlarmsAIos.
   ///
   /// In es, this message translates to:
-  /// **'En Ajustes › Alarmas activa «Avisar antes de cada turno», elige cuánto antes y, si quieres, un aviso el día anterior a una hora fija. En el detalle de un día puedes quitar su alarma con «Sin alarma este día».\n\nSin el permiso de notificaciones, Cuadrante no puede avisarte. Si no te sale la ventana para permitirlas, actívalas en los ajustes del sistema.'**
+  /// **'En Ajustes › Alarmas activa «Avisar antes de cada turno», elige cuánto antes y, si quieres, un aviso el día anterior a una hora fija. En el detalle de un día puedes quitar su alarma con «Sin alarma este día».\n\nSin el permiso de notificaciones, Turnly no puede avisarte. Si no te sale la ventana para permitirlas, actívalas en los ajustes del sistema.'**
   String get faqAlarmsAIos;
 
   /// No description provided for @faqWidgetAIos.
   ///
   /// In es, this message translates to:
-  /// **'En Ajustes › Añadir widget ves los tamaños (pequeño: hoy y mañana; mediano: los próximos 7 días; grande: el mes entero) y cómo colocarlo. Mantén pulsada la pantalla de inicio, toca el + de arriba y busca Cuadrante.\n\nEl widget guarda tus próximos días. El sistema decide cuándo lo actualiza y puede retrasar el cambio de día. Si se queda sin datos, abre Cuadrante para ponerlo al día.'**
+  /// **'En Ajustes › Añadir widget ves los tamaños (pequeño: hoy y mañana; mediano: los próximos 7 días; grande: el mes entero) y cómo colocarlo. Mantén pulsada la pantalla de inicio, toca el + de arriba y busca Turnly.\n\nEl widget guarda tus próximos días. El sistema decide cuándo lo actualiza y puede retrasar el cambio de día. Si se queda sin datos, abre Turnly para ponerlo al día.'**
   String get faqWidgetAIos;
 
   /// No description provided for @faqBackupAIos.
   ///
   /// In es, this message translates to:
-  /// **'Ajustes › Copia de seguridad guarda copias automáticas en este dispositivo después de cada cambio, pero se pierden si lo pierdes o desinstalas la app. Exporta un archivo con «Exportar archivo» y guárdalo en iCloud Drive o envíatelo por WhatsApp o correo.\n\nPara cambiar de dispositivo: exporta el archivo, instala Cuadrante en el nuevo, abre el archivo con la app (o usa «Importar archivo» en la copia de seguridad) y revisa la vista previa antes de restaurar. «Probar restauración» comprueba que tu última copia se puede recuperar entera.'**
+  /// **'Ajustes › Copia de seguridad guarda copias automáticas en este dispositivo después de cada cambio, pero se pierden si lo pierdes o desinstalas la app. Exporta un archivo con «Exportar archivo» y guárdalo en iCloud Drive o envíatelo por WhatsApp o correo.\n\nPara cambiar de dispositivo: exporta el archivo, instala Turnly en el nuevo, abre el archivo con la app (o usa «Importar archivo» en la copia de seguridad) y revisa la vista previa antes de restaurar. «Probar restauración» comprueba que tu última copia se puede recuperar entera.'**
   String get faqBackupAIos;
 
   /// No description provided for @calExportPermissionDeniedBodyIos.
   ///
   /// In es, this message translates to:
-  /// **'Actívalo en los ajustes del sistema (Cuadrante › Calendarios) y vuelve aquí.'**
+  /// **'Actívalo en los ajustes del sistema (Turnly › Calendarios) y vuelve aquí.'**
   String get calExportPermissionDeniedBodyIos;
 
   /// No description provided for @backupUiWarningIos.
@@ -3623,7 +3623,7 @@ abstract class AppLocalizations {
   /// No description provided for @faqIntro.
   ///
   /// In es, this message translates to:
-  /// **'Respuestas rápidas sobre cómo funciona Cuadrante. Todo está en este dispositivo: no hace falta cuenta ni conexión.'**
+  /// **'Respuestas rápidas sobre cómo funciona Turnly. Todo está en este dispositivo: no hace falta cuenta ni conexión.'**
   String get faqIntro;
 
   /// No description provided for @faqNotFound.
@@ -3707,7 +3707,7 @@ abstract class AppLocalizations {
   /// No description provided for @faqAlarmsA.
   ///
   /// In es, this message translates to:
-  /// **'En Ajustes › Alarmas activa «Avisar antes de cada turno», elige cuánto antes y, si quieres, un aviso el día anterior a una hora fija. En el detalle de un día puedes quitar su alarma con «Sin alarma este día».\n\nEn Android hacen falta las notificaciones y el permiso «Alarmas y recordatorios» de los ajustes del sistema: sin él, Android puede retrasar el aviso unos minutos. La pantalla de alarmas te dice qué falta y te lleva a los ajustes. Si tu móvil ahorra batería de forma agresiva, deja Cuadrante sin restricciones para que no pare los avisos.'**
+  /// **'En Ajustes › Alarmas activa «Avisar antes de cada turno», elige cuánto antes y, si quieres, un aviso el día anterior a una hora fija. En el detalle de un día puedes quitar su alarma con «Sin alarma este día».\n\nEn Android hacen falta las notificaciones y el permiso «Alarmas y recordatorios» de los ajustes del sistema: sin él, Android puede retrasar el aviso unos minutos. La pantalla de alarmas te dice qué falta y te lleva a los ajustes. Si tu móvil ahorra batería de forma agresiva, deja Turnly sin restricciones para que no pare los avisos.'**
   String get faqAlarmsA;
 
   /// No description provided for @faqHolidaysQ.
@@ -3731,7 +3731,7 @@ abstract class AppLocalizations {
   /// No description provided for @faqWidgetA.
   ///
   /// In es, this message translates to:
-  /// **'En Ajustes › Añadir widget ves los tamaños (pequeño: hoy y mañana; mediano: los próximos 7 días; grande: el mes entero) y cómo colocarlo. En Android, mantén pulsada una zona vacía de la pantalla de inicio, elige Widgets y busca Cuadrante.\n\nEl widget siempre enseña el día de hoy: cambia de día a medianoche aunque no abras la app, porque lleva guardados tus próximos días. Si pasa mucho tiempo sin abrir Cuadrante se queda sin datos y te pide abrir la app para ponerse al día.'**
+  /// **'En Ajustes › Añadir widget ves los tamaños (pequeño: hoy y mañana; mediano: los próximos 7 días; grande: el mes entero) y cómo colocarlo. En Android, mantén pulsada una zona vacía de la pantalla de inicio, elige Widgets y busca Turnly.\n\nEl widget siempre enseña el día de hoy: cambia de día a medianoche aunque no abras la app, porque lleva guardados tus próximos días. Si pasa mucho tiempo sin abrir Turnly se queda sin datos y te pide abrir la app para ponerse al día.'**
   String get faqWidgetA;
 
   /// No description provided for @faqBackupQ.
@@ -3743,7 +3743,7 @@ abstract class AppLocalizations {
   /// No description provided for @faqBackupA.
   ///
   /// In es, this message translates to:
-  /// **'Ajustes › Copia de seguridad guarda copias automáticas en este dispositivo después de cada cambio, pero se pierden si lo pierdes o desinstalas la app. Exporta un archivo con «Exportar archivo» y guárdalo en Drive o envíatelo por WhatsApp o correo.\n\nPara cambiar de dispositivo: exporta el archivo, instala Cuadrante en el nuevo, abre el archivo con la app (o usa «Importar archivo» en la copia de seguridad) y revisa la vista previa antes de restaurar. «Probar restauración» comprueba que tu última copia se puede recuperar entera.'**
+  /// **'Ajustes › Copia de seguridad guarda copias automáticas en este dispositivo después de cada cambio, pero se pierden si lo pierdes o desinstalas la app. Exporta un archivo con «Exportar archivo» y guárdalo en Drive o envíatelo por WhatsApp o correo.\n\nPara cambiar de dispositivo: exporta el archivo, instala Turnly en el nuevo, abre el archivo con la app (o usa «Importar archivo» en la copia de seguridad) y revisa la vista previa antes de restaurar. «Probar restauración» comprueba que tu última copia se puede recuperar entera.'**
   String get faqBackupA;
 
   /// No description provided for @faqImportQ.
@@ -3755,7 +3755,7 @@ abstract class AppLocalizations {
   /// No description provided for @faqImportA.
   ///
   /// In es, this message translates to:
-  /// **'Sí. En Ajustes › Importar turnos puedes traer una copia «.Shifter» de LRHSoft, turnos del calendario del móvil, un archivo .ics o un CSV. Para LRHSoft, crea una copia en Menú › Copia de seguridad › Copia local y elige el archivo de Documents › ShifterBackups. Revisa las fechas, los tipos de turno y la vista previa antes de importar.\n\n«Exportar al calendario del móvil» copia tus turnos una vez a un calendario del teléfono. Si exportas otra vez no se duplican: solo se tocan los eventos que creó Cuadrante.'**
+  /// **'Sí. En Ajustes › Importar turnos puedes traer una copia «.Shifter» de LRHSoft, turnos del calendario del móvil, un archivo .ics o un CSV. Para LRHSoft, crea una copia en Menú › Copia de seguridad › Copia local y elige el archivo de Documents › ShifterBackups. Revisa las fechas, los tipos de turno y la vista previa antes de importar.\n\n«Exportar al calendario del móvil» copia tus turnos una vez a un calendario del teléfono. Si exportas otra vez no se duplican: solo se tocan los eventos que creó Turnly.'**
   String get faqImportA;
 
   /// No description provided for @faqCalendarsQ.
@@ -3815,7 +3815,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsAboutTagline.
   ///
   /// In es, this message translates to:
-  /// **'Cuadrante funciona sin conexión y sin cuenta: tus turnos se quedan en tu móvil.'**
+  /// **'Turnly funciona sin conexión y sin cuenta: tus turnos se quedan en tu móvil.'**
   String get settingsAboutTagline;
 
   /// No description provided for @settingsAboutLicenses.
@@ -3893,7 +3893,7 @@ abstract class AppLocalizations {
   /// No description provided for @importSourceHelp.
   ///
   /// In es, this message translates to:
-  /// **'Cuadrante lee los eventos aquí mismo, en tu móvil, y no los envía a ningún sitio. Tú decides qué se importa.'**
+  /// **'Turnly lee los eventos aquí mismo, en tu móvil, y no los envía a ningún sitio. Tú decides qué se importa.'**
   String get importSourceHelp;
 
   /// No description provided for @importSourceDevice.
@@ -3971,13 +3971,13 @@ abstract class AppLocalizations {
   /// No description provided for @calExportPermissionReadBody.
   ///
   /// In es, this message translates to:
-  /// **'Para importar, Cuadrante necesita leer los eventos de tus calendarios. Solo lo hace ahora, mientras importas, y no guarda nada fuera del móvil.'**
+  /// **'Para importar, Turnly necesita leer los eventos de tus calendarios. Solo lo hace ahora, mientras importas, y no guarda nada fuera del móvil.'**
   String get calExportPermissionReadBody;
 
   /// No description provided for @calExportPermissionWriteBody.
   ///
   /// In es, this message translates to:
-  /// **'Para añadir tus turnos, Cuadrante necesita acceso a tus calendarios. Solo añade o cambia sus propios eventos, y solo cuando tú exportas. Si el calendario que elijas se sincroniza con una cuenta (Google, iCloud...), esa cuenta también recibirá los turnos.'**
+  /// **'Para añadir tus turnos, Turnly necesita acceso a tus calendarios. Solo añade o cambia sus propios eventos, y solo cuando tú exportas. Si el calendario que elijas se sincroniza con una cuenta (Google, iCloud...), esa cuenta también recibirá los turnos.'**
   String get calExportPermissionWriteBody;
 
   /// No description provided for @calExportPermissionAgainBody.
@@ -4031,7 +4031,7 @@ abstract class AppLocalizations {
   /// No description provided for @calExportPermissionWriteOnlyBody.
   ///
   /// In es, this message translates to:
-  /// **'El sistema solo ha dado permiso para añadir eventos. Cuadrante necesita acceso completo para leer los calendarios o para sustituir los eventos de una exportación anterior.'**
+  /// **'El sistema solo ha dado permiso para añadir eventos. Turnly necesita acceso completo para leer los calendarios o para sustituir los eventos de una exportación anterior.'**
   String get calExportPermissionWriteOnlyBody;
 
   /// No description provided for @importCalendarsTitle.
@@ -4445,7 +4445,7 @@ abstract class AppLocalizations {
   /// No description provided for @importProblemPermissionRestricted.
   ///
   /// In es, this message translates to:
-  /// **'Este móvil no deja a Cuadrante usar el calendario. Prueba con un archivo.'**
+  /// **'Este móvil no deja a Turnly usar el calendario. Prueba con un archivo.'**
   String get importProblemPermissionRestricted;
 
   /// No description provided for @importProblemCalendarUnavailable.
@@ -4559,7 +4559,7 @@ abstract class AppLocalizations {
   /// No description provided for @calExportHelp.
   ///
   /// In es, this message translates to:
-  /// **'Añade tus turnos como eventos a un calendario del móvil, una sola vez. Si lo repites, Cuadrante sustituye sus eventos anteriores en esas fechas en vez de duplicarlos.'**
+  /// **'Añade tus turnos como eventos a un calendario del móvil, una sola vez. Si lo repites, Turnly sustituye sus eventos anteriores en esas fechas en vez de duplicarlos.'**
   String get calExportHelp;
 
   /// No description provided for @calExportSource.
@@ -4577,7 +4577,7 @@ abstract class AppLocalizations {
   /// No description provided for @calExportNewCalendar.
   ///
   /// In es, this message translates to:
-  /// **'Crear el calendario «Cuadrante»'**
+  /// **'Crear el calendario «Turnly»'**
   String get calExportNewCalendar;
 
   /// No description provided for @calExportNewCalendarHelp.
@@ -4697,7 +4697,7 @@ abstract class AppLocalizations {
   /// No description provided for @calExportDoneCalendar.
   ///
   /// In es, this message translates to:
-  /// **'Se ha creado el calendario «Cuadrante».'**
+  /// **'Se ha creado el calendario «Turnly».'**
   String get calExportDoneCalendar;
 
   /// No description provided for @calExportDoneCreated.
@@ -4985,7 +4985,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupUiImportSubtitle.
   ///
   /// In es, this message translates to:
-  /// **'Recupera un archivo de Cuadrante'**
+  /// **'Recupera un archivo de Turnly'**
   String get backupUiImportSubtitle;
 
   /// No description provided for @backupUiVerify.
@@ -5315,13 +5315,13 @@ abstract class AppLocalizations {
   /// No description provided for @backupUiErrorNotOurs.
   ///
   /// In es, this message translates to:
-  /// **'Este archivo no es una copia de Cuadrante.'**
+  /// **'Este archivo no es una copia de Turnly.'**
   String get backupUiErrorNotOurs;
 
   /// No description provided for @backupUiErrorNewer.
   ///
   /// In es, this message translates to:
-  /// **'Este archivo es de una versión más nueva de Cuadrante: actualiza la app.'**
+  /// **'Este archivo es de una versión más nueva de Turnly: actualiza la app.'**
   String get backupUiErrorNewer;
 
   /// No description provided for @backupUiErrorCorrupt.
@@ -5333,7 +5333,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupUiErrorTooLarge.
   ///
   /// In es, this message translates to:
-  /// **'Este archivo es demasiado grande para ser una copia de Cuadrante.'**
+  /// **'Este archivo es demasiado grande para ser una copia de Turnly.'**
   String get backupUiErrorTooLarge;
 
   /// No description provided for @backupUiErrorUnreadable.
@@ -5357,7 +5357,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupUiErrorRestoreReload.
   ///
   /// In es, this message translates to:
-  /// **'Hemos restaurado tus datos, pero la pantalla no se ha podido actualizar. Cierra Cuadrante y vuelve a abrirlo.'**
+  /// **'Hemos restaurado tus datos, pero la pantalla no se ha podido actualizar. Cierra Turnly y vuelve a abrirlo.'**
   String get backupUiErrorRestoreReload;
 
   /// No description provided for @backupUiBack.
@@ -5399,13 +5399,13 @@ abstract class AppLocalizations {
   /// No description provided for @widgetStaleTitle.
   ///
   /// In es, this message translates to:
-  /// **'Cuadrante'**
+  /// **'Turnly'**
   String get widgetStaleTitle;
 
   /// Widget: aviso cuando los datos publicados ya no cubren el día de hoy.
   ///
   /// In es, this message translates to:
-  /// **'Abre Cuadrante para seguir al día'**
+  /// **'Abre Turnly para seguir al día'**
   String get widgetStaleBody;
 
   /// No description provided for @widgetAddTitle.
@@ -5459,13 +5459,13 @@ abstract class AppLocalizations {
   /// No description provided for @widgetAddManualAndroid.
   ///
   /// In es, this message translates to:
-  /// **'Mantén pulsada una zona vacía de la pantalla de inicio, elige Widgets y busca Cuadrante.'**
+  /// **'Mantén pulsada una zona vacía de la pantalla de inicio, elige Widgets y busca Turnly.'**
   String get widgetAddManualAndroid;
 
   /// No description provided for @widgetAddManualIos.
   ///
   /// In es, this message translates to:
-  /// **'Mantén pulsada la pantalla de inicio, toca el + de arriba y busca Cuadrante.'**
+  /// **'Mantén pulsada la pantalla de inicio, toca el + de arriba y busca Turnly.'**
   String get widgetAddManualIos;
 
   /// No description provided for @compareTitle.
@@ -6056,7 +6056,7 @@ abstract class AppLocalizations {
   /// No description provided for @alarmsNotifTestBody.
   ///
   /// In es, this message translates to:
-  /// **'Así te avisará Cuadrante antes de tu turno.'**
+  /// **'Así te avisará Turnly antes de tu turno.'**
   String get alarmsNotifTestBody;
 
   /// No description provided for @alarmsRowOn.
@@ -6110,7 +6110,7 @@ abstract class AppLocalizations {
   /// No description provided for @alarmsPermNotifBody.
   ///
   /// In es, this message translates to:
-  /// **'Sin el permiso de notificaciones, Cuadrante no puede avisarte. Si no te sale la ventana para permitirlas, actívalas en los ajustes del sistema.'**
+  /// **'Sin el permiso de notificaciones, Turnly no puede avisarte. Si no te sale la ventana para permitirlas, actívalas en los ajustes del sistema.'**
   String get alarmsPermNotifBody;
 
   /// No description provided for @alarmsPermNotifAllow.
@@ -6122,13 +6122,13 @@ abstract class AppLocalizations {
   /// No description provided for @alarmsPermNotifBlockedBody.
   ///
   /// In es, this message translates to:
-  /// **'Android ya no te pregunta por las notificaciones. Actívalas en los ajustes del sistema y Cuadrante podrá avisarte.'**
+  /// **'Android ya no te pregunta por las notificaciones. Actívalas en los ajustes del sistema y Turnly podrá avisarte.'**
   String get alarmsPermNotifBlockedBody;
 
   /// No description provided for @alarmsPermNotifBlockedBodyIos.
   ///
   /// In es, this message translates to:
-  /// **'iOS ya no te pregunta por las notificaciones. Actívalas en Ajustes › Cuadrante › Notificaciones y Cuadrante podrá avisarte.'**
+  /// **'iOS ya no te pregunta por las notificaciones. Actívalas en Ajustes › Turnly › Notificaciones y Turnly podrá avisarte.'**
   String get alarmsPermNotifBlockedBodyIos;
 
   /// No description provided for @alarmsPermNotifOpenSettings.
@@ -6164,7 +6164,7 @@ abstract class AppLocalizations {
   /// No description provided for @alarmsTypesEmpty.
   ///
   /// In es, this message translates to:
-  /// **'Ninguno de tus turnos tiene horario. Ponle hora en Mis turnos para que Cuadrante pueda avisarte.'**
+  /// **'Ninguno de tus turnos tiene horario. Ponle hora en Mis turnos para que Turnly pueda avisarte.'**
   String get alarmsTypesEmpty;
 
   /// No description provided for @alarmsBeforeTitle.

@@ -120,6 +120,21 @@ void main() {
       expect(ExportTag.parse('cuadrante:v1:roto'), isNull);
     });
 
+    test('events exported before the rename to Turnly are still ours', () {
+      final e = build().first;
+      expect(e.description, startsWith('Creado con Turnly\n'));
+      final legacy = e.description.replaceFirst(
+        'Creado con Turnly',
+        'Creado con Cuadrante',
+      );
+      expect(ExportTag.parse(legacy)?.typeId, 'morning');
+      final other = e.description.replaceFirst(
+        'Creado con Turnly',
+        'Creado con',
+      );
+      expect(ExportTag.parse(other), isNull);
+    });
+
     test('the range is cut to a year and a reversed range is empty', () {
       final schedule = emptySchedule(
         entries: {
@@ -171,10 +186,10 @@ void main() {
       exporter = CalendarExporter(phone);
     });
 
-    test('creates the calendar «Cuadrante» and writes the events', () async {
+    test('creates the calendar «Turnly» and writes the events', () async {
       final result = await run(const NewCalendar(colorValue: 0xFF4B4FD1));
       expect(phone.createdCalendars, 1);
-      expect(phone.allCalendars.single.name, 'Cuadrante');
+      expect(phone.allCalendars.single.name, 'Turnly');
       expect(result.calendarCreated, isTrue);
       expect(result.created, 5);
       expect(result.removed, 0);

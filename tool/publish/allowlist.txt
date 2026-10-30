@@ -906,6 +906,7 @@ docs/readme/ca/03-pintar.png
 docs/readme/ca/04-rotaciones.png
 docs/readme/ca/05-horas.png
 docs/readme/ca/06-festivos.png
+docs/readme/ca/07-mes-oscuro.png
 docs/readme/ca/header.png
 docs/readme/ca/icon-512.png
 docs/readme/en/01-mes.png
@@ -914,6 +915,7 @@ docs/readme/en/03-pintar.png
 docs/readme/en/04-rotaciones.png
 docs/readme/en/05-horas.png
 docs/readme/en/06-festivos.png
+docs/readme/en/07-mes-oscuro.png
 docs/readme/en/header.png
 docs/readme/en/icon-512.png
 docs/readme/es/01-mes.png
@@ -922,6 +924,7 @@ docs/readme/es/03-pintar.png
 docs/readme/es/04-rotaciones.png
 docs/readme/es/05-horas.png
 docs/readme/es/06-festivos.png
+docs/readme/es/07-mes-oscuro.png
 docs/readme/es/header.png
 docs/readme/es/icon-512.png
 docs/readme/eu/01-mes.png
@@ -930,6 +933,7 @@ docs/readme/eu/03-pintar.png
 docs/readme/eu/04-rotaciones.png
 docs/readme/eu/05-horas.png
 docs/readme/eu/06-festivos.png
+docs/readme/eu/07-mes-oscuro.png
 docs/readme/eu/header.png
 docs/readme/eu/icon-512.png
 docs/readme/gl/01-mes.png
@@ -938,6 +942,7 @@ docs/readme/gl/03-pintar.png
 docs/readme/gl/04-rotaciones.png
 docs/readme/gl/05-horas.png
 docs/readme/gl/06-festivos.png
+docs/readme/gl/07-mes-oscuro.png
 docs/readme/gl/header.png
 docs/readme/gl/icon-512.png
 docs/tienda/app-store.md

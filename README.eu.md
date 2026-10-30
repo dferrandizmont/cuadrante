@@ -1,10 +1,12 @@
 [English](README.md) · [Español](README.es.md) · [Català](README.ca.md) · [Galego](README.gl.md) · **Euskara**
 
 <p align="center">
-  <img src="docs/readme/eu/header.png" alt="Cuadrante — Zure txandak, begi-kolpe batean. Doan, iragarkirik gabe eta konexiorik gabe." width="1024">
+  <img src="docs/readme/eu/header.png" alt="Turnly — Zure txandak, begi-kolpe batean. Doan, iragarkirik gabe eta konexiorik gabe." width="1024">
 </p>
 
-# Cuadrante
+# Turnly
+
+Lehen Cuadrante zuen izena.
 
 [![Kodea: MIT](https://img.shields.io/badge/Kodea-MIT-4B4FD1)](LICENSE)
 [![Edukia: CC BY-SA 4.0](https://img.shields.io/badge/Edukia-CC_BY--SA_4.0-4B4FD1)](LICENSE-CONTENT.md)
@@ -41,7 +43,7 @@ Aplikazioa proba itxian dago Google Play-n, eta edonor sar daiteke:
 
 > **Une honetan, Google lehen bertsioa berrikusten ari da.** Taldean sar zaitezke dagoeneko (1. urratsa); 2. urratseko esteka onartu bezain laster ibiliko da, normalean egun gutxiren buruan.
 
-1. Sartu testerren taldean: [cuadrante-testers](https://groups.google.com/g/cuadrante-testers). Zure Google kontuarekin, sakatu taldean sartzeko botoia.
+1. Sartu testerren taldean: [turnly-testers](https://groups.google.com/g/turnly-testers). Zure Google kontuarekin, sakatu taldean sartzeko botoia.
 2. Onartu proba mugikorretik edo ordenagailutik: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
 3. Instalatu aplikazioa Google Play-tik. Bere kabuz eguneratuko da.
 
@@ -52,7 +54,7 @@ Ahal baduzu, egon proban gutxienez 14 egunez eta erabili noizean behin (adibidez
 <details>
 <summary>Instalatu APKa GitHub-etik</summary>
 
-[Azken bertsioaren](https://github.com/dferrandizmont/cuadrante/releases/latest) APKa ere deskarga dezakezu eta eskuz instalatu (jatorri ezezaguneko aplikazioak instalatzea baimendu behar da). Google Play-ko bertsioaren beste gako batekin dago sinatuta; beraz, batak ez du bestea eguneratzen: aldatzeko, esportatu lehenago `.cuadrante` kopia bat aplikaziotik.
+[Azken bertsioaren](https://github.com/dferrandizmont/cuadrante/releases/latest) APKa ere deskarga dezakezu eta eskuz instalatu (jatorri ezezaguneko aplikazioak instalatzea baimendu behar da). Google Play-ko bertsioaren beste gako batekin dago sinatuta; beraz, batak ez du bestea eguneratzen: aldatzeko, esportatu lehenago kopia bat aplikaziotik (`.turnly`; aurreko bertsioek `.cuadrante` gisa gordetzen dute).
 
 Laster App Store-n.
 
@@ -61,7 +63,7 @@ Laster App Store-n.
 ## Pantaila-argazkiak
 
 <p>
-  <a href="docs/readme/eu/01-mes.png"><img src="docs/readme/eu/01-mes.png" width="19%" alt="Margotutako hilabetea eta hurrengo txandaren txartela, modu ilunean"></a>
+  <a href="docs/readme/eu/01-mes.png"><img src="docs/readme/eu/01-mes.png" width="19%" alt="Margotutako hilabetea eta hurrengo txandaren txartela"></a>
   <a href="docs/readme/eu/02-lista.png"><img src="docs/readme/eu/02-lista.png" width="19%" alt="Hilabete bera Zerrenda ikuspegian, kode eta ordutegi osoekin"></a>
   <a href="docs/readme/eu/03-pintar.png"><img src="docs/readme/eu/03-pintar.png" width="19%" alt="Margotze modua, txanden paletarekin"></a>
   <a href="docs/readme/eu/04-rotaciones.png"><img src="docs/readme/eu/04-rotaciones.png" width="19%" alt="Txandaketen laguntzailea, aplikatu aurreko aurrebistarekin"></a>
@@ -73,6 +75,7 @@ Laster App Store-n.
 
 <p>
   <a href="docs/readme/eu/06-festivos.png"><img src="docs/readme/eu/06-festivos.png" width="19%" alt="Madrilgo Erkidegoko eta Madril udalerriko jaiegunak"></a>
+  <a href="docs/readme/eu/07-mes-oscuro.png"><img src="docs/readme/eu/07-mes-oscuro.png" width="19%" alt="Hilabete bera gai ilunarekin"></a>
 </p>
 
 </details>
@@ -91,8 +94,6 @@ Sakatu pantaila-argazki bat handitzeko. Benetako pantailak dira, datu asmatuekin
   laguntzailea aurrebistarekin: txanda birakariak, 24/72, 4×4, 6×4, 5×2, 2-2-3
   eta eredu propioak. Txanda motak, koloreak, ikonoak eta ordutegiak editagarriak
   dira.
-- **Hainbat egutegi.** Ordaindu beharreko mugarik gabe, eta bi egutegi alderatzeko
-  aukera.
 - **Espainiako jaiegunak.** Estatukoak eta erkidegokoak konexiorik gabe datoz; tokikoak,
   eskuragarri dauden udalerrietarako, eta zureak gehitzeko aukera.
 - **Alarmak eta widgetak.** Alarmak txanda motaren arabera, oharren gogorarazpenak
@@ -100,14 +101,22 @@ Sakatu pantaila-argazki bat handitzeko. Benetako pantailak dira, datu asmatuekin
   Puntualtasuna sistemaren baimenen eta murrizketen araberakoa da. iPhoneko
   widgeta (WidgetKit) Mac-ean garatzeko dago oraindik.
 - **Babeskopia lokala eta inportatzea.** Tokiko babeskopia automatikoak,
-  `.cuadrante` fitxategira esportatzea, leheneratu aurreko aurrebista eta «Probatu
+  `.turnly` fitxategira esportatzea (`.cuadrante` kopia zaharrak ere irekitzen dira), leheneratu aurreko aurrebista eta «Probatu
   leheneratzea». LRHSoft-en `.Shifter` kopiak, `.ics` edo CSV fitxategiak eta
   mugikorreko egutegiko gertaerak inportatzea, txandak gorde aurretik berrikusita.
 - **Orduen laburpena.** Lan egindako orduak, gaueko orduak, jaiegunetako orduak,
   aparteko orduak eta irteera aurreratuak; diru-sarreren estimazioa, orduko
   prezioarekin eta txandako osagarri finkoarekin.
+
+<details>
+<summary>Funtzio gehiago</summary>
+
+- **Hainbat egutegi.** Ordaindu beharreko mugarik gabe, eta bi egutegi alderatzeko
+  aukera.
 - **Irisgarritasuna.** Hizkuntza-hautatzailea, pantaila-irakurgailua eta testu
   handigarria; txandak ez daude inoiz kolorearen mende bakarrik.
+
+</details>
 
 ## Pribatutasuna
 
@@ -123,7 +132,7 @@ Ez du kokapenik, kontakturik, kamerarik ezta mikrofonorik eskatzen.
 
 Google-ren edo Apple-ren sistemako kopiek zure datuak izan ditzakete, absentziak
 barne. Sinkronizatutako egutegi batera esportatzen baduzu edo kopia bat partekatzen
-baduzu, datuak zuk aukeratutako helmugara joaten dira. `.cuadrante` fitxategia ez
+baduzu, datuak zuk aukeratutako helmugara joaten dira. `.turnly` kopia-fitxategia ez
 dago zifratuta.
 
 </details>

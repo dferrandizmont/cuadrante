@@ -14,12 +14,12 @@ Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
 
 You may share and adapt them, including for commercial purposes, with
 attribution, indicating the changes and sharing adaptations under the same
-licence. The attribution must identify Daniel Mont Ferrandiz and Cuadrante and
+licence. The attribution must identify Daniel Mont Ferrandiz and Turnly and
 include a link to this licence. The
 [CC BY-SA 4.0 legal code](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 governs.
 
-This licence covers only the author's own content. The name "Cuadrante" and the
+This licence covers only the author's own content. The name "Turnly" (formerly "Cuadrante") and the
 icon identify this app: if you publish a modified version, give it another name
 and icon so nobody mistakes it for the original.
 

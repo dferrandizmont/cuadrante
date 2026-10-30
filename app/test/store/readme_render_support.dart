@@ -98,3 +98,136 @@ void paintCaption(Canvas canvas, String text, Rect rect, TextStyle style) {
   painter.paint(canvas, rect.topLeft);
   painter.dispose();
 }
+
+/// Logical size of the phone used for the raw GitHub screenshots (Pixel 7
+/// class): 412 dp wide, rendered at 1080 px so the PNG is exactly 1080x2400.
+const githubPhysical = Size(1080, 2400);
+const githubWidthDp = 412.0;
+const githubPixelRatio = 1080 / githubWidthDp;
+
+/// Status bar height and gesture bar inset of the fake phone, in dp.
+const githubStatusBarDp = 40.0;
+const githubGestureDp = 24.0;
+
+/// Draws a realistic Android status bar (10:00, wifi, 3G, signal, full
+/// battery) and the gesture navigation pill over an already painted screen.
+/// [canvas] is in physical pixels (1080x2400). Nothing is painted behind the
+/// icons: the app's own background shows through, as on a real phone.
+void paintAndroidChrome(
+  Canvas canvas, {
+  required Size size,
+  required Color ink,
+  required TextStyle textStyle,
+}) {
+  final dp = size.width / githubWidthDp;
+  final ys = githubStatusBarDp * dp;
+  final cy = ys / 2;
+
+  // Time, left.
+  final time = TextPainter(
+    text: TextSpan(
+      text: '10:00',
+      style: textStyle.copyWith(
+        color: ink,
+        fontSize: 14 * dp,
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0,
+        height: 1,
+      ),
+    ),
+    textDirection: TextDirection.ltr,
+  )..layout();
+  time.paint(canvas, Offset(24 * dp, cy - time.height / 2));
+  time.dispose();
+
+  final fill = Paint()
+    ..color = ink
+    ..style = ui.PaintingStyle.fill
+    ..isAntiAlias = true;
+
+  // Right side, painted from right to left.
+  var x = size.width - 20 * dp;
+
+  // Battery, full: 8x14 dp body with a small cap.
+  const bw = 8.0, bh = 14.0;
+  x -= bw * dp;
+  canvas.drawRRect(
+    RRect.fromRectAndRadius(
+      Rect.fromLTWH(x, cy - bh * dp / 2 + 1 * dp, bw * dp, (bh - 1) * dp),
+      Radius.circular(1.2 * dp),
+    ),
+    fill,
+  );
+  canvas.drawRRect(
+    RRect.fromRectAndRadius(
+      Rect.fromLTWH(x + 2.5 * dp, cy - bh * dp / 2, 3 * dp, 1.6 * dp),
+      Radius.circular(.6 * dp),
+    ),
+    fill,
+  );
+
+  // Signal triangle (full).
+  x -= 6 * dp;
+  const sw = 13.0, sh = 13.0;
+  x -= sw * dp;
+  canvas.drawPath(
+    Path()
+      ..moveTo(x + sw * dp, cy - sh * dp / 2)
+      ..lineTo(x + sw * dp, cy + sh * dp / 2)
+      ..lineTo(x, cy + sh * dp / 2)
+      ..close(),
+    fill,
+  );
+
+  // "3G".
+  x -= 4 * dp;
+  final network = TextPainter(
+    text: TextSpan(
+      text: '3G',
+      style: textStyle.copyWith(
+        color: ink,
+        fontSize: 13 * dp,
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0,
+        height: 1,
+      ),
+    ),
+    textDirection: TextDirection.ltr,
+  )..layout();
+  x -= network.width;
+  network.paint(canvas, Offset(x, cy - network.height / 2));
+  network.dispose();
+
+  // Wifi: a filled fan with a flat bottom, as Android draws it.
+  x -= 6 * dp;
+  const ww = 16.0, wh = 12.0;
+  x -= ww * dp;
+  final wifi = Path()
+    ..moveTo(x + ww * dp / 2, cy + wh * dp / 2)
+    ..lineTo(x, cy - wh * dp / 2 + 3.2 * dp)
+    ..arcToPoint(
+      Offset(x + ww * dp, cy - wh * dp / 2 + 3.2 * dp),
+      radius: Radius.circular(ww * dp * .72),
+      clockwise: true,
+    )
+    ..close();
+  canvas.drawPath(wifi, fill);
+
+  // Gesture pill, centred; Android draws it 108x4 dp, about 12 dp from the
+  // bottom edge.
+  final pillW = 108 * dp, pillH = 4 * dp;
+  canvas.drawRRect(
+    RRect.fromRectAndRadius(
+      Rect.fromLTWH(
+        (size.width - pillW) / 2,
+        size.height - 12 * dp - pillH / 2,
+        pillW,
+        pillH,
+      ),
+      Radius.circular(pillH / 2),
+    ),
+    Paint()
+      ..color = ink.withValues(alpha: .9)
+      ..isAntiAlias = true,
+  );
+}

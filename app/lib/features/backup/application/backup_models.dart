@@ -84,13 +84,13 @@ class RestoreFailure implements Exception {
   String toString() => 'RestoreFailure(dataReplaced: $dataReplaced, $cause)';
 }
 
-/// `cuadrante-2026-11-10-143005.cuadrante`: the name of an exported file, with
+/// `turnly-2026-11-10-143005.turnly`: the name of an exported file, with
 /// the date and time as the user sees them (local). The time makes every
 /// export a file of its own, so the delayed delete of one export can never
 /// reach a newer one.
 String exportFileName(DateTime now) {
   final t = now.toLocal();
   String two(int n) => n.toString().padLeft(2, '0');
-  return 'cuadrante-${t.year.toString().padLeft(4, '0')}-${two(t.month)}-'
-      '${two(t.day)}-${two(t.hour)}${two(t.minute)}${two(t.second)}.cuadrante';
+  return 'turnly-${t.year.toString().padLeft(4, '0')}-${two(t.month)}-'
+      '${two(t.day)}-${two(t.hour)}${two(t.minute)}${two(t.second)}.turnly';
 }

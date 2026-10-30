@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="widget_agenda_label">Cuadrante: próximos días</string>
-    <string name="widget_two_weeks_label">Cuadrante: dúas semanas</string>
+    <string name="widget_agenda_label">Turnly: próximos días</string>
+    <string name="widget_two_weeks_label">Turnly: dúas semanas</string>
     <string name="widget_agenda_description">Hoxe e os próximos días, con quendas e notas. Cambia de día só.</string>
     <string name="widget_two_weeks_description">Esta semana e a seguinte, desde o luns. Cambia de día só.</string>
     <string name="widget_no_shift">Sen quenda</string>
     <string name="widget_has_note">Ten nota</string>
     <string name="widget_today">hoxe</string>
-    <string name="widget_empty_title">Cuadrante</string>
-    <string name="widget_empty_body">Abre Cuadrante para ver as túas quendas</string>
+    <string name="widget_empty_title">Turnly</string>
+    <string name="widget_empty_body">Abre Turnly para ver as túas quendas</string>
 </resources>

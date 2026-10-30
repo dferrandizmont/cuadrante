@@ -1,8 +1,8 @@
-# Cuadrante: calendario de turnos (especificación de producto)
+# Turnly: calendario de turnos (especificación de producto)
 
 18 oct 2026 · Basada en el análisis de ~6.100 reseñas de 12 apps de Google Play y 5 del App Store de España ([docs/analisis-mercado.md](docs/analisis-mercado.md)).
 
-> **Nombre provisional:** «Cuadrante». Antes de decidir, comprobar que el nombre y el dominio estén libres en las dos tiendas. Alternativas: «Turnero», «MiCuadrante», «Turnos Claros».
+> **Nombre:** «Turnly» (decisión del usuario del 30-oct-2026, pregunta 20 de `docs/preguntas.md`: la app se abre a fuera de España; antes se llamaba «Cuadrante»). Pendiente de comprobar en las dos tiendas y como marca. El identificador `es.cuadrante.app` no cambia.
 
 ---
 
@@ -188,7 +188,7 @@ Cercano, en tú, con vocabulario del sector (saliente, moscoso, libre disposici�
 | Widgets | **`home_widget`** como puente + **extensión WidgetKit en SwiftUI** (iOS) + **Glance o RemoteViews** (Android) | Grupo de app compartido con Flutter |
 | Copia de seguridad iOS | Archivo JSON en el contenedor de iCloud mediante un canal nativo en Swift | Plugins existentes viejos o con licencia GPL: mejor un canal propio (~150 líneas) |
 | Copia de seguridad Android | **Auto Backup** del sistema (incluye la base de datos) + exportar a Google Drive (carpeta de la app) como opción | Probar a fondo la restauración en Samsung y Xiaomi |
-| Exportar e importar | Archivo `.cuadrante` (JSON comprimido y versionado) | Se comparte por AirDrop, WhatsApp o correo |
+| Exportar e importar | Archivo `.turnly` (JSON comprimido y versionado; se siguen abriendo las copias antiguas `.cuadrante`) | Se comparte por AirDrop, WhatsApp o correo |
 | Importar desde calendario | `device_calendar` (EventKit / Calendar Provider) | Asistente para asociar títulos de eventos con tipos de turno |
 | Alarmas | Android: alarmas exactas y reprogramar tras reiniciar. iOS: notificaciones locales (máximo 64 pendientes: programar 2 semanas por delante) | Valorar AlarmKit (iOS 26) en la v1.1; comprobar que hay soporte desde Flutter |
 | Compras | **No hay** | Sin SDK de pagos, sin paywall y sin «Restaurar compras» (decisión del 26-oct-2026) |
@@ -222,7 +222,7 @@ Settings(key, value)
 
 ## 7. Gratuidad y licencias
 
-> **Decisión del usuario del 26-oct-2026:** Cuadrante es **totalmente gratuita y de código abierto**. No hay Pro, ni
+> **Decisión del usuario del 26-oct-2026:** Turnly es **totalmente gratuita y de código abierto**. No hay Pro, ni
 > compras, ni suscripciones, ni anuncios. Sustituye a todas las decisiones anteriores de monetización: la tabla
 > gratis/Pro, los precios y los ingresos previstos quedan derogados.
 
@@ -253,7 +253,7 @@ Settings(key, value)
 
 ## 8. ASO y lanzamiento
 
-**Título (iOS, 30 caracteres):** «Cuadrante: Turnos de Trabajo»
+**Título (iOS, 30 caracteres):** «Turnly: Cuadrante de turnos» (los de cada idioma, en `docs/tienda/`)
 **Subtítulo:** «Calendario de turnos y widget»
 
 **Palabras clave:** calendario turnos, cuadrante, turnos trabajo, correturnos, enfermería, guardias, horario rotativo, moscosos, saliente, 24/72, festivos, horas, nocturnidad

@@ -595,6 +595,42 @@ void main() {
 
   group('safety copy before a restore', () {
     test(
+      'mixed safety copies rotate together and legacy ones still restore',
+      () async {
+        safety.createSync(recursive: true);
+        const codec = BackupCodec();
+        final legacyBytes = codec.encode(
+          buildGoldenBackupData(),
+          appVersion: testAppVersion,
+          exportedAt: DateTime.utc(2026, 11, 8, 9),
+        );
+        final names = [
+          'pre-restore-20261106-090000.cuadrante',
+          'pre-restore-20261107-090000.turnly',
+          'pre-restore-20261108-090000.cuadrante',
+          'pre-restore-20261109-090000.turnly',
+        ];
+        for (final name in names) {
+          File(p.join(safety.path, name)).writeAsBytesSync(legacyBytes);
+        }
+        await repository.restore(smallData());
+        expect(fileNames(safety).toSet(), {
+          names[2],
+          names[3],
+          'pre-restore-20261110-090000.turnly',
+        });
+        final legacy = File(p.join(safety.path, names[2]));
+        expect(await legacy.readAsBytes(), legacyBytes);
+        await repository.restore(codec.decode(await legacy.readAsBytes()).data);
+        expect(await repository.readAll(), buildGoldenBackupData());
+        expect(
+          fileNames(safety),
+          contains('pre-restore-20261110-090000-2.turnly'),
+        );
+      },
+    );
+
+    test(
       'a note above the old 4 MiB limit can recover replaced data',
       () async {
         final large = BackupData(
@@ -652,9 +688,9 @@ void main() {
       await seedDatabase(db, buildGoldenBackupData());
       await repository.restore(smallData());
 
-      expect(fileNames(safety), ['pre-restore-20261110-090000.cuadrante']);
+      expect(fileNames(safety), ['pre-restore-20261110-090000.turnly']);
       final bytes = File(
-        p.join(safety.path, 'pre-restore-20261110-090000.cuadrante'),
+        p.join(safety.path, 'pre-restore-20261110-090000.turnly'),
       ).readAsBytesSync();
       final file = const BackupCodec().decode(bytes);
       expect(file.data, buildGoldenBackupData());
@@ -680,9 +716,9 @@ void main() {
         );
       }
       expect(fileNames(safety), [
-        'pre-restore-20261110-090200.cuadrante',
-        'pre-restore-20261110-090300.cuadrante',
-        'pre-restore-20261110-090400.cuadrante',
+        'pre-restore-20261110-090200.turnly',
+        'pre-restore-20261110-090300.turnly',
+        'pre-restore-20261110-090400.turnly',
       ]);
     });
 
@@ -693,9 +729,9 @@ void main() {
         await repository.restore(buildGoldenBackupData());
         await repository.restore(smallData());
         expect(fileNames(safety), [
-          'pre-restore-20261110-090000-2.cuadrante',
-          'pre-restore-20261110-090000-3.cuadrante',
-          'pre-restore-20261110-090000.cuadrante',
+          'pre-restore-20261110-090000-2.turnly',
+          'pre-restore-20261110-090000-3.turnly',
+          'pre-restore-20261110-090000.turnly',
         ]);
         // The oldest of them is the first (empty database) and the newest the
         // one before the last restore.
@@ -703,13 +739,13 @@ void main() {
             File(p.join(safety.path, name)).readAsBytesSync();
         expect(
           const BackupCodec()
-              .decode(read('pre-restore-20261110-090000-3.cuadrante'))
+              .decode(read('pre-restore-20261110-090000-3.turnly'))
               .data,
           buildGoldenBackupData(),
         );
         expect(
           const BackupCodec()
-              .decode(read('pre-restore-20261110-090000-2.cuadrante'))
+              .decode(read('pre-restore-20261110-090000-2.turnly'))
               .data,
           smallData(),
         );

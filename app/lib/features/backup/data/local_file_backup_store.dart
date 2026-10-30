@@ -6,18 +6,20 @@ import 'package:path/path.dart' as p;
 import '../domain/backup_store.dart';
 import 'backup_files.dart';
 
-/// [BackupStore] over a folder of files `<prefix>-<stamp>.cuadrante`: what
+/// [BackupStore] over a folder of files `<prefix>-<stamp>.turnly`: what
 /// Android uses for now and what the tests use. Keeps the [keep] newest, or
 /// whatever [retain] says when it is given.
 ///
-/// The automatic copies use the prefix `cuadrante`; a second store over the
-/// same folder with the prefix `pre-restore` lists the safety copies that
-/// `BackupRepository.restore` writes (the two never see each other's files).
+/// Legacy `.cuadrante` copies (and their `cuadrante` prefix) remain readable
+/// and share the same retention. Automatic copies use the prefix `turnly`;
+/// a second store over the same folder with the prefix `pre-restore` lists
+/// the safety copies that `BackupRepository.restore` writes (the two never
+/// see each other's files).
 class LocalFileBackupStore implements BackupStore {
   LocalFileBackupStore(
     this.directory, {
     this.keep = 5,
-    this.prefix = 'cuadrante',
+    this.prefix = 'turnly',
     this.retain,
     this.pruneOnSave = true,
   }) : assert(keep >= 1, 'a store must keep at least one backup'),

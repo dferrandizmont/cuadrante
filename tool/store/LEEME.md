@@ -1,7 +1,7 @@
 # Gráficos y capturas del README y las tiendas
 
 Como en Ley al Blanco, los tests de `app/test/store/` dibujan las composiciones
-alrededor de **pantallas reales de Cuadrante**. No necesitan emulador, dispositivo,
+alrededor de **pantallas reales de Turnly**. No necesitan emulador, dispositivo,
 red, una base de datos del usuario ni herramientas de retoque.
 
 ## Regenerar los README
@@ -28,20 +28,26 @@ En Windows se usa la zona del sistema: no definas `TZ=Europe/Madrid`, porque
 su runtime no interpreta ese identificador IANA como Linux.
 
 Salidas versionadas en **`docs/readme/<idioma>/`** para los cinco idiomas de la app
-(`es`, `ca`, `gl`, `eu`, `en`), ocho por idioma:
+(`es`, `ca`, `gl`, `eu`, `en`), nueve por idioma. Las capturas son **pantallas en bruto
+del móvil, como las de Ink Lab**: 1080 × 2400 (412 dp de ancho a 1080/412), tema claro,
+con barra de estado de Android (10:00, wifi, 3G, cobertura y batería llenas) y píldora
+del gesto abajo, **sin titular, sin marco y sin tinte de fondo**. Una sola va en oscuro
+(`07-mes-oscuro.png`). Las dibuja el destino `github` (el predeterminado de `STORE_TARGET`):
 
 | Archivo | Tamaño | Contenido |
 |---|---|---|
 | `header.png` | 1024 × 500 | Cabecera, reutilizable como gráfico destacado de Play |
 | `icon-512.png` | 512 × 512 | Icono real de `app/assets/icon/icon.png` |
-| `01-mes.png` | 540 × 1080 | Cuadrícula del mes, tema oscuro |
-| `02-lista.png` | 540 × 1080 | Lista del mismo mes |
-| `03-pintar.png` | 540 × 1080 | Pintar con la paleta, tema oscuro |
-| `04-rotaciones.png` | 540 × 1080 | Asistente y vista previa de la rotación |
-| `05-horas.png` | 540 × 1080 | Resumen de horas |
-| `06-festivos.png` | 540 × 1080 | Festivos, comunidad y municipio |
+| `01-mes.png` | 1080 × 2400 | Cuadrícula del mes, tema claro |
+| `02-lista.png` | 1080 × 2400 | Lista del mismo mes |
+| `03-pintar.png` | 1080 × 2400 | Pintar con la paleta |
+| `04-rotaciones.png` | 1080 × 2400 | Asistente y vista previa de la rotación |
+| `05-horas.png` | 1080 × 2400 | Resumen de horas |
+| `06-festivos.png` | 1080 × 2400 | Festivos, comunidad y municipio |
+| `07-mes-oscuro.png` | 1080 × 2400 | Cuadrícula del mes, tema oscuro |
 
-PNG RGB de 8 bits, opacos y sin metadatos. El escritor comprueba las dimensiones
+En las pantallas largas (`05-horas`, `06-festivos`) el test desplaza la lista lo mínimo
+para que ningún texto quede bajo la píldora del gesto. PNG RGB de 8 bits, opacos y sin metadatos. El escritor comprueba las dimensiones
 decodificando el PNG antes de guardarlo. La cabecera y el icono los genera
 `readme_graphics_test.dart`; las escenas, `store_screenshots_test.dart`.
 
@@ -61,7 +67,7 @@ La sexta escena usa Festivos; no se simula un escritorio ni un widget nativo.
 
 ## Tamaños de tienda
 
-Los mismos tests pueden componer las seis escenas para cada tienda, sin estirar
+Los mismos tests pueden componer las seis escenas (con titular y marco; `07-mes-oscuro` es solo del README) para cada tienda, sin estirar
 ni cortar la pantalla. Desde `app/`:
 
 ```bash

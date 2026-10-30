@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 /**
- * "Guardar en el móvil": hands the bytes of an exported `.cuadrante` to the
+ * "Guardar en el móvil": hands the bytes of an exported `.turnly` to the
  * system's own save dialog (`ACTION_CREATE_DOCUMENT`, the Storage Access
  * Framework), so the user picks the folder (Descargas, a card, a cloud app)
  * without the app asking for any storage permission.
@@ -174,6 +174,6 @@ object DocumentName {
     /** A name with no folder in it, whatever Dart sent; never empty. */
     fun sanitize(name: String): String {
         val last = name.substringAfterLast('/').substringAfterLast('\\').trim()
-        return last.ifEmpty { "cuadrante.cuadrante" }
+        return last.ifEmpty { "turnly.turnly" }
     }
 }

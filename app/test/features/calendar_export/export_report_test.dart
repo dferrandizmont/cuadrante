@@ -185,7 +185,7 @@ void main() {
         calendarCreated: true,
       );
       expect(exportResultLines(l10n, fresh).map((l) => l.text), [
-        'Se ha creado el calendario «Cuadrante».',
+        'Se ha creado el calendario «Turnly».',
         '30 eventos añadidos',
       ]);
     });

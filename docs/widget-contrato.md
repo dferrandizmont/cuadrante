@@ -182,8 +182,8 @@ La cuadrícula incluye días anteriores a hoy y posteriores al día 60 con datos
   "locale": "es",
   "firstDate": "2026-10-19",
   "lastDate": "2026-12-17",
-  "staleTitle": "Cuadrante",
-  "staleBody": "Abre Cuadrante para seguir al día",
+  "staleTitle": "Turnly",
+  "staleBody": "Abre Turnly para seguir al día",
   "weekdayHeaders": ["L", "M", "X", "J", "V", "S", "D"],
   "styles": [
     {
@@ -349,7 +349,7 @@ Reglas:
 
 La entrada `.stale` aparece cuando `now` pasa de la medianoche siguiente al día 60, o desde el primer momento si no
 hay JSON válido o `now` queda fuera de `firstDate…lastDate` (reloj atrasado, JSON viejo). Muestra **solo**
-`staleTitle` y `staleBody` (`Cuadrante` / `Abre Cuadrante para seguir al día`) en todas las familias; en pantalla de
+`staleTitle` y `staleBody` (`Turnly` / `Abre Turnly para seguir al día`) en todas las familias; en pantalla de
 bloqueo, una línea corta (`staleBody`; circular: icono o `–`). **Nunca** muestra turnos, colores de turno ni nada de
 otro día: es un aviso honesto, no un dato a medias. El mes grande tampoco: sin cuadrículas en caducado. Cuando el
 usuario abre la app, esta republica y las líneas de tiempo vuelven a la normalidad.
@@ -416,7 +416,7 @@ y mismo aviso de caducado. Código en `app/android/app/src/main/kotlin/es/cuadra
 | `CuadranteTwoWeeksWidgetProvider` (4×2) | «Dos semanas»: 2 filas de 7 días desde el lunes de la semana actual, incluso con domingo como inicio del mes en Ajustes. Día, color, código y hora compacta cuando cabe; cada celda abre su día. |
 | `WidgetModelBuilder` | Lee el JSON y devuelve lo que se pinta (o el aviso). Nunca lanza: JSON ausente, roto, versión distinta de 1 y 2 o un día incompleto dan el aviso. |
 | `WidgetRenderer` | `RemoteViews` (los cinco widgets). Colores del JSON; en Android 12+ con `setColorInt(claro, oscuro)`, así que el cambio de tema no necesita redibujar; antes se elige por `uiMode` al dibujar. **Todo dibujo fija la visibilidad del
-aviso «Abre Cuadrante» y del contenido** (`WidgetRenderPlan`): el lanzador reaplica el `RemoteViews` sobre las vistas que ya
+aviso «Abre Turnly» y del contenido** (`WidgetRenderPlan`): el lanzador reaplica el `RemoteViews` sobre las vistas que ya
 tiene si el layout es el mismo, y lo que dejó el dibujo anterior (aviso visible, contenido oculto) se queda si el nuevo no lo
 cambia (H-T12-2). Fondo y textos neutros de `res/values(-night)/widget_colors.xml` (tokens de `docs/diseno.md`). |
 | `WidgetScheduler` | Alarma de la próxima medianoche (+2 s) y tarea periódica de WorkManager (6 h). |

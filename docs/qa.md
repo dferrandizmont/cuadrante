@@ -124,7 +124,7 @@ propósito, 27–28 Vacaciones.
 | Q09 Tema oscuro y texto grande | Tema oscuro con texto ×1,3 y ×2,0: mes, modo pintar (con un trazo) y hoja del día sin ningún `FlutterError`; capturas de cada uno. |
 | Q10 Festivos por comunidad | Solo nacionales: el 26 dic no es festivo; con `ES-CT` sí («San Esteban»); se guarda en `settings`, sobrevive a cerrar la app y se quita al borrar la comunidad. |
 | Q11 Alarmas | Con la alarma de Noche 90 min antes, el plugin real de notificaciones lista las pendientes con nuestro prefijo de payload (≤ 60, las del plan, todas a las 20:30 locales de un día de Noche); al desactivar no queda ninguna. Con el reloj fijo, la primera es el 19 oct a las 20:30. El plugin no expone la hora de disparo: la hora se comprueba en el plan. |
-| Q12 Copia de seguridad | Exportar con `BackupService` → alterar y vaciar los datos → restaurar: la huella (`scheduleFingerprint`, 730 días) coincide con la original y queda la copia previa `pre-restore`; archivos dañados (byte cambiado, truncado, no es un `.cuadrante`) se rechazan sin tocar los datos. |
+| Q12 Copia de seguridad | Exportar con `BackupService` → alterar y vaciar los datos → restaurar: la huella (`scheduleFingerprint`, 730 días) coincide con la original y queda la copia previa `pre-restore`; archivos dañados (byte cambiado, truncado, no es una copia `.turnly`) se rechazan sin tocar los datos. |
 | Q13 Rendimiento | Arranque en frío (abrir el archivo, `bootstrapApp`, primer fotograma con las 42 celdas) con 2 años de turnos en la BD: objetivo < 1 s, **falla por encima de 2 s**. Se miden tres arranques seguidos; el primero es el que cuenta. La cifra sale del build de depuración en el emulador (JIT), así que es una cota alta del rendimiento real. Medido el 19-oct-2026 en `Mochila_Phone` (API 36, 417 días guardados): 237 / 228 / 237 ms. |
 | Q20 Mis turnos: orden | Ajustes › Mis turnos lista la paleta en su orden; arrastrar el asa de un turno cambia el orden, la BD guarda `sort_order` en ese orden, la barra de pintar lo sigue y sobrevive a reiniciar. (`scenarios/shift_types.dart`) |
 | Q21 Mis turnos: crear | Formulario vacío → mensajes en español y nada guardado; el código se sugiere desde el nombre y uno repetido se rechaza; color de la cuadrícula, 07:30–15:30, descanso de 30 min («Se pagan 7 h 30 min») y 12,50 €/h: la BD guarda `paid_minutes` 450 y `hourly_rate_cents` 1250; se pinta de inmediato y sobrevive a reiniciar. |
@@ -166,11 +166,11 @@ temporal, nunca a la de la app.
 
 | Id | Qué demuestra |
 |---|---|
-| Q65 Exportar, vaciar e importar (R4) | Ajustes › Copia de seguridad › Exportar archivo entrega un `.cuadrante` llamado `cuadrante-2026-10-19.cuadrante`; se vacían los días y las rotaciones; Importar archivo → vista previa («Esto sustituye lo que tienes ahora; antes guardamos una copia.») → confirmar: la huella de 730 días es idéntica a la original, queda una copia `pre-restore` y el calendario vuelve a mostrar la noche de hoy. En Android, la línea de la copia del sistema está en pantalla. |
-| Q66 Versión más nueva (R6) | Un archivo con `schemaVersion` mayor se rechaza en la vista previa con «Este archivo es de una versión más nueva de Cuadrante: actualiza la app.» y «No hemos cambiado nada»; sin botón de confirmar, huella y BD intactas, sin copia previa. |
-| Q67 Archivo dañado (R7) | Cortado, con un byte cambiado y que no es un `.cuadrante`: cada uno se rechaza con su mensaje, sin tocar la BD ni crear copia previa; el archivo bueno sigue importándose después. |
+| Q65 Exportar, vaciar e importar (R4) | Ajustes › Copia de seguridad › Exportar archivo entrega un `.turnly` llamado `turnly-2026-10-19-<hhmmss>.turnly` (hasta la 0.6.14, `cuadrante-….cuadrante`); se vacían los días y las rotaciones; Importar archivo → vista previa («Esto sustituye lo que tienes ahora; antes guardamos una copia.») → confirmar: la huella de 730 días es idéntica a la original, queda una copia `pre-restore` y el calendario vuelve a mostrar la noche de hoy. En Android, la línea de la copia del sistema está en pantalla. |
+| Q66 Versión más nueva (R6) | Un archivo con `schemaVersion` mayor se rechaza en la vista previa con «Este archivo es de una versión más nueva de Turnly: actualiza la app.» y «No hemos cambiado nada»; sin botón de confirmar, huella y BD intactas, sin copia previa. |
+| Q67 Archivo dañado (R7) | Cortado, con un byte cambiado y que no es una copia `.turnly`: cada uno se rechaza con su mensaje, sin tocar la BD ni crear copia previa; el archivo bueno sigue importándose después. |
 | Q68 Volver a como estaba | «Hacer copia ahora», pintar dos noches, «Restaurar esta» (vuelve a la copia) y «Volver a como estaba» desde la copia previa: la huella de las noches pintadas se recupera y el calendario las muestra. |
-| Q69 Copia automática | Sin ninguna copia al empezar; pintar un día; sin pulsar nada aparece `cuadrante-*.cuadrante` con ese día dentro (retraso de 2 s en la batería en lugar de 10 s) y la pantalla dice «Hoy a las 18:20 · En este móvil», sin aviso de fallo. |
+| Q69 Copia automática | Sin ninguna copia al empezar; pintar un día; sin pulsar nada aparece `turnly-*.turnly` con ese día dentro (retraso de 2 s en la batería en lugar de 10 s) y la pantalla dice «Hoy a las 18:20 · En este móvil», sin aviso de fallo. |
 
 | Q70 Importar un .ics | Ajustes › Importar › archivo `.ics` con 3 eventos («El archivo trae 3 eventos.»): Mañana, Noche y Libre se reconocen por el título y la alarma del evento no se toma por un turno; tras importar se ve noviembre con M, M, M, N en sus días, el día anterior y el Libre de la rotación quedan igual, se guardan 4 días y todo se deshace con un solo «Deshacer». (`scenarios/import.dart`) |
 | Q71 Importar un CSV | Columnas de fecha, título y horas, títulos agrupados y días pintados como en el archivo. |
@@ -354,14 +354,14 @@ ni una versión de origen que no esté publicada (`QA_OLD_TAG=v0.1.0` prueba esa
 ## Una sola actividad (`tool/qa/single_activity_check.sh`)
 
 `MainActivity` es `launchMode="singleTask"` (`docs/copia-de-seguridad.md`, apartado 9). Con `singleTop` y
-`taskAffinity=""`, un `VIEW` de un `.cuadrante` desde Archivos o WhatsApp con la app en segundo plano arrancaba una
+`taskAffinity=""`, un `VIEW` de una copia (`.turnly` o `.cuadrante`) desde Archivos o WhatsApp con la app en segundo plano arrancaba una
 segunda `MainActivity` y un segundo motor. Comprobación manual, o con el script:
 
 ```bash
 QA_DEVICE=emulator-5580 tool/qa/single_activity_check.sh   # app ya instalada; sin QA_DEVICE no hace nada
 ```
 
-A mano: abre Cuadrante, pulsa Inicio, abre un `.cuadrante` desde Archivos (o `adb shell am start -a
+A mano: abre Turnly, pulsa Inicio, abre un `.turnly` (o un `.cuadrante` antiguo) desde Archivos (o `adb shell am start -a
 android.intent.action.VIEW -n es.cuadrante.app/.MainActivity -t application/octet-stream -d content://...`) y
 mira `adb shell dumpsys activity activities`: **una** sola `ActivityRecord` de `es.cuadrante.app/.MainActivity`
 (antes del cambio salían dos). Aparte, con la app en segundo plano: tocar un día del widget abre ese día
@@ -392,7 +392,7 @@ zona y ahorro de batería de vuelta a lo normal, emulador apagado solo si lo arr
 |---|---|
 | W01 Publicar y añadir | La app (datos de demostración) publica la instantánea en `HomeWidgetPreferences` con `firstDate` = hoy; desde Ajustes › Añadir widget se fijan los dos primeros widgets (2×2 y 4×2) aceptando el diálogo del launcher; la pantalla de inicio muestra la etiqueta de hoy. |
 | W02 Cambio de día sin la app | Con la app cerrada (proceso matado) y el ahorro de batería activo, la hora pasa a las 23:58:30; el widget enseña hoy, y tras medianoche, mañana: la alarma exacta llega a las 00:00:02 (falla si tarda más de 10 s; con `QA_WIDGET_EXACT=0` solo se anota la hora). Después, cambio de zona a Pacific/Honolulu (el widget sigue el reloj de allí) y vuelta. |
-| W03 Aviso honesto | Último día publicado a las 23:58:30 y su medianoche: pasa a «Abre Cuadrante para seguir al día» sin ningún turno; 40 días después y con el reloj antes del primer día, lo mismo; de vuelta dentro del rango reaparece el día correcto. |
+| W03 Aviso honesto | Último día publicado a las 23:58:30 y su medianoche: pasa a «Abre Turnly para seguir al día» sin ningún turno; 40 días después y con el reloj antes del primer día, lo mismo; de vuelta dentro del rango reaparece el día correcto. |
 | W05 Widget del mes (4×4) | Desde Ajustes › Añadir widget › «Grande: el mes entero» se fija el widget 4×4: muestra el título del mes de hoy (de la instantánea, p. ej. «Octubre 2026») y una celda con descripción «<día> … hoy». Con la app matada y el ahorro de batería activo, la hora pasa a las 23:58:30 de la víspera del primer día del segundo mes de la instantánea; tras la medianoche (alarma) el título cambia al mes nuevo, desaparece el anterior y la celda «1 … hoy» es la de hoy. Tocar la cabecera abre la app (`cuadrante://widget/month/<aaaa-mm>`). Lo que **no** mira el script (a ojo, con las capturas `W05_*.png`): el anillo de hoy, las barras de color, los días atenuados de otros meses y que con 3×3 celdas se lea (ver el protocolo manual). Va antes de W04 porque necesita el widget colocado. |
 | W04 Reinicio | Tras reiniciar el emulador llega `BOOT_COMPLETED`, la alarma de medianoche vuelve a estar armada (`dumpsys alarm`) y la siguiente medianoche dispara el refresco. Va la última: el launcher de esta imagen olvida los widgets colocados al reiniciar, así que no se mira la pantalla después. |
 

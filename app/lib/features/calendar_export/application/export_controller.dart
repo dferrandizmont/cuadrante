@@ -53,7 +53,7 @@ class ExportState {
   /// The calendars the export may write to.
   final List<DeviceCalendarInfo> calendars;
 
-  /// The phone calendar chosen; `null` = create «Cuadrante».
+  /// The phone calendar chosen; `null` = create «Turnly».
   final String? targetId;
   final CivilDate from;
   final CivilDate to;
@@ -183,11 +183,16 @@ class ExportController extends Notifier<ExportState> {
           _chosen &&
           (state.targetId == null ||
               writable.any((c) => c.id == state.targetId));
-      // The calendar called «Cuadrante», when there already is one; else a
-      // new one is created.
-      final existing = writable
-          .where((c) => c.name.trim().toLowerCase() == 'cuadrante')
-          .firstOrNull;
+      // The calendar called «Turnly», when there already is one (or the
+      // «Cuadrante» one made before the app was renamed); else a new one is
+      // created.
+      final existing =
+          writable
+              .where((c) => c.name.trim().toLowerCase() == 'turnly')
+              .firstOrNull ??
+          writable
+              .where((c) => c.name.trim().toLowerCase() == 'cuadrante')
+              .firstOrNull;
       state = state.copyWith(
         loading: false,
         access: access,

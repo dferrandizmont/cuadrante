@@ -1,4 +1,4 @@
-# Copia de seguridad: formato `.cuadrante` y restauración
+# Copia de seguridad: formato `.turnly` y restauración
 
 Contrato del archivo de copia y de la restauración. Lo que decide si alguien pierde su cuadrante: cualquier cambio
 aquí lleva prueba (`app/test/features/backup/`) y **nunca rompe la lectura de archivos antiguos**. La matriz de
@@ -28,7 +28,13 @@ el 9; y la copia del sistema de Android, en el 10.
 
 ## 1. El archivo
 
-Un `.cuadrante` es **JSON UTF-8 comprimido con gzip**. El JSON, ya descomprimido, es siempre canónico (claves
+Desde el cambio de nombre a Turnly (30-oct-2026), todos los archivos nuevos usan `.turnly`.
+Los archivos `.cuadrante` antiguos siguen aceptándose al importar, abrir desde otra app y listar o restaurar
+copias locales o de iCloud. Solo cambian el nombre y la extensión: el formato interno, `format: "cuadrante"`,
+la cabecera gzip, la versión, el esquema y los datos permanecen iguales. Renombrar la extensión permite leer
+una copia nueva con una app antigua que soporte su versión de formato, y viceversa.
+
+Un `.turnly` es **JSON UTF-8 comprimido con gzip**. El JSON, ya descomprimido, es siempre canónico (claves
 ordenadas en todos los niveles, sin espacios ni saltos de línea), de modo que los mismos datos dan los mismos bytes.
 
 ```json
@@ -113,7 +119,7 @@ copia previa, huella, límites y dorado antiguo).
 
 - **Entra todo lo que el usuario ha creado o configurado**, con sus marcas de tiempo: se restaura la base de datos tal
   cual estaba, no una reconstrucción parecida. La baja médica y demás ausencias de salud son días como los demás
-  (`dayEntries` con un tipo de la categoría `absence`): viajan **dentro del archivo `.cuadrante` que controla el
+  (`dayEntries` con un tipo de la categoría `absence`): viajan **dentro del archivo `.turnly` que controla el
   usuario** y, mientras la copia del sistema de Android esté activada, **también en la copia de Google** (la base de
   datos y `backups/` están en `files/`, que Auto Backup sube a la cuenta de Google del usuario: apartado 10). Ni feed,
   ni analítica, ni servidor nuestro. Qué hacer con los datos de salud en la copia de Google es una decisión pendiente
@@ -122,7 +128,7 @@ copia previa, huella, límites y dorado antiguo).
   describen la vida de ese móvil con la app, no el cuadrante. No se exportan, un archivo que los trae (versiones
   anteriores exportaban todo `settings`) no los devuelve al restaurar, y restaurar deja intactos los del móvil. Al
   terminar un restore con éxito el primer uso se marca como hecho (`RestoreCoordinator`): un móvil al que se le acaba
-  de restaurar un cuadrante no es un primer arranque. Un `.cuadrante` abierto durante el primer uso espera a que
+  de restaurar un cuadrante no es un primer arranque. Un `.turnly` abierto durante el primer uso espera a que
   termine (`BackupHost`).
 - **`appearance.language` tampoco entra**: el idioma de la app es de ese móvil, como `backup.cloud`. No se exporta,
   un archivo que lo trae no lo cambia y restaurar deja el idioma como estaba (`isDeviceSetting`).
@@ -248,7 +254,7 @@ de perder datos en silencio** (apartado 1, «Por qué se sube la versión»). En
   días, luego los calendarios; al insertar, los calendarios van antes), en **una** transacción (todo o nada). Los
   ajustes `calendars.active` y `calendars.primary` viajan en `settings`, así que lo que la copia traiga sustituye lo
   que hubiera (un v1 no los trae: vuelven a valer `main`). Antes escribe una
-  exportación de seguridad de lo actual en `<Application Support>/backups/pre-restore-<fecha>.cuadrante` (UTC,
+  exportación de seguridad de lo actual en `<Application Support>/backups/pre-restore-<fecha>.turnly` (UTC,
   `yyyyMMdd-HHmmss`, con `-2`, `-3`… si coinciden en el mismo segundo) y se queda con las 3 últimas. Si esa copia no
   se puede escribir, no se restaura. Un archivo o dato inconsistente se rechaza antes de escribir nada. Un fallo a
   mitad deja los datos como estaban.
@@ -265,7 +271,7 @@ de perder datos en silencio** (apartado 1, «Por qué se sube la versión»). En
 `inspect(bytes)` (lee y resume, sin escribir; es lo que se hace al importar. **Decodifica en un isolate aparte**
 —`BackupService(runner:)`, por defecto `Isolate.run`; las pruebas de pantalla inyectan `runOnThisIsolate`—, así que un
 archivo hostil no bloquea la interfaz; solo el resumen contra la base de datos, que es barato, corre en el principal), `restore(pending)` y `verifyLatest()`.
-El nombre de archivo que propone la interfaz al exportar es `cuadrante-AAAA-MM-DD-HHmmss.cuadrante` con la fecha y
+El nombre de archivo que propone la interfaz al exportar es `turnly-AAAA-MM-DD-HHmmss.turnly` con la fecha y
 hora **locales** (la hora hace único cada archivo: el borrado diferido de una exportación no puede alcanzar a una
 posterior; `exportFileName`, en `application/backup_models.dart`; `BackupCodec.suggestedFileName` ya no se usa en la interfaz).
 
@@ -296,7 +302,7 @@ Restauración en seco, sin tocar los datos del usuario ni la carpeta de copias d
 
 ## 4. Dónde se guarda: `BackupStore`
 
-`domain/backup_store.dart` define el contrato; los bytes son siempre un `.cuadrante` hecho por `BackupCodec`, el
+`domain/backup_store.dart` define el contrato; los bytes son siempre un `.turnly` hecho por `BackupCodec`, el
 almacén solo los guarda:
 
 ```dart
@@ -312,11 +318,14 @@ abstract interface class BackupStore {
 parecer buena: la interfaz muestra el error y la fecha de la última buena, R8). `BackupEntry` lleva `id` (opaco),
 `modifiedAt` (UTC) y `sizeBytes`.
 
-- **Ahora (Android y pruebas): `LocalFileBackupStore(directory, {keep = 5, prefix = 'cuadrante', retain})`**, una carpeta
-  con `<prefijo>-<fecha>.cuadrante`. Escritura atómica (archivo temporal + renombrar), sin pisar dos copias del mismo
-  segundo, ignora lo que no es suyo y solo lee (y borra) nombres que son suyos. Con `retain` (la política del apartado
+- **Ahora (Android y pruebas): `LocalFileBackupStore(directory, {keep = 5, prefix = 'turnly', retain})`**, una carpeta
+  con `<prefijo>-<fecha>.turnly`. Las copias antiguas `cuadrante-<fecha>.cuadrante` siguen en el almacén
+  automático, y `pre-restore-<fecha>.cuadrante` en el de seguridad: dentro de cada almacén se ordenan junto a las
+  nuevas por fecha y contador, y comparten la misma poda. El contador de un archivo nuevo sigue al mayor de ambos
+  nombres en ese segundo. Escritura atómica (archivo temporal + renombrar), sin pisar dos copias del mismo segundo,
+  ignora lo que no es suyo y solo lee (y borra) nombres que son suyos. Con `retain` (la política del apartado
   8) en lugar de `keep`; la copia recién guardada nunca se borra y un archivo que no se puede borrar se deja para la
-  próxima vez en vez de hacer fallar el guardado. Dos almacenes sobre la misma carpeta no se ven: `cuadrante` (copias
+  próxima vez en vez de hacer fallar el guardado. Dos almacenes sobre la misma carpeta no se ven: `turnly` (copias
   de la app) y `pre-restore` (copias previas a restaurar, que escribe `BackupRepository.restore`).
 - **iOS: `ICloudBackupStore`** (`data/icloud_backup_store.dart`), que implementa la misma interfaz llamando por un
   `MethodChannel` al código Swift (~150 líneas, ver `turnos-spec.md` §6) que escribe en el contenedor de iCloud de
@@ -344,18 +353,18 @@ parecer buena: la interfaz muestra el error y la fecha de la última buena, R8).
      (otro fichero), nunca los bytes de la copia local.
   2. El interruptor «Copia en iCloud» de Ajustes (`BackupSettingsRepository.loadCloud()` / `saveCloud()`, clave
      `backup.cloud`, **apagado por defecto**; solo un `true` explícito lo enciende). Es un ajuste **del dispositivo**
-     (`isDeviceSetting`): no entra en ningún `.cuadrante`, un archivo importado no lo puede encender ni apagar y una
+     (`isDeviceSetting`): no entra en ningún `.turnly`, un archivo importado no lo puede encender ni apagar y una
      restauración lo deja como está. `BackupTools._mirrorToCloud` lo vuelve a leer **antes de cada copia**: apagarlo
      detiene la siguiente de inmediato (y un valor ilegible cuenta como apagado).
 
-  La réplica en iCloud está apagada por defecto y solo se activa con el interruptor «Copia en iCloud» de Ajustes, cuyo texto dice que la copia va a iCloud Drive (carpeta Cuadrante, visible en Archivos y en todos los dispositivos de tu Apple ID), que incluye todos los turnos y ausencias (bajas incluidas), y que no está cifrada de extremo a extremo salvo que tengas Protección de datos avanzada. Registrar el canal de Swift no la activa; además `kICloudReplica` debe pasar a true solo cuando se responda la pregunta 13.
+  La réplica en iCloud está apagada por defecto y solo se activa con el interruptor «Copia en iCloud» de Ajustes, cuyo texto dice que la copia va a iCloud Drive (carpeta Turnly, visible en Archivos y en todos los dispositivos de tu Apple ID), que incluye todos los turnos y ausencias (bajas incluidas), y que no está cifrada de extremo a extremo salvo que tengas Protección de datos avanzada. Registrar el canal de Swift no la activa; además `kICloudReplica` debe pasar a true solo cuando se responda la pregunta 13.
 
   **Interruptor «Copia en iCloud» (pendiente: sin pantalla todavía).** Debe vivir en Ajustes › Copia de seguridad,
   apagado de fábrica, y su texto debe decir, sin suavizar, lo de arriba: que la copia va a iCloud Drive (carpeta
-  Cuadrante, visible en Archivos y en todos los dispositivos de tu Apple ID), que incluye todos los turnos y ausencias
+  Turnly, visible en Archivos y en todos los dispositivos de tu Apple ID), que incluye todos los turnos y ausencias
   (bajas incluidas) y que no está cifrada de extremo a extremo salvo que tengas Protección de datos avanzada. Textos por
   ARB; se hace con el diseño cerrado y el provider ya existe: `cloudBackupEnabledProvider`.
-- Auto Backup de Android (A1–A4) copia la base de datos del sistema y es independiente de esto; el `.cuadrante` es el
+- Auto Backup de Android (A1–A4) copia la base de datos del sistema y es independiente de esto; el `.turnly` es el
   seguro adicional y lo que viaja entre plataformas.
 
 ### Copia en iCloud: contrato del canal `app.cuadrante/icloud`
@@ -363,12 +372,12 @@ parecer buena: la interfaz muestra el error y la fecha de la última buena, R8).
 Lo que `ICloudBackupStore` espera del Swift (`AppDelegate.didInitializeImplicitFlutterEngine`, patrón
 `registerPathsChannel` de Mochila). Todo en **la carpeta `Documents/` del contenedor ubicuo**
 `iCloud.es.cuadrante.app` (`FileManager.default.url(forUbiquityContainerIdentifier: nil)`), que es la que
-aparece en Archivos › iCloud Drive › Cuadrante cuando `Info.plist` declara `NSUbiquitousContainers`.
+aparece en Archivos › iCloud Drive › Turnly cuando `Info.plist` declara `NSUbiquitousContainers`.
 
 | Método | Argumentos | Respuesta |
 |---|---|---|
 | `status` | — | `{available: bool, reason: String?}`. `available` = `ubiquityIdentityToken != nil` **y** el contenedor existe. `reason` si no: `signed_out` (sin sesión de iCloud), `disabled` (iCloud Drive apagado para la app), `no_container`. **Nunca lanza**: responde `available: false` |
-| `list` | — | `[{id, name, sizeBytes, modifiedAtMs}]`, los ficheros normales de `Documents/`, **también los que aún no se han descargado** (un marcador `.nombre.icloud` se cuenta con su nombre real). `id == name` (el nombre del fichero). El Dart descarta lo que no case con `cuadrante-yyyyMMdd-HHmmss[-n].cuadrante` y **toma la fecha del nombre**, no de `modifiedAtMs` (que es solo informativo) |
+| `list` | — | `[{id, name, sizeBytes, modifiedAtMs}]`, los ficheros normales de `Documents/`, **también los que aún no se han descargado** (un marcador `.nombre.icloud` se cuenta con su nombre real). `id == name` (el nombre del fichero). El Dart descarta lo que no case con `turnly-yyyyMMdd-HHmmss[-n].turnly` o el nombre antiguo `cuadrante-yyyyMMdd-HHmmss[-n].cuadrante` y **toma la fecha del nombre**, no de `modifiedAtMs` (que es solo informativo) |
 | `save` | `{name: String, bytes: Uint8List}` | `{id, name, sizeBytes, modifiedAtMs}`. Crea `Documents/` si falta y escribe con `NSFileCoordinator` (`.forReplacing`) **de forma atómica** (fichero temporal en el contenedor y `replaceItemAt`). El Dart ya ha elegido un nombre libre (añade `-2`, `-3`... si hay otra copia del mismo segundo); si aun así existe, se sustituye. Hasta 8 MB (`BackupCodec.maxFileBytes`) |
 | `read` | `{id: String}` | `bytes` (`FlutterStandardTypedData`). Antes de descargar o leer, comprobar el tamaño; si pasa de 8 MB responder `too_large` sin descargar. `sizeBytes` de `list` es el tamaño real también para ficheros no descargados. Si el fichero está en la nube, `startDownloadingUbiquitousItem` y espera a que esté `current`, con **plazo de 60 s** (`icloud_timeout`) |
 | `delete` | `{id: String}` | `null`. Coordinado (`.forDeleting`). Un fichero que ya no está cuenta como borrado |
@@ -391,7 +400,7 @@ aparece en Archivos › iCloud Drive › Cuadrante cuando `Info.plist` declara `
   copia recién guardada y la más nueva nunca se borran; un fichero que no se puede borrar se deja para la próxima.
   Un fichero ajeno de la carpeta (el usuario la ve en Archivos) **no se lee ni se borra**.
 - **Pruebas en el Mac:** matriz R1, R3, R8 de `docs/mac-ios.md` §5.2. Una vez escrita la copia, mira en Archivos ›
-  iCloud Drive › Cuadrante.
+  iCloud Drive › Turnly.
 
 ## 5. Archivo de referencia (golden)
 
@@ -496,9 +505,9 @@ vacía, y en Kotlin un flujo colgado acaba como `unreadable` al plazo sin bloque
   min). Si falla, lo dice y muestra el aviso anterior.
 - **Copias automáticas** (interruptor, **activado por defecto**; se guarda en `settings` como `backup.auto`; si
   falta o no se entiende, vale «activado»). Desactivarlas no borra nada. Activarlas pide una copia pronto.
-- **Exportar archivo.** Genera el `.cuadrante` de lo que hay ahora, lo **lee de vuelta** (`BackupCodec.decode`) antes
+- **Exportar archivo.** Genera el `.turnly` de lo que hay ahora, lo **lee de vuelta** (`BackupCodec.decode`) antes
   de entregarlo —un archivo que no se puede volver a leer no sale— y abre la hoja de compartir del sistema
-  (`share_plus`: WhatsApp, Drive, correo) con el nombre `cuadrante-AAAA-MM-DD-HHmmss.cuadrante`. El archivo temporal va a la
+  (`share_plus`: WhatsApp, Drive, correo) con el nombre `turnly-AAAA-MM-DD-HHmmss.turnly`. El archivo temporal va a la
   caché, que la copia del sistema no incluye. Va a `<caché>/export/` (`ExportCache`): antes de cada exportación se
   vacía esa carpeta, el archivo se borra a los 2 minutos de que la hoja de compartir haya vuelto (la app receptora puede
   seguir leyéndolo un momento) y al arrancar se vacía (`BackupHost`), así que no quedan copias de todo el cuadrante en
@@ -512,9 +521,10 @@ vacía, y en Kotlin un flujo colgado acaba como `unreadable` al plazo sin bloque
   pantalla cuenta con «No se ha podido guardar el archivo…». Tipo MIME `application/octet-stream`. En iOS el botón no
   se muestra (`backupSaveSupportedProvider`): la hoja de compartir ya ofrece «Guardar en Archivos»; ver
   `docs/mac-ios.md`, 4.3.
-- **Importar archivo.** Selector de archivos (`file_selector`; en Android sin filtro de tipo, porque la extensión
-  `.cuadrante` no tiene tipo MIME y un filtro podría esconder justo el archivo; el contenido se valida igual). Un
-  archivo de más de 8 MB se rechaza sin leerlo entero.
+- **Importar archivo.** Selector de archivos (`file_selector`; en Android sin filtro de tipo, porque las extensiones
+  `.turnly` y `.cuadrante` no tienen tipo MIME y un filtro podría esconder justo el archivo; el contenido se valida
+  igual). Un archivo de más de 8 MB se rechaza sin leerlo entero. En escritorio el filtro «Turnly» acepta ambas extensiones;
+  en iOS se mantiene `public.data` para que también se puedan seleccionar los archivos antiguos.
 - **Probar restauración.** `BackupService.verifyLatest` sobre la copia más nueva de la app. Resultados:
   «La copia está completa: 730 días comprobados» (y si es idéntica a lo que hay ahora, o anterior —con el primer día que
   cambia—, que es normal si se ha editado después), «La copia no se reconstruye igual. Primer día distinto: …» (un fallo
@@ -544,10 +554,10 @@ la lista:
 
    | Error | Mensaje |
    |---|---|
-   | `NewerFormatVersion` (R6) | «Este archivo es de una versión más nueva de Cuadrante: actualiza la app.» |
+   | `NewerFormatVersion` (R6) | «Este archivo es de una versión más nueva de Turnly: actualiza la app.» |
    | `CorruptBackup` (R7) | «El archivo está dañado o incompleto y no se puede usar.» |
-   | `NotACuadranteFile` | «Este archivo no es una copia de Cuadrante.» |
-   | más de 8 MB | «Este archivo es demasiado grande para ser una copia de Cuadrante.» |
+   | `NotACuadranteFile` | «Este archivo no es una copia de Turnly.» |
+   | más de 8 MB | «Este archivo es demasiado grande para ser una copia de Turnly.» |
    | no se pudo leer | «No se ha podido leer el archivo.» |
 
 3. Si sirve: de dónde viene (y, si el móvil lo dice, **qué app lo ha enviado**: «Enviado desde WhatsApp
@@ -565,7 +575,7 @@ la lista:
    (abre la vista previa de la copia previa que acaba de escribir la restauración; hay que confirmar otra vez). Si falla
    la restauración: «No se ha podido restaurar. Tus datos siguen como estaban.» (es todo o nada). Si los datos se
    reemplazaron pero las pantallas no se pudieron recargar (muy raro): «Hemos restaurado tus datos, pero la pantalla no
-   se ha podido actualizar. Cierra Cuadrante y vuelve a abrirlo.»
+   se ha podido actualizar. Cierra Turnly y vuelve a abrirlo.»
 
 La restauración vuelve a elegir el calendario que tenía la copia en pantalla (`calendars.active`), que puede ser otro
 que antes. El interruptor de copias automáticas viaja en `settings`: restaurar un archivo que lo tenía desactivado lo
@@ -604,19 +614,19 @@ las 3 últimas) tienen su propia poda y no se tocan.
 **Cada copia se lee de vuelta** (`BackupTools.backupAndVerify`): si el archivo recién escrito no se puede decodificar,
 se borra y la copia se da por fallida, y solo entonces se podan las viejas. Una copia mala nunca parece buena.
 
-## 9. Abrir un `.cuadrante` desde otra app (Android)
+## 9. Abrir un `.turnly` desde otra app (Android)
 
 `AndroidManifest.xml` declara en `MainActivity` (`launchMode="singleTask"`):
 
 - `VIEW` + esquema `content` + MIME `application/octet-stream`, `application/gzip` o `application/x-gzip`
   (WhatsApp, Drive y los gestores mandan el archivo como binario opaco: el nombre no va en la URI);
-- `VIEW` + esquema `content` + cualquier MIME (`*/*`) + `pathPattern` que acaba en `.cuadrante` (hay una entrada por
+- `VIEW` + esquema `content` + cualquier MIME (`*/*`) + `pathPattern` que acaba en `.turnly` o `.cuadrante` (hay una entrada por
   número de puntos de la ruta, porque `pathPattern` no tiene un «cualquier cosa» que incluya el punto);
-- `SEND` (Compartir › Cuadrante) con los tres MIME de arriba. **No** `*/*`: Cuadrante no debe salir al compartir cada
+- `SEND` (Compartir › Turnly) con los tres MIME de arriba. **No** `*/*`: Turnly no debe salir al compartir cada
   foto o texto.
 
-**`singleTask`, no `singleTop`.** Con `singleTop` y `taskAffinity=""`, abrir un `.cuadrante` desde Archivos o
-WhatsApp con Cuadrante en segundo plano arrancaba una **segunda** `MainActivity` (y un segundo motor de Flutter, con
+**`singleTask`, no `singleTop`.** Con `singleTop` y `taskAffinity=""`, abrir un `.turnly` desde Archivos o
+WhatsApp con Turnly en segundo plano arrancaba una **segunda** `MainActivity` (y un segundo motor de Flutter, con
 dos conexiones a la misma base de datos). Con `singleTask` el sistema lleva la tarea existente al frente y entrega el
 `Intent` a `onNewIntent`, que ya hacía `setIntent` y avisaba con `incomingAvailable` (`LaunchPolicy` no cambia).
 Lo demás sigue entrando por el mismo sitio: los toques en el widget (`cuadrante://widget/day/<fecha>`, por
@@ -625,8 +635,8 @@ de las notificaciones de alarma (`flutter_local_notifications`, que lanza la act
 lanzamiento). Se comprueba con `tool/qa/single_activity_check.sh` (`docs/qa.md`, «Una sola actividad»).
 
 Sin categoría `BROWSABLE` (una web no puede lanzarlo) y con `flutter_deeplinking_enabled=false` (la URL de un `VIEW` no
-se interpreta como ruta de la app). A cambio, Cuadrante aparece en «Abrir con» de cualquier binario genérico; el
-archivo que no es nuestro acaba en «Este archivo no es una copia de Cuadrante» sin tocar nada.
+se interpreta como ruta de la app). A cambio, Turnly aparece en «Abrir con» de cualquier binario genérico; el
+archivo que no es nuestro acaba en «Este archivo no es una copia de Turnly» sin tocar nada.
 
 **Cómo llega al Dart** (sin plugin extra): `MainActivity` registra el `MethodChannel` `app.cuadrante/backup`.
 
@@ -665,7 +675,7 @@ integridad) y **en un isolate aparte**. El canal solo devuelve bytes y el estado
 que escriba. La lógica pura de Kotlin (`FileReading.kt`, `LaunchPolicy.kt`) tiene pruebas en
 `android/app/src/test` (`./gradlew :app:testDebugUnitTest`).
 
-### Abrir un `.cuadrante` desde otra app (iOS)
+### Abrir un `.turnly` desde otra app (iOS)
 
 **Dart (hecho):** `defaultPlatformBackupChannel()` devuelve `MethodChannelBackupChannel` también en iOS, con el
 **mismo nombre de canal (`app.cuadrante/backup`) y los mismos métodos** que Android. Hasta que exista el Swift,
@@ -674,8 +684,9 @@ todas las llamadas dan `MissingPluginException` y se tratan como «no ha llegado
 iCloud lo da `ICloudBackupStore.status`). El selector de «Importar archivo» pide el identificador de tipo
 `public.data` (file_selector_ios lanza un error si solo recibe extensiones).
 
-**`Info.plist` (hecho):** el tipo `app.cuadrante.backup` (extensión `cuadrante`, conforme a `public.data`, exportado
-con `UTExportedTypeDeclarations`), `CFBundleDocumentTypes` con `LSHandlerRank = Owner` y rol `Viewer` (solo se lee;
+**`Info.plist` (hecho):** las descripciones visibles (`CFBundleTypeName`, `UTTypeDescription`) son
+«Copia de seguridad de Turnly». Se conserva el identificador interno del tipo: `app.cuadrante.backup`
+(extensiones `turnly` y `cuadrante`, conforme a `public.data`, exportado con `UTExportedTypeDeclarations`), `CFBundleDocumentTypes` con `LSHandlerRank = Owner` y rol `Viewer` (solo se lee;
 nunca se escribe en el original), y `LSSupportsOpeningDocumentsInPlace = true`. **Por qué «en el sitio»:** con `false`
 iOS copia cada archivo a `Documents/Inbox` de la app, y esa copia queda ahí (y entra en la copia del dispositivo de
 iCloud) con lo que lleve dentro, bajas incluidas. Con `true`, los archivos que vienen de Archivos o iCloud Drive se
@@ -715,7 +726,7 @@ Archivos), con la app cerrada y abierta.
 ## 10. Copia del sistema de Android (Auto Backup)
 
 > **Importante: la copia del sistema SÍ sube los datos a la cuenta de Google del usuario.** Con Auto Backup activado,
-> Android sube periódicamente `files/` (la base de datos y las copias `.cuadrante`) a la cuenta de Google del usuario.
+> Android sube periódicamente `files/` (la base de datos y las copias `.turnly`) a la cuenta de Google del usuario.
 > Va **cifrada de extremo a extremo con el bloqueo de pantalla** (PIN, patrón o contraseña) en Android 9 o superior
 > **si el usuario tiene un bloqueo puesto**; sin bloqueo de pantalla, esa clave del usuario no existe. Nosotros no la
 > vemos, pero los datos **sí salen del móvil**: no es cierto que «nunca salgan» de él. Esto incluye las ausencias de
@@ -723,7 +734,7 @@ Archivos), con la app cerrada y abierta.
 > (pregunta 13).
 
 Application Support en Android es `files/` (`getFilesDir()`, dominio `file` de Auto Backup): ahí están
-`cuadrante.sqlite` (la base de datos), `backups/` (copias `.cuadrante`, copias previas a restaurar y a migrar). La caché
+`cuadrante.sqlite` (la base de datos), `backups/` (copias `.turnly`, copias previas a restaurar y a migrar). La caché
 (`getTemporaryDirectory()`: los archivos que se entregan a la hoja de compartir) no se copia nunca.
 
 `AndroidManifest.xml`: `android:allowBackup="true"` explícito, y reglas explícitas para los dos mecanismos:
@@ -736,7 +747,7 @@ Application Support en Android es `files/` (`getFilesDir()`, dominio `file` de A
 Las tres reglas hacen lo mismo: `<include domain="file" path="."/>`. En cuanto hay un `<include>`, solo entra lo
 incluido: **se excluyen** las preferencias compartidas (las alarmas programadas de `flutter_local_notifications`, que se
 vuelven a calcular de los datos al arrancar, no deben viajar a otro móvil), la caché, `code_cache` y `no_backup/`. Se
-incluyen a propósito también las copias `.cuadrante` de `backups/`: si la base de datos se copiara a medio escribir, la
+incluyen a propósito también las copias `.turnly` de `backups/`: si la base de datos se copiara a medio escribir, la
 última copia entera sigue ahí. Mantener los dos XML iguales.
 
 Límites y comportamiento del sistema (no son nuestros): la copia completa de una app no puede pasar de **25 MB** (con
@@ -787,4 +798,4 @@ y se restaura igual que arriba. Para comprobar que las reglas XML se leen y qué
 `adb shell setprop log.tag.BackupXmlParserLogging VERBOSE` y `adb logcat -s BackupXmlParserLogging` durante el
 `backupnow`. Móvil a móvil (`<device-transfer>`): se prueba con el asistente de configuración de un móvil nuevo (cable
 o wifi); `bmgr` no lo ejercita. Probar en Pixel → Samsung y Samsung → Xiaomi como pide la matriz (A1–A4), y que el
-archivo `.cuadrante` exportado se importa en todos.
+archivo `.turnly` exportado se importa en todos.

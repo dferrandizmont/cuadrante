@@ -34,8 +34,9 @@ class ICloudStatus {
 /// "Copia en iCloud", and docs/mac-ios.md, 4.3.
 ///
 /// Same file names and the same retention rules as `LocalFileBackupStore`:
-/// `<prefix>-<yyyyMMdd-HHmmss>.cuadrante`, plus `-<n>` for several in one
-/// second. The id of an entry is its file name; its date is the one in the
+/// `<prefix>-<yyyyMMdd-HHmmss>.turnly`, plus `-<n>` for several in one
+/// second. Legacy `.cuadrante` copies share the listing and retention.
+/// The id of an entry is its file name; its date is the one in the
 /// name (the `at` given to [save]), not iCloud's modification time. Files in
 /// the folder that are not of this store are ignored: the folder is visible in
 /// Files and the user may drop things in it.
@@ -48,7 +49,7 @@ class ICloudBackupStore implements BackupStore {
   ICloudBackupStore({
     MethodChannel? channel,
     this.keep = 5,
-    this.prefix = 'cuadrante',
+    this.prefix = 'turnly',
     this.retain,
     this.pruneOnSave = true,
     this.callTimeout = const Duration(minutes: 2),
@@ -113,11 +114,7 @@ class ICloudBackupStore implements BackupStore {
   @override
   Future<BackupEntry> save(Uint8List bytes, {required DateTime at}) async {
     final taken = {for (final e in await _listOrThrow()) e.id};
-    final stamp = backupStamp(at);
-    var name = '$prefix-$stamp.cuadrante';
-    for (var n = 2; taken.contains(name); n++) {
-      name = '$prefix-$stamp-$n.cuadrante';
-    }
+    final name = nextBackupName(prefix, at, taken);
     final reply = await _call<Map<Object?, Object?>>('save', {
       'name': name,
       'bytes': bytes,
@@ -242,7 +239,8 @@ class ICloudBackupStore implements BackupStore {
     if (byStamp != 0) return byStamp;
     final na = int.tryParse(ma[2] ?? '') ?? 1;
     final nb = int.tryParse(mb[2] ?? '') ?? 1;
-    return nb.compareTo(na);
+    final byCounter = nb.compareTo(na);
+    return byCounter != 0 ? byCounter : b.id.compareTo(a.id);
   }
 
   void _checkOwn(BackupEntry entry) {

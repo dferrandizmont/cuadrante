@@ -17,7 +17,7 @@ import '../domain/month_summary.dart';
 /// The picture that "Compartir el mes como imagen" sends: the title, the
 /// month in the grid of design B (the real [DayCell]s, without today's ring,
 /// notes or the days of the neighbouring months), the legend with the days of
-/// each shift and a small "Cuadrante" at the bottom. Nothing private goes
+/// each shift and a small "Turnly" at the bottom. Nothing private goes
 /// in: no notes, no hours, no pay.
 ///
 /// It reads the theme and the texts from its context; the image is drawn

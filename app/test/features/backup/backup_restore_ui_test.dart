@@ -22,7 +22,7 @@ import 'backup_test_support.dart';
 import 'backup_ui_support.dart';
 import 'golden_dataset_v2.dart';
 
-/// Importing a `.cuadrante` (a file, one handed over by another app, a copy of
+/// Importing a `.turnly` (a file, one handed over by another app, a copy of
 /// the phone): the preview, the confirmation, the blocking progress, the
 /// result, the safety copy, and the files that must be refused without
 /// touching a thing (R4, R6, R7).
@@ -195,7 +195,7 @@ void main() {
       await tapIo(tester, key('backup-export'));
       expect(h.shared, hasLength(1));
       final exported = h.shared.single;
-      expect(exported.fileName, 'cuadrante-2026-10-19-120000.cuadrante');
+      expect(exported.fileName, 'turnly-2026-10-19-120000.turnly');
       expect(digestOf(exported.bytes), original);
 
       // The phone loses its rotation behind the app's back.
@@ -266,7 +266,7 @@ void main() {
       await pumpIo(tester, until: key('restore-unusable'));
       expect(
         find.text(
-          'Este archivo es demasiado grande para ser una copia de Cuadrante.',
+          'Este archivo es demasiado grande para ser una copia de Turnly.',
         ),
         findsOneWidget,
       );
@@ -284,7 +284,7 @@ void main() {
           'data': {'calendars': <Object?>[]},
           'checksum': 'blake3:nothing',
         }),
-        'Este archivo es de una versión más nueva de Cuadrante: actualiza la '
+        'Este archivo es de una versión más nueva de Turnly: actualiza la '
             'app.',
       ),
       'a truncated copy (R7)': (
@@ -297,11 +297,11 @@ void main() {
       ),
       'a file that is not a backup': (
         Uint8List.fromList(List<int>.generate(64, (i) => i)),
-        'Este archivo no es una copia de Cuadrante.',
+        'Este archivo no es una copia de Turnly.',
       ),
       'an empty file': (
         Uint8List(0),
-        'Este archivo no es una copia de Cuadrante.',
+        'Este archivo no es una copia de Turnly.',
       ),
     };
 
@@ -459,7 +459,7 @@ void main() {
       );
       expect(await digest(app, h), isNot(originalDigest));
 
-      final copy = h.filesStartingWith('cuadrante-').single;
+      final copy = h.filesStartingWith('turnly-').single;
       await tapIo(
         tester,
         key('backup-restore-$copy'),
@@ -479,8 +479,8 @@ void main() {
         'confirmation, never straight to restore', (tester) async {
       final h = BackupUiHarness(tester);
       final name =
-          'cuadrante-${backupStamp(harnessNow.subtract(const Duration(days: 1)))}'
-          '.cuadrante';
+          'turnly-${backupStamp(harnessNow.subtract(const Duration(days: 1)))}'
+          '.turnly';
       final files = <String, Uint8List>{name: golden};
       const channel = MethodChannel(ICloudBackupStore.channelName);
       final messenger =
@@ -534,8 +534,8 @@ void main() {
         '"unusable" screen as any file, data untouched', (tester) async {
       final h = BackupUiHarness(tester);
       final name =
-          'cuadrante-${backupStamp(harnessNow.subtract(const Duration(days: 1)))}'
-          '.cuadrante';
+          'turnly-${backupStamp(harnessNow.subtract(const Duration(days: 1)))}'
+          '.turnly';
       const channel = MethodChannel(ICloudBackupStore.channelName);
       final messenger =
           TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;

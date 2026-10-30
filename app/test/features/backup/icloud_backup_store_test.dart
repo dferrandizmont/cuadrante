@@ -10,6 +10,7 @@ import 'package:cuadrante/features/backup/data/icloud_backup_store.dart';
 import 'package:cuadrante/features/backup/data/local_file_backup_store.dart';
 import 'package:cuadrante/features/backup/data/platform_backup_channel.dart';
 import 'package:cuadrante/features/backup/domain/backup_codec.dart';
+import 'package:cuadrante/features/backup/domain/backup_retention.dart';
 import 'package:cuadrante/features/backup/domain/backup_store.dart';
 import 'package:cuadrante/features/backup/domain/icloud_errors.dart';
 import 'package:flutter/services.dart';
@@ -145,7 +146,7 @@ void main() {
           at: DateTime.utc(2026, 10, 19, 10, 5, 7),
         );
 
-        expect(saved.id, 'cuadrante-20261019-100507.cuadrante');
+        expect(saved.id, 'turnly-20261019-100507.turnly');
         expect(saved.modifiedAt, DateTime.utc(2026, 10, 19, 10, 5, 7));
         expect(saved.sizeBytes, 300);
 
@@ -165,8 +166,8 @@ void main() {
         final first = await s.save(Uint8List.fromList([1]), at: day(19));
         final second = await s.save(Uint8List.fromList([2]), at: day(19));
         final third = await s.save(Uint8List.fromList([3]), at: day(19));
-        expect(second.id, 'cuadrante-20261019-090000-2.cuadrante');
-        expect(third.id, 'cuadrante-20261019-090000-3.cuadrante');
+        expect(second.id, 'turnly-20261019-090000-2.turnly');
+        expect(third.id, 'turnly-20261019-090000-3.turnly');
         expect((await s.list()).map((e) => e.id), [
           third.id,
           second.id,
@@ -217,6 +218,67 @@ void main() {
   });
 
   group('retention', () {
+    test(
+      'legacy and current names share listing, reads and rotation',
+      () async {
+        final names = [
+          'turnly-20261016-090000.turnly',
+          'cuadrante-20261017-090000.cuadrante',
+          'turnly-20261018-090000.turnly',
+          'cuadrante-20261019-090000.cuadrante',
+        ];
+        for (var i = 0; i < names.length; i++) {
+          native.files[names[i]] = Uint8List.fromList([i]);
+        }
+        const foreign = 'pre-restore-20261015-090000.cuadrante';
+        native.files[foreign] = Uint8List.fromList([9]);
+        final s = store(keep: 3);
+        final before = await s.list();
+        expect(before.map((e) => e.id), names.reversed);
+        expect(await s.read(before.first), [3]);
+        final saved = await s.save(Uint8List.fromList([4]), at: day(20));
+        expect(native.files.keys.toSet(), {
+          saved.id,
+          names[3],
+          names[2],
+          foreign,
+        });
+        expect((await s.list()).map((e) => e.id), [
+          saved.id,
+          names[3],
+          names[2],
+        ]);
+      },
+    );
+
+    test('daily retention applies across both names', () async {
+      const retention = BackupRetention(newest: 1, dailyForDays: 2);
+      final names = [
+        'cuadrante-20261017-090000.cuadrante',
+        'turnly-20261018-080000.turnly',
+        'cuadrante-20261018-090000.cuadrante',
+        'turnly-20261019-080000.turnly',
+      ];
+      for (final name in names) {
+        native.files[name] = Uint8List.fromList([1]);
+      }
+      final s = store(
+        retain: (entries) => retention.idsToKeep(entries, now: day(19)),
+      );
+      final saved = await s.save(Uint8List.fromList([2]), at: day(19));
+      expect(native.files.keys.toSet(), {saved.id, names[2]});
+    });
+
+    test('a same-second new copy follows the highest legacy counter', () async {
+      const old = 'cuadrante-20261019-090000-9.cuadrante';
+      native.files[old] = Uint8List.fromList([9]);
+      final s = store(keep: 1);
+      final saved = await s.save(Uint8List.fromList([10]), at: day(19));
+      expect(saved.id, 'turnly-20261019-090000-10.turnly');
+      expect(native.files.keys, [saved.id]);
+      expect(await s.read(saved), [10]);
+    });
+
     test('keeps the newest [keep] when saving', () async {
       final s = store(keep: 3);
       for (var d = 10; d <= 15; d++) {

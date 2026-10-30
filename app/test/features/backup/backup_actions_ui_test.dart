@@ -32,7 +32,7 @@ void main() {
   Finder key(String k) => find.byKey(ValueKey(k));
 
   group('Exportar archivo', () {
-    testWidgets('hands a decodable .cuadrante with today\'s date to the '
+    testWidgets('hands a decodable .turnly with today\'s date to the '
         'share sheet', (tester) async {
       final h = BackupUiHarness(tester);
       final app = await h.open();
@@ -41,7 +41,7 @@ void main() {
 
       expect(h.shared, hasLength(1));
       final shared = h.shared.single;
-      expect(shared.fileName, 'cuadrante-2026-10-19-120000.cuadrante');
+      expect(shared.fileName, 'turnly-2026-10-19-120000.turnly');
       // It is a real backup of what the phone holds.
       final file = const BackupCodec().decode(shared.bytes);
       final live = await app.real(
@@ -175,7 +175,7 @@ void main() {
       // The newest copy is damaged.
       h.backups.createSync(recursive: true);
       File(
-        p.join(h.backups.path, 'cuadrante-29990101-000000.cuadrante'),
+        p.join(h.backups.path, 'turnly-29990101-000000.turnly'),
       ).writeAsBytesSync(Uint8List.fromList(List<int>.generate(64, (i) => i)));
       await h.tester.runAsync(() async {});
 
@@ -187,7 +187,7 @@ void main() {
       expect(
         find.text(
           'No se ha podido probar la copia. Este archivo no es una copia de '
-          'Cuadrante.',
+          'Turnly.',
         ),
         findsOneWidget,
       );
@@ -325,14 +325,14 @@ void main() {
       final h = BackupUiHarness(tester);
       final app = await h.open();
       await pumpIo(tester);
-      expect(h.filesStartingWith('cuadrante-'), isEmpty);
+      expect(h.filesStartingWith('turnly-'), isEmpty);
 
       await app.real(() => addSecondCalendar(app.database));
       // Not before the debounce (the pumps of the helper add a fraction of a
       // second)...
       await tester.pump(const Duration(seconds: 9));
       await pumpIo(tester);
-      expect(h.filesStartingWith('cuadrante-'), isEmpty);
+      expect(h.filesStartingWith('turnly-'), isEmpty);
       expect(
         find.text('Hay cambios nuevos: la copia se hará en unos segundos.'),
         findsOneWidget,
@@ -341,7 +341,7 @@ void main() {
       // ...and then on its own, listed on the screen.
       await tester.pump(const Duration(seconds: 1));
       await pumpIo(tester, until: find.textContaining('Copia del dispositivo'));
-      final names = h.filesStartingWith('cuadrante-');
+      final names = h.filesStartingWith('turnly-');
       expect(names, hasLength(1));
       final file = const BackupCodec().decode(
         File(p.join(h.backups.path, names.single)).readAsBytesSync(),
@@ -372,11 +372,11 @@ void main() {
       // Nothing is copied before the spacing is over.
       await tester.pump(const Duration(minutes: 5));
       await pumpIo(tester);
-      expect(h.filesStartingWith('cuadrante-'), hasLength(1));
+      expect(h.filesStartingWith('turnly-'), hasLength(1));
       await tester.pump(const Duration(minutes: 11));
       await pumpIo(tester, rounds: 40);
       await pumpIo(tester, rounds: 40);
-      expect(h.filesStartingWith('cuadrante-'), hasLength(2));
+      expect(h.filesStartingWith('turnly-'), hasLength(2));
     });
 
     testWidgets('a burst of changes makes one copy', (tester) async {
@@ -403,13 +403,13 @@ void main() {
       );
       await tester.pump(const Duration(seconds: 6));
       await pumpIo(tester);
-      expect(h.filesStartingWith('cuadrante-'), isEmpty);
+      expect(h.filesStartingWith('turnly-'), isEmpty);
 
       await tester.pump(const Duration(seconds: 5));
       await pumpIo(tester, until: find.textContaining('Copia del dispositivo'));
       await tester.pump(const Duration(minutes: 20));
       await pumpIo(tester);
-      final names = h.filesStartingWith('cuadrante-');
+      final names = h.filesStartingWith('turnly-');
       expect(names, hasLength(1));
       final file = const BackupCodec().decode(
         File(p.join(h.backups.path, names.single)).readAsBytesSync(),
@@ -459,14 +459,14 @@ void main() {
       await app.real(() => addSecondCalendar(app.database));
       await tester.pump(const Duration(minutes: 5));
       await pumpIo(tester);
-      expect(h.filesStartingWith('cuadrante-'), isEmpty);
+      expect(h.filesStartingWith('turnly-'), isEmpty);
 
       // On again: the changes made meanwhile get their copy.
       await tapIo(tester, toggle);
       expect(tester.widget<Switch>(toggle).value, isTrue);
       await tester.pump(const Duration(seconds: 10));
       await pumpIo(tester, until: find.textContaining('Copia del dispositivo'));
-      expect(h.filesStartingWith('cuadrante-'), hasLength(1));
+      expect(h.filesStartingWith('turnly-'), hasLength(1));
     });
 
     testWidgets('"Hacer copia ahora" works with the switch off', (
@@ -480,7 +480,7 @@ void main() {
         key('backup-now'),
         until: find.textContaining('Copia del dispositivo'),
       );
-      expect(h.filesStartingWith('cuadrante-'), hasLength(1));
+      expect(h.filesStartingWith('turnly-'), hasLength(1));
     });
   });
 }

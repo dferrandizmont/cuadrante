@@ -10,7 +10,7 @@ class AppLocalizationsEu extends AppLocalizations {
   AppLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get appName => 'Cuadrante';
+  String get appName => 'Turnly';
 
   @override
   String get cancel => 'Utzi';
@@ -2116,19 +2116,19 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get faqAlarmsAIos =>
-      'Ezarpenak › Alarmak atalean, aktibatu «Abisatu txanda bakoitzaren aurretik», aukeratu zenbat lehenago eta, nahi baduzu, aurreko eguneko abisu bat ordu jakin batean. Egun baten xehetasunetan haren alarma ken dezakezu «Alarmarik ez egun honetan» aukerarekin.\n\nJakinarazpenen baimenik gabe, Cuadrantek ezin dizu abisatu. Baimentzeko leihoa agertzen ez bazaizu, aktibatu sistemaren ezarpenetan.';
+      'Ezarpenak › Alarmak atalean, aktibatu «Abisatu txanda bakoitzaren aurretik», aukeratu zenbat lehenago eta, nahi baduzu, aurreko eguneko abisu bat ordu jakin batean. Egun baten xehetasunetan haren alarma ken dezakezu «Alarmarik ez egun honetan» aukerarekin.\n\nJakinarazpenen baimenik gabe, Turnly-k ezin dizu abisatu. Baimentzeko leihoa agertzen ez bazaizu, aktibatu sistemaren ezarpenetan.';
 
   @override
   String get faqWidgetAIos =>
-      'Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Cuadrante.\n\nWidgetak zure hurrengo egunak gordetzen ditu. Sistemak erabakitzen du noiz eguneratu, eta egun-aldaketa atzeratu dezake. Daturik gabe geratzen bada, ireki Cuadrante eguneratzeko.';
+      'Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Turnly.\n\nWidgetak zure hurrengo egunak gordetzen ditu. Sistemak erabakitzen du noiz eguneratu, eta egun-aldaketa atzeratu dezake. Daturik gabe geratzen bada, ireki Turnly eguneratzeko.';
 
   @override
   String get faqBackupAIos =>
-      'Ezarpenak › Babeskopia atalak kopia automatikoak gordetzen ditu gailu honetan aldaketa bakoitzaren ondoren, baina gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, galdu egiten dira. Esportatu fitxategi bat «Esportatu fitxategia» aukerarekin eta gorde iCloud Driven, edo bidali zeure buruari WhatsApp edo posta elektroniko bidez.\n\nGailuz aldatzeko: esportatu fitxategia, instalatu Cuadrante gailu berrian, ireki fitxategia aplikazioarekin (edo erabili «Inportatu fitxategia» babeskopian) eta berrikusi aurrebista leheneratu aurretik. «Probatu leheneratzea» aukerak egiaztatzen du zure azken kopia osorik berreskura daitekeela.';
+      'Ezarpenak › Babeskopia atalak kopia automatikoak gordetzen ditu gailu honetan aldaketa bakoitzaren ondoren, baina gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, galdu egiten dira. Esportatu fitxategi bat «Esportatu fitxategia» aukerarekin eta gorde iCloud Driven, edo bidali zeure buruari WhatsApp edo posta elektroniko bidez.\n\nGailuz aldatzeko: esportatu fitxategia, instalatu Turnly gailu berrian, ireki fitxategia aplikazioarekin (edo erabili «Inportatu fitxategia» babeskopian) eta berrikusi aurrebista leheneratu aurretik. «Probatu leheneratzea» aukerak egiaztatzen du zure azken kopia osorik berreskura daitekeela.';
 
   @override
   String get calExportPermissionDeniedBodyIos =>
-      'Aktibatu sistemaren ezarpenetan (Cuadrante › Egutegiak) eta itzuli hona.';
+      'Aktibatu sistemaren ezarpenetan (Turnly › Egutegiak) eta itzuli hona.';
 
   @override
   String get backupUiWarningIos =>
@@ -2178,7 +2178,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get faqIntro =>
-      'Cuadrante nola dabilen azaltzeko erantzun azkarrak. Dena gailu honetan dago: ez da konturik ez konexiorik behar.';
+      'Turnly nola dabilen azaltzeko erantzun azkarrak. Dena gailu honetan dago: ez da konturik ez konexiorik behar.';
 
   @override
   String get faqNotFound => 'Ez duzu bilatzen duzuna aurkitzen?';
@@ -2228,7 +2228,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get faqAlarmsA =>
-      'Ezarpenak › Alarmak atalean, aktibatu «Abisatu txanda bakoitzaren aurretik», aukeratu zenbat lehenago eta, nahi baduzu, aurreko eguneko abisu bat ordu jakin batean. Egun baten xehetasunetan haren alarma ken dezakezu «Alarmarik ez egun honetan» aukerarekin.\n\nAndroiden, jakinarazpenak eta sistemaren ezarpenetako «Alarmak eta abisuak» baimena behar dira: hori gabe, Androidek minutu batzuk atzeratu dezake abisua. Alarmen pantailak esaten dizu zer falta den eta ezarpenetara eramaten zaitu. Zure mugikorrak bateria modu oldarkorrean aurrezten badu, utzi Cuadrante murrizketarik gabe, abisuak geldi ez ditzan.';
+      'Ezarpenak › Alarmak atalean, aktibatu «Abisatu txanda bakoitzaren aurretik», aukeratu zenbat lehenago eta, nahi baduzu, aurreko eguneko abisu bat ordu jakin batean. Egun baten xehetasunetan haren alarma ken dezakezu «Alarmarik ez egun honetan» aukerarekin.\n\nAndroiden, jakinarazpenak eta sistemaren ezarpenetako «Alarmak eta abisuak» baimena behar dira: hori gabe, Androidek minutu batzuk atzeratu dezake abisua. Alarmen pantailak esaten dizu zer falta den eta ezarpenetara eramaten zaitu. Zure mugikorrak bateria modu oldarkorrean aurrezten badu, utzi Turnly murrizketarik gabe, abisuak geldi ez ditzan.';
 
   @override
   String get faqHolidaysQ => 'Nola gehitzen dut tokiko jaiegun bat?';
@@ -2243,14 +2243,14 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get faqWidgetA =>
-      'Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Androiden, eduki sakatuta hasierako pantailako gune huts bat, aukeratu Widgetak eta bilatu Cuadrante.\n\nWidgetak beti erakusten du gaurko eguna: gauerdian aldatzen da, aplikazioa ireki ez arren, hurrengo egunak gordeta dituelako. Denbora luzez Cuadrante ireki gabe egoten bazara, datuak agortzen zaizkio eta aplikazioa irekitzeko eskatzen dizu, eguneratzeko.';
+      'Ezarpenak › Gehitu widgeta atalean tamainak ikusiko dituzu (txikia: gaur eta bihar; ertaina: hurrengo 7 egunak; handia: hilabete osoa) eta nola jarri. Androiden, eduki sakatuta hasierako pantailako gune huts bat, aukeratu Widgetak eta bilatu Turnly.\n\nWidgetak beti erakusten du gaurko eguna: gauerdian aldatzen da, aplikazioa ireki ez arren, hurrengo egunak gordeta dituelako. Denbora luzez Turnly ireki gabe egoten bazara, datuak agortzen zaizkio eta aplikazioa irekitzeko eskatzen dizu, eguneratzeko.';
 
   @override
   String get faqBackupQ => 'Nola egin kopia eta aldatu gailuz?';
 
   @override
   String get faqBackupA =>
-      'Ezarpenak › Babeskopia atalak kopia automatikoak gordetzen ditu gailu honetan aldaketa bakoitzaren ondoren, baina gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, galdu egiten dira. Esportatu fitxategi bat «Esportatu fitxategia» aukerarekin eta gorde Driven, edo bidali zeure buruari WhatsApp edo posta elektroniko bidez.\n\nGailuz aldatzeko: esportatu fitxategia, instalatu Cuadrante gailu berrian, ireki fitxategia aplikazioarekin (edo erabili «Inportatu fitxategia» babeskopian) eta berrikusi aurrebista leheneratu aurretik. «Probatu leheneratzea» aukerak egiaztatzen du zure azken kopia osorik berreskura daitekeela.';
+      'Ezarpenak › Babeskopia atalak kopia automatikoak gordetzen ditu gailu honetan aldaketa bakoitzaren ondoren, baina gailua galtzen baduzu edo aplikazioa desinstalatzen baduzu, galdu egiten dira. Esportatu fitxategi bat «Esportatu fitxategia» aukerarekin eta gorde Driven, edo bidali zeure buruari WhatsApp edo posta elektroniko bidez.\n\nGailuz aldatzeko: esportatu fitxategia, instalatu Turnly gailu berrian, ireki fitxategia aplikazioarekin (edo erabili «Inportatu fitxategia» babeskopian) eta berrikusi aurrebista leheneratu aurretik. «Probatu leheneratzea» aukerak egiaztatzen du zure azken kopia osorik berreskura daitekeela.';
 
   @override
   String get faqImportQ =>
@@ -2258,7 +2258,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get faqImportA =>
-      'Bai. Ezarpenak › Inportatu txandak atalean, LRHSoft aplikazioaren «.Shifter» kopia bat, mugikorreko egutegiko txandak, .ics fitxategi bat edo CSV bat ekar ditzakezu. LRHSoft aplikazioan, sortu kopia bat Menua › Babeskopia › Tokiko kopia atalean, eta aukeratu Documents › ShifterBackups karpetako fitxategia. Berrikusi datak, txanda motak eta aurrebista inportatu aurretik.\n\n«Esportatu mugikorreko egutegira» aukerak behin kopiatzen ditu zure txandak telefonoko egutegi batera. Berriro esportatzen baduzu, ez dira bikoizten: Cuadrantek sortutako gertaerak bakarrik ukitzen dira.';
+      'Bai. Ezarpenak › Inportatu txandak atalean, LRHSoft aplikazioaren «.Shifter» kopia bat, mugikorreko egutegiko txandak, .ics fitxategi bat edo CSV bat ekar ditzakezu. LRHSoft aplikazioan, sortu kopia bat Menua › Babeskopia › Tokiko kopia atalean, eta aukeratu Documents › ShifterBackups karpetako fitxategia. Berrikusi datak, txanda motak eta aurrebista inportatu aurretik.\n\n«Esportatu mugikorreko egutegira» aukerak behin kopiatzen ditu zure txandak telefonoko egutegi batera. Berriro esportatzen baduzu, ez dira bikoizten: Turnly-k sortutako gertaerak bakarrik ukitzen dira.';
 
   @override
   String get faqCalendarsQ =>
@@ -2294,7 +2294,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get settingsAboutTagline =>
-      'Cuadrantek konexiorik eta konturik gabe funtzionatzen du: zure txandak zure mugikorrean geratzen dira.';
+      'Turnly-k konexiorik eta konturik gabe funtzionatzen du: zure txandak zure mugikorrean geratzen dira.';
 
   @override
   String get settingsAboutLicenses => 'Kode irekiko lizentziak';
@@ -2339,7 +2339,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get importSourceHelp =>
-      'Cuadrantek hementxe irakurtzen ditu gertaerak, zure mugikorrean, eta ez ditu inora bidaltzen. Zuk erabakitzen duzu zer inportatzen den.';
+      'Turnly-k hementxe irakurtzen ditu gertaerak, zure mugikorrean, eta ez ditu inora bidaltzen. Zuk erabakitzen duzu zer inportatzen den.';
 
   @override
   String get importSourceDevice => 'Mugikorreko egutegia';
@@ -2384,11 +2384,11 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get calExportPermissionReadBody =>
-      'Inportatzeko, Cuadrantek zure egutegietako gertaerak irakurri behar ditu. Orain bakarrik egiten du, inportatzen ari zaren bitartean, eta ez du ezer gordetzen mugikorretik kanpo.';
+      'Inportatzeko, Turnly-k zure egutegietako gertaerak irakurri behar ditu. Orain bakarrik egiten du, inportatzen ari zaren bitartean, eta ez du ezer gordetzen mugikorretik kanpo.';
 
   @override
   String get calExportPermissionWriteBody =>
-      'Zure txandak gehitzeko, Cuadrantek zure egutegietarako sarbidea behar du. Bere gertaerak bakarrik gehitzen edo aldatzen ditu, eta zuk esportatzen duzunean bakarrik. Aukeratzen duzun egutegia kontu batekin sinkronizatzen bada (Google, iCloud...), kontu horrek ere jasoko ditu txandak.';
+      'Zure txandak gehitzeko, Turnly-k zure egutegietarako sarbidea behar du. Bere gertaerak bakarrik gehitzen edo aldatzen ditu, eta zuk esportatzen duzunean bakarrik. Aukeratzen duzun egutegia kontu batekin sinkronizatzen bada (Google, iCloud...), kontu horrek ere jasoko ditu txandak.';
 
   @override
   String get calExportPermissionAgainBody =>
@@ -2421,7 +2421,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get calExportPermissionWriteOnlyBody =>
-      'Sistemak gertaerak gehitzeko baimena bakarrik eman du. Cuadrantek sarbide osoa behar du egutegiak irakurtzeko edo aurreko esportazio baten gertaerak ordezteko.';
+      'Sistemak gertaerak gehitzeko baimena bakarrik eman du. Turnly-k sarbide osoa behar du egutegiak irakurtzeko edo aurreko esportazio baten gertaerak ordezteko.';
 
   @override
   String get importCalendarsTitle => 'Aukeratu egutegiak';
@@ -2796,7 +2796,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get importProblemPermissionRestricted =>
-      'Mugikor honek ez dio Cuadranteri egutegia erabiltzen uzten. Probatu fitxategi batekin.';
+      'Mugikor honek ez dio Turnly-ri egutegia erabiltzen uzten. Probatu fitxategi batekin.';
 
   @override
   String get importProblemCalendarUnavailable =>
@@ -2912,7 +2912,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get calExportHelp =>
-      'Zure txandak gertaera gisa gehitzen ditu mugikorreko egutegi batean, behin bakarrik. Errepikatzen baduzu, Cuadrantek data horietako bere aurreko gertaerak ordezten ditu, bikoiztu beharrean.';
+      'Zure txandak gertaera gisa gehitzen ditu mugikorreko egutegi batean, behin bakarrik. Errepikatzen baduzu, Turnly-k data horietako bere aurreko gertaerak ordezten ditu, bikoiztu beharrean.';
 
   @override
   String calExportSource(String name) {
@@ -2923,7 +2923,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get calExportCalendarLabel => 'Egutegia';
 
   @override
-  String get calExportNewCalendar => 'Sortu «Cuadrante» egutegia';
+  String get calExportNewCalendar => 'Sortu «Turnly» egutegia';
 
   @override
   String get calExportNewCalendarHelp =>
@@ -3024,7 +3024,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get calExportDoneTitle => 'Esportazioa eginda';
 
   @override
-  String get calExportDoneCalendar => '«Cuadrante» egutegia sortu da.';
+  String get calExportDoneCalendar => '«Turnly» egutegia sortu da.';
 
   @override
   String calExportDoneCreated(int count) {
@@ -3231,8 +3231,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get backupUiImport => 'Inportatu fitxategia';
 
   @override
-  String get backupUiImportSubtitle =>
-      'Berreskuratu Cuadranteren fitxategi bat';
+  String get backupUiImportSubtitle => 'Berreskuratu Turnly-ren fitxategi bat';
 
   @override
   String get backupUiVerify => 'Probatu leheneratzea';
@@ -3448,11 +3447,11 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get backupUiErrorNotOurs =>
-      'Fitxategi hau ez da Cuadranteren kopia bat.';
+      'Fitxategi hau ez da Turnly-ren kopia bat.';
 
   @override
   String get backupUiErrorNewer =>
-      'Fitxategi hau Cuadranteren bertsio berriago batekoa da: eguneratu aplikazioa.';
+      'Fitxategi hau Turnly-ren bertsio berriago batekoa da: eguneratu aplikazioa.';
 
   @override
   String get backupUiErrorCorrupt =>
@@ -3460,7 +3459,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get backupUiErrorTooLarge =>
-      'Fitxategi hau handiegia da Cuadranteren kopia bat izateko.';
+      'Fitxategi hau handiegia da Turnly-ren kopia bat izateko.';
 
   @override
   String get backupUiErrorUnreadable => 'Ezin izan da fitxategia irakurri.';
@@ -3475,7 +3474,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get backupUiErrorRestoreReload =>
-      'Zure datuak leheneratu ditugu, baina ezin izan da pantaila eguneratu. Itxi Cuadrante eta ireki berriro.';
+      'Zure datuak leheneratu ditugu, baina ezin izan da pantaila eguneratu. Itxi Turnly eta ireki berriro.';
 
   @override
   String get backupUiBack => 'Itzuli';
@@ -3497,10 +3496,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get widgetEmptyCircular => '–';
 
   @override
-  String get widgetStaleTitle => 'Cuadrante';
+  String get widgetStaleTitle => 'Turnly';
 
   @override
-  String get widgetStaleBody => 'Ireki Cuadrante eguneratuta egoteko';
+  String get widgetStaleBody => 'Ireki Turnly eguneratuta egoteko';
 
   @override
   String get widgetAddTitle => 'Gehitu widgeta';
@@ -3529,11 +3528,11 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get widgetAddManualAndroid =>
-      'Eduki sakatuta hasierako pantailako gune huts bat, aukeratu Widgetak eta bilatu Cuadrante.';
+      'Eduki sakatuta hasierako pantailako gune huts bat, aukeratu Widgetak eta bilatu Turnly.';
 
   @override
   String get widgetAddManualIos =>
-      'Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Cuadrante.';
+      'Eduki sakatuta hasierako pantaila, ukitu goiko + ikurra eta bilatu Turnly.';
 
   @override
   String get compareTitle => 'Alderatu egutegiak';
@@ -3932,7 +3931,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get alarmsNotifTestBody =>
-      'Honela abisatuko dizu Cuadrantek zure txanda baino lehen.';
+      'Honela abisatuko dizu Turnly-k zure txanda baino lehen.';
 
   @override
   String get alarmsRowOn => 'Aktibatuta';
@@ -3962,18 +3961,18 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get alarmsPermNotifBody =>
-      'Jakinarazpenen baimenik gabe, Cuadrantek ezin dizu abisatu. Baimentzeko leihoa agertzen ez bazaizu, aktibatu sistemaren ezarpenetan.';
+      'Jakinarazpenen baimenik gabe, Turnly-k ezin dizu abisatu. Baimentzeko leihoa agertzen ez bazaizu, aktibatu sistemaren ezarpenetan.';
 
   @override
   String get alarmsPermNotifAllow => 'Baimendu';
 
   @override
   String get alarmsPermNotifBlockedBody =>
-      'Androidek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu sistemaren ezarpenetan, eta Cuadrantek abisatu ahal izango dizu.';
+      'Androidek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu sistemaren ezarpenetan, eta Turnly-k abisatu ahal izango dizu.';
 
   @override
   String get alarmsPermNotifBlockedBodyIos =>
-      'iOSek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu Ezarpenak › Cuadrante › Jakinarazpenak atalean, eta Cuadrantek abisatu ahal izango dizu.';
+      'iOSek jada ez dizu jakinarazpenei buruz galdetzen. Aktibatu Ezarpenak › Turnly › Jakinarazpenak atalean, eta Turnly-k abisatu ahal izango dizu.';
 
   @override
   String get alarmsPermNotifOpenSettings => 'Ireki ezarpenak';
@@ -3993,7 +3992,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get alarmsTypesEmpty =>
-      'Zure txandetako batek ere ez du ordutegirik. Jarri ordua Nire txandak atalean, Cuadrantek abisatu ahal izan diezazun.';
+      'Zure txandetako batek ere ez du ordutegirik. Jarri ordua Nire txandak atalean, Turnly-k abisatu ahal izan diezazun.';
 
   @override
   String get alarmsBeforeTitle => 'Txandaren aurretik';

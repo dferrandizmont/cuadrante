@@ -9,7 +9,7 @@ import 'package:path/path.dart' as p;
 
 import 'backup_test_support.dart';
 
-/// An exported `.cuadrante` holds the whole schedule: it must not stay in the
+/// An exported `.turnly` holds the whole schedule: it must not stay in the
 /// cache after sharing.
 void main() {
   late Directory cacheRoot;
@@ -27,7 +27,7 @@ void main() {
 
   test('the file is written under cache/export/, not the cache root', () async {
     late File seen;
-    await cache.share(bytes, 'cuadrante-2026-10-19.cuadrante', (file) async {
+    await cache.share(bytes, 'turnly-2026-10-19.turnly', (file) async {
       seen = file;
       expect(file.existsSync(), isTrue);
       expect(file.readAsBytesSync(), bytes);
@@ -36,14 +36,14 @@ void main() {
   });
 
   test('the file is deleted once the share sheet has returned', () async {
-    await cache.share(bytes, 'a.cuadrante', (_) async {});
+    await cache.share(bytes, 'a.turnly', (_) async {});
     await cache.lastCleanup;
     expect(names(), isEmpty);
   });
 
   test('also when the share sheet fails', () async {
     await expectLater(
-      cache.share(bytes, 'a.cuadrante', (_) async => throw StateError('x')),
+      cache.share(bytes, 'a.turnly', (_) async => throw StateError('x')),
       throwsStateError,
     );
     await cache.lastCleanup;
@@ -55,8 +55,8 @@ void main() {
       cacheRoot,
       graceBeforeDelete: const Duration(minutes: 5),
     );
-    await slow.share(bytes, 'a.cuadrante', (_) async {});
-    expect(names(), ['a.cuadrante']);
+    await slow.share(bytes, 'a.turnly', (_) async {});
+    expect(names(), ['a.turnly']);
     // The next export (or the next start) removes it.
     await slow.sweep();
     expect(names(), isEmpty);
@@ -64,27 +64,24 @@ void main() {
 
   test('an export first removes the leftovers of earlier ones', () async {
     await cache.directory.create(recursive: true);
-    File(p.join(cache.directory.path, 'old.cuadrante')).writeAsBytesSync([9]);
-    await cache.write(bytes, 'new.cuadrante');
-    expect(names(), ['new.cuadrante']);
+    File(p.join(cache.directory.path, 'old.turnly')).writeAsBytesSync([9]);
+    await cache.write(bytes, 'new.turnly');
+    expect(names(), ['new.turnly']);
   });
 
   test('sweep empties the folder and never throws', () async {
     await cache.sweep(); // no folder yet
     await cache.directory.create(recursive: true);
-    File(p.join(cache.directory.path, 'a.cuadrante')).writeAsBytesSync([1]);
+    File(p.join(cache.directory.path, 'a.turnly')).writeAsBytesSync([1]);
     Directory(p.join(cache.directory.path, 'sub')).createSync();
     await cache.sweep();
     expect(names(), isEmpty);
   });
 
   test('a file name cannot climb out of the folder', () async {
-    final file = await cache.write(bytes, '../../evil.cuadrante');
+    final file = await cache.write(bytes, '../../evil.turnly');
     expect(p.dirname(file.path), cache.directory.path);
-    expect(
-      File(p.join(cacheRoot.path, 'evil.cuadrante')).existsSync(),
-      isFalse,
-    );
+    expect(File(p.join(cacheRoot.path, 'evil.turnly')).existsSync(), isFalse);
   });
 
   group('the shared sharer (backupSharerProvider)', () {
@@ -109,16 +106,16 @@ void main() {
           : <String>[];
 
       // Same second, same name: the worst case for a delayed delete.
-      await share(bytes, 'cuadrante-2026-10-19-120000.cuadrante');
+      await share(bytes, 'turnly-2026-10-19-120000.turnly');
       await Future<void>.delayed(const Duration(milliseconds: 1000));
       await share(
         Uint8List.fromList([4, 5, 6]),
-        'cuadrante-2026-10-19-120000.cuadrante',
+        'turnly-2026-10-19-120000.turnly',
       );
       // Past the moment the FIRST export's timer would have fired (2.0 s),
       // well before the second one's (3.0 s).
       await Future<void>.delayed(const Duration(milliseconds: 1500));
-      expect(files(), ['cuadrante-2026-10-19-120000.cuadrante']);
+      expect(files(), ['turnly-2026-10-19-120000.turnly']);
       // ...and the second one's own timer still cleans up.
       final deadline = DateTime.now().add(const Duration(seconds: 10));
       while (files().isNotEmpty && DateTime.now().isBefore(deadline)) {

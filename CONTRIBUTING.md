@@ -6,7 +6,7 @@ Bug reports, ideas and translations are welcome. Describe the problem, the expec
 behaviour and how you checked it. Discuss UI and scope changes in an issue first.
 Use synthetic data instead of attaching personal schedules.
 
-Cuadrante is free, with no accounts, ads or purchases. Flutter code lives in
+Turnly is free, with no accounts, ads or purchases. Flutter code lives in
 `app/`; scope is defined in [turnos-spec.md](turnos-spec.md), with technical
 contracts in `docs/` (Spanish).
 

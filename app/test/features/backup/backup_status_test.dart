@@ -92,9 +92,9 @@ void main() {
       expect(find.text('Copia hecha'), findsOneWidget); // the snack bar
       expect(key('backup-failed-title'), findsNothing);
       // One file on disk, and it is a real backup of the data.
-      final names = h.filesStartingWith('cuadrante-');
+      final names = h.filesStartingWith('turnly-');
       expect(names, hasLength(1));
-      expect(names.single, endsWith('.cuadrante'));
+      expect(names.single, endsWith('.turnly'));
       final bytes = File(p.join(h.backups.path, names.single))
           .readAsBytesSync();
       final file = const BackupCodec().decode(bytes);
@@ -212,7 +212,7 @@ void main() {
       );
       expect(key('backup-failed-title'), findsNothing);
       expect(textOf(tester, key('backup-status-title')), 'Hoy a las 12:00');
-      expect(h.filesStartingWith('cuadrante-'), hasLength(1));
+      expect(h.filesStartingWith('turnly-'), hasLength(1));
     });
 
     testWidgets('mentions the last good copy when there is one', (
@@ -228,8 +228,8 @@ void main() {
 
       // The next copy cannot be written: a folder sits where its file goes
       // (the clock is fixed, so the second copy of the second is "-2").
-      final firstCopy = h.filesStartingWith('cuadrante-').single;
-      final blockedCopy = firstCopy.replaceFirst('.cuadrante', '-2.cuadrante');
+      final firstCopy = h.filesStartingWith('turnly-').single;
+      final blockedCopy = firstCopy.replaceFirst('.turnly', '-2.turnly');
       Directory(p.join(h.backups.path, blockedCopy)).createSync();
       app.container.read(autoBackupRunnerProvider).noteChange();
       // The first copy was a moment ago: the spacing makes it wait 15 min.

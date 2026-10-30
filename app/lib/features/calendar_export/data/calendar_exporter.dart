@@ -3,7 +3,7 @@ import '../domain/device_calendar_api.dart';
 import '../domain/export_events.dart';
 
 /// Name of the calendar Cuadrante creates on the phone.
-const String exportCalendarName = 'Cuadrante';
+const String exportCalendarName = 'Turnly';
 
 /// Where an export writes.
 sealed class ExportTarget {

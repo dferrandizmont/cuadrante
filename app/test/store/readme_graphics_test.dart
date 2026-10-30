@@ -63,7 +63,7 @@ void main() {
           if (isHeader) {
             paintCaption(
               canvas,
-              'Cuadrante',
+              'Turnly',
               const Rect.fromLTWH(344, 125, 632, 90),
               type.display.copyWith(fontSize: 72),
             );

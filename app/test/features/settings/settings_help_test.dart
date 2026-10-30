@@ -152,7 +152,7 @@ void main() {
       await tester.tap(key('help-copy-version'));
       await tester.pumpAndSettle();
 
-      expect(copied, startsWith('Cuadrante'));
+      expect(copied, startsWith('Turnly'));
       // Not behind the sheet: the sheet is gone and the message is visible.
       expect(find.byType(BottomSheet), findsNothing);
       expect(find.text('Versión copiada'), findsOneWidget);
@@ -205,11 +205,11 @@ void main() {
       expect(find.byType(LicensePage), findsOneWidget);
       // Registered Spanish strings of Material: the title of the page.
       expect(find.text('Licencias'), findsWidgets);
-      expect(find.text('Cuadrante'), findsWidgets);
+      expect(find.text('Turnly'), findsWidgets);
       expect(find.text('Versión 0.6.1'), findsOneWidget);
       expect(
         find.text(
-          'Cuadrante funciona sin conexión y sin cuenta: tus turnos se '
+          'Turnly funciona sin conexión y sin cuenta: tus turnos se '
           'quedan en tu móvil.',
         ),
         findsOneWidget,

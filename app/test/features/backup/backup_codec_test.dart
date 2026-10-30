@@ -109,7 +109,7 @@ void main() {
     test('suggests a dated file name', () {
       expect(
         BackupCodec.suggestedFileName(DateTime.utc(2026, 11, 3, 23)),
-        'Cuadrante-2026-11-03.cuadrante',
+        'turnly-2026-11-03.turnly',
       );
     });
 

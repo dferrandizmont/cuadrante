@@ -305,14 +305,14 @@ void main() {
         findsOneWidget,
       );
       expect(
-        find.textContaining('Cuadrante · Versión de desarrollo'),
+        find.textContaining('Turnly · Versión de desarrollo'),
         findsOneWidget,
       );
       expect(find.byKey(const ValueKey('help-copy-email')), findsNothing);
 
       await tester.tap(find.byKey(const ValueKey('help-copy-version')));
       await tester.pumpAndSettle();
-      expect(copied, 'Cuadrante · Versión de desarrollo');
+      expect(copied, 'Turnly · Versión de desarrollo');
       expect(find.text('Versión copiada'), findsOneWidget);
     });
 
@@ -377,7 +377,7 @@ void main() {
       );
       await tester.tap(find.byKey(const ValueKey('settings-about')));
       await tester.pumpAndSettle();
-      expect(find.text('Cuadrante'), findsOneWidget);
+      expect(find.text('Turnly'), findsOneWidget);
       expect(find.textContaining('sin conexión y sin cuenta'), findsOneWidget);
 
       await tester.tap(find.byKey(const ValueKey('about-licenses')));

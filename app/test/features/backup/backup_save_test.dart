@@ -29,7 +29,7 @@ void main() {
       final exported = h.shared.single;
       final saved = h.saved.single;
       expect(saved.fileName, exported.fileName);
-      expect(saved.fileName, 'cuadrante-2026-10-19-120000.cuadrante');
+      expect(saved.fileName, 'turnly-2026-10-19-120000.turnly');
       expect(saved.bytes, exported.bytes, reason: 'same bytes as the export');
       // And it is a real backup.
       expect(
@@ -127,25 +127,25 @@ void main() {
       final bytes = Uint8List.fromList([1, 2, 3]);
       final outcome = await saveWithSystemDialog(
         bytes,
-        'cuadrante-2026-10-19-120000.cuadrante',
+        'turnly-2026-10-19-120000.turnly',
         channel,
       );
       expect(outcome, BackupSaveOutcome.saved);
       expect(calls.single.method, 'saveDocument');
       final args = calls.single.arguments as Map<Object?, Object?>;
-      expect(args['fileName'], 'cuadrante-2026-10-19-120000.cuadrante');
+      expect(args['fileName'], 'turnly-2026-10-19-120000.turnly');
       expect(args['bytes'], bytes);
     });
 
     test('«cancelled» (or nothing) is a cancelled dialog', () async {
       reply((_) async => 'cancelled');
       expect(
-        await saveWithSystemDialog(Uint8List(1), 'x.cuadrante', channel),
+        await saveWithSystemDialog(Uint8List(1), 'x.turnly', channel),
         BackupSaveOutcome.cancelled,
       );
       reply((_) async => null);
       expect(
-        await saveWithSystemDialog(Uint8List(1), 'x.cuadrante', channel),
+        await saveWithSystemDialog(Uint8List(1), 'x.turnly', channel),
         BackupSaveOutcome.cancelled,
       );
     });
@@ -153,7 +153,7 @@ void main() {
     test('a failure of the platform reaches the caller', () async {
       reply((_) async => throw PlatformException(code: 'unwritable'));
       await expectLater(
-        saveWithSystemDialog(Uint8List(1), 'x.cuadrante', channel),
+        saveWithSystemDialog(Uint8List(1), 'x.turnly', channel),
         throwsA(isA<PlatformException>()),
       );
     });

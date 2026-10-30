@@ -110,7 +110,7 @@ class PluginDeviceCalendarApi implements DeviceCalendarApi {
           // Android: a local account, so no Google account is touched. iOS
           // ignores it and picks iCloud, or the local source.
           platformOptions: const dcp.CreateCalendarOptionsAndroid(
-            accountName: 'Cuadrante',
+            accountName: 'Turnly',
           ),
         ),
       );

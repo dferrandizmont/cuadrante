@@ -70,12 +70,12 @@ class BackupTools {
   final Directory directory;
   final BackupService service;
 
-  /// `cuadrante-<stamp>.cuadrante`: the copies of the app, with the retention
+  /// `turnly-<stamp>.turnly`: the copies of the app, with the retention
   /// policy. Always on the phone, and always the first place: a copy exists
   /// here before it is sent anywhere.
   final LocalFileBackupStore autoStore;
 
-  /// `pre-restore-<stamp>.cuadrante`: written by `BackupRepository.restore`.
+  /// `pre-restore-<stamp>.turnly`: written by `BackupRepository.restore`.
   /// Local only, never in iCloud.
   final LocalFileBackupStore safetyStore;
 
@@ -486,8 +486,8 @@ final backupSharerProvider = Provider<BackupSharer>(
 typedef BackupFilePicker = Future<IncomingFile?> Function();
 
 /// The system file picker. On Android no type filter is passed: the
-/// extension `.cuadrante` has no MIME type there, and a filter could hide the
-/// very file the user wants; the content is validated anyway. On iOS the
+/// extensions `.turnly` and `.cuadrante` have no MIME type there, and a filter
+/// could hide the very file the user wants; the content is validated anyway. On iOS the
 /// picker only takes type identifiers (extensions alone make it throw): any
 /// data file, for the same reason; the app's own type (`app.cuadrante.backup`,
 /// declared in Info.plist) is one of them.
@@ -496,13 +496,10 @@ Future<IncomingFile?> pickBackupFile() async {
       ? const <XTypeGroup>[]
       : Platform.isIOS
       ? const [
-          XTypeGroup(
-            label: 'Cuadrante',
-            uniformTypeIdentifiers: ['public.data'],
-          ),
+          XTypeGroup(label: 'Turnly', uniformTypeIdentifiers: ['public.data']),
         ]
       : const [
-          XTypeGroup(label: 'Cuadrante', extensions: ['cuadrante']),
+          XTypeGroup(label: 'Turnly', extensions: ['turnly', 'cuadrante']),
         ];
   final file = await openFile(acceptedTypeGroups: groups);
   if (file == null) return null;

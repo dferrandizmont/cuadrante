@@ -172,7 +172,7 @@ class FakeDeviceCalendar implements DeviceCalendarApi {
   Future<String> createCalendar({required String name, int? colorValue}) async {
     _check();
     createdCalendars++;
-    return addCalendar(name, account: 'Cuadrante', color: colorValue);
+    return addCalendar(name, account: 'Turnly', color: colorValue);
   }
 
   @override

@@ -91,8 +91,8 @@ Future<void> main() async {
       expect(s.timeZone, _tz);
       expect(s.locale, 'es');
       expect(s.generatedAt, _generatedAt);
-      expect(s.staleTitle, 'Cuadrante');
-      expect(s.staleBody, 'Abre Cuadrante para seguir al día');
+      expect(s.staleTitle, 'Turnly');
+      expect(s.staleBody, 'Abre Turnly para seguir al día');
       expect(s.weekdayHeaders, ['L', 'M', 'X', 'J', 'V', 'S', 'D']);
     });
 

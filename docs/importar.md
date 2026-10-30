@@ -9,11 +9,11 @@ continua, más adelante, también será gratuita), `docs/motor-de-turnos.md` (un
 
 ## Qué hace
 
-- **Importar** trae turnos ya hechos a un calendario de Cuadrante: desde la copia de seguridad `.Shifter` de LRHSoft
+- **Importar** trae turnos ya hechos a un calendario de Turnly: desde la copia de seguridad `.Shifter` de LRHSoft
   (la vía completa y gratis para quien viene de ahí), desde el calendario del móvil (el historial de Supershift, por
   ejemplo), desde un archivo `.ics` o desde un CSV.
-- **Exportar** copia los turnos de Cuadrante a un calendario del móvil, una sola vez. Si se repite, **sustituye** lo
-  que Cuadrante escribió antes en esas fechas en vez de duplicarlo.
+- **Exportar** copia los turnos de Turnly a un calendario del móvil, una sola vez. Si se repite, **sustituye** lo
+  que Turnly (o Cuadrante, su nombre anterior) escribió antes en esas fechas en vez de duplicarlo.
 
 Está en Ajustes › «Importar y exportar» (`/ajustes/importar` y `/ajustes/exportar`) y, para importar, también en el
 paso 4 del primer uso («¿Vienes de otra app?»).
@@ -25,7 +25,7 @@ se leen en el móvil, se agrupan en el móvil y solo se guarda lo que el usuario
 mensajes de error nunca llevan texto del archivo ni títulos de eventos.
 
 **Exportar sí escribe en un calendario del móvil, y ese calendario puede estar sincronizado con una cuenta** (Google,
-iCloud, Exchange...): lo que se escribe ahí lo sube el propio sistema a esa cuenta, fuera del control de Cuadrante.
+iCloud, Exchange...): lo que se escribe ahí lo sube el propio sistema a esa cuenta, fuera del control de Turnly.
 Por eso:
 
 - **Las ausencias no se exportan por defecto** (`ShiftCategory.absence`: vacaciones, asuntos propios y, sobre todo,
@@ -34,7 +34,7 @@ Por eso:
   libres siguen su propio interruptor.
 - Si el calendario elegido es de una cuenta que sincroniza (`DeviceCalendarInfo.isSynced`: el tipo de cuenta no es
   `local`), la pantalla dice «Este calendario se sincroniza con {cuenta}: tus turnos se verán allí.». Con uno local no
-  dice nada. «Crear el calendario Cuadrante» es local en Android; en iOS puede acabar en iCloud (no se puede saber
+  dice nada. «Crear el calendario Turnly» es local en Android; en iOS puede acabar en iCloud (no se puede saber
   antes de crearlo) y el aviso de permiso ya lo menciona.
 - Qué se escribe: título («Mañana · M»), horario y una descripción con la marca y la etiqueta. Nunca notas del día,
   cantidades de dinero ni nada más.
@@ -47,7 +47,7 @@ arrancar, ni para importar un archivo):
 
 | Plataforma | Permiso | Declaración |
 |---|---|---|
-| Android | `READ_CALENDAR` y `WRITE_CALENDAR` (un solo grupo, un solo cuadro del sistema) | `AndroidManifest.xml`. En Play Console, «Seguridad de los datos»: calendario, uso local; Cuadrante no lo envía a ningún servidor propio, pero lo que se exporta a un calendario sincronizado lo sube el sistema a esa cuenta (decirlo en la ficha) |
+| Android | `READ_CALENDAR` y `WRITE_CALENDAR` (un solo grupo, un solo cuadro del sistema) | `AndroidManifest.xml`. En Play Console, «Seguridad de los datos»: calendario, uso local; Turnly no lo envía a ningún servidor propio, pero lo que se exporta a un calendario sincronizado lo sube el sistema a esa cuenta (decirlo en la ficha) |
 | iOS | Acceso completo al calendario (`NSCalendarsFullAccessUsageDescription`, y `NSCalendarsUsageDescription` para iOS 16 o anterior) | `Info.plist`: «Para leer turnos de tu calendario al importar y, si tú lo pides, añadir tus turnos al calendario que elijas. Si ese calendario se sincroniza con una cuenta, esa cuenta también los recibirá.» |
 
 El texto de la tarjeta de permiso explica el motivo **antes** de pedirlo; el botón «Permitir acceso» es lo único que
@@ -199,8 +199,8 @@ puede representar) se salta; nunca aborta la importación.
 `/ajustes/exportar`. Gratis; la sincronización continua no forma parte de esto (más adelante, y también gratuita).
 
 - **Calendario**: uno que ya exista y se pueda escribir (los de solo lectura y los ocultos no salen) o **«Crear el
-  calendario "Cuadrante"»** (en Android, una cuenta local «Cuadrante»; en iOS, iCloud o local). Si ya hay uno que se
-  llama «Cuadrante» viene elegido.
+  calendario "Turnly"»** (en Android, una cuenta local «Turnly»; en iOS, iCloud o local). Si ya hay uno que se
+  llama «Turnly» viene elegido. Un calendario «Cuadrante» creado por versiones anteriores sale en la lista como uno más.
 - **Fechas**: por defecto los próximos 3 meses desde hoy; como mucho un año (366 días). El aviso «se ha recortado el
   final» solo sale si el rango pedido pasaba de eso.
 - Cada turno es un evento: título **«Mañana · M»** (nombre · código), con su horario (un turno de noche acaba al día
@@ -218,14 +218,14 @@ puede representar) se salta; nunca aborta la importación.
 - **Ausencias** (vacaciones, asuntos propios, baja médica): **no se exportan** salvo que se active «Incluir
   ausencias» (ver «Privacidad»). Si se apaga después, la siguiente exportación borra del calendario las que había
   escrito.
-- **Sin duplicados**: cada evento lleva en la descripción una primera línea «Creado con Cuadrante» y, en otra línea
+- **Sin duplicados**: cada evento lleva en la descripción una primera línea «Creado con Turnly» (hasta la 0.6.14, «Creado con Cuadrante») y, en otra línea
   suya, una etiqueta `cuadrante:v1:<calendario>:<fecha>:<tipo>:<n>`. El calendario y el tipo se escriben con
   `Uri.encodeComponent` (un id con `:` o espacios, de una copia editada a mano, sigue dando una etiqueta que se lee
-  de vuelta; los ids normales quedan igual). Al volver a exportar, Cuadrante compara con lo que hay: lo que ya
+  de vuelta; los ids normales quedan igual). Al volver a exportar, Turnly compara con lo que hay: lo que ya
   está bien se deja, lo que ha cambiado se borra y se crea de nuevo, lo repetido se borra.
 - **Qué es «suyo»** (estricto, porque lo suyo se puede borrar): el evento está en el calendario del móvil elegido, su
-  descripción **empieza exactamente por «Creado con Cuadrante»**, la etiqueta es **una línea entera** que cumple
-  `^cuadrante:v1:([^:\s]+):(\d{4}-\d{2}-\d{2}):([^:\s]+):(\d+)$`, el calendario de Cuadrante coincide y el **día de la
+  descripción **empieza exactamente por «Creado con Turnly» o por la línea antigua «Creado con Cuadrante»**, la etiqueta es **una línea entera** que cumple
+  `^cuadrante:v1:([^:\s]+):(\d{4}-\d{2}-\d{2}):([^:\s]+):(\d+)$`, el calendario de Turnly coincide y el **día de la
   etiqueta** cae dentro de las fechas elegidas. Una etiqueta citada en mitad de otro texto, con otra primera línea o
   en un evento de otro calendario del móvil no se toca. No se exige que el tipo siga existiendo (los eventos de un
   tipo borrado se limpian igual). Los eventos del usuario, los de otra exportación y los de días fuera del rango no
@@ -251,12 +251,12 @@ genera CSV, Excel ni `.ics`. Lo gratis y completo es su copia de seguridad local
 
 1. En LRHSoft: Menú › Copia de seguridad › Copia local. Queda un `*.Shifter` (en Android, en
    `Documentos/ShifterBackups/`).
-2. En Cuadrante: Ajustes › Importar turnos › **Copia de LRHSoft (Calendario de Turnos)** (o, en el primer uso, el botón
+2. En Turnly: Ajustes › Importar turnos › **Copia de LRHSoft (Calendario de Turnos)** (o, en el primer uso, el botón
    «Importar copia de LRHSoft» del paso 4). Elige el `.Shifter`; el selector deja elegir cualquier archivo. El selector
    de Android llama «.bin» a los archivos cuyo tipo no conoce (una copia `.Shifter` llega como
    `application/octet-stream`): la app **no repite** ese nombre inventado y dice «Copia de LRHSoft» (H-T22-10).
 3. Elige las fechas (por defecto, de su primer a su último día con datos, como mucho 5 años).
-4. Revisa a qué turno de Cuadrante corresponde cada turno de LRHSoft. «Mañana», «Tarde», «Noche» y «Libre»
+4. Revisa a qué turno de Turnly corresponde cada turno de LRHSoft. «Mañana», «Tarde», «Noche» y «Libre»
    (también «Descanso», «Free», «Day off»…) se asocian solos a los tuyos; **los que no coinciden empiezan como «Crear
    tipo nuevo»** con su nombre, código, color y horario (también el segundo tramo de un turno partido), editables o
    «Ignorar». Es la única fuente en la que lo que no coincide no empieza en «Ignorar»: los tipos vienen de otra app de
@@ -373,12 +373,12 @@ aviso de después de importar («Se han importado N días… · Deshacer») repi
 
 - **Un archivo `.ics` que llega desde otra app** (compartir desde WhatsApp o el correo) entra por la misma ruta:
   `/ajustes/importar` acepta un `PickedImportFile` como `extra` y empieza a leerlo. Falta enchufar el aviso nativo de
-  Android (filtro de intents) y el de iOS, que ya existen para `.cuadrante` (`docs/copia-de-seguridad.md`) y se
+  Android (filtro de intents) y el de iOS, que ya existen para `.turnly` y `.cuadrante` (`docs/copia-de-seguridad.md`) y se
   amplían en la fase del Mac.
 - Un grupo con el mismo título pero horarios distintos (un «Turno» de 6 a 14 y otro de 14 a 22) se asocia a **un**
   solo tipo; se ve en el horario más habitual del grupo. Si importa, separarlos en el calendario de origen.
-- El formato de exportación (título, línea «Creado con Cuadrante» y etiqueta) es parte del contrato: la etiqueta
-  `cuadrante:v1` y la primera línea no se cambian. Las exportaciones hechas antes de codificar los ids siguen
+- El formato de exportación (título, línea «Creado con Turnly» y etiqueta) es parte del contrato: la etiqueta
+  `cuadrante:v1` no se cambia, y la primera línea antigua «Creado con Cuadrante» se sigue reconociendo siempre. Las exportaciones hechas antes de codificar los ids siguen
   reconociéndose (un id normal se escribe igual).
 - No se importan ausencias con contador ni adjuntos. Las notas del día solo vienen de la copia de LRHSoft (ver
   «Copia de LRHSoft»).
@@ -436,6 +436,6 @@ aviso de después de importar («Se han importado N días… · Deshacer») repi
 
 El plugin `device_calendar_plus` sobre CalendarContract y EventKit reales: fin de los eventos de todo el día en iOS,
 calendarios de cuentas de Google sincronizadas, el comportamiento con permiso de «solo añadir» en iOS 17, la creación
-del calendario «Cuadrante» en iCloud, y los escenarios Q72 y Q73 en el emulador (necesitan el calendario del sistema).
+del calendario «Turnly» en iCloud, y los escenarios Q72 y Q73 en el emulador (necesitan el calendario del sistema).
 
 La importación de la copia de LRHSoft (`.Shifter`) está probada con bases hechas en las pruebas y con la copia real de la muestra, pero **no en el emulador**: falta elegir el archivo con el selector de Android (`application/octet-stream`, sin extensión conocida), `sqlite3` dentro del aislado en el móvil, y repetir T22 (H-T22-1 a H-T22-5) con la app.

@@ -32,7 +32,7 @@ ExportState stateOf(AppUnderTest app) =>
 void main() {
   setUpAll(initializeLocale);
 
-  testWidgets('opens on the calendars, with «Cuadrante» to be created', (
+  testWidgets('opens on the calendars, with «Turnly» to be created', (
     tester,
   ) async {
     final phone = FakeDeviceCalendar();
@@ -47,7 +47,7 @@ void main() {
       findsOneWidget,
     );
     expect(byKey('export-calendar-new'), findsOneWidget);
-    expect(find.text('Crear el calendario «Cuadrante»'), findsOneWidget);
+    expect(find.text('Crear el calendario «Turnly»'), findsOneWidget);
     expect(find.text('Personal'), findsOneWidget);
     expect(find.text('yo@example.com'), findsOneWidget);
     expect(find.text('Festivos'), findsNothing, reason: 'read-only');
@@ -57,7 +57,18 @@ void main() {
     expect(phone.requests, 0);
   });
 
-  testWidgets('an existing «Cuadrante» is chosen by default', (tester) async {
+  testWidgets('an existing «Turnly» is chosen by default', (tester) async {
+    final phone = FakeDeviceCalendar();
+    phone.addCalendar('Cuadrante');
+    final id = phone.addCalendar('Turnly');
+    phone.addCalendar('Personal');
+    final app = await openExport(tester, phone);
+    expect(stateOf(app).targetId, id);
+  });
+
+  testWidgets('the «Cuadrante» calendar from before the rename is still found', (
+    tester,
+  ) async {
     final phone = FakeDeviceCalendar();
     final id = phone.addCalendar('Cuadrante');
     phone.addCalendar('Personal');
@@ -82,7 +93,7 @@ void main() {
     expect(byKey('export-result'), findsOneWidget);
     expect(find.text('Exportación hecha'), findsOneWidget);
     expect(
-      find.text('Se ha creado el calendario «Cuadrante».'),
+      find.text('Se ha creado el calendario «Turnly».'),
       findsOneWidget,
     );
     expect(

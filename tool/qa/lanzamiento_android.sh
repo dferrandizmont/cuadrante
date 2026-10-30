@@ -114,7 +114,7 @@ if [ "$WANT_PLAY" = 1 ]; then
   qa_adb shell am start -a android.intent.action.VIEW \
     -d "https://play.google.com/apps/testing/es.cuadrante.app" >/dev/null 2>&1 || true
   info "En el emulador se ha abierto la página de la prueba: pulsa «Convertirse en"
-  info "tester». La cuenta tiene que estar en el grupo cuadrante-testers."
+  info "tester». La cuenta tiene que estar en el grupo turnly-testers."
   espera "Cuando diga que ya eres tester,"
 fi
 

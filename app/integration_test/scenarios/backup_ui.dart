@@ -219,7 +219,7 @@ Future<void> _fileRoundTrip(QaContext qa) async {
   // Named for today plus the time, so two exports never share a file.
   expect(
     exported.fileName,
-    matches(RegExp(r'^cuadrante-2026-10-19-\d{6}\.cuadrante$')),
+    matches(RegExp(r'^turnly-2026-10-19-\d{6}\.turnly$')),
   );
   expect(const BackupCodec().decode(exported.bytes).data.calendars, isNotEmpty);
   await _home(t);

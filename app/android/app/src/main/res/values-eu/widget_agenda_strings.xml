@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="widget_agenda_label">Cuadrante: hurrengo egunak</string>
-    <string name="widget_two_weeks_label">Cuadrante: bi aste</string>
+    <string name="widget_agenda_label">Turnly: hurrengo egunak</string>
+    <string name="widget_two_weeks_label">Turnly: bi aste</string>
     <string name="widget_agenda_description">Gaur eta hurrengo egunak, txandekin eta oharrekin. Eguna automatikoki aldatzen da.</string>
     <string name="widget_two_weeks_description">Aste hau eta hurrengoa, astelehenetik hasita. Eguna automatikoki aldatzen da.</string>
     <string name="widget_no_shift">Txandarik ez</string>
     <string name="widget_has_note">Oharra du</string>
     <string name="widget_today">gaur</string>
-    <string name="widget_empty_title">Cuadrante</string>
-    <string name="widget_empty_body">Ireki Cuadrante zure txandak ikusteko</string>
+    <string name="widget_empty_title">Turnly</string>
+    <string name="widget_empty_body">Ireki Turnly zure txandak ikusteko</string>
 </resources>

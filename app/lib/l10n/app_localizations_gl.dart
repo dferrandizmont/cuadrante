@@ -10,7 +10,7 @@ class AppLocalizationsGl extends AppLocalizations {
   AppLocalizationsGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get appName => 'Cuadrante';
+  String get appName => 'Turnly';
 
   @override
   String get cancel => 'Cancelar';
@@ -2116,19 +2116,19 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get faqAlarmsAIos =>
-      'En Configuración › Alarmas activa «Avisar antes de cada quenda», escolle canto antes e, se queres, un aviso o día anterior a unha hora fixa. No detalle dun día podes quitar a súa alarma con «Sen alarma este día».\n\nSen o permiso de notificacións, Cuadrante non pode avisarte. Se non che sae a xanela para permitilas, actívaas na configuración do sistema.';
+      'En Configuración › Alarmas activa «Avisar antes de cada quenda», escolle canto antes e, se queres, un aviso o día anterior a unha hora fixa. No detalle dun día podes quitar a súa alarma con «Sen alarma este día».\n\nSen o permiso de notificacións, Turnly non pode avisarte. Se non che sae a xanela para permitilas, actívaas na configuración do sistema.';
 
   @override
   String get faqWidgetAIos =>
-      'En Configuración › Engadir widget ves os tamaños (pequeno: hoxe e mañá; mediano: os próximos 7 días; grande: o mes enteiro) e como colocalo. Mantén premida a pantalla de inicio, toca o + de arriba e busca Cuadrante.\n\nO widget garda os teus próximos días. O sistema decide cando o actualiza e pode atrasar o cambio de día. Se queda sen datos, abre Cuadrante para poñelo ao día.';
+      'En Configuración › Engadir widget ves os tamaños (pequeno: hoxe e mañá; mediano: os próximos 7 días; grande: o mes enteiro) e como colocalo. Mantén premida a pantalla de inicio, toca o + de arriba e busca Turnly.\n\nO widget garda os teus próximos días. O sistema decide cando o actualiza e pode atrasar o cambio de día. Se queda sen datos, abre Turnly para poñelo ao día.';
 
   @override
   String get faqBackupAIos =>
-      'Configuración › Copia de seguranza garda copias automáticas neste dispositivo despois de cada cambio, pero pérdense se o perdes ou desinstalas a app. Exporta un ficheiro con «Exportar ficheiro» e gárdao en iCloud Drive ou envíao a ti mesmo por WhatsApp ou correo.\n\nPara cambiar de dispositivo: exporta o ficheiro, instala Cuadrante no novo, abre o ficheiro coa app (ou usa «Importar ficheiro» na copia de seguranza) e revisa a vista previa antes de restaurar. «Probar restauración» comproba que a túa última copia se pode recuperar enteira.';
+      'Configuración › Copia de seguranza garda copias automáticas neste dispositivo despois de cada cambio, pero pérdense se o perdes ou desinstalas a app. Exporta un ficheiro con «Exportar ficheiro» e gárdao en iCloud Drive ou envíao a ti mesmo por WhatsApp ou correo.\n\nPara cambiar de dispositivo: exporta o ficheiro, instala Turnly no novo, abre o ficheiro coa app (ou usa «Importar ficheiro» na copia de seguranza) e revisa a vista previa antes de restaurar. «Probar restauración» comproba que a túa última copia se pode recuperar enteira.';
 
   @override
   String get calExportPermissionDeniedBodyIos =>
-      'Actívao na configuración do sistema (Cuadrante › Calendarios) e volve aquí.';
+      'Actívao na configuración do sistema (Turnly › Calendarios) e volve aquí.';
 
   @override
   String get backupUiWarningIos =>
@@ -2177,7 +2177,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get faqIntro =>
-      'Respostas rápidas sobre como funciona Cuadrante. Todo está neste dispositivo: non fai falta conta nin conexión.';
+      'Respostas rápidas sobre como funciona Turnly. Todo está neste dispositivo: non fai falta conta nin conexión.';
 
   @override
   String get faqNotFound => 'Non atopas o que buscas?';
@@ -2226,7 +2226,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get faqAlarmsA =>
-      'En Configuración › Alarmas activa «Avisar antes de cada quenda», escolle canto antes e, se queres, un aviso o día anterior a unha hora fixa. No detalle dun día podes quitar a súa alarma con «Sen alarma este día».\n\nEn Android fan falta as notificacións e o permiso «Alarmas e recordatorios» da configuración do sistema: sen el, Android pode atrasar o aviso uns minutos. A pantalla de alarmas diche que falta e lévate á configuración. Se o teu móbil aforra batería de forma agresiva, deixa Cuadrante sen restricións para que non pare os avisos.';
+      'En Configuración › Alarmas activa «Avisar antes de cada quenda», escolle canto antes e, se queres, un aviso o día anterior a unha hora fixa. No detalle dun día podes quitar a súa alarma con «Sen alarma este día».\n\nEn Android fan falta as notificacións e o permiso «Alarmas e recordatorios» da configuración do sistema: sen el, Android pode atrasar o aviso uns minutos. A pantalla de alarmas diche que falta e lévate á configuración. Se o teu móbil aforra batería de forma agresiva, deixa Turnly sen restricións para que non pare os avisos.';
 
   @override
   String get faqHolidaysQ => 'Como engado un festivo local?';
@@ -2240,14 +2240,14 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get faqWidgetA =>
-      'En Configuración › Engadir widget ves os tamaños (pequeno: hoxe e mañá; mediano: os próximos 7 días; grande: o mes enteiro) e como colocalo. En Android, mantén premida unha zona baleira da pantalla de inicio, escolle Widgets e busca Cuadrante.\n\nO widget sempre amosa o día de hoxe: cambia de día á medianoite aínda que non abras a app, porque leva gardados os teus próximos días. Se pasa moito tempo sen abrir Cuadrante, queda sen datos e pídeche abrir a app para poñerse ao día.';
+      'En Configuración › Engadir widget ves os tamaños (pequeno: hoxe e mañá; mediano: os próximos 7 días; grande: o mes enteiro) e como colocalo. En Android, mantén premida unha zona baleira da pantalla de inicio, escolle Widgets e busca Turnly.\n\nO widget sempre amosa o día de hoxe: cambia de día á medianoite aínda que non abras a app, porque leva gardados os teus próximos días. Se pasa moito tempo sen abrir Turnly, queda sen datos e pídeche abrir a app para poñerse ao día.';
 
   @override
   String get faqBackupQ => 'Como fago unha copia e cambio de dispositivo?';
 
   @override
   String get faqBackupA =>
-      'Configuración › Copia de seguranza garda copias automáticas neste dispositivo despois de cada cambio, pero pérdense se o perdes ou desinstalas a app. Exporta un ficheiro con «Exportar ficheiro» e gárdao en Drive ou envíao a ti mesmo por WhatsApp ou correo.\n\nPara cambiar de dispositivo: exporta o ficheiro, instala Cuadrante no novo, abre o ficheiro coa app (ou usa «Importar ficheiro» na copia de seguranza) e revisa a vista previa antes de restaurar. «Probar restauración» comproba que a túa última copia se pode recuperar enteira.';
+      'Configuración › Copia de seguranza garda copias automáticas neste dispositivo despois de cada cambio, pero pérdense se o perdes ou desinstalas a app. Exporta un ficheiro con «Exportar ficheiro» e gárdao en Drive ou envíao a ti mesmo por WhatsApp ou correo.\n\nPara cambiar de dispositivo: exporta o ficheiro, instala Turnly no novo, abre o ficheiro coa app (ou usa «Importar ficheiro» na copia de seguranza) e revisa a vista previa antes de restaurar. «Probar restauración» comproba que a túa última copia se pode recuperar enteira.';
 
   @override
   String get faqImportQ =>
@@ -2255,7 +2255,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get faqImportA =>
-      'Si. En Configuración › Importar quendas podes traer unha copia «.Shifter» de LRHSoft, quendas do calendario do móbil, un ficheiro .ics ou un CSV. En LRHSoft, crea unha copia en Menú › Copia de seguranza › Copia local e escolle o ficheiro de Documents › ShifterBackups. Revisa as datas, os tipos de quenda e a vista previa antes de importar.\n\n«Exportar ao calendario do móbil» copia as túas quendas unha vez a un calendario do teléfono. Se exportas outra vez non se duplican: só se tocan os eventos que creou Cuadrante.';
+      'Si. En Configuración › Importar quendas podes traer unha copia «.Shifter» de LRHSoft, quendas do calendario do móbil, un ficheiro .ics ou un CSV. En LRHSoft, crea unha copia en Menú › Copia de seguranza › Copia local e escolle o ficheiro de Documents › ShifterBackups. Revisa as datas, os tipos de quenda e a vista previa antes de importar.\n\n«Exportar ao calendario do móbil» copia as túas quendas unha vez a un calendario do teléfono. Se exportas outra vez non se duplican: só se tocan os eventos que creou Turnly.';
 
   @override
   String get faqCalendarsQ => 'Podo levar varios calendarios e comparalos?';
@@ -2290,7 +2290,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get settingsAboutTagline =>
-      'Cuadrante funciona sen conexión e sen conta: as túas quendas quedan no teu móbil.';
+      'Turnly funciona sen conexión e sen conta: as túas quendas quedan no teu móbil.';
 
   @override
   String get settingsAboutLicenses => 'Licenzas de código aberto';
@@ -2335,7 +2335,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get importSourceHelp =>
-      'Cuadrante le os eventos aquí mesmo, no teu móbil, e non os envía a ningún sitio. Ti decides que se importa.';
+      'Turnly le os eventos aquí mesmo, no teu móbil, e non os envía a ningún sitio. Ti decides que se importa.';
 
   @override
   String get importSourceDevice => 'Calendario do móbil';
@@ -2380,11 +2380,11 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get calExportPermissionReadBody =>
-      'Para importar, Cuadrante necesita ler os eventos dos teus calendarios. Só o fai agora, mentres importas, e non garda nada fóra do móbil.';
+      'Para importar, Turnly necesita ler os eventos dos teus calendarios. Só o fai agora, mentres importas, e non garda nada fóra do móbil.';
 
   @override
   String get calExportPermissionWriteBody =>
-      'Para engadir as túas quendas, Cuadrante necesita acceso aos teus calendarios. Só engade ou cambia os seus propios eventos, e só cando ti exportas. Se o calendario que escollas se sincroniza cunha conta (Google, iCloud...), esa conta tamén recibirá as quendas.';
+      'Para engadir as túas quendas, Turnly necesita acceso aos teus calendarios. Só engade ou cambia os seus propios eventos, e só cando ti exportas. Se o calendario que escollas se sincroniza cunha conta (Google, iCloud...), esa conta tamén recibirá as quendas.';
 
   @override
   String get calExportPermissionAgainBody =>
@@ -2417,7 +2417,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get calExportPermissionWriteOnlyBody =>
-      'O sistema só deu permiso para engadir eventos. Cuadrante necesita acceso completo para ler os calendarios ou para substituír os eventos dunha exportación anterior.';
+      'O sistema só deu permiso para engadir eventos. Turnly necesita acceso completo para ler os calendarios ou para substituír os eventos dunha exportación anterior.';
 
   @override
   String get importCalendarsTitle => 'Escolle os calendarios';
@@ -2791,7 +2791,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get importProblemPermissionRestricted =>
-      'Este móbil non deixa a Cuadrante usar o calendario. Proba cun ficheiro.';
+      'Este móbil non deixa a Turnly usar o calendario. Proba cun ficheiro.';
 
   @override
   String get importProblemCalendarUnavailable =>
@@ -2907,7 +2907,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get calExportHelp =>
-      'Engade as túas quendas como eventos a un calendario do móbil, unha soa vez. Se o repites, Cuadrante substitúe os seus eventos anteriores nesas datas en vez de duplicalos.';
+      'Engade as túas quendas como eventos a un calendario do móbil, unha soa vez. Se o repites, Turnly substitúe os seus eventos anteriores nesas datas en vez de duplicalos.';
 
   @override
   String calExportSource(String name) {
@@ -2918,7 +2918,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get calExportCalendarLabel => 'Calendario';
 
   @override
-  String get calExportNewCalendar => 'Crear o calendario «Cuadrante»';
+  String get calExportNewCalendar => 'Crear o calendario «Turnly»';
 
   @override
   String get calExportNewCalendarHelp =>
@@ -3019,7 +3019,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get calExportDoneTitle => 'Exportación feita';
 
   @override
-  String get calExportDoneCalendar => 'Creouse o calendario «Cuadrante».';
+  String get calExportDoneCalendar => 'Creouse o calendario «Turnly».';
 
   @override
   String calExportDoneCreated(int count) {
@@ -3225,7 +3225,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get backupUiImport => 'Importar ficheiro';
 
   @override
-  String get backupUiImportSubtitle => 'Recupera un ficheiro de Cuadrante';
+  String get backupUiImportSubtitle => 'Recupera un ficheiro de Turnly';
 
   @override
   String get backupUiVerify => 'Probar restauración';
@@ -3438,11 +3438,11 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get backupUiErrorNotOurs =>
-      'Este ficheiro non é unha copia de Cuadrante.';
+      'Este ficheiro non é unha copia de Turnly.';
 
   @override
   String get backupUiErrorNewer =>
-      'Este ficheiro é dunha versión máis nova de Cuadrante: actualiza a app.';
+      'Este ficheiro é dunha versión máis nova de Turnly: actualiza a app.';
 
   @override
   String get backupUiErrorCorrupt =>
@@ -3450,7 +3450,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get backupUiErrorTooLarge =>
-      'Este ficheiro é demasiado grande para ser unha copia de Cuadrante.';
+      'Este ficheiro é demasiado grande para ser unha copia de Turnly.';
 
   @override
   String get backupUiErrorUnreadable => 'Non se puido ler o ficheiro.';
@@ -3465,7 +3465,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get backupUiErrorRestoreReload =>
-      'Restauramos os teus datos, pero a pantalla non se puido actualizar. Pecha Cuadrante e volve abrilo.';
+      'Restauramos os teus datos, pero a pantalla non se puido actualizar. Pecha Turnly e volve abrilo.';
 
   @override
   String get backupUiBack => 'Volver';
@@ -3487,10 +3487,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get widgetEmptyCircular => '–';
 
   @override
-  String get widgetStaleTitle => 'Cuadrante';
+  String get widgetStaleTitle => 'Turnly';
 
   @override
-  String get widgetStaleBody => 'Abre Cuadrante para estar ao día';
+  String get widgetStaleBody => 'Abre Turnly para estar ao día';
 
   @override
   String get widgetAddTitle => 'Engadir widget';
@@ -3519,11 +3519,11 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get widgetAddManualAndroid =>
-      'Mantén premida unha zona baleira da pantalla de inicio, escolle Widgets e busca Cuadrante.';
+      'Mantén premida unha zona baleira da pantalla de inicio, escolle Widgets e busca Turnly.';
 
   @override
   String get widgetAddManualIos =>
-      'Mantén premida a pantalla de inicio, toca o + de arriba e busca Cuadrante.';
+      'Mantén premida a pantalla de inicio, toca o + de arriba e busca Turnly.';
 
   @override
   String get compareTitle => 'Comparar calendarios';
@@ -3921,7 +3921,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get alarmsNotifTestBody =>
-      'Así te avisará Cuadrante antes da túa quenda.';
+      'Así te avisará Turnly antes da túa quenda.';
 
   @override
   String get alarmsRowOn => 'Activadas';
@@ -3950,18 +3950,18 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get alarmsPermNotifBody =>
-      'Sen o permiso de notificacións, Cuadrante non pode avisarte. Se non che sae a xanela para permitilas, actívaas na configuración do sistema.';
+      'Sen o permiso de notificacións, Turnly non pode avisarte. Se non che sae a xanela para permitilas, actívaas na configuración do sistema.';
 
   @override
   String get alarmsPermNotifAllow => 'Permitir';
 
   @override
   String get alarmsPermNotifBlockedBody =>
-      'Android xa non che pregunta polas notificacións. Actívaas na configuración do sistema e Cuadrante poderá avisarte.';
+      'Android xa non che pregunta polas notificacións. Actívaas na configuración do sistema e Turnly poderá avisarte.';
 
   @override
   String get alarmsPermNotifBlockedBodyIos =>
-      'iOS xa non che pregunta polas notificacións. Actívaas en Configuración › Cuadrante › Notificacións e Cuadrante poderá avisarte.';
+      'iOS xa non che pregunta polas notificacións. Actívaas en Configuración › Turnly › Notificacións e Turnly poderá avisarte.';
 
   @override
   String get alarmsPermNotifOpenSettings => 'Abrir configuración';
@@ -3981,7 +3981,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get alarmsTypesEmpty =>
-      'Ningunha das túas quendas ten horario. Ponlle hora en As miñas quendas para que Cuadrante poida avisarte.';
+      'Ningunha das túas quendas ten horario. Ponlle hora en As miñas quendas para que Turnly poida avisarte.';
 
   @override
   String get alarmsBeforeTitle => 'Antes da quenda';

@@ -1,6 +1,6 @@
 # Glosario de terminología — catalán (ca), gallego (gl), euskera (eu) e inglés (en)
 
-Base para traducir Cuadrante (`app/lib/l10n/app_es.arb`). **«Cuadrante» se queda como marca en los cuatro idiomas**; aquí se
+Base para traducir Turnly (`app/lib/l10n/app_es.arb`). **«Turnly» se queda como marca en todos los idiomas** (en euskera se declina con guion: Turnly-k, Turnly-ren, Turnly-ri); aquí se
 da el nombre común. Los textos de la app están en español, tuteo, tono cercano y vocabulario del sector.
 
 ## Cómo leer este documento (y qué NO está verificado)
@@ -205,7 +205,7 @@ Hora: 24 h en todos los idiomas (también en inglés: `22:00`, es lo que ven los
 - **Numerales + singular indeterminado**: «3 egun», «1 egun», «0 egun». El sustantivo **no** lleva marca de plural tras el número. El plural sólo aparece con determinante: *egunak* («los días»).
 - **El verbo sí concuerda**: «Egun 1 aldatu da» (singular) vs. «**3 egun aldatu dira**» (plural). Por eso cada mensaje con verbo necesita `plural`:
   `{count, plural, =1{Egun 1 aldatu da} other{{count} egun aldatu dira}}`.
-- **Ergativo**: si el sujeto es un agente de verbo transitivo hace falta *-k* y el verbo transitivo concuerda con objeto y agente (*du/ditu*). En Cuadrante casi todo es pasivo/absolutivo («se pegan N días» → «N egun itsatsi dira»), así que la mayoría de textos evitan ergativo; si aparece, pide revisión nativa.
+- **Ergativo**: si el sujeto es un agente de verbo transitivo hace falta *-k* y el verbo transitivo concuerda con objeto y agente (*du/ditu*). En Turnly casi todo es pasivo/absolutivo («se pegan N días» → «N egun itsatsi dira»), así que la mayoría de textos evitan ergativo; si aparece, pide revisión nativa.
 - **Genitivo locativo -ko** con horas y lugares: *gaueko txanda* (turno de noche), *goizeko txanda*, *arratsaldeko txanda*. Con números o variables evita: en vez de «22:00ko txanda» usa «Txanda: 22:00–06:00». *Hurrengo txanda* («el siguiente turno») es correcto sin *-ko*.
 - **Locativo -etan** («a las {time}») → no lo pongas sobre variable: «Amaiera: {time}». «Terminó a las 22:00» → «Amaitu da: 22:00».
 - **Posposiciones de duración**: «dentro de {duration}» → «{duration} barru» (la variable queda sola).

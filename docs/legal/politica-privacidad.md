@@ -1,8 +1,8 @@
-# Política de privacidad de Cuadrante
+# Política de privacidad de Turnly
 
-Última actualización: 26 de octubre de 2026
+Última actualización: 30 de octubre de 2026
 
-Cuadrante es una app de calendario de turnos para quien trabaja a turnos en España. Es una app independiente: no
+Turnly es una app de calendario de turnos para quien trabaja a turnos en España. Es una app independiente: no
 está creada, revisada ni respaldada por ninguna empresa, administración ni sindicato.
 
 Resumen: **no tienes cuenta, no hay servidor propio y tus turnos se quedan en tu móvil.** La app es totalmente
@@ -33,11 +33,11 @@ enseña el texto de la nota, para que nada de eso salga en la pantalla de bloque
 - las ausencias, baja incluida, van dentro de tus copias de seguridad (ver abajo), igual que el resto de tus turnos.
 
 ### Copias de seguridad
-La app hace **copias automáticas en tu propio móvil** y te deja **exportar una copia a un archivo `.cuadrante`**
-(Ajustes › Copia de seguridad) para guardarla donde quieras o pasarla a otro móvil, y restaurarla después. Ese
+La app hace **copias automáticas en tu propio móvil** y te deja **exportar una copia a un archivo `.turnly`**
+(Ajustes › Copia de seguridad; las copias antiguas `.cuadrante` también se pueden abrir) para guardarla donde quieras o pasarla a otro móvil, y restaurarla después. Ese
 archivo contiene tus turnos, notas y ausencias, no lleva ningún identificador y no está cifrado; lo guardas y lo
 controlas tú: la app solo lo entrega a la app que elijas en la hoja de compartir del sistema. Lo que hagas con él
-después (subirlo a tu nube, mandarlo por WhatsApp o por correo...) queda fuera de la app. Al abrir un `.cuadrante`,
+después (subirlo a tu nube, mandarlo por WhatsApp o por correo...) queda fuera de la app. Al abrir un `.turnly` o un `.cuadrante`,
 nada se restaura sin que lo confirmes.
 
 **Copia del sistema.** En Android, si tienes activada la copia de seguridad de Google, el sistema sube
@@ -71,7 +71,7 @@ La app no transmite turnos, identificadores ni informes de errores. No utiliza c
 servicios de terceros. Los errores se manejan solo en el dispositivo.
 
 Si tocas «Política de privacidad» en Ajustes › Ayuda, se abre esta página en tu navegador externo. Es el navegador
-el que se conecta a la web; Cuadrante no le envía tus turnos, notas ni ausencias.
+el que se conecta a la web; Turnly no le envía tus turnos, notas ni ausencias.
 
 ### Datos que NO se tratan
 - No pedimos ni guardamos nombre, correo, teléfono, DNI, fecha de nacimiento ni datos de tu empresa.
@@ -83,7 +83,7 @@ el que se conecta a la web; Cuadrante no le envía tus turnos, notas ni ausencia
 «Ayuda y contacto» (Ajustes) te enseña la dirección de soporte para que la copies y nos escribas desde tu propia app
 de correo, con la versión de la app si quieres adjuntarla. La app no abre el correo ni envía nada por sí misma. Si
 nos escribes, trataremos tu dirección de correo y lo que nos cuentes solo para responderte. No nos mandes copias
-`.cuadrante` ni capturas con turnos, notas o ausencias reales: para un fallo nos basta con datos inventados.
+`.turnly` o `.cuadrante` ni capturas con turnos, notas o ausencias reales: para un fallo nos basta con datos inventados.
 
 ## 3. Para qué y con qué base jurídica
 

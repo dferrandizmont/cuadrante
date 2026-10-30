@@ -14,11 +14,11 @@ Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0).
 
 Puedes compartirlos y adaptarlos, también con fines comerciales, con atribución,
 indicando los cambios y compartiendo las adaptaciones bajo la misma licencia.
-La atribución debe identificar a Daniel Mont Ferrandiz y a Cuadrante e incluir
+La atribución debe identificar a Daniel Mont Ferrandiz y a Turnly e incluir
 un enlace a esta licencia. Rigen los términos del
 [texto de la licencia CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.es).
 
-Esta licencia se aplica solo al contenido propio. El nombre «Cuadrante» y el
+Esta licencia se aplica solo al contenido propio. El nombre «Turnly» (antes «Cuadrante») y el
 icono identifican esta app: si publicas una versión modificada, dale otro nombre
 y otro icono para que nadie la confunda con la original.
 

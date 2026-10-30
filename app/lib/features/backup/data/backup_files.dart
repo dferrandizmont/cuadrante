@@ -12,11 +12,33 @@ String backupStamp(DateTime t) {
 }
 
 /// Name pattern of the files a folder of backups holds: `<prefix>-<stamp>`,
-/// plus `-<n>` when several share a second, then `.cuadrante`. Group 1 is the
-/// stamp, group 2 the optional counter.
-RegExp backupNamePattern(String prefix) => RegExp(
-  '^${RegExp.escape(prefix)}-(\\d{8}-\\d{6})(?:-(\\d+))?\\.cuadrante\$',
-);
+/// plus `-<n>` when several share a second, then `.turnly` or the legacy
+/// `.cuadrante`. Automatic copies also accept the legacy `cuadrante` prefix.
+/// Group 1 is the stamp, group 2 the optional counter.
+RegExp backupNamePattern(String prefix) {
+  final prefixes = prefix == 'turnly'
+      ? '(?:turnly|cuadrante)'
+      : RegExp.escape(prefix);
+  return RegExp(
+    '^$prefixes-(\\d{8}-\\d{6})(?:-(\\d+))?\\.(?:turnly|cuadrante)\$',
+  );
+}
+
+/// A new `.turnly` name, counting both current and legacy copies of the
+/// same second so the new copy sorts after all existing ones.
+String nextBackupName(String prefix, DateTime at, Iterable<String> names) {
+  final stamp = backupStamp(at);
+  final pattern = backupNamePattern(prefix);
+  var counter = 1;
+  for (final name in names) {
+    final match = pattern.firstMatch(name);
+    if (match == null || match[1] != stamp) continue;
+    final next = (int.tryParse(match[2] ?? '') ?? 1) + 1;
+    if (next > counter) counter = next;
+  }
+  final suffix = counter == 1 ? '' : '-$counter';
+  return '$prefix-$stamp$suffix.turnly';
+}
 
 /// Writes [bytes] to [target] so a crash never leaves half a file there: to a
 /// temporary file in the same folder first, flushed to disk, then renamed.
@@ -39,12 +61,12 @@ Future<File> newBackupFile(
   DateTime at,
 ) async {
   await directory.create(recursive: true);
-  final stamp = backupStamp(at);
-  var file = File(p.join(directory.path, '$prefix-$stamp.cuadrante'));
-  for (var n = 2; await file.exists(); n++) {
-    file = File(p.join(directory.path, '$prefix-$stamp-$n.cuadrante'));
-  }
-  return file;
+  final names = await directory
+      .list()
+      .where((e) => e is File)
+      .map((e) => p.basename(e.path))
+      .toList();
+  return File(p.join(directory.path, nextBackupName(prefix, at, names)));
 }
 
 /// The files of [directory] that match [pattern] (see [backupNamePattern]),
@@ -60,7 +82,11 @@ Future<List<File>> listBackupFiles(Directory directory, RegExp pattern) async {
   }
   found.sort((a, b) {
     final byStamp = b.$1.compareTo(a.$1);
-    return byStamp != 0 ? byStamp : b.$2.compareTo(a.$2);
+    if (byStamp != 0) return byStamp;
+    final byCounter = b.$2.compareTo(a.$2);
+    return byCounter != 0
+        ? byCounter
+        : p.basename(b.$3.path).compareTo(p.basename(a.$3.path));
   });
   return [for (final f in found) f.$3];
 }

@@ -167,7 +167,7 @@ de v1, huella de los 730 días de `main` antes y después, el paso que falla dej
 arranque lo migra) y `test/core/database/upgrade_from_v1_test.dart` (archivo real en disco por `openAppDatabase`:
 copia previa, abrir dos veces, instalación nueva).
 
-**Copia de seguridad:** el formato `.cuadrante` pasa a `schemaVersion` 2 (incluye `calendars`, `calendarId` en
+**Copia de seguridad:** el formato `.cuadrante` (hoy `.turnly`) pasa a `schemaVersion` 2 (incluye `calendars`, `calendarId` en
 rotaciones y días y `hourlyRateCents` en los tipos de turno). El lector acepta v1 (todo a `main`) y v2
 (`docs/copia-de-seguridad.md`); el archivo dorado v1 sigue restaurándose igual y hay un dorado v2. La huella
 cubre todos los calendarios.
@@ -344,7 +344,7 @@ anotaciones. Comprueba los nulos iniciales, escritura y lectura del plus, los l�
 tras un fallo. `test/core/database/upgrade_from_v3_test.dart` usa un archivo real, verifica la copia legible como v3,
 la apertura repetida conservando el plus y el bloqueo de la migración cuando falla la copia.
 
-El formato `.cuadrante` sigue en **versión 3**: `fixedPlusCents` es opcional y se omite cuando vale `NULL`.
+El formato de copia (`.turnly`, antes `.cuadrante`) sigue en **versión 3**: `fixedPlusCents` es opcional y se omite cuando vale `NULL`.
 Las copias anteriores restauran sin plus. Una app anterior que lee v3 ignora esta clave desconocida y valida su
 suma de control normalmente; no conserva ese importe al volver a exportar. Véase `docs/copia-de-seguridad.md`.
 
@@ -364,8 +364,8 @@ suma de control normalmente; no conserva ese importe al volver a exportar. Véas
   pasada. Además, al podar nunca se borra la copia más antigua del destino actual. Con pruebas
   (`migration_backup_test.dart`, `upgrade_from_v2_test.dart`).
 - **Esa copia no se ve en la interfaz** (decidido tras la campaña de QA, H-T16-1): «Copias en este móvil» solo lista
-  las `.cuadrante`, no los `pre-v*.sqlite`. Es una red de seguridad interna, no una función para el usuario:
-  el usuario recupera con las copias `.cuadrante` de Ajustes › Copia de seguridad. En una compilación de
+  las `.turnly` (o `.cuadrante` antiguas), no los `pre-v*.sqlite`. Es una red de seguridad interna, no una función para el usuario:
+  el usuario recupera con las copias `.turnly` de Ajustes › Copia de seguridad. En una compilación de
   lanzamiento no se puede comprobar con `run-as` ni con `adb backup` (apps con `targetSdk` 36); se comprueba con la
   prueba automática o con una compilación de depuración.
 - Prueba de humo en CI: el esquema que genera el código coincide con el último volcado de `drift_schemas/`

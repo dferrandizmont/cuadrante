@@ -168,7 +168,7 @@ void main() {
     ) async {
       await pump(tester);
       expect(find.text('Octubre 2026'), findsOneWidget);
-      expect(find.text('Cuadrante'), findsOneWidget);
+      expect(find.text('Turnly'), findsOneWidget);
       expect(find.text('Turnos del mes'), findsOneWidget);
       // Every day of the month, none of the neighbouring ones.
       for (var d = 1; d <= 31; d++) {

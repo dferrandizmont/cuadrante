@@ -167,8 +167,8 @@ class WidgetModelBuilderTest {
             assertTrue(after is WidgetContent.Stale)
             after as WidgetContent.Stale
             assertEquals(WidgetDayLogic.StaleReason.AFTER_LAST, after.reason)
-            assertEquals("Cuadrante", after.title)
-            assertEquals("Abre Cuadrante para seguir al día", after.body)
+            assertEquals("Turnly", after.title)
+            assertEquals("Abre Turnly para seguir al día", after.body)
 
             val before = WidgetModelBuilder.build(json, kind, at(18, 23, 59, 59), madrid)
             assertEquals(

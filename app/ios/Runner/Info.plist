@@ -10,7 +10,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>Copia de seguridad de Cuadrante</string>
+			<string>Copia de seguridad de Turnly</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSHandlerRank</key>
@@ -22,7 +22,7 @@
 		</dict>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>Cuadrante</string>
+	<string>Turnly</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -115,13 +115,14 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Copia de seguridad de Cuadrante</string>
+			<string>Copia de seguridad de Turnly</string>
 			<key>UTTypeIdentifier</key>
 			<string>app.cuadrante.backup</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
+					<string>turnly</string>
 					<string>cuadrante</string>
 				</array>
 			</dict>

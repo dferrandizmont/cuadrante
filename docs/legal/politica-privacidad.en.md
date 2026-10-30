@@ -1,11 +1,11 @@
-# Cuadrante privacy policy
+# Turnly privacy policy
 
-Last updated: 26 October 2026
+Last updated: 30 October 2026
 
 Courtesy translation. The Spanish version ([politica-privacidad.md](politica-privacidad.md)) is the one that
 applies.
 
-Cuadrante is a shift-work calendar app for shift workers in Spain. It is an independent app: not created, reviewed
+Turnly is a shift-work calendar app for shift workers in Spain. It is an independent app: not created, reviewed
 or endorsed by any company, public body or union.
 
 Summary: **you have no account, there is no server of ours and your shifts stay on your phone.** The app is entirely
@@ -36,11 +36,11 @@ that reaches the lock screen. Bear in mind, though, that:
 - absences, sick leave included, are part of your backups (see below), like the rest of your shifts.
 
 ### Backups
-The app makes **automatic backups on your own phone** and lets you **export a backup to a `.cuadrante` file**
-(Settings › Backup) to keep wherever you like or move to another phone, and restore it later. That file contains your
+The app makes **automatic backups on your own phone** and lets you **export a backup to a `.turnly` file**
+(Settings › Backup; older `.cuadrante` backups can also be opened) to keep wherever you like or move to another phone, and restore it later. That file contains your
 shifts, notes and absences, carries no identifier and is not encrypted; you keep and control it: the app only hands
 it to the app you pick in the system share sheet. What you do with it afterwards (upload it to your cloud, send it by
-WhatsApp or email...) is outside the app. When you open a `.cuadrante`, nothing is restored until you confirm.
+WhatsApp or email...) is outside the app. When you open a `.turnly` or `.cuadrante` file, nothing is restored until you confirm.
 
 **System backup.** On Android, if Google backup is on, the system periodically uploads the app's database and
 backups to your Google account and moves them to your new phone; on Android 9 or later it is end-to-end encrypted
@@ -72,7 +72,7 @@ The app transmits no shifts, identifiers or crash reports. It uses no purchases,
 services. Errors are handled on the device only.
 
 If you tap "Privacy policy" in Settings › Help, this page opens in your external browser. The browser connects to
-the website; Cuadrante sends it none of your shifts, notes or absences.
+the website; Turnly sends it none of your shifts, notes or absences.
 
 ### Data NOT processed
 - We do not ask for or store your name, email, phone, ID number, date of birth or employer details.
@@ -83,7 +83,7 @@ the website; Cuadrante sends it none of your shifts, notes or absences.
 ### If you write to us
 "Help and contact" (Settings) shows you the support address to copy so you can write from your own mail app, with
 the app version if you want to attach it. The app opens no mail client and sends nothing by itself. If you write to
-us, we process your email address and what you tell us only to reply. Do not send us `.cuadrante` backups or
+us, we process your email address and what you tell us only to reply. Do not send us `.turnly` or `.cuadrante` backups or
 screenshots with real shifts, notes or absences: made-up data is enough to fix a bug.
 
 ## 3. Purposes and legal basis

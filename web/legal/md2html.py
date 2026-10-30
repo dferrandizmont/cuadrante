@@ -74,7 +74,7 @@ def convertir(md):
                 filas.append([c.strip() for c in lineas[i].strip("|").split("|")])
                 i += 1
             salida.append('<div class="tabla" role="region" aria-label="' +
-                          ('Purposes and legal basis' if '# Cuadrante privacy' in md else 'Finalidades y base jurídica') +
+                          ('Purposes and legal basis' if '# Turnly privacy' in md else 'Finalidades y base jurídica') +
                           '" tabindex="0"><table><thead><tr>')
             salida.append("".join(f'<th scope="col">{inline(c)}</th>' for c in filas[0]))
             salida.append("</tr></thead><tbody>")
@@ -103,7 +103,7 @@ def convertir(md):
 
 def pagina(idioma):
     ingles = idioma == "en"
-    titulo = "Cuadrante privacy policy" if ingles else "Política de privacidad de Cuadrante"
+    titulo = "Turnly privacy policy" if ingles else "Política de privacidad de Turnly"
     raiz = "../../" if ingles else "../"
     alternativa = "../" if ingles else "en/"
     nombre = "Español" if ingles else "English"
@@ -124,7 +124,7 @@ def pagina(idioma):
 <main id="contenido">
 <nav aria-label="{'Language' if ingles else 'Idioma'}"><a href="{alternativa}" lang="{'es' if ingles else 'en'}" hreflang="{'es' if ingles else 'en'}">{nombre}</a></nav>
 {cuerpo}
-<footer><a href="{raiz}">Cuadrante</a></footer>
+<footer><a href="{raiz}">Turnly</a></footer>
 </main>
 </body>
 </html>

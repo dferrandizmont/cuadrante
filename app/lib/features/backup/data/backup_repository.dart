@@ -67,7 +67,7 @@ class BackupRepository {
 
   static Future<Uint8List> _readSafetyFile(File file) => file.readAsBytes();
 
-  /// Where `pre-restore-<stamp>.cuadrante` safety exports go (Application
+  /// Where `pre-restore-<stamp>.turnly` safety exports go (Application
   /// Support / backups).
   final Directory safetyDirectory;
 
@@ -95,7 +95,7 @@ class BackupRepository {
 
   /// Replaces **every** user table with [data] in one transaction: all or
   /// nothing. Before touching anything it writes the current data to
-  /// `pre-restore-<stamp>.cuadrante` in [safetyDirectory] and keeps the
+  /// `pre-restore-<stamp>.turnly` in [safetyDirectory] and keeps the
   /// newest [keepSafetyCopies]; if that copy cannot be written the restore
   /// does not start.
   ///
@@ -121,7 +121,7 @@ class BackupRepository {
     return data.sanitized();
   }
 
-  /// "Probar restauración": a dry run of [bytes] (a `.cuadrante` file) that
+  /// "Probar restauración": a dry run of [bytes] (a `.turnly` file) that
   /// touches nothing. It decodes the file, rebuilds it in a scratch in-memory
   /// database, and compares fingerprints over the 730 days around [today]:
   /// the rebuilt data must equal the file ([VerificationPassed]; otherwise

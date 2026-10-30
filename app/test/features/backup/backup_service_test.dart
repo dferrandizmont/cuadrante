@@ -47,7 +47,7 @@ void main() {
 
   test('backupNow stores a file that reads back as the current data', () async {
     final entry = await service.backupNow();
-    expect(entry.id, 'cuadrante-20261110-090000.cuadrante');
+    expect(entry.id, 'turnly-20261110-090000.turnly');
     final file = const BackupCodec().decode(await store.read(entry));
     expect(file.data, buildGoldenBackupData());
     expect(file.appVersion, testAppVersion);
@@ -58,6 +58,20 @@ void main() {
     final entry = await service.backupNow();
     expect(await service.exportBytes(), await store.read(entry));
   });
+
+  test(
+    'a legacy .cuadrante file still imports and restores unchanged',
+    () async {
+      final legacy = File('test/fixtures/golden_backup/golden_v3.cuadrante');
+      final original = await legacy.readAsBytes();
+      final pending = await service.inspect(original);
+      await service.restore(pending);
+      expect(await makeRepository(db, safety).readAll(), pending.file.data);
+      expect(await legacy.readAsBytes(), original);
+      expect(readEnvelope(await service.exportBytes())['format'], 'cuadrante');
+      expect(fileNames(safety).single, endsWith('.turnly'));
+    },
+  );
 
   test('import into another phone: inspect, then restore (R4)', () async {
     final bytes = await service.exportBytes();

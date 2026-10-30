@@ -106,6 +106,15 @@ void main() {
   });
 
   group('copies of the same second', () {
+    test('counters sort together across legacy and new prefixes', () {
+      const one = BackupRetention(newest: 1, dailyForDays: 0);
+      final keep = one.idsToKeep([
+        entry('turnly-20261019-100000-9.turnly', now),
+        entry('cuadrante-20261019-100000-10.cuadrante', now),
+      ], now: now);
+      expect(keep, {'cuadrante-20261019-100000-10.cuadrante'});
+    });
+
     // What the folder lists: `-2` is the second copy of that second, so it is
     // the newer one (listBackupFiles sorts the same way).
     test('the counter decides: -2 is newer than the plain name', () {

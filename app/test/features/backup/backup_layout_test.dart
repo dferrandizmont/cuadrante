@@ -47,8 +47,8 @@ void main() {
         key('backup-now'),
         until: find.textContaining('Copia del dispositivo'),
       );
-      final firstCopy = h.filesStartingWith('cuadrante-').single;
-      final blockedCopy = firstCopy.replaceFirst('.cuadrante', '-2.cuadrante');
+      final firstCopy = h.filesStartingWith('turnly-').single;
+      final blockedCopy = firstCopy.replaceFirst('.turnly', '-2.turnly');
       Directory('${h.backups.path}${Platform.pathSeparator}$blockedCopy')
           .createSync();
       app.container.read(autoBackupRunnerProvider).noteChange();

@@ -27,7 +27,7 @@
          Auto Backup is on and the rules say exactly what goes into the Google
          backup (android:fullBackupContent, Android 11 and below) and into the
          cloud backup and the device-to-device transfer (android:dataExtractionRules,
-         Android 12+): the database and the .cuadrante copies in files/, and
+         Android 12+): the database and the .turnly and legacy .cuadrante copies in files/, and
          nothing else. -->
     <application
         android:label="@string/app_name"
@@ -63,8 +63,8 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <!-- Open a .cuadrante from WhatsApp, Files or Drive (docs/copia-de-seguridad.md,
-                 "Abrir un .cuadrante desde otra app"). Nothing is restored by
+            <!-- Open a .turnly or legacy .cuadrante from WhatsApp, Files or Drive (docs/copia-de-seguridad.md,
+                 "Abrir un .turnly desde otra app"). Nothing is restored by
                  itself: the file goes to the preview, where the user confirms.
                  Only content:// is handled (see MainActivity). No BROWSABLE
                  category, so a web page cannot start it. -->
@@ -78,7 +78,7 @@
                 <data android:mimeType="application/gzip"/>
                 <data android:mimeType="application/x-gzip"/>
             </intent-filter>
-            <!-- VIEW of any type whose path ends in .cuadrante (file managers
+            <!-- VIEW of any type whose path ends in .turnly or .cuadrante (file managers
                  and providers that keep the name in the URI). pathPattern has
                  no "anything" wildcard that includes dots, hence one entry per
                  number of dots. -->
@@ -88,9 +88,13 @@
                 <data android:scheme="content"/>
                 <data android:host="*"/>
                 <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.turnly"/>
                 <data android:pathPattern=".*\\.cuadrante"/>
+                <data android:pathPattern=".*\\..*\\.turnly"/>
                 <data android:pathPattern=".*\\..*\\.cuadrante"/>
+                <data android:pathPattern=".*\\..*\\..*\\.turnly"/>
                 <data android:pathPattern=".*\\..*\\..*\\.cuadrante"/>
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.turnly"/>
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.cuadrante"/>
             </intent-filter>
             <!-- "Share" / "Send to" from other apps. Not */*: Cuadrante must

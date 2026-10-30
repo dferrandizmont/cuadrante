@@ -1,6 +1,6 @@
 # Changelog
 
-What changes in each version of Cuadrante, newest first. The "Unreleased" section fills up as changes land and becomes
+What changes in each version of Turnly (called Cuadrante until 0.6.14), newest first. The "Unreleased" section fills up as changes land and becomes
 the next version on the day it ships.
 
 Numbering: the last number goes up with fixes (0.6.12 → 0.6.13), the middle one with new features (→ 0.7.0), and 1.0.0
@@ -9,6 +9,15 @@ will be the production launch in the stores. Every version ships on
 at once, so they can skip numbers.
 
 ## Unreleased
+
+## 0.6.15 · 2026-10-30
+
+Internal test build (private prerelease). It updates 0.6.14 without losing anything.
+
+- The app is now called **Turnly** (formerly Cuadrante): app name, widgets and texts in all five languages. Backups are
+  saved as `.turnly`, and older `.cuadrante` backups still open. Calendar exports are marked "Creado con Turnly", and
+  events exported before are still recognised.
+- The READMEs follow the common template: English is now the main `README.md`, with Spanish, Catalan, Galician and Basque versions, and the build and test instructions move to `CONTRIBUTING.md` and `CONTRIBUTING.es.md`.
 
 ## 0.6.14 · 2026-10-29
 

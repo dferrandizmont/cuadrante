@@ -1,6 +1,6 @@
 # Google Play · borrador de ficha
 
-> **Borrador · 26-oct-2026. La app es totalmente gratuita y de código abierto** (decisión del usuario): sin compras, sin suscripciones, sin anuncios y sin cuentas. No hay ningún precio que insertar ni condiciones de compra que redactar. Nombre pendiente de confirmación (pregunta 5): «Cuadrante» y sus títulos localizados son provisionales; disponibilidad en tiendas, dominio y marcas: verificar.
+> **Borrador · 26-oct-2026. La app es totalmente gratuita y de código abierto** (decisión del usuario): sin compras, sin suscripciones, sin anuncios y sin cuentas. No hay ningún precio que insertar ni condiciones de compra que redactar. Nombre: **Turnly** (decisión del usuario del 30-oct-2026, pregunta 20; antes «Cuadrante»). Cada título lleva la palabra de búsqueda local (cuadrante, quadrant, cadro de quendas, txanden egutegia, shift calendar). Disponibilidad en tiendas, dominio y marcas: verificar.
 
 Los bloques de texto son los campos para copiar; los títulos, recuentos y notas son internos. Recuento en caracteres Unicode normalizados NFC, incluidos espacios, signos y saltos de línea LF; sin el salto final del bloque. Idiomas en orden: es, ca, gl, eu, en. Inglés neutro con grafía US. Revisión nativa de ca/gl/eu pendiente según el glosario.
 
@@ -20,22 +20,22 @@ Política de privacidad y URL pública: **(la redacta el usuario)**. No hay cond
 
 ## es · Español
 
-### Título · 28/30 caracteres
+### Título · 27/30 caracteres
 
 ```text
-Cuadrante: Turnos de Trabajo
+Turnly: Cuadrante de turnos
 ```
 
-### Descripción breve · 76/80 caracteres
+### Descripción breve · 80/80 caracteres
 
 ```text
-Tus turnos, widget al día y copias comprobables. Gratis y de código abierto.
+Calendario de turnos de trabajo con widget y copias. Gratis y de código abierto.
 ```
 
-### Descripción completa · 1714/4000 caracteres
+### Descripción completa · 1708/4000 caracteres
 
 ```text
-Tus turnos, de un vistazo. Cuadrante te ayuda a organizar mañanas, tardes, noches, guardias, salientes y días libres, sin cuenta, sin anuncios, sin compras y sin conexión.
+Tus turnos, de un vistazo. Turnly te ayuda a organizar mañanas, tardes, noches, guardias, salientes y días libres, sin cuenta, sin anuncios, sin compras y sin conexión.
 
 Pinta los días o aplica un patrón de correturnos, 24/72, 4x4 o tu propia rotación. Añade varios turnos en un día y consulta cada uno con color, código y horario. Mira el mes o el año y apunta tus notas.
 
@@ -43,7 +43,7 @@ UN WIDGET QUE CAMBIA DE DÍA SOLO
 Consulta hoy, la semana o el mes sin abrir la app. El cambio de día depende de los permisos y las restricciones del sistema.
 
 COPIAS QUE PUEDES COMPROBAR
-Crea copias locales y usa «Probar restauración» para comprobar que se pueden recuperar. Revisa el contenido antes de restaurar. Para cambiar de móvil, guarda un archivo .cuadrante fuera de la app y llévalo al nuevo dispositivo: la copia local se pierde al desinstalar.
+Crea copias locales y usa «Probar restauración» para comprobar que se pueden recuperar. Revisa el contenido antes de restaurar. Para cambiar de móvil, guarda un archivo .turnly fuera de la app y llévalo al nuevo dispositivo: la copia local se pierde al desinstalar.
 
 TRAE TUS TURNOS
 Importa tu copia .Shifter de LRHSoft (Calendario de Turnos) y revisa la vista previa antes de guardar. También puedes importar desde el calendario del móvil, .ics o CSV.
@@ -58,30 +58,30 @@ GRATUITA Y DE CÓDIGO ABIERTO
 Todo lo que hay en la app es gratis, y el código es abierto: puedes revisarlo y compilarlo tú mismo. Sin cuentas, sin anuncios, sin compras y sin suscripciones.
 ```
 
-### Novedades · primera publicación · 242/500 caracteres
+### Novedades · primera publicación · 239/500 caracteres
 
 ```text
-Primera versión de Cuadrante: calendario de turnos, patrones, widgets, copia de seguridad con «Probar restauración», importación de LRHSoft y resumen de horas. Totalmente gratuita y de código abierto, en cinco idiomas, sin cuenta ni anuncios.
+Primera versión de Turnly: calendario de turnos, patrones, widgets, copia de seguridad con «Probar restauración», importación de LRHSoft y resumen de horas. Totalmente gratuita y de código abierto, en cinco idiomas, sin cuenta ni anuncios.
 ```
 
 ## ca · Català
 
-### Título · 27/30 caracteres
+### Título · 25/30 caracteres
 
 ```text
-Cuadrante: Torns de treball
+Turnly: Quadrant de torns
 ```
 
-### Descripción breve · 77/80 caracteres
+### Descripción breve · 79/80 caracteres
 
 ```text
-Els teus torns, widget al dia i còpies comprovables. Gratuït i de codi obert.
+Calendari de torns de treball, widget al dia i còpies. Gratuït i de codi obert.
 ```
 
-### Descripción completa · 1705/4000 caracteres
+### Descripción completa · 1699/4000 caracteres
 
 ```text
-Els teus torns, d’un cop d’ull. Cuadrante t’ajuda a organitzar matins, tardes, nits, guàrdies, sortints i dies lliures, sense compte, sense anuncis, sense compres i sense connexió.
+Els teus torns, d’un cop d’ull. Turnly t’ajuda a organitzar matins, tardes, nits, guàrdies, sortints i dies lliures, sense compte, sense anuncis, sense compres i sense connexió.
 
 Pinta els dies o aplica un patró de torns rotatius, 24/72, 4x4 o la teva pròpia rotació. Afegeix diversos torns en un dia i consulta’ls amb color, codi i horari. Mira el mes o l’any i apunta les teves notes.
 
@@ -89,7 +89,7 @@ UN WIDGET QUE CANVIA DE DIA SOL
 Consulta avui, la setmana o el mes sense obrir l’app. El canvi de dia depèn dels permisos i les restriccions del sistema.
 
 CÒPIES QUE POTS COMPROVAR
-Crea còpies locals i fes servir «Prova la restauració» per comprovar que es poden recuperar. Revisa’n el contingut abans de restaurar. Per canviar de mòbil, desa un fitxer .cuadrante fora de l’app i porta’l al nou dispositiu: la còpia local es perd en desinstal·lar.
+Crea còpies locals i fes servir «Prova la restauració» per comprovar que es poden recuperar. Revisa’n el contingut abans de restaurar. Per canviar de mòbil, desa un fitxer .turnly fora de l’app i porta’l al nou dispositiu: la còpia local es perd en desinstal·lar.
 
 PORTA ELS TEUS TORNS
 Importa la còpia .Shifter de LRHSoft (Calendario de Turnos) i revisa la vista prèvia abans de desar. També pots importar des del calendari del mòbil, .ics o CSV.
@@ -104,30 +104,30 @@ GRATUÏTA I DE CODI OBERT
 Tot el que hi ha a l’app és gratuït, i el codi és obert: el pots revisar i compilar tu mateix. Sense comptes, sense anuncis, sense compres ni subscripcions.
 ```
 
-### Novedades · primera publicación · 230/500 caracteres
+### Novedades · primera publicación · 227/500 caracteres
 
 ```text
-Primera versió de Cuadrante: calendari de torns, patrons, widgets, còpia de seguretat amb «Prova la restauració», importació de LRHSoft i resum d’hores. Totalment gratuïta i de codi obert, en cinc idiomes, sense compte ni anuncis.
+Primera versió de Turnly: calendari de torns, patrons, widgets, còpia de seguretat amb «Prova la restauració», importació de LRHSoft i resum d’hores. Totalment gratuïta i de codi obert, en cinc idiomes, sense compte ni anuncis.
 ```
 
 ## gl · Galego
 
-### Título · 30/30 caracteres
+### Título · 24/30 caracteres
 
 ```text
-Cuadrante: Quendas de traballo
+Turnly: Cadro de quendas
 ```
 
-### Descripción breve · 75/80 caracteres
+### Descripción breve · 80/80 caracteres
 
 ```text
-As túas quendas, widget e copias comprobables. De balde e de código aberto.
+Calendario de quendas de traballo, widget e copias. De balde e de código aberto.
 ```
 
-### Descripción completa · 1675/4000 caracteres
+### Descripción completa · 1669/4000 caracteres
 
 ```text
-As túas quendas, dunha ollada. Cuadrante axúdache a organizar mañás, tardes, noites, gardas, saíntes e días libres, sen conta, sen anuncios, sen compras e sen conexión.
+As túas quendas, dunha ollada. Turnly axúdache a organizar mañás, tardes, noites, gardas, saíntes e días libres, sen conta, sen anuncios, sen compras e sen conexión.
 
 Pinta os días ou aplica un patrón de quendas rotativas, 24/72, 4x4 ou a túa propia rotación. Engade varias quendas nun día e consulta cada unha con cor, código e horario. Mira o mes ou o ano e apunta as túas notas.
 
@@ -135,7 +135,7 @@ UN WIDGET QUE CAMBIA DE DÍA SÓ
 Consulta hoxe, a semana ou o mes sen abrir a app. O cambio de día depende dos permisos e das restricións do sistema.
 
 COPIAS QUE PODES COMPROBAR
-Crea copias locais e usa «Probar restauración» para comprobar que se poden recuperar. Revisa o contido antes de restaurar. Para cambiar de móbil, garda un ficheiro .cuadrante fóra da app e lévao ao novo dispositivo: a copia local pérdese ao desinstalar.
+Crea copias locais e usa «Probar restauración» para comprobar que se poden recuperar. Revisa o contido antes de restaurar. Para cambiar de móbil, garda un ficheiro .turnly fóra da app e lévao ao novo dispositivo: a copia local pérdese ao desinstalar.
 
 TRAE AS TÚAS QUENDAS
 Importa a copia .Shifter de LRHSoft (Calendario de Turnos) e revisa a vista previa antes de gardar. Tamén podes importar desde o calendario do móbil, .ics ou CSV.
@@ -150,30 +150,30 @@ DE BALDE E DE CÓDIGO ABERTO
 Todo o que hai na app é de balde, e o código é aberto: podes revisalo e compilalo ti mesmo. Sen contas, sen anuncios, sen compras nin subscricións.
 ```
 
-### Novedades · primera publicación · 241/500 caracteres
+### Novedades · primera publicación · 238/500 caracteres
 
 ```text
-Primeira versión de Cuadrante: calendario de quendas, patróns, widgets, copia de seguranza con «Probar restauración», importación de LRHSoft e resumo de horas. Totalmente de balde e de código aberto, en cinco idiomas, sen conta nin anuncios.
+Primeira versión de Turnly: calendario de quendas, patróns, widgets, copia de seguranza con «Probar restauración», importación de LRHSoft e resumo de horas. Totalmente de balde e de código aberto, en cinco idiomas, sen conta nin anuncios.
 ```
 
 ## eu · Euskara
 
-### Título · 22/30 caracteres
+### Título · 24/30 caracteres
 
 ```text
-Cuadrante: Lan-txandak
+Turnly: Txanden egutegia
 ```
 
-### Descripción breve · 77/80 caracteres
+### Descripción breve · 72/80 caracteres
 
 ```text
-Zure txandak, widget eta babeskopia egiaztagarriak. Doakoa eta kode irekikoa.
+Lan-txanden egutegia, widgeta eta babeskopiak. Doakoa eta kode irekikoa.
 ```
 
-### Descripción completa · 1907/4000 caracteres
+### Descripción completa · 1901/4000 caracteres
 
 ```text
-Zure txandak, begirada batean. Cuadrante aplikazioarekin goizeko, arratsaldeko eta gaueko txandak, guardiak, gau-ondokoak eta egun libreak antola ditzakezu, konturik, iragarkirik, erosketarik eta Interneteko konexiorik gabe.
+Zure txandak, begirada batean. Turnly aplikazioarekin goizeko, arratsaldeko eta gaueko txandak, guardiak, gau-ondokoak eta egun libreak antola ditzakezu, konturik, iragarkirik, erosketarik eta Interneteko konexiorik gabe.
 
 Margotu egunak edo aplikatu txanda birakarien eredua, 24/72, 4x4 edo zure txandaketa. Gehitu hainbat txanda egun berean, bakoitza kolorearekin, kodearekin eta ordutegiarekin. Ikusi hilabetea edo urtea eta idatzi oharrak.
 
@@ -181,7 +181,7 @@ EGUNA BEREZ ALDATZEN DUEN WIDGETA
 Ikusi gaurko txandak, astea edo hilabetea aplikazioa ireki gabe. Egun aldaketa sistemaren baimenen eta murrizketen araberakoa da.
 
 EGIAZTA DITZAKEZUN BABESKOPIAK
-Sortu tokiko kopiak eta erabili «Probatu leheneratzea» berreskura daitezkeela egiaztatzeko. Berrikusi edukia leheneratu aurretik. Mugikorra aldatzeko, gorde .cuadrante fitxategia aplikaziotik kanpo eta eraman gailu berrira: aplikazioa desinstalatzean tokiko kopia galtzen da.
+Sortu tokiko kopiak eta erabili «Probatu leheneratzea» berreskura daitezkeela egiaztatzeko. Berrikusi edukia leheneratu aurretik. Mugikorra aldatzeko, gorde .turnly fitxategia aplikaziotik kanpo eta eraman gailu berrira: aplikazioa desinstalatzean tokiko kopia galtzen da.
 
 EKARRI ZURE TXANDAK
 Inportatu LRHSoft kopia (Calendario de Turnos), .Shifter fitxategia, eta berrikusi aurrebista gorde aurretik. Mugikorreko egutegitik, .ics edo CSV fitxategietatik ere inporta dezakezu.
@@ -196,18 +196,18 @@ DOAKOA ETA KODE IREKIKOA
 Aplikazioan dagoen guztia doakoa da, eta kodea irekia da: berrikusi eta konpilatu dezakezu zeuk ere. Konturik, iragarkirik, erosketarik eta harpidetzerik gabe.
 ```
 
-### Novedades · primera publicación · 233/500 caracteres
+### Novedades · primera publicación · 230/500 caracteres
 
 ```text
-Cuadrante aplikazioaren lehen bertsioa: txanden egutegia, ereduak, widgetak, babeskopia eta «Probatu leheneratzea», LRHSoft inportazioa eta orduen laburpena. Doakoa eta kode irekikoa, bost hizkuntzatan, konturik eta iragarkirik gabe.
+Turnly aplikazioaren lehen bertsioa: txanden egutegia, ereduak, widgetak, babeskopia eta «Probatu leheneratzea», LRHSoft inportazioa eta orduen laburpena. Doakoa eta kode irekikoa, bost hizkuntzatan, konturik eta iragarkirik gabe.
 ```
 
 ## en · English
 
-### Título · 30/30 caracteres
+### Título · 27/30 caracteres
 
 ```text
-Cuadrante: Work Shift Calendar
+Turnly: Work Shift Calendar
 ```
 
 ### Descripción breve · 69/80 caracteres
@@ -216,10 +216,10 @@ Cuadrante: Work Shift Calendar
 Your shifts, widgets and backups you can check. Free and open source.
 ```
 
-### Descripción completa · 1687/4000 caracteres
+### Descripción completa · 1681/4000 caracteres
 
 ```text
-Your shifts at a glance. Cuadrante helps you plan mornings, afternoons, nights, 24-hour shifts, post-night days and days off, without an account, ads, purchases or an internet connection.
+Your shifts at a glance. Turnly helps you plan mornings, afternoons, nights, 24-hour shifts, post-night days and days off, without an account, ads, purchases or an internet connection.
 
 Paint days or apply a rotating shift pattern, 24/72, 4x4 or your own rotation. Add several shifts to a day and see each one with a color, code and times. View the month or year and add your notes.
 
@@ -227,7 +227,7 @@ A WIDGET THAT CHANGES DAY ON ITS OWN
 Check today, the week or the month without opening the app. Day changes depend on system permissions and restrictions.
 
 BACKUPS YOU CAN CHECK
-Create local backups and use Test restore to check that they can be recovered. Review the contents before restoring. To change phones, save a .cuadrante file outside the app and take it to your new device: local backups are lost when you uninstall.
+Create local backups and use Test restore to check that they can be recovered. Review the contents before restoring. To change phones, save a .turnly file outside the app and take it to your new device: local backups are lost when you uninstall.
 
 BRING YOUR SHIFTS
 Import your .Shifter backup from LRHSoft (Calendario de Turnos) and review the preview before saving. You can also import from your phone’s calendar, .ics or CSV.
@@ -242,10 +242,10 @@ FREE AND OPEN SOURCE
 Everything in the app is free, and the code is open: you can review it and build it yourself. No accounts, no ads, no purchases and no subscriptions.
 ```
 
-### Novedades · primera publicación · 209/500 caracteres
+### Novedades · primera publicación · 206/500 caracteres
 
 ```text
-The first release of Cuadrante: shift calendar, patterns, widgets, backups with Test restore, LRHSoft import and an hours summary. Completely free and open source, in five languages, without an account or ads.
+The first release of Turnly: shift calendar, patterns, widgets, backups with Test restore, LRHSoft import and an hours summary. Completely free and open source, in five languages, without an account or ads.
 ```
 
 
@@ -298,7 +298,7 @@ Borrador técnico basado en el árbol de código revisado el 25-oct-2026, no sol
 | Datos recopilados | **Ninguno** | No seleccionar calendario, salud, información financiera ni notas solo por su tratamiento local |
 | Datos compartidos | **Ninguno por la app de forma automática** | La exportación elegida por el usuario pasa a Archivos, compartir del sistema o un calendario del dispositivo. Verificar que encaje en las excepciones vigentes de transferencias iniciadas por el usuario |
 | ¿Todos los datos recopilados se cifran en tránsito? | **No aplica: no hay recopilación** | Si la consola omite la pregunta tras responder No, no rellenarla. No marcar Sí como garantía de cifrado de archivos locales |
-| Métodos de creación de cuentas | **La app no permite crear cuentas** | Una cuenta Apple/Google del sistema no es una cuenta de Cuadrante |
+| Métodos de creación de cuentas | **La app no permite crear cuentas** | Una cuenta Apple/Google del sistema no es una cuenta de Turnly |
 | URL para pedir eliminación de cuenta | **No aplica** | No inventar una web ni un flujo de cuentas |
 | Solicitud de eliminación de datos recopilados sin eliminar cuenta | **No aplica: no se recopilan datos** | Verificar el nombre exacto del campo y su visibilidad en la consola |
 | Finalidades, tratamiento efímero, obligatoriedad y vinculación por tipo de dato | **No aplica** | No hay tipos recopilados que detallar en este build |
