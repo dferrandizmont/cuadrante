@@ -54,8 +54,6 @@ Si puedes, quédate en la prueba al menos 14 días y úsala de vez en cuando (po
 
 También puedes descargar el APK de la [última versión](https://github.com/dferrandizmont/turnly/releases/latest) e instalarlo a mano (hay que permitir «instalar aplicaciones de origen desconocido»). Va firmado con otra clave que la versión de Google Play, así que una no actualiza a la otra: para cambiar, exporta antes una copia desde la app (`.turnly`; las versiones anteriores la guardan como `.cuadrante`).
 
-Próximamente en App Store.
-
 </details>
 
 ## Capturas

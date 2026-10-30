@@ -53,8 +53,6 @@ Please stay in the test for 14 days and open the app now and then: Google needs 
 
 Or download the APK of the [latest release](https://github.com/dferrandizmont/turnly/releases/latest) and install it by hand (allow installs from unknown sources). It uses a different signing key from the Google Play version, so one does not update the other: to switch, export a backup first (`.turnly`; older versions use `.cuadrante`).
 
-Coming soon on the App Store.
-
 </details>
 
 ## Screenshots

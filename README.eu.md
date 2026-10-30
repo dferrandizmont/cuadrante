@@ -54,8 +54,6 @@ Ahal baduzu, egon proban gutxienez 14 egunez eta erabili noizean behin (adibidez
 
 [Azken bertsioaren](https://github.com/dferrandizmont/turnly/releases/latest) APKa ere deskarga dezakezu eta eskuz instalatu (jatorri ezezaguneko aplikazioak instalatzea baimendu behar da). Google Play-ko bertsioaren beste gako batekin dago sinatuta; beraz, batak ez du bestea eguneratzen: aldatzeko, esportatu lehenago kopia bat aplikaziotik (`.turnly`; aurreko bertsioek `.cuadrante` gisa gordetzen dute).
 
-Laster App Store-n.
-
 </details>
 
 ## Pantaila-argazkiak

@@ -53,8 +53,6 @@ Si pots, queda’t a la prova almenys 14 dies i fes-la servir de tant en tant (p
 
 També pots baixar l’APK de la [darrera versió](https://github.com/dferrandizmont/turnly/releases/latest) i instal·lar-lo a mà (cal permetre «instal·lar aplicacions d’origen desconegut»). Està signat amb una clau diferent de la de la versió de Google Play, així que l’una no actualitza l’altra: per canviar, exporta abans una còpia des de l’app (`.turnly`; les versions anteriors la desen com a `.cuadrante`).
 
-Aviat a l’App Store.
-
 </details>
 
 ## Captures
