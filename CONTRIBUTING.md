@@ -59,5 +59,5 @@ Include the commands and results in your PR. Report vulnerabilities following
 [SECURITY.en.md](SECURITY.en.md).
 
 [Regenerate graphics and screenshots](tool/store/LEEME.md) (in Spanish) ·
-[Generate the privacy website](web/legal/LEEME.md) (in Spanish) ·
+[Privacy policy and website](docs/legal/LEEME.en.md) ·
 [Design](docs/diseno.md) (in Spanish).

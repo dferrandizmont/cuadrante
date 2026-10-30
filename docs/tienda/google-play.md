@@ -14,7 +14,7 @@ La ficha describe el objetivo de v1; no certifica que el build esté listo. Veri
 
 Los calendarios no tienen límite comercial y la sección «Cuadrante Pro» ya está retirada de Ajustes. Pendientes y **sin anunciar** hasta que existan: la jornada anual y el saldo contra convenio; los pluses por hora nocturna o festiva; los saldos de ausencias; el libro de cambios; el PDF; los temas de la app; la exportación continua al calendario; y compartir por enlace o `.ics` (P1, fuera del MVP).
 
-Política de privacidad y URL pública: **(la redacta el usuario)**. No hay condiciones de compra ni de suscripción que adjuntar: la app no vende nada. Soporte y URL: verificar con el usuario (preguntas 3 y 6).
+Política de privacidad: `https://turnly.mainshai.com/privacy/` (en inglés, `/en/privacy/`). Web: `https://turnly.mainshai.com`. Soporte: `turnly@mainshai.com`. No hay condiciones de compra ni de suscripción que adjuntar: la app no vende nada.
 
 ## Textos públicos localizados
 
@@ -303,7 +303,7 @@ Borrador técnico basado en el árbol de código revisado el 25-oct-2026, no sol
 | Solicitud de eliminación de datos recopilados sin eliminar cuenta | **No aplica: no se recopilan datos** | Verificar el nombre exacto del campo y su visibilidad en la consola |
 | Finalidades, tratamiento efímero, obligatoriedad y vinculación por tipo de dato | **No aplica** | No hay tipos recopilados que detallar en este build |
 | Revisión de seguridad independiente / acreditaciones | **No** | No se ha aportado ninguna certificación |
-| Política de privacidad · contenido y URL | **(la redacta el usuario)** | URL pública pendiente; que no haya recopilación no elimina este requisito |
+| Política de privacidad · contenido y URL | `https://turnly.mainshai.com/privacy/` (30-oct-2026; antes GitHub Pages) | Cambiarla también en Play Console › Política de la app |
 
 ### Evidencias y límites de la declaración
 

@@ -1,0 +1,51 @@
+{% extends 'base/layout.html.j2' %}
+{#- The policy is published whole and in order. Its own title becomes the page h1, its "last updated" line
+    the date stamp (wrapped in <time>), and its numbered sections get anchors for the index. -#}
+{% block content %}
+{#- A policy that links to another policy's Markdown file points to that policy's page on the site instead. -#}
+{%- set ns = namespace(html=policy_html) -%}
+{%- for code, path in site.privacy.items() if code in site.languages -%}
+  {%- set ns.html = ns.html.replace(('href="' ~ path.split('/')[-1] ~ '"') | safe, ('href="' ~ route(code, true) ~ '"') | safe) -%}
+{%- endfor -%}
+{%- set sections = ns.html.split('<h3>') -%}
+{%- set head = sections[0] -%}
+{%- set titled = head.lstrip().startswith('<h2>') and '</h2>' in head -%}
+{%- if titled -%}
+  {%- set title_parts = head.lstrip()[4:].split('</h2>', 1) -%}
+  {%- set after_title = title_parts[1].lstrip() -%}
+  {%- set stamped = after_title.startswith('<p>') and '</p>' in after_title -%}
+  {%- if stamped -%}{%- set stamp_parts = after_title[3:].split('</p>', 1) -%}{%- endif -%}
+{%- endif -%}
+{%- set toc = [] -%}
+{%- for part in sections[1:] -%}{%- set _ = toc.append(part.split('</h3>', 1)[0] | striptags) -%}{%- endfor -%}
+<div class="wrap doc">
+{% if toc %}<nav class="side" aria-label="{{ c.toc_aria }}">
+<p class="label">{{ c.toc_label }}</p>
+<ol class="idx">{% for label in toc %}<li><a href="#s{{ loop.index }}">{{ label }}</a></li>{% endfor %}</ol>
+</nav>{% endif %}
+<div class="doc-main">
+<p class="label doc-kicker">{{ t.privacy }}</p>
+{% if policy_lang != lang %}<aside class="notice">
+<p class="label">{{ c.fallback_label }}</p>
+<p><strong class="privacy-fallback">{{ t.privacy_fallback.format(language=t.languages[policy_lang]) }}</strong> {{ c.fallback_text }}</p>
+</aside>{% endif %}
+{% if toc %}<details class="idx-m">
+<summary>{{ c.toc_label }} · {{ c.toc_count.format(count=toc | length) }}</summary>
+<ol class="idx">{% for label in toc %}<li><a href="#s{{ loop.index }}">{{ label }}</a></li>{% endfor %}</ol>
+</details>{% endif %}
+<article class="pol" lang="{{ policy_lang }}">
+{% if titled %}<h1 class="h1 doc-title">{{ title_parts[0] }}</h1>
+{% if stamped %}<p class="stamp"><time datetime="{{ c.privacy_date }}">{{ stamp_parts[0] }}</time></p>
+<div class="doc-gap" aria-hidden="true"></div>
+{{ stamp_parts[1] }}{% else %}<p class="stamp">{{ t.privacy_version }} <time datetime="{{ c.privacy_date }}">{{ c.privacy_date }}</time></p>
+<div class="doc-gap" aria-hidden="true"></div>
+{{ title_parts[1] }}{% endif %}
+{% else %}<h1 class="h1 doc-title">{{ t.privacy_full }}</h1>
+<p class="stamp">{{ t.privacy_version }} <time datetime="{{ c.privacy_date }}">{{ c.privacy_date }}</time></p>
+<div class="doc-gap" aria-hidden="true"></div>
+{{ head }}{% endif %}
+{% for part in sections[1:] %}<h3 id="s{{ loop.index }}">{{ part }}{% endfor %}
+</article>
+</div>
+</div>
+{% endblock %}

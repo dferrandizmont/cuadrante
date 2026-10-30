@@ -1,6 +1,6 @@
 /// The support address «Ayuda y contacto» offers to copy. A build can
 /// override it with `--dart-define=SUPPORT_EMAIL=...`.
-const String kSupportEmail = 'dev@mainshai.com';
+const String kSupportEmail = 'turnly@mainshai.com';
 
 /// Build-time configuration, supplied with `--dart-define`.
 ///
@@ -49,11 +49,11 @@ class AppConfig {
   /// Public policies opened in the external browser only on a user's tap.
   static const String _privacyUrl = String.fromEnvironment(
     'PRIVACY_URL',
-    defaultValue: 'https://dferrandizmont.github.io/turnly/privacidad/',
+    defaultValue: 'https://turnly.mainshai.com/privacy/',
   );
   static const String _privacyUrlEn = String.fromEnvironment(
     'PRIVACY_URL_EN',
-    defaultValue: 'https://dferrandizmont.github.io/turnly/privacidad/en/',
+    defaultValue: 'https://turnly.mainshai.com/en/privacy/',
   );
 
   /// Shows the developer entries outside debug builds. Off by default.

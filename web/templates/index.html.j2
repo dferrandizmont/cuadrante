@@ -1,0 +1,93 @@
+{% extends 'base/layout.html.j2' %}
+{% from 'base/screenshots.html.j2' import picture %}
+{% from 'base/faq.html.j2' import faq %}
+{% block content %}
+{%- set light = shots[0] -%}
+{%- set dark = shots[site.screenshots.index('07-mes-oscuro')] if '07-mes-oscuro' in site.screenshots else shots[0] -%}
+{%- set hero_sizes = '(max-width: 760px) 220px, 300px' -%}
+<section id="about" class="wrap" aria-labelledby="t-about">
+<div class="today">
+<div>
+<p class="label">{{ c.kicker }}</p>
+<h1 id="t-about" class="h1">{{ c.tagline }}</h1>
+<p class="chip">{{ c.chip }}</p>
+<p class="lede">{{ c.intro }}</p>
+</div>
+<figure class="today-shot">
+<picture>
+<source type="image/avif" media="(prefers-color-scheme: dark)" srcset="{{ dark.avif }}" sizes="{{ hero_sizes }}">
+<source type="image/webp" media="(prefers-color-scheme: dark)" srcset="{{ dark.webp }}" sizes="{{ hero_sizes }}">
+<source type="image/avif" srcset="{{ light.avif }}" sizes="{{ hero_sizes }}">
+<source type="image/webp" srcset="{{ light.webp }}" sizes="{{ hero_sizes }}">
+<img src="{{ light.src }}" srcset="{{ light.webp }}" sizes="{{ hero_sizes }}" width="{{ light.width }}" height="{{ light.height }}" alt="{{ light.alt }}" fetchpriority="high">
+</picture>
+</figure>
+</div>
+<ul class="keys">
+{%- set facts = c.key_facts.split(' · ') -%}
+{% for fact in facts %}<li><i aria-hidden="true"></i>{{ fact }}{% if not loop.last %}<span class="vh"> · </span>{% endif %}</li>{% endfor %}
+</ul>
+</section>
+
+<section id="download" class="sec wrap" aria-labelledby="t-download">
+<p class="label">{{ t.download }}</p>
+<h2 id="t-download" class="h2">{{ c.download_title }}</h2>
+<p class="intro">{{ c.download_intro }}</p>
+<div class="rows">
+{% for item in site.downloads %}<div class="row">
+<div><p class="plat">{{ t.ios if item.kind in ('app_store', 'testflight') else t.android }}</p><h3>{{ t[item.kind] }}</h3></div>
+<div><span class="state">{{ t[item.state] }}</span><p class="desc">{{ c.download_notes[item.kind] }}</p></div>
+{% if item.state == 'soon' %}<span class="pill pill-off">{{ t[item.kind] }} · {{ t[item.state] }}</span>
+{% else %}<a class="pill" href="{{ item.url }}">{{ t[item.kind] }} · {{ t[item.state] }}</a>{% endif %}
+</div>
+{% endfor %}</div>
+<details class="join">
+<summary>{{ c.join_title }}</summary>
+<ol>
+{% for step in c.join_steps %}<li>{{ step.text }}{% if step.link_text is defined %} <a href="{{ step.href }}">{{ step.link_text }}</a>{{ step.after }}{% endif %}</li>
+{% endfor %}</ol>
+</details>
+</section>
+
+<section id="screenshots" class="sec wrap" aria-labelledby="t-shots">
+<p class="label">{{ t.screenshots }}</p>
+<h2 id="t-shots" class="h2">{{ c.screenshots_title }}</h2>
+<p class="intro">{{ c.screenshots_intro }}</p>
+<ul class="gallery">
+{% for shot in shots %}<li><figure>{{ picture(shot, loop.first, '(max-width: 760px) 45vw, 270px') }}<figcaption aria-hidden="true">{{ shot.alt }}</figcaption></figure></li>
+{% endfor %}</ul>
+</section>
+
+<section id="features" class="sec wrap" aria-labelledby="t-feat">
+<p class="label">{{ t.features }}</p>
+<h2 id="t-feat" class="h2">{{ c.features_title }}</h2>
+<p class="intro">{{ c.features_intro }}</p>
+<ol class="flist">
+{% for feature in c.features %}<li><span class="fnum" aria-hidden="true">{{ '%02d' % loop.index }}</span><div><h3>{{ c.feature_titles[loop.index0] }}</h3><p>{{ feature }}</p></div></li>
+{% endfor %}</ol>
+</section>
+
+<section id="privacy" class="band" aria-labelledby="t-priv">
+<div class="wrap band-in">
+<div>
+<p class="label">{{ t.privacy }}</p>
+<h2 id="t-priv" class="h2">{{ c.privacy_title }}</h2>
+</div>
+<div>
+{% for sentence in c.privacy_summary %}<p>{{ sentence }}</p>
+{% endfor %}<a class="pill" href="{{ route(lang, true) }}">{{ t.privacy_full }}</a>
+</div>
+</div>
+</section>
+
+<section id="support" class="sec wrap" aria-labelledby="t-sup">
+<div class="help">
+<div>
+<p class="label">{{ t.support }}</p>
+<h2 id="t-sup" class="h2">{{ t.faq }}</h2>
+<p class="intro">{{ c.support_intro }}<br><a class="mail" href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+</div>
+<div class="qa">{{ faq(c.faq) }}</div>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>{% include 'base/head.html.j2' %}</head>
+<body>
+{% include 'base/skip_link.html.j2' %}
+{% block header %}{% set home = route(lang) %}<header class="top">
+<div class="wrap top-in">
+<a class="brand" href="{{ home }}"><img src="{{ 'icon.png' | asset }}" alt="" width="36" height="36"><span>{{ c.name }}</span></a>
+<nav class="nav" aria-label="{{ c.nav_label }}">
+<a href="{{ '' if page_kind == 'home' else home }}#download">{{ t.download }}</a>
+<a href="{{ '' if page_kind == 'home' else home }}#screenshots">{{ t.screenshots }}</a>
+<a href="{{ '' if page_kind == 'home' else home }}#features">{{ t.features }}</a>
+<a href="{{ '' if page_kind == 'home' else home }}#privacy">{{ t.privacy }}</a>
+<a href="{{ '' if page_kind == 'home' else home }}#support">{{ t.support }}</a>
+</nav>
+{% include 'base/lang_switcher.html.j2' %}
+</div>
+</header>{% endblock %}
+<main id="content">{% block content %}{% endblock %}</main>
+{% block footer %}{% include 'base/required_footer.html.j2' %}{% endblock %}
+</body>
+</html>

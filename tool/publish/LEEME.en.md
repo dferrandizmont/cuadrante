@@ -120,7 +120,6 @@ images and final identity before any publication. Publishing is a separate step.
 python -B tool/publish/test_export_public.py
 sh tool/publish/export_public.sh HEAD /empty/path/cuadrante-public
 cd /empty/path/cuadrante-public
-python -B web/legal/test_legal.py
 cd app
 flutter pub get
 flutter gen-l10n

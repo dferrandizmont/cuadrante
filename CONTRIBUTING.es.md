@@ -57,4 +57,4 @@ Incluye en el PR los comandos ejecutados y su resultado. Para vulnerabilidades,
 sigue [SECURITY.md](SECURITY.md).
 
 [Regenerar imágenes y capturas](tool/store/LEEME.md) ·
-[Generar la web de privacidad](web/legal/LEEME.md) · [Diseño](docs/diseno.md).
+[Política de privacidad y web](docs/legal/LEEME.md) · [Diseño](docs/diseno.md).

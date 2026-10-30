@@ -1,0 +1,100 @@
+{
+  "name": "Turnly",
+  "title": "Turnly · Tus turnos, de un vistazo",
+  "description": "Calendario de turnos gratuito y de código abierto para quienes trabajan a turnos en España. Sin anuncios, sin cuenta y sin conexión.",
+  "intro": "Calendario de turnos para quienes trabajan a turnos en España: sanidad, policía, bomberos, industria, hostelería o cualquier otro sector. Organiza mañanas, tardes, noches, guardias y días libres, y consulta tu próximo turno de un vistazo.",
+  "key_facts": "Gratis · Sin anuncios · Sin cuenta · Funciona sin conexión · Código abierto · Cinco idiomas",
+  "features": [
+    "Mes en cuadrícula o lista, vista anual y notas por día. Cada turno lleva color, código y horario.",
+    "Pinta turnos tocando o arrastrando, y crea rotaciones con vista previa: correturnos, 24/72, 4×4, 6×4, 5×2, 2-2-3 y patrones propios.",
+    "Festivos de España nacionales y autonómicos sin conexión, locales de los municipios disponibles y los tuyos propios.",
+    "Alarma por tipo de turno, recordatorios de notas y widgets de Android.",
+    "Copias de seguridad automáticas en el móvil y exportación a archivo. Importa copias de Shifter de LRHSoft, archivos .ics o CSV y el calendario del móvil.",
+    "Resumen de horas trabajadas, nocturnas, festivas y extras, con estimación de ingresos."
+  ],
+  "privacy_summary": [
+    "Tus turnos, notas y ausencias se guardan solo en tu móvil: no hay cuenta, ni servidor propio, ni analítica.",
+    "La app no envía datos ni informes de errores a nadie. Solo salen del móvil las copias de tu cuenta de Google o de Apple y lo que tú decidas exportar."
+  ],
+  "faq": [
+    {
+      "question": "¿Cuánto cuesta?",
+      "answer": "Nada. Turnly es totalmente gratis y de código abierto: sin anuncios, sin versión Pro y sin compras dentro de la app."
+    },
+    {
+      "question": "¿Necesito una cuenta o conexión a internet?",
+      "answer": "No. No hay cuenta y todo funciona sin conexión, también los festivos."
+    },
+    {
+      "question": "¿Cómo me apunto a la prueba de Google Play?",
+      "answer": "Únete al grupo turnly-testers en Google Groups con tu cuenta de Google, acepta la prueba en el enlace de Google Play e instala la app desde la tienda. Se actualizará sola."
+    },
+    {
+      "question": "¿Y en iPhone?",
+      "answer": "La versión de iPhone está en camino. Saldrá primero en TestFlight y después en la App Store."
+    },
+    {
+      "question": "¿Cómo paso mis turnos a otro móvil?",
+      "answer": "Exporta una copia desde Ajustes › Copia de seguridad y ábrela en el móvil nuevo. Nada se restaura sin que lo confirmes."
+    }
+  ],
+  "licence_text": "Código MIT · Contenido CC BY-SA 4.0",
+  "screenshot_alts": {
+    "01-mes": "Mes pintado y tarjeta del próximo turno",
+    "02-lista": "El mismo mes en vista Lista, con códigos y horarios completos",
+    "03-pintar": "Modo pintar con la paleta de turnos",
+    "04-rotaciones": "Asistente de rotaciones con vista previa antes de aplicar",
+    "05-horas": "Resumen mensual de horas trabajadas, nocturnas y festivas",
+    "06-festivos": "Festivos de la Comunidad de Madrid y del municipio Madrid",
+    "07-mes-oscuro": "El mismo mes con el tema oscuro"
+  },
+  "privacy_date": "2026-10-30",
+  "kicker": "Calendario de turnos",
+  "tagline": "Tus turnos, de un vistazo.",
+  "chip": "Gratis, sin anuncios y sin conexión.",
+  "nav_label": "Secciones",
+  "download_title": "Android en pruebas; iPhone, próximamente.",
+  "download_intro": "Modo claro y oscuro. Gratis y sin cuenta.",
+  "download_notes": {
+    "play": "Cualquiera puede apuntarse: primero te unes al grupo de testers y después aceptas la prueba.",
+    "apk": "Lo instalas a mano. Va firmado con otra clave que la versión de Google Play: una no actualiza a la otra.",
+    "app_store": "Turnly llegará a iPhone. Mientras tanto, solo se puede instalar en Android."
+  },
+  "join_title": "Cómo unirte a la prueba de Google Play",
+  "join_steps": [
+    {
+      "text": "Únete al grupo de testers",
+      "link_text": "turnly-testers",
+      "href": "https://groups.google.com/g/turnly-testers",
+      "after": ". Con tu cuenta de Google, pulsa «Unirse al grupo»."
+    },
+    {
+      "text": "Acepta la prueba desde el móvil o el ordenador:",
+      "link_text": "play.google.com/apps/testing/es.cuadrante.app",
+      "href": "https://play.google.com/apps/testing/es.cuadrante.app",
+      "after": "."
+    },
+    {
+      "text": "Instala la app desde Google Play. Se actualizará sola."
+    }
+  ],
+  "screenshots_title": "Pantallas reales",
+  "screenshots_intro": "Con datos ficticios, en claro y en oscuro.",
+  "features_title": "Todo abierto, sin Pro ni compras",
+  "features_intro": "Cada turno lleva color, código y horario, y nunca depende solo del color.",
+  "feature_titles": [
+    "Mes en Cuadrícula o Lista",
+    "Pintar turnos y rotaciones",
+    "Festivos de España",
+    "Alarmas y widgets",
+    "Copias de seguridad e importación",
+    "Resumen de horas"
+  ],
+  "privacy_title": "Tus turnos se quedan en tu móvil.",
+  "support_intro": "¿Tienes otra duda? Escríbeme:",
+  "toc_label": "Índice",
+  "toc_aria": "Índice de la política",
+  "toc_count": "{count} apartados",
+  "fallback_label": "Aviso de idioma",
+  "fallback_text": "Es la versión válida de la política. El resto de la web está en español."
+}

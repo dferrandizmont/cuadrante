@@ -10,6 +10,16 @@ at once, so they can skip numbers.
 
 ## Unreleased
 
+## 0.6.17 · 2026-10-30
+
+Internal test build (private prerelease). It updates 0.6.16 without losing anything.
+
+- Turnly has its own website, [turnly.mainshai.com](https://turnly.mainshai.com), in the app's five languages, with
+  downloads, screenshots, FAQ and the full privacy policy.
+- The privacy policy link in Settings opens the policy on the new website (`turnly.mainshai.com/privacy/`) instead of
+  GitHub Pages.
+- The support email is now `turnly@mainshai.com` (in Help and contact, the privacy policy and the READMEs).
+
 ## 0.6.16 · 2026-10-30
 
 Google Play closed test (with the 0.6.13 to 0.6.15 changes).

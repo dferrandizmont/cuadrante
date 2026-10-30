@@ -16,7 +16,7 @@ control those.
 ## 1. Data controller
 
 - Holder: Daniel Mont Ferrandiz
-- Contact email: dev@mainshai.com
+- Contact email: turnly@mainshai.com
 
 ## 2. What data is processed
 
@@ -97,7 +97,7 @@ screenshots with real shifts, notes or absences: made-up data is enough to fix a
 We make no automated decisions and build no profiles about you.
 
 ## 4. Who receives the data
-The app transmits no data to third parties. If you send a support email, the holder receives it at dev@mainshai.com
+The app transmits no data to third parties. If you send a support email, the holder receives it at turnly@mainshai.com
 through the mail service you choose. If you export to a synced calendar or have system backup on, the recipient of
 that data is your account provider (Google, Apple or another), on your behalf and under its terms.
 
@@ -114,7 +114,7 @@ of an export) are governed by their own terms.
 ## 7. Your rights
 
 You can exercise your rights of **access, rectification, erasure, objection, restriction of processing and
-portability** by writing to dev@mainshai.com. We will reply within one month.
+portability** by writing to turnly@mainshai.com. We will reply within one month.
 
 We do not receive the data stored on your phone, so we cannot see or delete it for you. You can delete it by
 uninstalling the app or clearing its data from the system settings, and take it with you using "Export backup".
@@ -140,4 +140,4 @@ your consent), we will also tell you inside the app.
 
 ## 11. Contact
 
-dev@mainshai.com
+turnly@mainshai.com

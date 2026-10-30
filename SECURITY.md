@@ -1,6 +1,6 @@
 # Avisos de seguridad
 
-Si encuentras una vulnerabilidad, escribe a **dev@mainshai.com**.
+Si encuentras una vulnerabilidad, escribe a **turnly@mainshai.com**.
 
 Incluye la versión afectada, los pasos para reproducir el problema y su posible
 impacto. Comunica los detalles por correo antes de abrir una incidencia pública,

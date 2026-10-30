@@ -40,13 +40,11 @@ Android en probas; iPhone, proximamente. Modo claro e escuro.
 
 A app está en proba pechada en Google Play e calquera pode apuntarse:
 
-> **Agora mesmo Google está a revisar a primeira versión.** Xa podes unirte ao grupo (paso 1); a ligazón do paso 2 funcionará en canto a aproben, normalmente en poucos días.
-
 1. Únete ao grupo de testers: [turnly-testers](https://groups.google.com/g/turnly-testers). Coa túa conta de Google, preme «Unirse ao grupo».
 2. Acepta a proba desde o móbil ou o ordenador: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
 3. Instala a app desde Google Play. Actualizarase soa.
 
-Se podes, quédate na proba polo menos 14 días e úsaa de cando en vez (por exemplo, mira a túa quenda de mañá ou pon o widget): Google esixe 12 testers durante 14 días para publicala para todo o mundo. Os comentarios, a dev@mainshai.com.
+Se podes, quédate na proba polo menos 14 días e úsaa de cando en vez (por exemplo, mira a túa quenda de mañá ou pon o widget): Google esixe 12 testers durante 14 días para publicala para todo o mundo. Os comentarios, a turnly@mainshai.com.
 
 </details>
 
@@ -131,8 +129,8 @@ datos van ao destino que escollas. O ficheiro de copia `.turnly` non está cifra
 
 </details>
 
-[Política de privacidade](https://dferrandizmont.github.io/turnly/privacidad/) ·
-[Detalle técnico](docs/privacy.md) (en castelán) · Soporte: **dev@mainshai.com**.
+[Web](https://turnly.mainshai.com/gl/) · [Política de privacidade](https://turnly.mainshai.com/gl/privacy/) ·
+[Detalle técnico](docs/privacy.md) (en castelán) · Soporte: **turnly@mainshai.com**.
 
 ## Novidades
 

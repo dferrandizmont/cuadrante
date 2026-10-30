@@ -1,0 +1,100 @@
+{
+  "name": "Turnly",
+  "title": "Turnly · Els teus torns, d’un cop d’ull",
+  "description": "Calendari de torns gratuït i de codi obert per a qui treballa a torns a Espanya. Sense anuncis, sense compte i sense connexió.",
+  "intro": "Calendari de torns per a qui treballa a torns a Espanya: sanitat, policia, bombers, indústria, hostaleria o qualsevol altre sector. Organitza matins, tardes, nits, guàrdies i dies lliures, i consulta el teu proper torn d’un cop d’ull.",
+  "key_facts": "Gratis · Sense anuncis · Sense compte · Funciona sense connexió · Codi obert · Cinc idiomes",
+  "features": [
+    "Mes en quadrícula o llista, vista anual i notes per dia. Cada torn porta color, codi i horari.",
+    "Pinta torns tocant o arrossegant, i crea rotacions amb vista prèvia: torns rotatius, 24/72, 4×4, 6×4, 5×2, 2-2-3 i patrons propis.",
+    "Festius d’Espanya nacionals i autonòmics sense connexió, els locals dels municipis disponibles i els teus propis.",
+    "Alarma per tipus de torn, recordatoris de notes i widgets d’Android.",
+    "Còpies de seguretat automàtiques al mòbil i exportació a fitxer. Importa còpies de Shifter de LRHSoft, fitxers .ics o CSV i el calendari del mòbil.",
+    "Resum d’hores treballades, nocturnes, festives i extra, amb estimació d’ingressos."
+  ],
+  "privacy_summary": [
+    "Els teus torns, notes i absències es desen només al teu mòbil: no hi ha compte, ni servidor propi, ni analítica.",
+    "L’app no envia dades ni informes d’errors a ningú. Només surten del mòbil les còpies del teu compte de Google o d’Apple i el que tu decideixis exportar."
+  ],
+  "faq": [
+    {
+      "question": "Quant costa?",
+      "answer": "Res. Turnly és totalment gratis i de codi obert: sense anuncis, sense versió Pro i sense compres dins de l’app."
+    },
+    {
+      "question": "Necessito un compte o connexió a internet?",
+      "answer": "No. No hi ha compte i tot funciona sense connexió, també els festius."
+    },
+    {
+      "question": "Com m’apunto a la prova de Google Play?",
+      "answer": "Uneix-te al grup turnly-testers de Google Groups amb el teu compte de Google, accepta la prova a l’enllaç de Google Play i instal·la l’app des de la botiga. S’actualitzarà sola."
+    },
+    {
+      "question": "I a l’iPhone?",
+      "answer": "La versió d’iPhone és en camí. Sortirà primer a TestFlight i després a l’App Store."
+    },
+    {
+      "question": "Com passo els meus torns a un altre mòbil?",
+      "answer": "Exporta una còpia des de Configuració › Còpia de seguretat i obre-la al mòbil nou. No es restaura res sense que ho confirmis."
+    }
+  ],
+  "licence_text": "Codi MIT · Contingut CC BY-SA 4.0",
+  "screenshot_alts": {
+    "01-mes": "Mes pintat i targeta del proper torn",
+    "02-lista": "El mateix mes en vista Llista, amb codis i horaris complets",
+    "03-pintar": "Mode pintar amb la paleta de torns",
+    "04-rotaciones": "Assistent de rotacions amb vista prèvia abans d’aplicar",
+    "05-horas": "Resum mensual d’hores treballades, nocturnes i festives",
+    "06-festivos": "Festius de la Comunitat de Madrid i del municipi de Madrid",
+    "07-mes-oscuro": "El mateix mes amb el tema fosc"
+  },
+  "privacy_date": "2026-10-30",
+  "kicker": "Calendari de torns",
+  "tagline": "Els teus torns, d’un cop d’ull.",
+  "chip": "Gratis, sense anuncis i sense connexió.",
+  "nav_label": "Seccions",
+  "download_title": "Android en proves; iPhone, aviat.",
+  "download_intro": "Mode clar i fosc. Gratis i sense compte.",
+  "download_notes": {
+    "play": "Qualsevol s’hi pot apuntar: primer t’uneixes al grup de testers i després acceptes la prova.",
+    "apk": "L’instal·les a mà. Està signat amb una clau diferent de la de la versió de Google Play: l’una no actualitza l’altra.",
+    "app_store": "Turnly arribarà a l’iPhone. Mentrestant, només es pot instal·lar a Android."
+  },
+  "join_title": "Com unir-te a la prova de Google Play",
+  "join_steps": [
+    {
+      "text": "Uneix-te al grup de testers",
+      "link_text": "turnly-testers",
+      "href": "https://groups.google.com/g/turnly-testers",
+      "after": ". Amb el teu compte de Google, prem «Uneix-te al grup»."
+    },
+    {
+      "text": "Accepta la prova des del mòbil o l’ordinador:",
+      "link_text": "play.google.com/apps/testing/es.cuadrante.app",
+      "href": "https://play.google.com/apps/testing/es.cuadrante.app",
+      "after": "."
+    },
+    {
+      "text": "Instal·la l’app des de Google Play. S’actualitzarà sola."
+    }
+  ],
+  "screenshots_title": "Pantalles reals",
+  "screenshots_intro": "Amb dades fictícies, en clar i en fosc.",
+  "features_title": "Tot obert, sense Pro ni compres",
+  "features_intro": "Cada torn porta color, codi i horari, i mai no depèn només del color.",
+  "feature_titles": [
+    "Mes en Quadrícula o Llista",
+    "Pintar torns i rotacions",
+    "Festius d’Espanya",
+    "Alarmes i widgets",
+    "Còpies de seguretat i importació",
+    "Resum d’hores"
+  ],
+  "privacy_title": "Els teus torns es queden al teu mòbil.",
+  "support_intro": "Tens algun altre dubte? Escriu-me:",
+  "toc_label": "Índex",
+  "toc_aria": "Índex de la política",
+  "toc_count": "{count} apartats",
+  "fallback_label": "Avís d’idioma",
+  "fallback_text": "La política es mostra en castellà, que és la versió vàlida. La resta del web és en català."
+}

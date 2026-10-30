@@ -13,7 +13,7 @@ exportar, y eso lo controlas tú.
 ## 1. Responsable del tratamiento
 
 - Titular: Daniel Mont Ferrandiz
-- Correo de contacto: dev@mainshai.com
+- Correo de contacto: turnly@mainshai.com
 
 ## 2. Qué datos se tratan
 
@@ -96,7 +96,7 @@ nos escribes, trataremos tu dirección de correo y lo que nos cuentes solo para 
 No tomamos decisiones automatizadas ni elaboramos perfiles sobre ti.
 
 ## 4. Quién recibe los datos
-La app no transmite datos a terceros. Si envías un correo de soporte, lo recibe el titular en dev@mainshai.com
+La app no transmite datos a terceros. Si envías un correo de soporte, lo recibe el titular en turnly@mainshai.com
 mediante el servicio de correo que elijas. Si exportas a un calendario sincronizado o tienes activada la copia del
 sistema, quien recibe esos datos es el proveedor de tu cuenta (Google, Apple u otro), en tu nombre y según sus
 condiciones.
@@ -115,7 +115,7 @@ sincronizado o destino de una exportación) se rigen por sus propias condiciones
 ## 7. Tus derechos
 
 Puedes ejercer tus derechos de **acceso, rectificación, supresión, oposición, limitación del tratamiento y
-portabilidad** escribiendo a dev@mainshai.com. Te responderemos en el plazo de un mes.
+portabilidad** escribiendo a turnly@mainshai.com. Te responderemos en el plazo de un mes.
 
 No recibimos los datos guardados en tu móvil, así que no podemos verlos ni borrarlos por ti. Puedes borrarlos
 desinstalando la app o borrando sus datos desde los ajustes del sistema, y llevártelos con «Exportar copia».
@@ -141,22 +141,4 @@ se activaría con tu consentimiento), te lo indicaremos también dentro de la ap
 
 ## 11. Contacto
 
-dev@mainshai.com
-
----
-
-## Notas para el titular (no publicar)
-Borra esta sección antes de publicar (el generador HTML la omite). Texto redactado el 26-oct-2026 contra el código de
-esa fecha (`docs/privacy.md` es la fuente de verdad): revísalo con una persona antes del lanzamiento.
-
-Decisiones ya tomadas en este texto, por si quieres cambiarlas: titular Daniel Mont Ferrandiz y correo
-`dev@mainshai.com` (los de Ley al Blanco); conservación de correos «un año desde la última respuesta»; fecha de
-última actualización la de la redacción. No se publica el NIF: el RGPD pide identificar al responsable y un contacto,
-y una app gratuita sin actividad económica no está obligada a darlo por la LSSI.
-
-Pendientes: la decisión 13 de `docs/preguntas.md` (ausencias de salud fuera de toda copia automática) no está
-implementada, y esta política dice la verdad actual (van en las copias); si se implementa, reescribir «Tu baja
-médica» y «Copias de seguridad». El correo `dev@mainshai.com` ya está definido en `kSupportEmail`. Publicar la URL
-(`docs/legal/LEEME.md`) y ponerla en las fichas de las tiendas; comprobar que coincide con «Seguridad de los datos»
-(Play) y «Privacidad de la app» (Apple): no se recopilan datos. La versión inglesa (`politica-privacidad.en.md`) es
-una traducción de cortesía; manda la española.
+turnly@mainshai.com

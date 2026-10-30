@@ -1,0 +1,100 @@
+{
+  "name": "Turnly",
+  "title": "Turnly · As túas quendas, dunha ollada",
+  "description": "Calendario de quendas gratuíto e de código aberto para quen traballa a quendas en España. Sen anuncios, sen conta e sen conexión.",
+  "intro": "Calendario de quendas para quen traballa a quendas en España: sanidade, policía, bombeiros, industria, hostalaría ou calquera outro sector. Organiza mañás, tardes, noites, gardas e días libres, e consulta a túa próxima quenda dunha ollada.",
+  "key_facts": "Gratis · Sen anuncios · Sen conta · Funciona sen conexión · Código aberto · Cinco idiomas",
+  "features": [
+    "Mes en cuadrícula ou lista, vista anual e notas por día. Cada quenda leva cor, código e horario.",
+    "Pinta quendas tocando ou arrastrando, e crea rotacións con vista previa: quendas rotativas, 24/72, 4×4, 6×4, 5×2, 2-2-3 e patróns propios.",
+    "Festivos de España nacionais e autonómicos sen conexión, os locais dos municipios dispoñibles e os teus propios.",
+    "Alarma por tipo de quenda, recordatorios de notas e widgets de Android.",
+    "Copias de seguranza automáticas no móbil e exportación a ficheiro. Importa copias de Shifter de LRHSoft, ficheiros .ics ou CSV e o calendario do móbil.",
+    "Resumo de horas traballadas, nocturnas, festivas e extra, con estimación de ingresos."
+  ],
+  "privacy_summary": [
+    "As túas quendas, notas e ausencias gárdanse só no teu móbil: non hai conta, nin servidor propio, nin analítica.",
+    "A app non envía datos nin informes de erros a ninguén. Só saen do móbil as copias da túa conta de Google ou de Apple e o que ti decidas exportar."
+  ],
+  "faq": [
+    {
+      "question": "Canto custa?",
+      "answer": "Nada. Turnly é totalmente gratis e de código aberto: sen anuncios, sen versión Pro e sen compras dentro da app."
+    },
+    {
+      "question": "Necesito unha conta ou conexión a internet?",
+      "answer": "Non. Non hai conta e todo funciona sen conexión, tamén os festivos."
+    },
+    {
+      "question": "Como me apunto á proba de Google Play?",
+      "answer": "Únete ao grupo turnly-testers en Google Groups coa túa conta de Google, acepta a proba na ligazón de Google Play e instala a app desde a tenda. Actualizarase soa."
+    },
+    {
+      "question": "E no iPhone?",
+      "answer": "A versión para iPhone está en camiño. Sairá primeiro en TestFlight e despois na App Store."
+    },
+    {
+      "question": "Como paso as miñas quendas a outro móbil?",
+      "answer": "Exporta unha copia desde Configuración › Copia de seguranza e ábrea no móbil novo. Non se restaura nada sen que o confirmes."
+    }
+  ],
+  "licence_text": "Código MIT · Contido CC BY-SA 4.0",
+  "screenshot_alts": {
+    "01-mes": "Mes pintado e tarxeta da próxima quenda",
+    "02-lista": "O mesmo mes en vista Lista, con códigos e horarios completos",
+    "03-pintar": "Modo pintar coa paleta de quendas",
+    "04-rotaciones": "Asistente de rotacións con vista previa antes de aplicar",
+    "05-horas": "Resumo mensual de horas traballadas, nocturnas e festivas",
+    "06-festivos": "Festivos da Comunidade de Madrid e do concello de Madrid",
+    "07-mes-oscuro": "O mesmo mes co tema escuro"
+  },
+  "privacy_date": "2026-10-30",
+  "kicker": "Calendario de quendas",
+  "tagline": "As túas quendas, dunha ollada.",
+  "chip": "Gratis, sen anuncios e sen conexión.",
+  "nav_label": "Seccións",
+  "download_title": "Android en probas; iPhone, proximamente.",
+  "download_intro": "Modo claro e escuro. Gratis e sen conta.",
+  "download_notes": {
+    "play": "Calquera pode apuntarse: primeiro entras no grupo de testers e despois aceptas a proba.",
+    "apk": "Instálalo á man. Vai asinado cunha clave distinta da versión de Google Play: unha non actualiza a outra.",
+    "app_store": "Turnly chegará ao iPhone. Mentres tanto, só se pode instalar en Android."
+  },
+  "join_title": "Como unirte á proba de Google Play",
+  "join_steps": [
+    {
+      "text": "Únete ao grupo de testers",
+      "link_text": "turnly-testers",
+      "href": "https://groups.google.com/g/turnly-testers",
+      "after": ". Coa túa conta de Google, preme «Unirse ao grupo»."
+    },
+    {
+      "text": "Acepta a proba desde o móbil ou o ordenador:",
+      "link_text": "play.google.com/apps/testing/es.cuadrante.app",
+      "href": "https://play.google.com/apps/testing/es.cuadrante.app",
+      "after": "."
+    },
+    {
+      "text": "Instala a app desde Google Play. Actualizarase soa."
+    }
+  ],
+  "screenshots_title": "Pantallas reais",
+  "screenshots_intro": "Con datos ficticios, en claro e en escuro.",
+  "features_title": "Todo aberto, sen Pro nin compras",
+  "features_intro": "Cada quenda leva cor, código e horario, e nunca depende só da cor.",
+  "feature_titles": [
+    "Mes en Cuadrícula ou Lista",
+    "Pintar quendas e rotacións",
+    "Festivos de España",
+    "Alarmas e widgets",
+    "Copias de seguranza e importación",
+    "Resumo de horas"
+  ],
+  "privacy_title": "As túas quendas quedan no teu móbil.",
+  "support_intro": "Tes outra dúbida? Escríbeme:",
+  "toc_label": "Índice",
+  "toc_aria": "Índice da política",
+  "toc_count": "{count} apartados",
+  "fallback_label": "Aviso de idioma",
+  "fallback_text": "A política móstrase en castelán, que é a versión válida. O resto da web está en galego."
+}

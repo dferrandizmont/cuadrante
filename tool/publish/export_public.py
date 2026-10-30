@@ -142,6 +142,9 @@ def safe_name(name):
 
 
 def binary_allowed(name):
+    if name.startswith('web/assets/'):
+        # Website images and self-hosted fonts only.
+        return name.lower().endswith(('.png', '.woff2'))
     return name.startswith(('app/assets/', 'docs/readme/', 'app/test/')) or (
         name.lower().endswith('.png') and (
             name.startswith('tool/icon/preview/')

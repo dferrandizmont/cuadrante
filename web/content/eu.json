@@ -1,0 +1,100 @@
+{
+  "name": "Turnly",
+  "title": "Turnly · Zure txandak, begi-kolpe batean",
+  "description": "Txanden egutegi doakoa eta kode irekikoa, Espainian txandaka lan egiten dutenentzat. Iragarkirik gabe, konturik gabe eta konexiorik gabe.",
+  "intro": "Txanden egutegia Espainian txandaka lan egiten dutenentzat: osasungintza, polizia, suhiltzaileak, industria, ostalaritza edo beste edozein sektore. Antolatu goizak, arratsaldeak, gauak, guardiak eta egun libreak, eta ikusi zure hurrengo txanda begi-kolpe batean.",
+  "key_facts": "Doakoa · Iragarkirik gabe · Konturik gabe · Konexiorik gabe dabil · Kode irekia · Bost hizkuntza",
+  "features": [
+    "Hilabetea saretan edo zerrendan, urteko ikuspegia eta eguneko oharrak. Txanda bakoitzak kolorea, kodea eta ordutegia ditu.",
+    "Margotu txandak ukituz edo arrastatuz, eta sortu txandaketak aurrebistarekin: txanda birakariak, 24/72, 4×4, 6×4, 5×2, 2-2-3 eta eredu propioak.",
+    "Espainiako jaiegunak: estatukoak eta erkidegokoak konexiorik gabe, eskuragarri dauden udalerrietako tokikoak eta zureak.",
+    "Alarma txanda mota bakoitzeko, oharren gogorarazpenak eta Androiderako widgetak.",
+    "Babeskopia automatikoak mugikorrean eta fitxategira esportatzea. Inportatu LRHSoft-en Shifter kopiak, .ics edo CSV fitxategiak eta mugikorreko egutegia.",
+    "Lan egindako orduen, gaueko orduen, jaiegunetako orduen eta aparteko orduen laburpena, diru-sarreren estimazioarekin."
+  ],
+  "privacy_summary": [
+    "Zure txandak, oharrak eta absentziak zure mugikorrean bakarrik gordetzen dira: ez dago konturik, ez zerbitzari propiorik, ez analitikarik.",
+    "Aplikazioak ez dio inori daturik edo errore-txostenik bidaltzen. Mugikorretik zure Google edo Apple kontuko kopiak eta zuk esportatzea erabakitzen duzuna bakarrik ateratzen dira."
+  ],
+  "faq": [
+    {
+      "question": "Zenbat balio du?",
+      "answer": "Ezer ez. Turnly guztiz doakoa eta kode irekikoa da: iragarkirik gabe, Pro bertsiorik gabe eta aplikazio barneko erosketarik gabe."
+    },
+    {
+      "question": "Kontu bat edo Interneteko konexioa behar al dut?",
+      "answer": "Ez. Ez dago konturik, eta dena dabil konexiorik gabe, baita jaiegunak ere."
+    },
+    {
+      "question": "Nola eman dezaket izena Google Play-ko proban?",
+      "answer": "Sartu Google Groups-eko turnly-testers taldean zure Google kontuarekin, onartu proba Google Play-ko estekan eta instalatu aplikazioa dendatik. Bere kabuz eguneratuko da."
+    },
+    {
+      "question": "Eta iPhonean?",
+      "answer": "iPhonerako bertsioa bidean da. Lehenik TestFlight-en aterako da, eta gero App Store-n."
+    },
+    {
+      "question": "Nola eraman ditzaket nire txandak beste mugikor batera?",
+      "answer": "Esportatu kopia bat Ezarpenak › Babeskopia ataletik eta ireki mugikor berrian. Ez da ezer leheneratzen zuk berretsi arte."
+    }
+  ],
+  "licence_text": "Kodea: MIT · Edukia: CC BY-SA 4.0",
+  "screenshot_alts": {
+    "01-mes": "Margotutako hilabetea eta hurrengo txandaren txartela",
+    "02-lista": "Hilabete bera Zerrenda ikuspegian, kode eta ordutegi osoekin",
+    "03-pintar": "Margotze modua, txanden paletarekin",
+    "04-rotaciones": "Txandaketen laguntzailea, aplikatu aurreko aurrebistarekin",
+    "05-horas": "Lan egindako orduen, gaueko orduen eta jaiegunetako orduen hileko laburpena",
+    "06-festivos": "Madrilgo Erkidegoko eta Madril udalerriko jaiegunak",
+    "07-mes-oscuro": "Hilabete bera gai ilunarekin"
+  },
+  "privacy_date": "2026-10-30",
+  "kicker": "Txanden egutegia",
+  "tagline": "Zure txandak, begi-kolpe batean.",
+  "chip": "Doan, iragarkirik gabe eta konexiorik gabe.",
+  "nav_label": "Atalak",
+  "download_title": "Android probetan; iPhone, laster.",
+  "download_intro": "Modu argia eta iluna. Doan eta konturik gabe.",
+  "download_notes": {
+    "play": "Edonork eman dezake izena: lehenik testerren taldean sartzen zara, eta gero proba onartzen duzu.",
+    "apk": "Eskuz instalatzen da. Google Play-ko bertsioaren beste gako batekin dago sinatuta: batak ez du bestea eguneratzen.",
+    "app_store": "Turnly iPhonera ere iritsiko da. Bitartean, Androiden bakarrik instala daiteke."
+  },
+  "join_title": "Nola sartu Google Play-ko proban",
+  "join_steps": [
+    {
+      "text": "Sartu testerren taldean",
+      "link_text": "turnly-testers",
+      "href": "https://groups.google.com/g/turnly-testers",
+      "after": ". Zure Google kontuarekin, sakatu taldean sartzeko botoia."
+    },
+    {
+      "text": "Onartu proba mugikorretik edo ordenagailutik:",
+      "link_text": "play.google.com/apps/testing/es.cuadrante.app",
+      "href": "https://play.google.com/apps/testing/es.cuadrante.app",
+      "after": "."
+    },
+    {
+      "text": "Instalatu aplikazioa Google Play-tik. Bere kabuz eguneratuko da."
+    }
+  ],
+  "screenshots_title": "Benetako pantailak",
+  "screenshots_intro": "Datu asmatuekin, modu argian eta ilunean.",
+  "features_title": "Dena irekita, Pro bertsiorik eta erosketarik gabe",
+  "features_intro": "Txanda bakoitzak kolorea, kodea eta ordutegia ditu, eta ez dago inoiz kolorearen mende bakarrik.",
+  "feature_titles": [
+    "Hilabetea Sareta edo Zerrenda gisa",
+    "Txandak margotzea eta txandaketak",
+    "Espainiako jaiegunak",
+    "Alarmak eta widgetak",
+    "Babeskopiak eta inportatzea",
+    "Orduen laburpena"
+  ],
+  "privacy_title": "Zure txandak zure mugikorrean geratzen dira.",
+  "support_intro": "Beste zalantzarik baduzu, idatzi niri:",
+  "toc_label": "Aurkibidea",
+  "toc_aria": "Politikaren aurkibidea",
+  "toc_count": "{count} atal",
+  "fallback_label": "Hizkuntza-oharra",
+  "fallback_text": "Politika gaztelaniaz erakusten da, hori baita baliozko bertsioa. Webgunearen gainerakoa euskaraz dago."
+}

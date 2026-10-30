@@ -1,0 +1,4 @@
+{#- Segmented control: one link per language; a single-language site renders nothing. -#}
+{% if site.languages | length > 1 %}<nav class="langs-nav" aria-label="{{ t.languages_label }}" data-lang-switcher><ul class="langs">
+{% for code in site.languages %}<li><a href="{{ route(code, page_kind == 'privacy') }}" lang="{{ code }}" hreflang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ code | upper }}<span class="vh"> · {{ t.languages[code] }}</span></a></li>{% endfor %}
+</ul></nav>{% endif %}

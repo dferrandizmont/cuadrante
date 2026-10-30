@@ -1,0 +1,100 @@
+{
+  "name": "Turnly",
+  "title": "Turnly · Your shifts at a glance",
+  "description": "A free, open-source shift calendar for people who work shifts in Spain. No ads, no account, and it works offline.",
+  "intro": "A shift calendar for people who work shifts in Spain: healthcare, police, firefighters, industry, hospitality or any other sector. Set up mornings, afternoons, nights, on-call shifts and days off, and see your next shift at a glance.",
+  "key_facts": "Free · No ads · No account · Works offline · Open source · Five languages",
+  "features": [
+    "Month in a grid or a list, a year view and notes for each day. Every shift shows its colour, code and times.",
+    "Paint shifts by tapping or dragging, and build rotations with a preview: rotating shifts, 24/72, 4×4, 6×4, 5×2, 2-2-3 and your own patterns.",
+    "Spanish national and regional public holidays offline, local ones for the supported municipalities, and your own.",
+    "An alarm per shift type, note reminders and Android home-screen widgets.",
+    "Automatic backups on your phone and export to a file. Import LRHSoft Shifter backups, .ics or CSV files and the phone calendar.",
+    "Summary of worked, night, public holiday and overtime hours, with estimated pay."
+  ],
+  "privacy_summary": [
+    "Your shifts, notes and absences are stored only on your phone: there is no account, no server of ours and no analytics.",
+    "The app sends no data or crash reports to anyone. The only things that leave your phone are the backups to your Google or Apple account and whatever you choose to export."
+  ],
+  "faq": [
+    {
+      "question": "How much does it cost?",
+      "answer": "Nothing. Turnly is completely free and open source: no ads, no Pro tier and no in-app purchases."
+    },
+    {
+      "question": "Do I need an account or an internet connection?",
+      "answer": "No. There is no account and everything works offline, public holidays included."
+    },
+    {
+      "question": "How do I join the Google Play test?",
+      "answer": "Join the turnly-testers group on Google Groups with your Google account, accept the test at the Google Play link and install the app from the store. It updates itself."
+    },
+    {
+      "question": "What about iPhone?",
+      "answer": "The iPhone version is on its way. It will come to TestFlight first and then to the App Store."
+    },
+    {
+      "question": "How do I move my shifts to another phone?",
+      "answer": "Export a backup from Settings › Backup and open it on the new phone. Nothing is restored until you confirm it."
+    }
+  ],
+  "licence_text": "Code MIT · Content CC BY-SA 4.0",
+  "screenshot_alts": {
+    "01-mes": "Painted month and next shift card",
+    "02-lista": "The same month in List view, with shift codes and full times",
+    "03-pintar": "Paint mode with the shift palette",
+    "04-rotaciones": "Rotation wizard with a preview before applying",
+    "05-horas": "Monthly summary of worked, night and public holiday hours",
+    "06-festivos": "Regional and local public holidays for Madrid",
+    "07-mes-oscuro": "The same month in the dark theme"
+  },
+  "privacy_date": "2026-10-30",
+  "kicker": "Shift calendar",
+  "tagline": "Your shifts at a glance.",
+  "chip": "Free, no ads and works offline.",
+  "nav_label": "Sections",
+  "download_title": "Android is in testing; iPhone is coming soon.",
+  "download_intro": "Light and dark themes. Free, with no account.",
+  "download_notes": {
+    "play": "Anyone can join: first join the testers group, then accept the test.",
+    "apk": "Install it by hand. It uses a different signing key from the Google Play version, so one does not update the other.",
+    "app_store": "Turnly is coming to iPhone. Until then, it can only be installed on Android."
+  },
+  "join_title": "How to join the Google Play test",
+  "join_steps": [
+    {
+      "text": "Join the testers group",
+      "link_text": "turnly-testers",
+      "href": "https://groups.google.com/g/turnly-testers",
+      "after": " with your Google account."
+    },
+    {
+      "text": "Accept the test on your phone or computer:",
+      "link_text": "play.google.com/apps/testing/es.cuadrante.app",
+      "href": "https://play.google.com/apps/testing/es.cuadrante.app",
+      "after": "."
+    },
+    {
+      "text": "Install the app from Google Play. It updates itself."
+    }
+  ],
+  "screenshots_title": "Real screens",
+  "screenshots_intro": "With made-up data, in light and dark.",
+  "features_title": "Everything included, no Pro tier or purchases",
+  "features_intro": "Every shift shows its colour, code and times, and never relies on colour alone.",
+  "feature_titles": [
+    "Month in Grid or List view",
+    "Paint shifts and rotations",
+    "Spanish public holidays",
+    "Alarms and widgets",
+    "Backups and import",
+    "Hours summary"
+  ],
+  "privacy_title": "Your shifts stay on your phone.",
+  "support_intro": "Anything else? Write to me:",
+  "toc_label": "Contents",
+  "toc_aria": "Policy contents",
+  "toc_count": "{count} sections",
+  "fallback_label": "Language notice",
+  "fallback_text": "That is the valid version of the policy. The rest of the site is in English."
+}

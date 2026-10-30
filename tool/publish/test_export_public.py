@@ -138,6 +138,9 @@ class ScannerTest(unittest.TestCase):
     def test_binary_locations_and_compressed_fixture(self):
         exporter.scan_file('app/assets/icon/icon.png', b'\x89PNG\x00')
         exporter.scan_file('app/test/fixtures/v1.cuadrante', gzip.compress(b'{"synthetic":true}'))
+        exporter.scan_file('web/assets/fonts/Font.woff2', b'wOF2\x00')
+        with self.assertRaises(ValueError):
+            exporter.scan_file('web/assets/tool.exe', b'MZ\x00')
         with self.assertRaises(ValueError):
             exporter.scan_file('tool/program.jar', b'PK\x00')
         with self.assertRaises(ValueError):

@@ -99,13 +99,13 @@ Android, que no entran en la copia del sistema. Solo lo leen los widgets de esta
 
 ## Soporte y enlaces
 «Ayuda y contacto» (Ajustes) enseña la dirección de soporte para **copiarla**; la app no abre el correo.
-La dirección es **dev@mainshai.com**, definida en `kSupportEmail`
+La dirección es **turnly@mainshai.com**, definida en `kSupportEmail`
 (`app/lib/core/config.dart`); el build puede sustituirla con `--dart-define=SUPPORT_EMAIL=...`.
 «Licencias de código abierto» abre la página de licencias de Flutter, sin conexión.
 «Política de privacidad» (Ajustes › Ayuda) abre la web en el **navegador externo**, solo al tocar la fila, mediante
 el plugin oficial `url_launcher`. No envía datos del cuadrante ni añade permiso `INTERNET` a la app: el navegador
-hace la conexión. `PRIVACY_URL` apunta por defecto a `https://dferrandizmont.github.io/turnly/privacidad/`;
-en inglés se usa `PRIVACY_URL_EN` (`https://dferrandizmont.github.io/turnly/privacidad/en/`). Las dos URL pueden
+hace la conexión. `PRIVACY_URL` apunta por defecto a `https://turnly.mainshai.com/privacy/`;
+en inglés se usa `PRIVACY_URL_EN` (`https://turnly.mainshai.com/en/privacy/`). Las dos URL pueden
 cambiarse con `--dart-define`. La web española es la referencia para los demás idiomas.
 
 ## Declaraciones en tiendas
@@ -121,7 +121,7 @@ cambiarse con `--dart-define`. La web española es la referencia para los demás
 ## Pendiente antes del lanzamiento
 - [x] Decisión 13 resuelta (usuario, 26-oct-2026): se mantiene el comportamiento actual, con las ausencias de salud
       en la misma base de datos y en las copias, como explica la política.
-- [ ] Comprobar la pantalla «Ayuda y contacto» en el build de release; `kSupportEmail` ya contiene `dev@mainshai.com`.
+- [ ] Comprobar la pantalla «Ayuda y contacto» en el build de release; `kSupportEmail` ya contiene `turnly@mainshai.com`.
 - [ ] Publicar la política de privacidad (URL), enlazarla desde las dos tiendas y comprobar las dos URL desde la
       fila de Ajustes ya implementada (`docs/legal/LEEME.md`).
 - [ ] Rellenar App Privacy (Apple) y Seguridad de los datos (Play) con el binario final.

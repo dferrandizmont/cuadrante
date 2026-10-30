@@ -17,7 +17,7 @@ void main() {
 
   group('H-T15-2: contact while there is no support address', () {
     test('the default support address is ready to copy', () {
-      expect(kSupportEmail, 'dev@mainshai.com');
+      expect(kSupportEmail, 'turnly@mainshai.com');
       expect(const AppConfig().supportEmail, kSupportEmail);
     });
 

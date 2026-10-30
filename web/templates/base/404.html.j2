@@ -1,0 +1,11 @@
+{% extends 'base/layout.html.j2' %}
+{% block content %}<section class="wrap lost">
+<div class="today today-solo">
+<p class="label">404</p>
+<h1 class="h1">{{ t.not_found }}</h1>
+<p class="lede">{{ t.not_found_text }}</p>
+<ul class="lost-links">
+{% for code in site.languages %}<li><a class="pill" href="{{ route(code) }}" lang="{{ code }}" hreflang="{{ code }}">{{ t.home }} · {{ t.languages[code] }}</a></li>{% endfor %}
+</ul>
+</div>
+</section>{% endblock %}

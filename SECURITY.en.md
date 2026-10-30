@@ -1,6 +1,6 @@
 # Security notices
 
-If you find a vulnerability, write to **dev@mainshai.com**.
+If you find a vulnerability, write to **turnly@mainshai.com**.
 
 Include the affected version, the steps to reproduce the problem and its
 possible impact. Send the details by email before opening a public issue, so

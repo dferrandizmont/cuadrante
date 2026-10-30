@@ -240,7 +240,7 @@ void main() {
       await tester.ensureVisible(_key('faq-contact'));
       await tester.tap(_key('faq-contact'));
       await tester.pumpAndSettle();
-      expect(find.text('dev@mainshai.com'), findsOneWidget);
+      expect(find.text('turnly@mainshai.com'), findsOneWidget);
       expect(_key('help-copy-email'), findsOneWidget);
       expect(_key('help-copy-version'), findsOneWidget);
     }, variant: android);

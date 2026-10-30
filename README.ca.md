@@ -40,13 +40,11 @@ Android en proves; iPhone, aviat. Mode clar i fosc.
 
 L’app és en prova tancada a Google Play i s’hi pot apuntar qualsevol persona:
 
-> **Ara mateix Google està revisant la primera versió.** Ja et pots unir al grup (pas 1); l’enllaç del pas 2 funcionarà quan l’aprovin, normalment en pocs dies.
-
 1. Uneix-te al grup de testers: [turnly-testers](https://groups.google.com/g/turnly-testers). Amb el teu compte de Google, prem «Uneix-te al grup».
 2. Accepta la prova des del mòbil o l’ordinador: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
 3. Instal·la l’app des de Google Play. S’actualitzarà sola.
 
-Si pots, queda’t a la prova almenys 14 dies i fes-la servir de tant en tant (per exemple, mira el torn de demà o posa el widget): Google exigeix 12 testers durant 14 dies per publicar-la per a tothom. Els comentaris, a dev@mainshai.com.
+Si pots, queda’t a la prova almenys 14 dies i fes-la servir de tant en tant (per exemple, mira el torn de demà o posa el widget): Google exigeix 12 testers durant 14 dies per publicar-la per a tothom. Els comentaris, a turnly@mainshai.com.
 
 </details>
 
@@ -130,8 +128,8 @@ dades van a la destinació que triïs. El fitxer de còpia `.turnly` no està xi
 
 </details>
 
-[Política de privacitat](https://dferrandizmont.github.io/turnly/privacidad/) ·
-[Detall tècnic](docs/privacy.md) (en castellà) · Suport: **dev@mainshai.com**.
+[Web](https://turnly.mainshai.com/ca/) · [Política de privacitat](https://turnly.mainshai.com/ca/privacy/) ·
+[Detall tècnic](docs/privacy.md) (en castellà) · Suport: **turnly@mainshai.com**.
 
 ## Novetats
 

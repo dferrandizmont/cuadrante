@@ -1,0 +1,17 @@
+id = "turnly"
+domain = "turnly.mainshai.com"
+languages = ["es", "ca", "gl", "eu", "en"]
+default_language = "es"
+brand = "#4B4FD1"
+open_source = true
+free = true
+repo_url = "https://github.com/dferrandizmont/turnly"
+contact_email = "turnly@mainshai.com"
+screenshots = ["01-mes", "02-lista", "03-pintar", "04-rotaciones", "05-horas", "06-festivos", "07-mes-oscuro"]
+privacy = { es = "docs/legal/politica-privacidad.md", en = "docs/legal/politica-privacidad.en.md" }
+privacy_fallback = { ca = "es", gl = "es", eu = "es" }
+downloads = [
+  { kind = "play", state = "closed_test", url = "https://play.google.com/apps/testing/es.cuadrante.app" },
+  { kind = "apk", state = "beta", url = "https://github.com/dferrandizmont/turnly/releases/latest" },
+  { kind = "app_store", state = "soon" },
+]

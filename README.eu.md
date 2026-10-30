@@ -41,13 +41,11 @@ Android probetan; iPhone, laster. Modu argia eta iluna.
 
 Aplikazioa proba itxian dago Google Play-n, eta edonor sar daiteke:
 
-> **Une honetan, Google lehen bertsioa berrikusten ari da.** Taldean sar zaitezke dagoeneko (1. urratsa); 2. urratseko esteka onartu bezain laster ibiliko da, normalean egun gutxiren buruan.
-
 1. Sartu testerren taldean: [turnly-testers](https://groups.google.com/g/turnly-testers). Zure Google kontuarekin, sakatu taldean sartzeko botoia.
 2. Onartu proba mugikorretik edo ordenagailutik: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
 3. Instalatu aplikazioa Google Play-tik. Bere kabuz eguneratuko da.
 
-Ahal baduzu, egon proban gutxienez 14 egunez eta erabili noizean behin (adibidez, begiratu biharko txanda edo jarri widgeta): Google-k 12 tester eskatzen ditu 14 egunez, aplikazioa guztientzat argitaratzeko. Iruzkinak, dev@mainshai.com helbidera.
+Ahal baduzu, egon proban gutxienez 14 egunez eta erabili noizean behin (adibidez, begiratu biharko txanda edo jarri widgeta): Google-k 12 tester eskatzen ditu 14 egunez, aplikazioa guztientzat argitaratzeko. Iruzkinak, turnly@mainshai.com helbidera.
 
 </details>
 
@@ -137,8 +135,8 @@ dago zifratuta.
 
 </details>
 
-[Pribatutasun-politika](https://dferrandizmont.github.io/turnly/privacidad/) ·
-[Xehetasun teknikoak](docs/privacy.md) (gaztelaniaz) · Laguntza: **dev@mainshai.com**.
+[Webgunea](https://turnly.mainshai.com/eu/) · [Pribatutasun-politika](https://turnly.mainshai.com/eu/privacy/) ·
+[Xehetasun teknikoak](docs/privacy.md) (gaztelaniaz) · Laguntza: **turnly@mainshai.com**.
 
 ## Berriak
 

@@ -120,7 +120,6 @@ revisar el árbol, las imágenes y la identidad final. Publicar es otro paso.
 python -B tool/publish/test_export_public.py
 sh tool/publish/export_public.sh HEAD /ruta/vacia/cuadrante-publico
 cd /ruta/vacia/cuadrante-publico
-python -B web/legal/test_legal.py
 cd app
 flutter pub get
 flutter gen-l10n

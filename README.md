@@ -40,13 +40,11 @@ Android is in testing; iPhone is coming soon. Light and dark themes.
 
 Anyone can join the closed test on Google Play:
 
-> **Google is still reviewing the first version.** You can join the group now; the link in step 2 works once it is approved, usually within days.
-
 1. Join the [turnly-testers](https://groups.google.com/g/turnly-testers) group with your Google account.
 2. Accept the test: [play.google.com/apps/testing/es.cuadrante.app](https://play.google.com/apps/testing/es.cuadrante.app).
 3. Install the app from Google Play; it updates itself.
 
-Please stay in the test for 14 days and open the app now and then: Google needs 12 testers for 14 days before a public release. Feedback to dev@mainshai.com.
+Please stay in the test for 14 days and open the app now and then: Google needs 12 testers for 14 days before a public release. Feedback to turnly@mainshai.com.
 
 </details>
 
@@ -128,8 +126,8 @@ you choose. The `.turnly` backup file is not encrypted.
 
 </details>
 
-[Privacy policy](https://dferrandizmont.github.io/turnly/privacidad/en/) ·
-[Technical details](docs/privacy.en.md) · Support: **dev@mainshai.com**.
+[Website](https://turnly.mainshai.com/en/) · [Privacy policy](https://turnly.mainshai.com/en/privacy/) ·
+[Technical details](docs/privacy.en.md) · Support: **turnly@mainshai.com**.
 
 ## What's new
 

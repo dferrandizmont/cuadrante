@@ -98,13 +98,13 @@ which are not part of the system backup. Only this app's widgets read it.
 
 ## Support and links
 "Help and contact" (Settings) shows the support address to **copy**; the app does not open mail.
-The address is **dev@mainshai.com**, defined in `kSupportEmail`
+The address is **turnly@mainshai.com**, defined in `kSupportEmail`
 (`app/lib/core/config.dart`); the build can override it with `--dart-define=SUPPORT_EMAIL=...`.
 "Open-source licences" opens Flutter's licence page, offline.
 "Privacy policy" (Settings › Help) opens the website in the **external browser**, only when tapped, through the
 official `url_launcher` plugin. It sends no roster data and adds no `INTERNET` permission to the app: the browser
-makes the connection. `PRIVACY_URL` defaults to `https://dferrandizmont.github.io/turnly/privacidad/`;
-English uses `PRIVACY_URL_EN` (`https://dferrandizmont.github.io/turnly/privacidad/en/`). Both URLs can be
+makes the connection. `PRIVACY_URL` defaults to `https://turnly.mainshai.com/privacy/`;
+English uses `PRIVACY_URL_EN` (`https://turnly.mainshai.com/en/privacy/`). Both URLs can be
 overridden with `--dart-define`. Other languages use the authoritative Spanish policy.
 
 ## Store declarations
@@ -119,7 +119,7 @@ overridden with `--dart-define`. Other languages use the authoritative Spanish p
 ## Pending before launch
 - [x] Decision 13 resolved (user, 26 Oct 2026): keep the current behaviour, with health absences in the same database
       and in backups, as the policy explains.
-- [ ] Check the "Help and contact" screen in the release build; `kSupportEmail` already contains `dev@mainshai.com`.
+- [ ] Check the "Help and contact" screen in the release build; `kSupportEmail` already contains `turnly@mainshai.com`.
 - [ ] Publish the privacy policy (URL), link it from both stores and check both URLs using the implemented
       Settings row (`docs/legal/LEEME.md`).
 - [ ] Fill in App Privacy (Apple) and Data safety (Play) with the final binary.
